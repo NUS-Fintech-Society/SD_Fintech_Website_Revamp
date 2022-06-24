@@ -35,6 +35,10 @@ We follow a
 where developers create a new branch and then make changes to it directly on the
 main repo.
 
+## vs code plugins 
+* Eslint
+* TailwindCSS intelliSense 
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
