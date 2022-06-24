@@ -1,7 +1,14 @@
+import NavBar from "@components/layout/Navbar";
 import { LayoutProps } from "@interfaces/layout";
 
-const Home = ({ chidlren }: LayoutProps) => {
-  return <div className="">Home Page</div>;
+const Layout = ({ children }: LayoutProps) => {
+  const overWriteChakraTheme = "font-primary";
+  return (
+    <div className={overWriteChakraTheme}>
+      <NavBar />
+      {children}
+    </div>
+  );
 };
 
-export default Home;
+export default Layout;

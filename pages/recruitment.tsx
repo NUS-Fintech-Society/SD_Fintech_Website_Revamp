@@ -1,6 +1,6 @@
-import Recruitment from "@components/recruitment/Recruitment";
-import type { NextPage } from "next";
-import Head from "next/head";
+import Recruitment from '@components/recruitment/Recruitment';
+import type { NextPage } from 'next';
+import Head from 'next/head';
 
 const RecruitmentPage: NextPage = () => {
   return (
