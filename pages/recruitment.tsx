@@ -1,17 +1,17 @@
-import Home from "@components/home/Home";
+import Recruitment from "@components/recruitment/Recruitment";
 import type { NextPage } from "next";
 import Head from "next/head";
 
-const HomePage: NextPage = () => {
+const RecruitmentPage: NextPage = () => {
   return (
     <>
       <Head>
         <title>NUS Fintech Society</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Home />
+      <Recruitment />
     </>
   );
 };
 
-export default HomePage;
+export default RecruitmentPage;
