@@ -11,14 +11,20 @@ module.exports = {
       },
       colors: {
         // not properly named
-        t_Black: "#000000",
-        t_Blue: "#141D48",
+        primary: "#141D48",
         t_Jade: "#DAF3CE",
-        t_Orange: "#DAF3CE",
+        t_Orange: "#F9A728",
         t_White: "#F6F6F6",
       },
       fontSize: {
-        h1: {},
+        h1: "64px",
+        h2: "48px",
+        h3: "36px",
+        h4: "24px",
+        body: "18px",
+      },
+      maxWidth: {
+        main: "1440px",
       },
     },
   },
