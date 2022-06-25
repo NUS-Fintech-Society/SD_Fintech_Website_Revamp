@@ -1,6 +1,6 @@
-import styles from "./Example.module.css";
+import styles from "./UsingCssModule.module.css";
 
-const Example = () => {
+const UsingCssModule = () => {
   return (
     <>
       <h1 className={["h-96 w-96", styles.example].join(" ")}>
@@ -14,4 +14,4 @@ const Example = () => {
   );
 };
 
-export default Example;
+export default UsingCssModule;
