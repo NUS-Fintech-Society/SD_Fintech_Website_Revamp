@@ -10,8 +10,8 @@ module.exports = {
         primary: ["Lato", "sans-serif"],
       },
       colors: {
-        // not properly named
         primary: "#141D48",
+        secondary: "#005792",
         t_Jade: "#DAF3CE",
         t_Orange: "#F9A728",
         t_White: "#F6F6F6",
@@ -24,7 +24,7 @@ module.exports = {
         body: "18px",
       },
       maxWidth: {
-        main: "1440px",
+        main: "1360px",
       },
     },
   },
