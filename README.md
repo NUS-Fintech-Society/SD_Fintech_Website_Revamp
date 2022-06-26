@@ -32,14 +32,14 @@
 1. Use TailwindCSS for majority of styling
    * Themes are set in `tailwind.config.js`.
    * You can add to this file if necessary (for more [custom styling](https://tailwindcss.com/docs/adding-custom-styles)). Do this only for repeating styles not present in TailWind.
-2. Use Chakra UI for its reusable components
+2. Use Chakra UI for its reusable components.
 3. Use CSS Module only as last resort i.e. either some third party package needs it, etc. 
    * for a component with css Module, please put it in a standalone folder e.g. a folder `/Dropdown` that contains `/Dropdown/Dropdown.tsx` and `/Dropdown/Dropdown.module.css`
-4. one-time usage of inline style is allowed.
+4. can use inline-style if it is very little and doesn't warrant creating a css module file.
 
 ## About Responsive design 
 
-All development should be done mobile-first. Currently our design files only provide us with desktop design. **We need everyone to exercise their own judgement in terms of its implementation**. 
+All development should be done mobile-first. Currently our design files only provide us with desktop design. **We need everyone to exercise their own judgement in terms of its design and layout**. 
 
 TailwindCSS supports mobile first design out of the box, please read more here: https://tailwindcss.com/docs/responsive-design.
 
