@@ -26,6 +26,7 @@
    * each page should have its own folder e.g. all components for homepage should be in `/components/homepage`
    * `/components/helpers`: shared components should be put here e.g. accordion used in both recruitment and deparments page
 * `/interface`: declare types here, **mirrors components structure**
+* Please use [absolute imports](https://nextjs.org/docs/advanced-features/module-path-aliases) instead of relative imports  
 
 ## Styling Standard
 
@@ -39,7 +40,7 @@
 
 ## About Responsive design 
 
-All development should be done mobile-first. Currently our design files only provide us with desktop design. **We need everyone to exercise their own judgement in terms of its design and layout**. 
+All development should be done mobile-first. Currently our design files only provide us with desktop design. **We need everyone to exercise their own judgement in terms of its design and layout in mobile view**. 
 
 TailwindCSS supports mobile first design out of the box, please read more here: https://tailwindcss.com/docs/responsive-design.
 
