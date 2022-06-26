@@ -40,7 +40,7 @@
 
 ## About Responsive design 
 
-All development should be done mobile-first. Currently our design files only provide us with desktop design. **We need everyone to exercise their own judgement in terms of its design and layout in mobile view**. 
+All development should be done mobile-first. Currently our design files only provide us with desktop design. **We need everyone to exercise their own judgement in terms of its design and layout in mobile view (just make sure it looks good)**. 
 
 TailwindCSS supports mobile first design out of the box, please read more here: https://tailwindcss.com/docs/responsive-design.
 
