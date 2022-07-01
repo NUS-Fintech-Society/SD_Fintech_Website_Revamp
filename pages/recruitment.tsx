@@ -1,17 +1,29 @@
-import Recruitment from '@components/recruitment/Recruitment';
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import Recruitment from "@components/recruitment";
+import RecruitmentData from "@data/interface/recruitmentData";
+import { fetchRecruitmentData } from "@data/mockFetch";
+import type { NextPage } from "next";
+import Head from "next/head";
 
-const RecruitmentPage: NextPage = () => {
+const RecruitmentPage: NextPage<RecruitmentData> = (props) => {
   return (
     <>
       <Head>
         <title>NUS Fintech Society</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Recruitment />
+      <Recruitment {...props} />
     </>
   );
 };
+
+export async function getStaticProps() {
+  const { departments } = await fetchRecruitmentData();
+
+  return {
+    props: {
+      departments,
+    },
+  };
+}
 
 export default RecruitmentPage;

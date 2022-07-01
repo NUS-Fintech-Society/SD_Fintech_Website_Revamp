@@ -1,13 +1,18 @@
-import About from "@components/home/About";
-import Landing from "@components/home/Landing";
-import Statistics from "@components/home/Statistics";
+//type
+import { HomeProps } from "@interfaces/home";
 
-const Home = () => {
+//code
+import Milestones from "@components/home/Milestones";
+import Landing from "@components/home/Landing";
+import Journey from "@components/home/Journey";
+
+const Home = ({ partnersImages, journey }: HomeProps) => {
+  console.log(partnersImages);
   return (
     <>
       <Landing />
-      <About />
-      <Statistics />
+      <Milestones />
+      <Journey />
     </>
   );
 };
