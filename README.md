@@ -26,7 +26,9 @@
    * each page should have its own folder e.g. all components for homepage should be in `/components/homepage`
    * `/components/helpers`: shared components should be put here e.g. accordion used in both recruitment and deparments page
 * `/interface`: declare types here, **mirrors components structure**
-* Please use [absolute imports](https://nextjs.org/docs/advanced-features/module-path-aliases) instead of relative imports  
+* '/data': data used in the website
+
+(Note: Please use [absolute imports](https://nextjs.org/docs/advanced-features/module-path-aliases) instead of relative imports unless it is CSS modules)
 
 ## Styling Standard
 
