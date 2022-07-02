@@ -17,7 +17,7 @@ const NavBar = () => {
             {!isOpen && (
               <a href={"/"}>
                 <Image
-                  src={"https://fintechsociety.comp.nus.edu.sg/images/"}
+                  src={"https://fintechsociety.comp.nus.edu.sg/images/SocietyLogo.png"}
                   width={100}
                   height={20}
                   alt={"Fintech Society Logo"}
