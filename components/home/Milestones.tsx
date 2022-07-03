@@ -1,6 +1,3 @@
-<<<<<<< Updated upstream
-import MaxWidth from '@components/layout/MaxWidth';
-=======
 import MaxWidth from "@components/layout/MaxWidth";
 import {
   Divider,
@@ -10,7 +7,6 @@ import {
   StatNumber,
   StatHelpText,
 } from '@chakra-ui/react'
->>>>>>> Stashed changes
 
 const Milestones = () => {
   return (
