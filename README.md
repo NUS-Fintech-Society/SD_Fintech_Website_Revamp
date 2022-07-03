@@ -40,13 +40,7 @@
    * for a component with css Module, please put it in a standalone folder e.g. a folder `/Dropdown` that contains `/Dropdown/Dropdown.tsx` and `/Dropdown/Dropdown.module.css`
 4. can use inline-style if it is very little and doesn't warrant creating a css module file or setting a tailwindCSS config.
 
-### About using TailwindCSS
-For className, as it can get lengthy, the css classes for smaller viewport should be moved to the front.
-
-e.g.
-```html
-className="z-0 sm:z-10 md:z-20 lg:z-30 xl:z-40"
-```
+**Please download eslint and prettier plugin for vscode to enable style checking and auto formatting**
 
 ## About Responsive design 
 
@@ -75,3 +69,4 @@ main repo.
 ## vs code plugins 
 * Eslint 
 * TailwindCSS intelliSense
+* Prettier

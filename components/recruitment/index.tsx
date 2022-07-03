@@ -1,4 +1,4 @@
-import { RecruitmentProps } from "@interfaces/recruitment";
+import { RecruitmentProps } from '@interfaces/recruitment';
 
 const Recruitment = ({ departments }: RecruitmentProps) => {
   return <div className="">Recruitment</div>;

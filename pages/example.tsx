@@ -1,6 +1,6 @@
-import type { NextPage } from "next";
-import UsingCssModule from "@components/example/UsingCssModule";
-import MaxWidth from "@components/layout/MaxWidth";
+import type { NextPage } from 'next';
+import UsingCssModule from '@components/example/UsingCssModule';
+import MaxWidth from '@components/layout/MaxWidth';
 
 /**
  * Follow this for responsive, should always start with mobile first view.
