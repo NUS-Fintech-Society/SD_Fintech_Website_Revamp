@@ -31,11 +31,11 @@ const Example: NextPage = () => {
           1914 translation by H. Rackham.
         </p>
         <h1 className=" text-h1">Responsive Example</h1>
-        <div className="flex flex-wrap mx-auto max-w-main">
-          <div className="w-full lg:w-1/2 h-96 bg-t_Jade text-h1">
+        <div className="mx-auto flex max-w-main flex-wrap">
+          <div className="h-96 w-full bg-t_Jade text-h1 lg:w-1/2">
             left block
           </div>
-          <div className="w-full lg:w-1/2 h-96 bg-t_Orange text-h2">
+          <div className="h-96 w-full bg-t_Orange text-h2 lg:w-1/2">
             right block
           </div>
         </div>

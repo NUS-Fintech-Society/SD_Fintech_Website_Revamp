@@ -5,9 +5,9 @@ import Link from "next/link";
 
 const NavBar = () => {
   return (
-    <div className="sticky top-0 w-[100vw] h-16 bg-primary">
+    <div className="sticky top-0 h-16 w-[100vw] bg-primary">
       <MaxWidth>
-        <div className="max-w-main flex justify-end mx-auto px-4 py-4">
+        <div className="mx-auto  flex max-w-main justify-end p-4">
           <div className="flex gap-3 text-white">
             <Link href={"/"}>
               <a>About</a>
