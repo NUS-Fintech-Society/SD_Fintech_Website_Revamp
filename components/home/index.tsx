@@ -2,17 +2,18 @@
 import { HomeProps } from '@interfaces/home';
 
 //code
-import Milestones from '@components/home/Milestones';
-import Landing from '@components/home/Landing';
-import Journey from '@components/home/Journey';
+import Landing from "@components/home/Landing";
+import Milestones from "@components/home/Milestones";
+import Journey from "@components/home/Journey";
+import Partners from "@components/home/Partners";
 
 const Home = ({ partnersImages, journey }: HomeProps) => {
-  console.log(partnersImages);
   return (
     <>
       <Landing />
       <Milestones />
       <Journey />
+      <Partners {...partnersImages} />
     </>
   );
 };
