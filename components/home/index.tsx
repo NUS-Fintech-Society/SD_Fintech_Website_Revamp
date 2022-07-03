@@ -1,10 +1,10 @@
 //type
-import { HomeProps } from "@interfaces/home";
+import { HomeProps } from '@interfaces/home';
 
 //code
-import Milestones from "@components/home/Milestones";
-import Landing from "@components/home/Landing";
-import Journey from "@components/home/Journey";
+import Milestones from '@components/home/Milestones';
+import Landing from '@components/home/Landing';
+import Journey from '@components/home/Journey';
 
 const Home = ({ partnersImages, journey }: HomeProps) => {
   console.log(partnersImages);

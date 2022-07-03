@@ -1,9 +1,9 @@
-import styles from "./UsingCssModule.module.css";
+import styles from './UsingCssModule.module.css';
 
 const UsingCssModule = () => {
   return (
     <>
-      <h1 className={["h-96 w-96", styles.example].join(" ")}>
+      <h1 className={['h-96 w-96', styles.example].join(' ')}>
         This shows you how to use tailwindCSS and CSS module together
       </h1>
       <p className=" text-h2">
