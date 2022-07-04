@@ -5,13 +5,17 @@ import { HomeProps } from "@interfaces/home";
 import Milestones from "@components/home/Milestones";
 import Landing from "@components/home/Landing";
 import Journey from "@components/home/Journey";
+import Departments from "@components/home/Departments";
 
-const Home = ({ partnersImages, journey }: HomeProps) => {
+const Home = (
+  { partnersImages, journey, departments }: HomeProps,
+) => {
   console.log(partnersImages);
   return (
     <>
       <Landing />
       <Milestones />
+      <Departments ds={departments}/>
       <Journey />
     </>
   );

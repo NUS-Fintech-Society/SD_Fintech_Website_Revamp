@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const NavBar = () => {
   return (
-    <div className="sticky top-0 w-[100vw] h-16 bg-primary">
+    <div className="z-10 sticky top-0 w-[100vw] h-16 bg-primary">
       <MaxWidth>
         <div className="max-w-main flex justify-end mx-auto px-4 py-4">
           <div className="flex gap-3 text-white">
