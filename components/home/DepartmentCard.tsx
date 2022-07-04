@@ -15,7 +15,6 @@ const DepartmentCard = (props: CardProps) => {
   return (
     <Link href={"/departments/" + props.path}>
       <div
-        key={1}
         className="hover:bg-blue-300 grid grid-cols-1 cursor-pointer max-w-sm rounded-lg overflow-hidden shadow-lg mx-auto mb-7 bg-gray-300"
       >
         <div className="relative">
