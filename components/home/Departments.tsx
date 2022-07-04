@@ -17,7 +17,6 @@ const Departments = (departments: DepartmentsProps) => {
             cardDescription={d.cardDescription}
             name={d.name}
             path={d.path}
-            key={"0"}
           />
         ))}
       </div>
