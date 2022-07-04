@@ -1,24 +1,32 @@
-import MaxWidth from "@components/layout/MaxWidth";
-import DepartmentCard from "@components/home/DepartmentCard";
-import { Department } from "@data/interface/homeData";
+// type
+import { DepartmentsProps } from '@interfaces/home/Departments';
 
-type DepartmentsProps = {
-  ds: Department[]; 
-}
+// library
+import { Fragment } from 'react';
 
-const Departments = (departments: DepartmentsProps) => {
+// code
+import MaxWidth from '@components/layout/MaxWidth';
+import DepartmentCard from '@components/home/DepartmentCard';
+
+const Departments = ({ departments }: DepartmentsProps) => {
   return (
     <MaxWidth>
-      <div className="font-bold text-3xl h-12 mt-4 mb-4 text-center">Departments</div>
-      <div className="flex flex-wrap">
-        {departments.ds?.map((d) => (
-          <DepartmentCard
-            coverImage={d.coverImage}
-            cardDescription={d.cardDescription}
-            name={d.name}
-            path={d.path}
-          />
-        ))}
+      <div className="my-4 h-12 text-center text-3xl font-bold">
+        Departments
+      </div>
+      <div className="flex flex-wrap justify-center gap-10">
+        {departments.map(
+          ({ coverImage, cardDescription, name, path }, index) => (
+            <Fragment key={index}>
+              <DepartmentCard
+                coverImage={coverImage}
+                cardDescription={cardDescription}
+                name={name}
+                path={path}
+              />
+            </Fragment>
+          )
+        )}
       </div>
     </MaxWidth>
   );

@@ -22,12 +22,11 @@ const HomePage: NextPage<HomeData> = (props) => {
 };
 
 export async function getStaticProps() {
-  const { journey, partnersImages, departments } = await fetchHomeData();
+  const { partnersImages, departments } = await fetchHomeData();
   return {
     props: {
-      journey,
       partnersImages,
-      departments
+      departments,
     },
   };
 }

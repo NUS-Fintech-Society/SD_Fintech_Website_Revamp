@@ -3,21 +3,16 @@ import { HomeProps } from '@interfaces/home';
 
 //code
 
-import Milestones from "@components/home/Milestones";
-import Landing from "@components/home/Landing";
-import Journey from "@components/home/Journey";
-import Departments from "@components/home/Departments";
+import Milestones from '@components/home/Milestones';
+import Landing from '@components/home/Landing';
+import Departments from '@components/home/Departments';
 
-const Home = (
-  { partnersImages, journey, departments }: HomeProps,
-) => {
-  console.log(partnersImages);
+const Home = ({ departments }: HomeProps) => {
   return (
     <>
       <Landing />
       <Milestones />
-      <Departments ds={departments}/>
-      <Journey />
+      <Departments departments={departments} />
     </>
   );
 };
