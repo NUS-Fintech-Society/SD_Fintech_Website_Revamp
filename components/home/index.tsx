@@ -14,7 +14,7 @@ const Home = ({ partnersImages, departments }: HomeProps) => {
       <Landing />
       <Milestones />
       <Departments departments={departments} />
-      <Partners {...partnersImages} />
+      <Partners partnersImages={partnersImages} />
     </>
   );
 };
