@@ -1,4 +1,4 @@
-import MaxWidth from "@components/layout/MaxWidth";
+import MaxWidth from '@components/layout/MaxWidth';
 
 const Journey = () => {
   return <MaxWidth>NUS Fintech Society Journey</MaxWidth>;

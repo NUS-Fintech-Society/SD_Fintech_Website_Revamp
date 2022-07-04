@@ -1,4 +1,4 @@
-import MaxWidth from "@components/layout/MaxWidth";
+import MaxWidth from '@components/layout/MaxWidth';
 
 const Milestones = () => {
   return <MaxWidth>Milestones</MaxWidth>;

@@ -26,7 +26,7 @@
    * each page should have its own folder e.g. all components for homepage should be in `/components/homepage`
    * `/components/helpers`: shared components should be put here e.g. accordion used in both recruitment and deparments page
 * `/interface`: declare types here, **mirrors components structure**
-* '/data': data used in the website
+* `/data`: data used in the website
 
 (Note: Please use [absolute imports](https://nextjs.org/docs/advanced-features/module-path-aliases) instead of relative imports unless it is CSS modules)
 
@@ -38,7 +38,9 @@
 2. Use Chakra UI for its reusable components.
 3. Use CSS Module only as last resort i.e. either some third party package needs it, etc. 
    * for a component with css Module, please put it in a standalone folder e.g. a folder `/Dropdown` that contains `/Dropdown/Dropdown.tsx` and `/Dropdown/Dropdown.module.css`
-4. can use inline-style if it is very little and doesn't warrant creating a css module file.
+4. can use inline-style if it is very little and doesn't warrant creating a css module file or setting a tailwindCSS config.
+
+**Please download eslint and prettier plugin for vscode to enable style checking and auto formatting**
 
 ## About Responsive design 
 
@@ -53,14 +55,18 @@ We follow a
 where developers create a new branch and then make changes to it directly on the
 main repo.
 
+*There is no need to fork! (that's the forking workflow)*
+
+
 ### Making a branch: 
 * please create a branch in this format: `[yourname]/[branchname]`
    * so for creating a branch called homepage, create branch named `zhiwei/homepage`
 
 ### Before making a PR:
 * Rebase your branch onto master
-* Make sure that lint passes
+* Make sure that lint passes (run `yarn lint`)
 
 ## vs code plugins 
 * Eslint 
 * TailwindCSS intelliSense
+* Prettier
