@@ -8,7 +8,7 @@ const Departments = () => {
         <MaxWidth>
             <div className='my-6'>
                 <div className='flex flex-col my-6'>
-                    <div className="text-4xl text-center mb-6">
+                    <div className="text-4xl text-center mb-8">
                         Departments
                     </div>
                     <div className='flex-row mb-8 mx-8'>
@@ -57,7 +57,7 @@ const Departments = () => {
                             </Box>
                         </SimpleGrid>
                     </div>
-                    <div className='flex-row mb-8 mx-48'>
+                    <div className='flex-row mb-8 mx-48 mt-8'>
                         <SimpleGrid minChildWidth='250px' spacing='40px' justifyItems='center'>
                             <Box bg='#C7C7C7' minWidth='250px' maxWidth='235px' height='300px'>
                                 <Image
