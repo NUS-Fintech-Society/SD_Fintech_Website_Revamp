@@ -15,16 +15,16 @@ const Landing = () => {
       </div>
       <MaxWidth>
         <div className="flex flex-col pt-[30vh]">
-          <div className=" flex text-6xl">NUS Fintech Society</div>
-          <div className="mt-1 mb-3 text-2xl italic text-[#005792D9]">
+          <div className="text-6xl  xl:text-8xl">NUS Fintech Society</div>
+          <div className="mt-1 mb-3 text-2xl italic text-[#005792D9] xl:text-4xl">
             Ideate. Innovate. Inspire
           </div>
-          <div className="mt-3 flex-row text-xl">
-            <b>Passionate -</b>
+          <div className="my-3 text-xl xl:text-2xl">
+            <b>Passionate &nbsp;&#8212;&nbsp;</b>
             Driving R&D in emerging realms of Blockchain and Machine Learning.
           </div>
-          <div className="flex-row text-xl">
-            <b>Goal Oriented -</b>
+          <div className=" text-xl xl:text-2xl">
+            <b>Goal Oriented &nbsp;&#8212;&nbsp;</b>
             Leading more than 100 members with a strong grasp of their fields.
           </div>
         </div>
