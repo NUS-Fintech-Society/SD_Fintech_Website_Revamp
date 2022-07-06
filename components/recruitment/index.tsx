@@ -1,7 +1,8 @@
+import { Box } from '@chakra-ui/react';
 import { RecruitmentProps } from '@interfaces/recruitment';
 
 const Recruitment = ({ departments }: RecruitmentProps) => {
-  return <div className="">Recruitment</div>;
+  return <Box>Recruitment data</Box>;
 };
 
 export default Recruitment;
