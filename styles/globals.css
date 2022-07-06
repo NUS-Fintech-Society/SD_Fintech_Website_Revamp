@@ -3,3 +3,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .section-my {
+    @apply my-28;
+  }
+
+  .section-title {
+    @apply mb-20 text-center text-h2 font-bold;
+  }
+}
