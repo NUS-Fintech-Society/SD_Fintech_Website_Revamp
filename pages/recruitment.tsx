@@ -19,11 +19,11 @@ const RecruitmentPage: NextPage<RecruitmentData> = (props) => {
 };
 
 export async function getStaticProps() {
-  const { departments } = await fetchRecruitmentData();
+  const { departmentCards } = await fetchRecruitmentData();
 
   return {
     props: {
-      departments,
+      departmentCards,
     },
   };
 }
