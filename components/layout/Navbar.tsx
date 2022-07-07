@@ -4,7 +4,7 @@ import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import MaxWidth from "@components/layout/MaxWidth";
 import Image from "next/image";
 import Link from "next/link";
-import DropDown from "./Dropdown";
+import DropDown from "@components/layout/DropDown";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,14 +15,14 @@ const NavBar = () => {
         <div className="max-w-main flex justify-between mx-auto text-white">
           <div className="font-bold cursor-pointer flex items-center mt-2 bg-white">
             {!isOpen && (
-              <a href={"/"}>
+              <Link href={"/"}>
                 <Image
                   src={"https://fintechsociety.comp.nus.edu.sg/images/SocietyLogo.png"}
                   width={100}
                   height={20}
                   alt={"Fintech Society Logo"}
                 />
-              </a>
+              </Link>
             )}
           </div>
 
@@ -39,12 +39,12 @@ const NavBar = () => {
             }`}
           >
             <li className="md:ml-8 md:my-0 my-7">
-              <a
+              <Link
                 href={"/"}
                 className="hover:text-gray-400 text-white rounded-md px-3 py-1"
               >
-                Home
-              </a>
+                <a>Home</a>
+              </Link>
             </li>
 
             <li className="md:ml-8 md:my-0 my-7">
@@ -52,57 +52,57 @@ const NavBar = () => {
             </li>
 
             <li className="md:ml-8 md:my-0 my-7">
-              <a
+              <Link
                 href={"/content"}
                 className="hover:text-gray-400 text-white rounded-md px-3 py-1"
               >
-                Content
-              </a>
+                <a>Content</a>
+              </Link>
             </li>
 
             <li className="md:ml-8 md:my-0 my-7">
-              <a
+              <Link
                 href={"/events"}
                 className="hover:text-gray-400 text-white rounded-md px-3 py-1"
               >
-                Events
-              </a>
+                <a>Events</a>
+              </Link>
             </li>
 
             <li className="md:ml-8 md:my-0 my-7">
-              <a
+              <Link
                 href={"/recruitment"}
                 className="hover:text-gray-400 text-white rounded-md px-3 py-1"
               >
-                Recruitment
-              </a>
+                <a>Recruitment</a>
+              </Link>
             </li>
 
             <li className="md:ml-8 md:my-0 my-7">
-              <a
+              <Link
                 href={"/faq"}
                 className="hover:text-gray-400 text-white rounded-md px-3 py-1"
               >
-                FAQs
-              </a>
+                <a>FAQs</a>
+              </Link>
             </li>
 
             <li className="md:ml-8 md:my-0 my-7">
-              <a
+              <Link
                 href={"/contact"}
                 className="hover:text-gray-400 text-white rounded-md px-3 py-1"
               >
-                Contact Us
-              </a>
+                <a>Contact Us</a>
+              </Link>
             </li>
 
             <li className="md:ml-8 md:my-0 my-7">
-              <a
+              <Link
                 href={"/login"}
                 className="hover:text-gray-400 text-white rounded-md px-3 py-1"
               >
-                Login
-              </a>
+                <a>Login</a>
+              </Link>
             </li>
           </ul>
         </div>
