@@ -1,18 +1,20 @@
 //type
-import { HomeProps } from "@interfaces/home";
+import { HomeProps } from '@interfaces/home';
 
 //code
-import Milestones from "@components/home/Milestones";
-import Landing from "@components/home/Landing";
-import Journey from "@components/home/Journey";
 
-const Home = ({ partnersImages, journey }: HomeProps) => {
-  console.log(partnersImages);
+import Milestones from '@components/home/Milestones';
+import Landing from '@components/home/Landing';
+import Departments from '@components/home/Departments';
+import Partners from '@components/home/Partners';
+
+const Home = ({ partnersImages, departments }: HomeProps) => {
   return (
     <>
       <Landing />
       <Milestones />
-      <Journey />
+      <Departments departments={departments} />
+      <Partners partnersImages={partnersImages} />
     </>
   );
 };

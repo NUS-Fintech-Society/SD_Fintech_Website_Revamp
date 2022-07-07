@@ -10,7 +10,7 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="sticky top-0 w-[100vw] h-16 bg-primary">
+    <div className="sticky top-0 z-10 h-16 w-[100vw] bg-primary">
       <MaxWidth>
         <div className="max-w-main flex justify-between mx-auto text-white">
           <div className="font-bold cursor-pointer flex items-center mt-2 bg-white">

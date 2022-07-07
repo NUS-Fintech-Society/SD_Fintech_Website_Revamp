@@ -1,13 +1,13 @@
 //type
-import type { NextPage } from "next";
-import { HomeData } from "@data/interface/homeData";
+import type { NextPage } from 'next';
+import { HomeData } from '@data/interface/homeData';
 
 //library
-import Head from "next/head";
+import Head from 'next/head';
 
 //code
-import Home from "@components/home";
-import { fetchHomeData } from "@data/mockFetch";
+import Home from '@components/home';
+import { fetchHomeData } from '@data/mockFetch';
 
 const HomePage: NextPage<HomeData> = (props) => {
   return (
@@ -22,12 +22,11 @@ const HomePage: NextPage<HomeData> = (props) => {
 };
 
 export async function getStaticProps() {
-  const { journey, partnersImages } = await fetchHomeData();
-
+  const { partnersImages, departments } = await fetchHomeData();
   return {
     props: {
-      journey,
       partnersImages,
+      departments,
     },
   };
 }

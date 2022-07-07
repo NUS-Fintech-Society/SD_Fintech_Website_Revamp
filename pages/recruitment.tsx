@@ -1,8 +1,8 @@
-import Recruitment from "@components/recruitment";
-import RecruitmentData from "@data/interface/recruitmentData";
-import { fetchRecruitmentData } from "@data/mockFetch";
-import type { NextPage } from "next";
-import Head from "next/head";
+import Recruitment from '@components/recruitment';
+import RecruitmentData from '@data/interface/recruitmentData';
+import { fetchRecruitmentData } from '@data/mockFetch';
+import type { NextPage } from 'next';
+import Head from 'next/head';
 
 const RecruitmentPage: NextPage<RecruitmentData> = (props) => {
   return (
@@ -17,11 +17,11 @@ const RecruitmentPage: NextPage<RecruitmentData> = (props) => {
 };
 
 export async function getStaticProps() {
-  const { departments } = await fetchRecruitmentData();
+  const { departmentFaq } = await fetchRecruitmentData();
 
   return {
     props: {
-      departments,
+      departmentFaq,
     },
   };
 }
