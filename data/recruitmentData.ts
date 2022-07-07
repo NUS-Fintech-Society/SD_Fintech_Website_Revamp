@@ -1,86 +1,76 @@
 import RecruitmentData from '@data/interface/recruitmentData';
-import {FAQData} from '@data/interface/recruitmentData';
 
-const recruitmentData: RecruitmentData = {'departmentCards' : [
+const recruitmentData: RecruitmentData = {
+  departmentFaq: [
     {
-        coverImage:{
-            src:'https://images.unsplash.com/photo-1617854818583-09e7f077a156?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80',
-            alt:"image1",
+      departmentName: 'Blockchain',
+      questions: [
+        {
+          question:
+            'What skillsets do I need to have to apply to Machine Learning? Can I still apply if I am new to machine learning? ',
+          answer:
+            'Good to know are python, numpy, pytorch and relevant skillsets and a willingness to learn.',
         },
-        name:"Blockchain",
-        description:"desc",
-    },
-    {
-        coverImage:{
-            src:'https://images.unsplash.com/photo-1617854818583-09e7f077a156?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80',
-            alt:"image2",
+        {
+          question:
+            'What skillsets do I need to have to apply to Machine Learning? Can I still apply if I am new to machine learning? ',
+          answer:
+            'Good to know are python, numpy, pytorch and relevant skillsets and a willingness to learn.',
         },
-        name:"Machine Learning",
-        description:"desc",
+      ],
     },
     {
-        coverImage:{
-            src:'https://images.unsplash.com/photo-1617854818583-09e7f077a156?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80',
-            alt:"image3",
+      departmentName: 'Machine Learning',
+      questions: [
+        {
+          question:
+            'What skillsets do I need to have to apply to Machine Learning? Can I still apply if I am new to machine learning? ',
+          answer:
+            'Good to know are python, numpy, pytorch and relevant skillsets and a willingness to learn.',
         },
-        name:"Software Development",
-        description:"desc",
-    },
-    {
-        coverImage:{
-            src:'https://images.unsplash.com/photo-1617854818583-09e7f077a156?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80',
-            alt:"image4",
+        {
+          question:
+            'What skillsets do I need to have to apply to Machine Learning? Can I still apply if I am new to machine learning? ',
+          answer:
+            'Good to know are python, numpy, pytorch and relevant skillsets and a willingness to learn.',
         },
-        name:"Operations - External",
-        description:"desc",
+      ],
     },
     {
-        coverImage:{
-            src:'https://images.unsplash.com/photo-1617854818583-09e7f077a156?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80',
-            alt:"image5",
+      departmentName: 'Software Development',
+      questions: [
+        {
+          question:
+            'What skillsets do I need to have to apply to Machine Learning? Can I still apply if I am new to machine learning? ',
+          answer:
+            'Good to know are python, numpy, pytorch and relevant skillsets and a willingness to learn.',
         },
-        name:"Operations - Internal",
-        description:"desc",
-    },
-]};
-
-const faqData: FAQData = {'departmentsFAQ' :[
-    {
-        departmentName : 'Blockchain',
-        questions: [
-            {
-                question:'Question 1',
-                answer:'Answer 1',
-            }
-        ]
+        {
+          question:
+            'What skillsets do I need to have to apply to Machine Learning? Can I still apply if I am new to machine learning? ',
+          answer:
+            'Good to know are python, numpy, pytorch and relevant skillsets and a willingness to learn.',
+        },
+      ],
     },
     {
-        departmentName : 'Machine Learning',
-        questions: [
-            {
-                question:'Question 2',
-                answer:'Answer 2',
-            }
-        ]
+      departmentName: 'Operations',
+      questions: [
+        {
+          question:
+            'What skillsets do I need to have to apply to Machine Learning? Can I still apply if I am new to machine learning? ',
+          answer:
+            'Good to know are python, numpy, pytorch and relevant skillsets and a willingness to learn.',
+        },
+        {
+          question:
+            'What skillsets do I need to have to apply to Machine Learning? Can I still apply if I am new to machine learning? ',
+          answer:
+            'Good to know are python, numpy, pytorch and relevant skillsets and a willingness to learn.',
+        },
+      ],
     },
-    {
-        departmentName : 'Software Development',
-        questions: [
-            {
-                question:'Question 3',
-                answer:'Answer 3',
-            }
-        ]
-    },
-    {
-        departmentName : 'Operations',
-        questions: [
-            {
-                question:'Question 4',
-                answer:'Answer 4',
-            }
-        ]
-    },
-]}
+  ],
+};
 
 export default recruitmentData;

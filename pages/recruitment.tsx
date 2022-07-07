@@ -4,26 +4,24 @@ import { fetchRecruitmentData } from '@data/mockFetch';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-
-
 const RecruitmentPage: NextPage<RecruitmentData> = (props) => {
   return (
     <>
-      <Recruitment {...props} />
       <Head>
         <title>NUS Fintech Society</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Recruitment {...props} />
     </>
   );
 };
 
 export async function getStaticProps() {
-  const { departmentCards } = await fetchRecruitmentData();
+  const { departmentFaq } = await fetchRecruitmentData();
 
   return {
     props: {
-      departmentCards,
+      departmentFaq,
     },
   };
 }

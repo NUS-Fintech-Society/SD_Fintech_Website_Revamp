@@ -11,12 +11,12 @@ import Landing from '@components/recruitment/Landing';
 import WhoShouldJoin from '@components/recruitment/WhoShouldJoin';
 import Faq from '@components/recruitment/Faq';
 
-const Recruitment = ({ departments }: RecruitmentProps) => {
+const Recruitment = ({ departmentFaq }: RecruitmentProps) => {
   return (
     <>
       <Landing />
       <WhoShouldJoin />
-      <Faq />
+      <Faq departmentFaq={departmentFaq} />
     </>
   );
 };

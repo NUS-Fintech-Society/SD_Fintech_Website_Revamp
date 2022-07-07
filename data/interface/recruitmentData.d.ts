@@ -1,26 +1,22 @@
-interface FAQData{
-    departmentsFAQ : departmentFAQ[];
-}
-
-interface departmentFAQ{
-    departmentName : string;
-    questions : Question[];
-}
+type DepartmentFaq = {
+  departmentName: string;
+  questions: Question[];
+}[];
 
 interface Question {
-    question : string;
-    answer : string;
+  question: string;
+  answer: string;
 }
 
 export default interface RecruitmentData {
-    departmentCards: DepartmentCard[];
+  departmentFaq: DepartmentFaq;
 }
 
-interface DepartmentCard{
-    coverImage: {
-        src: string;
-        alt: string;
-      };
-    name : string;
-    description : string;
+interface DepartmentCard {
+  coverImage: {
+    src: string;
+    alt: string;
+  };
+  name: string;
+  description: string;
 }

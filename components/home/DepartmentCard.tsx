@@ -13,7 +13,7 @@ const DepartmentCard = ({
 }: DepartmentCardProps) => {
   return (
     <Link href={'/departments/' + path}>
-      <a className=" mb-7 grid max-w-sm overflow-hidden rounded-lg bg-gray-300 shadow-lg hover:bg-blue-300">
+      <a className=" group mb-7 grid max-w-sm overflow-hidden rounded-lg bg-gray-300 shadow-lg hover:bg-primary hover:text-white">
         <div className="relative">
           <Image
             src={coverImage.src}
@@ -24,7 +24,9 @@ const DepartmentCard = ({
         </div>
         <div className="m-4">
           <h1 className="mb-5 text-2xl font-semibold">{name}</h1>
-          <p className="text-base text-gray-700">{cardDescription}</p>
+          <p className="text-base text-gray-700 group-hover:text-white">
+            {cardDescription}
+          </p>
         </div>
       </a>
     </Link>

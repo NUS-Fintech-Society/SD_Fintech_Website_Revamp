@@ -1,8 +1,12 @@
 import { Accordion as AccordionWrapper } from '@chakra-ui/react';
 import MaxWidth from '@components/layout/MaxWidth';
-import Accordion from '@components/recruitment/accordion';
+import Accordion from '@components/recruitment/Accordion';
+import QuestionsAndAnswers from '@components/recruitment/QuestionsAndAnswers';
+import { FaqProps } from '@interfaces/recruitment/Faq';
+import { Fragment } from 'react';
 
-const Faq = () => {
+const Faq = ({ departmentFaq }: FaqProps) => {
+  console.log(departmentFaq);
   return (
     <MaxWidth>
       <div className="section-my">
@@ -10,10 +14,17 @@ const Faq = () => {
           Frequently Asked Questions
         </h2>
         <AccordionWrapper className="mx-auto w-[80%]">
-          <Accordion title="Machine Learning">hello</Accordion>
-          <Accordion title="Blockchain">hello</Accordion>
-          <Accordion title="Software Development">hello</Accordion>
-          <Accordion title="Operations">hello</Accordion>
+          <>
+            {departmentFaq.map(({ departmentName, questions }, index) => {
+              return (
+                <Fragment key={index}>
+                  <Accordion title={departmentName}>
+                    <QuestionsAndAnswers questions={questions} />
+                  </Accordion>
+                </Fragment>
+              );
+            })}
+          </>
         </AccordionWrapper>
       </div>
     </MaxWidth>
