@@ -1,3 +1,7 @@
+//type
+import { DropDownProps } from "@interfaces/layout/DropDownProps"
+
+//library
 import {
     Menu,
     MenuButton,
@@ -5,50 +9,38 @@ import {
     MenuItem,
     useDisclosure,
   } from "@chakra-ui/react";
-  
-  const DropDown = () => {
+import Link from "next/link";
+import { Fragment } from 'react';
+
+//code
+const DropDown = ({
+    items,
+    title
+  }: DropDownProps) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
+
     return (
-      <div className="hover:text-gray-400 rounded-md px-3 py-1">
+      <div className="hover:text-gray-400 rounded-md">
         <Menu isOpen={isOpen}>
           <MenuButton onMouseEnter={onOpen} onMouseLeave={onClose}>
-            Department
+            {title}
           </MenuButton>
   
           <MenuList
             onMouseEnter={onOpen}
             onMouseLeave={onClose}
-            style={{ marginTop: "5px", marginLeft: "-15px" }}
+            style={{ marginTop: "5px", marginLeft: "-10px"}}
           >
             <div className="text-black">
-              <MenuItem
-                as="a"
-                href={"/departments/operations"}
-                _hover={{ bg: "blue.100" }}
-              >
-                Operations
-              </MenuItem>
-              <MenuItem
-                as="a"
-                href={"/departments/machinelearning"}
-                _hover={{ bg: "blue.100" }}
-              >
-                Machine Learning
-              </MenuItem>
-              <MenuItem
-                as="a"
-                href={"/departments/blockchain"}
-                _hover={{ bg: "blue.100" }}
-              >
-                Blockchain
-              </MenuItem>
-              <MenuItem
-                as="a"
-                href={"/departments/software"}
-                _hover={{ bg: "blue.100" }}
-              >
-                Software
-              </MenuItem>
+              {items.map((item, index) => (
+                <Fragment key={index}>
+                  <MenuItem _hover={{ bg: "blue.100" }}>
+                    <Link href={item[1]}>
+                      <a>{item[0]}</a>
+                    </Link>
+                  </MenuItem>
+                </Fragment>)
+              )}
             </div>
           </MenuList>
         </Menu>
