@@ -138,71 +138,71 @@ const homeData: HomeData = {
   partnersImages: [
     {
       alt: 'AlphaLab Logo',
-      src: '/static/images/partnerLogos/alphalab.png',
+      src: '/images/home/partnerLogos/alphalab.png',
     },
     {
       alt: 'Bybit Logo',
-      src: '/static/images/partnerLogos/bybit.png',
+      src: '/images/home/partnerLogos/bybit.png',
     },
     {
       alt: 'DeFiance Capital Logo',
-      src: '/static/images/partnerLogos/defiancecap.png',
+      src: '/images/home/partnerLogos/defiancecap.png',
     },
     {
       alt: 'Futu Logo',
-      src: '/static/images/partnerLogos/futu.png',
+      src: '/images/home/partnerLogos/futu.png',
     },
     {
       alt: 'Helicap Logo',
-      src: '/static/images/partnerLogos/helicap.png',
+      src: '/images/home/partnerLogos/helicap.png',
     },
     {
       alt: 'Hg Exchange Logo',
-      src: '/static/images/partnerLogos/hgexchange.png',
+      src: '/images/home/partnerLogos/hgexchange.png',
     },
     {
       alt: 'Messari Logo',
-      src: '/static/images/partnerLogos/messari.png',
+      src: '/images/home/partnerLogos/messari.png',
     },
     {
       alt: 'moledao Logo',
-      src: '/static/images/partnerLogos/moledao.png',
+      src: '/images/home/partnerLogos/moledao.png',
     },
     {
       alt: 'Octava Logo',
-      src: '/static/images/partnerLogos/octava.png',
+      src: '/images/home/partnerLogos/octava.png',
     },
     {
       alt: 'OIO Logo',
-      src: '/static/images/partnerLogos/oio.png',
+      src: '/images/home/partnerLogos/oio.png',
     },
     {
       alt: 'Revolut Logo',
-      src: '/static/images/partnerLogos/revolut.png',
+      src: '/images/home/partnerLogos/revolut.png',
     },
     {
       alt: 'Ripple Logo',
-      src: '/static/images/partnerLogos/ripple.png',
+      src: '/images/home/partnerLogos/ripple.png',
     },
     {
       alt: 'SeaMoney Logo',
-      src: '/static/images/partnerLogos/seamoney.png',
+      src: '/images/home/partnerLogos/seamoney.png',
     },
     {
       alt: 'Spenmo Logo',
-      src: '/static/images/partnerLogos/spenmo.png',
+      src: '/images/home/partnerLogos/spenmo.png',
     },
     {
       alt: 'Startbahn Logo',
-      src: '/static/images/partnerLogos/startbahn.png',
+      src: '/images/home/partnerLogos/startbahn.png',
     },
     {
       alt: 'StashAway Logo',
-      src: '/static/images/partnerLogos/stashaway.png',
+      src: '/images/home/partnerLogos/stashaway.png',
     },
     {
       alt: 'Stellar Logo',
-      src: '/static/images/partnerLogos/stellar.png',
+      src: '/images/home/partnerLogos/stellar.png',
     },
   ],
 };

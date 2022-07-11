@@ -10,7 +10,7 @@ const Footer = () => {
       <MaxWidth>
         <div className="flex h-72 flex-col  items-center gap-y-5 py-10 sm:flex-row sm:justify-between sm:gap-y-0">
           <Image
-            src="/static/images/fintechsoc-logo.png"
+            src="/images/fintechsoc-logo.png"
             alt="NUS FinTech Society Logo"
             width="227"
             height="116"
