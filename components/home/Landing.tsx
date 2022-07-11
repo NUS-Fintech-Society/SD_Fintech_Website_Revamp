@@ -6,7 +6,7 @@ const Landing = () => {
     <div className="relative h-[calc(100vh-64px)] min-h-[400px] w-screen">
       <div className="absolute -z-10 h-full w-full overflow-hidden">
         <Image
-          src="/landing.jpeg"
+          src="/images/home/landing.jpeg"
           alt="Insert Photo Here"
           layout="fill"
           objectFit="cover"

@@ -1,18 +1,18 @@
-// type
-import { PartnersProps } from '@interfaces/home/partners';
+//type
+import { PartnersProps } from '@interfaces/home/Partners';
 
-// library
+//library
 import { Fragment } from 'react';
 import Image from 'next/image';
 
-// code
+//code
 import MaxWidth from '@components/layout/MaxWidth';
 
 const Partners = ({ partnersImages }: PartnersProps) => {
   return (
     <MaxWidth>
-      <div className=" section-my ">
-        <div className="section-title ">Our Partners</div>
+      <div className="section-my">
+        <div className="section-title">Our Partners</div>
         <div className="flex flex-wrap justify-center gap-16">
           {partnersImages.map(({ src, alt }, index) => {
             return (
