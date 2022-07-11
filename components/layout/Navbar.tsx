@@ -15,7 +15,7 @@ const DEPARTMENTS_ITEMS = [
 
 const ABOUT_US_ITEMS = [
   ['About Us', '/about'],
-  ['The EXCO', '/about/exco'],
+  ['The EXCO', '/exco'],
 ];
 
 const NavBar = () => {
