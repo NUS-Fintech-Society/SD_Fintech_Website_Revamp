@@ -6,7 +6,6 @@ import { FaqProps } from '@interfaces/recruitment/Faq';
 import { Fragment } from 'react';
 
 const Faq = ({ departmentFaq }: FaqProps) => {
-  console.log(departmentFaq);
   return (
     <MaxWidth>
       <div className="section-my">

@@ -3,7 +3,7 @@ import { LayoutProps } from '@interfaces/layout';
 import Footer from './Footer';
 
 const Layout = ({ children }: LayoutProps) => {
-  const overWriteChakraTheme = 'font-primary overflow-x-hidden';
+  const overWriteChakraTheme = 'font-primary ';
   return (
     <div className={overWriteChakraTheme}>
       <NavBar />
