@@ -1,4 +1,5 @@
 //type
+import ContactForm from '@components/contact/ContactForm';
 import Landing from '@components/contact/landing';
 
 //code
