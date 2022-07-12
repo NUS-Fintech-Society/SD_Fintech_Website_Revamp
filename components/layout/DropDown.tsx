@@ -13,7 +13,7 @@ import Link from 'next/link';
 import { Fragment } from 'react';
 
 //code
-const DropDown = ({ items, title }: DropDownProps) => {
+const DropDown = ({ items, title, handleCloseNav }: DropDownProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -37,7 +37,7 @@ const DropDown = ({ items, title }: DropDownProps) => {
               <Fragment key={index}>
                 <MenuItem _hover={{ bg: 'blue.100' }}>
                   <Link href={item[1]}>
-                    <a>{item[0]}</a>
+                    <a onClick={handleCloseNav}>{item[0]}</a>
                   </Link>
                 </MenuItem>
               </Fragment>
