@@ -1,10 +1,7 @@
-//type
-
 //code
 import Info from '@components/contact/Info';
-import MainForm from '@components/contact/MainForm';
 import MaxWidth from '@components/layout/MaxWidth';
-import Image from 'next/image';
+import Form from '@components/contact/Form';
 
 const ContactForm = () => {
   return (
@@ -17,7 +14,7 @@ const ContactForm = () => {
         </div>
         <div className="w-full lg:order-1 lg:w-1/2">
           <div className="lg:w-5/6">
-            <MainForm />
+            <Form />
           </div>
         </div>
       </div>

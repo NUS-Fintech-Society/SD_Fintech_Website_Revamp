@@ -5,11 +5,11 @@ import type { NextPage } from 'next';
 //library
 import Head from 'next/head';
 
-const HomePage: NextPage = () => {
+const ContactUs: NextPage = () => {
   return (
     <>
       <Head>
-        <title>NUS Fintech Society</title>
+        <title>NUS Fintech Society: Contact Us</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Contact />
@@ -17,4 +17,4 @@ const HomePage: NextPage = () => {
   );
 };
 
-export default HomePage;
+export default ContactUs;
