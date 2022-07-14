@@ -13,7 +13,7 @@ type AccordionProps = {
 
 const Accordion = ({ title, children }: AccordionProps) => {
   return (
-    <AccordionItem borderTop="0" marginY="4">
+    <AccordionItem borderTop="0" marginY="4" className="overflow-hidden  ">
       <h2>
         <AccordionButton
           _hover={{
@@ -24,15 +24,17 @@ const Accordion = ({ title, children }: AccordionProps) => {
           borderTop="1px"
           borderTopRadius="lg"
         >
-          <Box flex="1" textAlign="left" className=" text-3xl">
+          <Box
+            flex="1"
+            textAlign="left"
+            className="text-xl md:text-2xl lg:text-3xl"
+          >
             {title}
           </Box>
           <AccordionIcon />
         </AccordionButton>
       </h2>
-      <AccordionPanel className=" rounded-b-lg bg-[#f6f6f6]">
-        {children}
-      </AccordionPanel>
+      <AccordionPanel className="  bg-[#f6f6f6]">{children}</AccordionPanel>
     </AccordionItem>
   );
 };

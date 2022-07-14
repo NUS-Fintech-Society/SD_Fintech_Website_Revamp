@@ -21,6 +21,10 @@ const ABOUT_US_ITEMS = [
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleCloseNav = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div className="sticky top-0 z-10  w-[100vw] bg-primary">
       <MaxWidth>
@@ -57,16 +61,24 @@ const NavBar = () => {
           >
             <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
               <Link href={'/'} className="rounded-md px-3 py-1 text-white">
-                <a>Home</a>
+                <a onClick={handleCloseNav}>Home</a>
               </Link>
             </li>
 
             <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
-              <DropDown title={'About Us'} items={ABOUT_US_ITEMS} />
+              <DropDown
+                handleCloseNav={handleCloseNav}
+                title={'About Us'}
+                items={ABOUT_US_ITEMS}
+              />
             </li>
 
             <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
-              <DropDown title={'Departments'} items={DEPARTMENTS_ITEMS} />
+              <DropDown
+                handleCloseNav={handleCloseNav}
+                title={'Departments'}
+                items={DEPARTMENTS_ITEMS}
+              />
             </li>
 
             <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
@@ -74,7 +86,7 @@ const NavBar = () => {
                 href={'/events'}
                 className="rounded-md px-3 py-1 text-white"
               >
-                <a>Events</a>
+                <a onClick={handleCloseNav}>Events</a>
               </Link>
             </li>
 
@@ -83,16 +95,16 @@ const NavBar = () => {
                 href={'/recruitment'}
                 className="rounded-md px-3 py-1 text-white"
               >
-                <a>Recruiment</a>
+                <a onClick={handleCloseNav}>Recruiment</a>
               </Link>
             </li>
 
             <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
               <Link
-                href={'/contact'}
+                href={'/contact-us'}
                 className="rounded-md px-3 py-1 text-white"
               >
-                <a>Contact Us</a>
+                <a onClick={handleCloseNav}>Contact Us</a>
               </Link>
             </li>
           </ul>
