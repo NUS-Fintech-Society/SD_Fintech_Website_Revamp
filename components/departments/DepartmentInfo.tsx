@@ -2,7 +2,6 @@
 import { DepartmentInfoProps } from '@interfaces/departments/DepartmentInfo'
 
 //library
-import { StarIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
 import { Fragment } from 'react';
 

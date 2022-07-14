@@ -1,6 +1,5 @@
 //type
 import { ProjectContentProps } from '@interfaces/departments/ProjectContent';
-import { ImageError } from 'next/dist/server/image-optimizer';
 
 //library
 import Image from 'next/image';
