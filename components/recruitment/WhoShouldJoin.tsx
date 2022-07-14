@@ -3,7 +3,7 @@ import MaxWidth from '@components/layout/MaxWidth';
 const WhoShouldJoin = () => {
   return (
     <MaxWidth>
-      <div className="section-my ">
+      <div className="section-my pb-0 ">
         <h2 className=" mb-20 text-2xl font-bold lg:text-4xl">
           Who Should Join Us?
         </h2>

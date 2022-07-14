@@ -12,13 +12,13 @@ const Faq = ({ departmentFaq }: FaqProps) => {
         <h2 className="mb-20 text-2xl font-bold lg:text-4xl">
           Frequently Asked Questions
         </h2>
-        <AccordionWrapper className="mx-auto w-[80%]">
+        <AccordionWrapper className="mx-auto " allowMultiple>
           <>
-            {departmentFaq.map(({ departmentName, questions }, index) => {
+            {departmentFaq.map(({ departmentName, questions }) => {
               return (
-                <Fragment key={index}>
+                <Fragment key={departmentName}>
                   <Accordion title={departmentName}>
-                    <QuestionsAndAnswers questions={questions} />
+                    <QuestionsAndAnswers questions={questions} />,
                   </Accordion>
                 </Fragment>
               );

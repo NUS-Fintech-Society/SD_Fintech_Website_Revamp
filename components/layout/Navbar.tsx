@@ -23,7 +23,7 @@ const NavBar = () => {
 
   const handleCloseNav = () => {
     setIsOpen(false);
-  }
+  };
 
   return (
     <div className="sticky top-0 z-10  w-[100vw] bg-primary">
@@ -66,11 +66,19 @@ const NavBar = () => {
             </li>
 
             <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
-              <DropDown handleCloseNav={handleCloseNav} title={'About Us'} items={ABOUT_US_ITEMS} />
+              <DropDown
+                handleCloseNav={handleCloseNav}
+                title={'About Us'}
+                items={ABOUT_US_ITEMS}
+              />
             </li>
 
             <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
-              <DropDown handleCloseNav={handleCloseNav} title={'Departments'} items={DEPARTMENTS_ITEMS} />
+              <DropDown
+                handleCloseNav={handleCloseNav}
+                title={'Departments'}
+                items={DEPARTMENTS_ITEMS}
+              />
             </li>
 
             <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
@@ -93,7 +101,7 @@ const NavBar = () => {
 
             <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
               <Link
-                href={'/contact'}
+                href={'/contact-us'}
                 className="rounded-md px-3 py-1 text-white"
               >
                 <a onClick={handleCloseNav}>Contact Us</a>

@@ -1,10 +1,5 @@
-import { Accordion as AccordionWrapper } from '@chakra-ui/react';
-import MaxWidth from '@components/layout/MaxWidth';
-import Accordion from '@components/recruitment/Accordion';
 import { Question } from '@data/interface/recruitmentData';
-import { FaqProps } from '@interfaces/recruitment/Faq';
 import { QuestionsAndAnswersProps } from '@interfaces/recruitment/QuestionsAndAnswers';
-import { Fragment } from 'react';
 
 const QuestionsAndAnswers = ({ questions }: QuestionsAndAnswersProps) => {
   return (
