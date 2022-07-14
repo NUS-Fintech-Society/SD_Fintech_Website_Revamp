@@ -16,12 +16,8 @@
     "framer-motion": "^6.3.12",
     "next": "12.1.6",
     "react": "18.2.0",
-<<<<<<< HEAD
     "react-dom": "18.2.0",
     "react-responsive-carousel": "^3.2.23"
-=======
-    "react-dom": "18.2.0"
->>>>>>> a216c91 (Finish the contact form)
   },
   "devDependencies": {
     "@types/node": "18.0.0",
