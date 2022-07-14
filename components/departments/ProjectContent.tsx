@@ -1,37 +1,51 @@
 //type
 import { ProjectContentProps } from '@interfaces/departments/ProjectContent';
+import { ImageError } from 'next/dist/server/image-optimizer';
 
 //library
 import Image from 'next/image';
 import { Fragment } from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-const ProjectContent = ({ projectImage, members, collaborations }: ProjectContentProps) => {
+//code
+const ProjectContent = ({ description, projectImage, members, collaborations }: ProjectContentProps) => {    
+    
     return (
         <div className="m-5">
             <div className="flex flex-wrap justify-between">
-                <div className="xl:w-1/2 xl:mr-36">
-                    <p className="text-md md:text-lg lg:text-xl text-slate-400">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        <br/><br/>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
+                <div className="xl:w-1/2 ">
+                    
+                        {description.split('/n').map(paragraph => (
+                            <p className="text-md md:text-lg lg:text-xl text-slate-400">
+                                <br/>{paragraph}
+                            </p>
+                        ))}
+                    
                 </div>
-                <div className="mt-5">
-                    <Image 
-                        src={projectImage.src}
-                        alt={projectImage.alt}
-                        height={500}
-                        width={400}
-                        className="rounded-lg shadow-lg"
-                    />
+                <div className="mt-5 lg:w-1/2">
+                    <Carousel
+                        showStatus={false}
+                        showArrows={false}
+                        autoPlay
+                        swipeable
+                        emulateTouch
+                        infiniteLoop={true}
+                        dynamicHeight={false}
+                        className="lg:ml-16"
+                    >  
+                        {
+                            projectImage.map(image => (
+                                <Image 
+                                src={image.src}
+                                alt={image.alt}
+                                height={image.height}
+                                width={image.width}
+                                className="rounded-lg shadow-lg"
+                            />
+                            ))
+                        }
+                    </Carousel>   
                 </div>
             </div>
             <div className="flex mt-7">

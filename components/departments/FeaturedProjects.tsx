@@ -2,7 +2,8 @@
 import { FeaturedProjectsProps } from '@interfaces/departments/FeaturedProjectsProps'
 
 //library
-import { Select } from '@chakra-ui/react'
+import { Select } from '@chakra-ui/react';
+import { TriangleDownIcon } from '@chakra-ui/icons';
 import { Fragment, useState, useEffect } from 'react';
 import { Accordion as AccordionWrapper } from '@chakra-ui/react';
 
@@ -28,17 +29,18 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
     return (
         <MaxWidth>
             <div className="text-xl md:text-2xl lg:text-3xl flex flex-wrap justify-between my-10">
-                <h2 className="font-semibold mb-3 mr-5">Featured Projects</h2>
+                <h2 className="font-semibold mb-3 mr-5">Featured Projects</h2> 
                 <Select 
+                    icon={<TriangleDownIcon />}
                     placeholder='Select Year' 
                     width={{base: 36, md: 64}} 
                     size={{base: 'sm', md: 'md'}}
                     onChange={handleChangeYear}
                 >     
-                    <option value='22/23'>AY 22/23</option>
-                    <option value='21/22'>AY 21/22</option>
-                    <option value='20/21'>AY 20/21</option>                  
-                </Select>
+                    <option value='22/23'>2022/2023</option>
+                    <option value='21/22'>2021/2022</option>
+                    <option value='20/21'>2020/2021</option>                  
+                </Select>              
             </div>
             <div className="mb-10">
                 <AccordionWrapper 
@@ -47,11 +49,12 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
                     
                     className="mx-auto"
                 >
-                    {projectsByYear.map(({ projectName, projectImage, members, collaborations }, index) => {
+                    {projectsByYear.map(({ projectName, description, projectImage, members, collaborations }, index) => {
                         return (
                             <Fragment key={index}>
                                 <Accordion title={projectName}>
                                     <ProjectContent 
+                                        description={description}
                                         projectImage={projectImage}
                                         members={members}
                                         collaborations={collaborations}

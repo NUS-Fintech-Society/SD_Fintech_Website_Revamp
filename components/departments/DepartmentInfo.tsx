@@ -9,33 +9,37 @@ import { Fragment } from 'react';
 // code
 import MaxWidth from '@components/layout/MaxWidth';
 
-const DepartmentInfo = ({ name, directors, roles }: DepartmentInfoProps ) => {
+const DepartmentInfo = ({ name, logo, purpose, vision, directors, roles }: DepartmentInfoProps ) => {
     return (
         <MaxWidth>
             <div className="flex flex-wrap text-3xl md:text-4xl lg:text-5xl lg:text-left font-semibold mt-12 lg:mt-24">
-                {/*StarIcon is a placeholder icon*/}
-                <StarIcon className="mr-7"/>
-                <h1>{`${name} Department`}</h1>
+                <Image 
+                    src={logo.src}
+                    alt={logo.alt}
+                    height={90}
+                    width={90}
+                />
+                <h1 className="ml-2 mt-6 md:mt-4 md:ml-4">{`${name} Department`}</h1>
             </div>
             <div className="flex flex-wrap mt-12 lg:mt-24">
                 <div className="text-xl md:text-2xl lg:text-3xl w-11/12 md:w-4/5 lg:w-3/5 lg:mr-36">
                     <div className="mb-10 lg:mb-16">
                         <h2 className="font-semibold mb-3">Purpose</h2>
-                        <p className="text-md md:text-lg lg:text-xl text-slate-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua.
+                        <p className="text-sm md:text-lg lg:text-xl text-slate-400">
+                            {purpose}
                         </p>
                     </div>
                     
                     <div className="mb-10 lg:mb-16">
                         <h2 className="font-semibold mb-3">Vision</h2>
-                        <p className="text-md md:text-lg lg:text-xl text-slate-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua.
+                        <p className="text-sm md:text-lg lg:text-xl text-slate-400">
+                            {vision}
                         </p>
                     </div>
 
                     <div className="mb-10 lg:mb-16">
                         <h2 className="font-semibold mb-3">Roles</h2>
-                        <ul className="text-md md:text-lg lg:text-xl text-slate-400 list-disc ml-5">
+                        <ul className="text-sm md:text-lg lg:text-xl text-slate-400 list-disc ml-5">
                             {roles.map((role, index) => (  
                                 <li key={index}>{role}</li>  
                             ))}
