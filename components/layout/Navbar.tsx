@@ -26,7 +26,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="sticky top-0 z-10  w-[100vw] bg-primary">
+    <div className="fixed top-0 z-10  w-[100vw] bg-primary">
       <MaxWidth>
         <div className="flex justify-between py-3 text-white">
           <div className="mt-2 flex cursor-pointer items-center font-bold">

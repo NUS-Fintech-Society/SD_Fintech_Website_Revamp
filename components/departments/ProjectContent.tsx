@@ -27,7 +27,8 @@ const ProjectContent = ({
         <div className="mt-5 lg:w-1/2">
           <Carousel
             showStatus={false}
-            showArrows={false}
+            showArrows={true}
+            showThumbs={false}
             autoPlay
             swipeable
             emulateTouch
@@ -36,28 +37,30 @@ const ProjectContent = ({
             className="lg:ml-16"
           >
             {projectImage.map((image) => (
-              <Image
-                src={image.src}
-                alt={image.alt}
-                height={image.height}
-                width={image.width}
-                className="rounded-lg shadow-lg"
-              />
+              <Fragment key={image.src}>
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  height={image.height}
+                  width={image.width}
+                  className="rounded-lg shadow-lg"
+                />
+              </Fragment>
             ))}
           </Carousel>
         </div>
       </div>
       <div className="mt-7 flex">
-        <div className="rounded-lg border-2 border-blue-300">
+        <div className="rounded-lg  border-primary">
           <h2 className="my-2 mx-5 text-lg font-semibold md:text-xl lg:text-2xl ">
             Members
           </h2>
         </div>
       </div>
-      <div className="mt-3 flex flex-wrap rounded-lg border-2 border-blue-300">
+      <div className="mt-3 flex flex-wrap rounded-lg border-[1px] border-gray-600">
         {members.map(({ src, alt, memberName }, index) => (
-          <Fragment key={index}>
-            <div className="md:text-md m-5 flex flex-wrap text-sm text-slate-400 lg:text-xl">
+          <Fragment key={memberName}>
+            <div className=" m-5 flex flex-wrap text-sm  lg:text-xl">
               <Image
                 src={src}
                 alt={alt}
@@ -72,16 +75,16 @@ const ProjectContent = ({
       </div>
 
       <div className="mt-7 flex">
-        <div className="rounded-lg border-2 border-blue-300">
+        <div className="rounded-lg  border-primary">
           <h2 className="my-2 mx-5 text-lg font-semibold md:text-xl lg:text-2xl ">
             Collaborations
           </h2>
         </div>
       </div>
-      <div className="mt-3 flex flex-wrap rounded-lg border-2 border-blue-300">
+      <div className="mt-3 flex flex-wrap rounded-lg border-[1px] border-gray-600 ">
         {collaborations.map(({ src, alt, companyName }, index) => (
-          <Fragment key={index}>
-            <div className="md:text-md m-5 flex flex-wrap text-sm text-slate-400 lg:text-xl">
+          <Fragment key={companyName}>
+            <div className=" m-5 flex flex-wrap text-sm  lg:text-xl">
               <Image
                 src={src}
                 alt={alt}

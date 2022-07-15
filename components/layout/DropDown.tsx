@@ -30,14 +30,16 @@ const DropDown = ({ items, title, handleCloseNav }: DropDownProps) => {
         <MenuList
           onMouseEnter={onOpen}
           onMouseLeave={onClose}
-          style={{ marginTop: '5px', marginLeft: '-10px' }}
+          style={{ marginTop: '5px' }}
         >
           <div className="text-black">
             {items.map((item, index) => (
               <Fragment key={index}>
-                <MenuItem _hover={{ bg: 'blue.100' }}>
+                <MenuItem _hover={{ bg: 'blue.100' }} padding={0}>
                   <Link href={item[1]}>
-                    <a onClick={handleCloseNav}>{item[0]}</a>
+                    <a onClick={handleCloseNav} className=" h-full w-full p-2">
+                      {item[0]}
+                    </a>
                   </Link>
                 </MenuItem>
               </Fragment>
