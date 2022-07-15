@@ -1,12 +1,13 @@
-import { ExcoProps } from '@interfaces/exco';
+//import { ExcoProps } from '@interfaces/exco';
 import TopBanner from '@components/exco/topBanner';
 import Hierarchy from '@components/exco/hierarchy';
+import ExcoProps from '@interfaces/exco/exco'
 
-const Exco = ({departmentExcos} : ExcoProps) => {
+const Exco = ({categories} : ExcoProps) => {
     return (
         <>
             <TopBanner/>
-            <Hierarchy departmentExcos={departmentExcos} />
+            <Hierarchy categories={categories} />
         </>
     )
 }

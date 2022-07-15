@@ -17,11 +17,11 @@ const ExcoPage : NextPage<ExcoData> = (props) => {
 }
 
 export async function getStaticProps(){
-    const {departmentExcos} = await fetchExcoData();
+    const {categories} = await fetchExcoData();
     
     return {
         props: {
-            departmentExcos,
+            categories,
         }
     }
 }

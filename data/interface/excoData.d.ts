@@ -1,13 +1,18 @@
 interface ExcoData{
-    departmentExcos: DepartmentExco[];
+    categories: Category[];
 }
 
-interface DepartmentExco{
-    department: string;
+export interface Category{
+    header: string;
+    subcategories: SubCategory[];
+}
+
+interface SubCategory{
+    header: string;
     excos: Exco[];
 }
 
-interface Exco{
+export interface Exco{
     role: string;
     designation: string;
     name: string;
