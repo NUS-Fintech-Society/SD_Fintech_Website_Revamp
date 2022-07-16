@@ -47,8 +47,8 @@ const DepartmentInfo = ({
           <h2 className=" pb-3  text-2xl font-semibold lg:text-4xl">
             Co-Directors
           </h2>
-          {directors.map((director, index) => (
-            <Fragment key={index}>
+          {directors.map((director) => (
+            <Fragment key={director.src}>
               <div className="my-7 flex flex-wrap">
                 <Image
                   src={director.src}

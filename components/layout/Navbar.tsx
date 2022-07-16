@@ -6,11 +6,11 @@ import Link from 'next/link';
 import DropDown from '@components/layout/DropDown';
 
 const DEPARTMENTS_ITEMS = [
-  ['Machine Learning', '/departments/machinelearning'],
+  ['Machine Learning', '/departments/machine-learning'],
   ['Blockchain', '/departments/blockchain'],
   ['Software Development', '/departments/software'],
-  ['Operations (Internal)', '/departments/operationsinternal'],
-  ['Operations (External)', '/departments/operationsexternal'],
+  ['Operations (Internal)', '/departments/operations-internal'],
+  ['Operations (External)', '/departments/operations-external'],
 ];
 
 const ABOUT_US_ITEMS = [
@@ -26,9 +26,9 @@ const NavBar = () => {
   };
 
   return (
-    <div className="fixed top-0 z-10  w-[100vw] bg-primary">
+    <nav className="fixed top-0 z-10  w-[100vw] bg-primary">
       <MaxWidth>
-        <div className="flex justify-between py-3 text-white">
+        <div className="flex items-center justify-between py-1 text-white">
           <div className="mt-2 flex cursor-pointer items-center font-bold">
             {!isOpen && (
               <Link href={'/'}>
@@ -36,7 +36,7 @@ const NavBar = () => {
                   src="/images/fintechsoc-logo.png"
                   alt="NUS FinTech Society Logo"
                   width="130"
-                  height="56"
+                  height="58"
                   layout="fixed"
                 />
               </Link>
@@ -55,9 +55,10 @@ const NavBar = () => {
           </div>
 
           <ul
-            className={`absolute left-0 z-[-1] mt-5 w-full bg-primary pb-5 pl-9 transition-all ease-in 
+            className={`fixed left-0 z-[-1]  w-full bg-primary pt-10 pb-5 pl-9 transition-all duration-100 ease-in lg:pt-0
+                    ${isOpen ? 'top-0 ' : 'top-[-700px]'}
                         lg:static lg:z-auto lg:mt-0 lg:flex lg:w-auto lg:items-center lg:pb-0 
-                        lg:pl-0 ${isOpen ? 'top-17 ' : 'top-[-490px]'}`}
+                        lg:pl-0`}
           >
             <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
               <Link href={'/'} className="rounded-md px-3 py-1 text-white">
@@ -65,20 +66,58 @@ const NavBar = () => {
               </Link>
             </li>
 
-            <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
-              <DropDown
-                handleCloseNav={handleCloseNav}
-                title={'About Us'}
-                items={ABOUT_US_ITEMS}
-              />
+            <li className="my-7  md:my-0 md:ml-8 md:py-3 lg:py-1">
+              <div className="lg:hidden">
+                <div className="rounded-md ">About</div>
+                <ul>
+                  {ABOUT_US_ITEMS.map((item) => (
+                    <li key={item[1]} className="my-4 ml-3 hover:text-gray-400">
+                      <Link href={item[1]}>
+                        <a
+                          onClick={handleCloseNav}
+                          className=" h-full w-full p-2"
+                        >
+                          {item[0]}
+                        </a>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className=" hidden lg:block">
+                <DropDown
+                  handleCloseNav={handleCloseNav}
+                  title={'About'}
+                  items={ABOUT_US_ITEMS}
+                />
+              </div>
             </li>
 
-            <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
-              <DropDown
-                handleCloseNav={handleCloseNav}
-                title={'Departments'}
-                items={DEPARTMENTS_ITEMS}
-              />
+            <li className="my-7  md:my-0 md:ml-8 md:py-3 lg:py-1">
+              <div className="lg:hidden">
+                <div className="rounded-md ">Departments</div>
+                <ul>
+                  {DEPARTMENTS_ITEMS.map((item) => (
+                    <li key={item[1]} className="my-4 ml-3 hover:text-gray-400">
+                      <Link href={item[1]}>
+                        <a
+                          onClick={handleCloseNav}
+                          className=" h-full w-full p-2"
+                        >
+                          {item[0]}
+                        </a>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className=" hidden lg:block">
+                <DropDown
+                  handleCloseNav={handleCloseNav}
+                  title={'Departments'}
+                  items={DEPARTMENTS_ITEMS}
+                />
+              </div>
             </li>
 
             <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
@@ -110,7 +149,7 @@ const NavBar = () => {
           </ul>
         </div>
       </MaxWidth>
-    </div>
+    </nav>
   );
 };
 

@@ -4,7 +4,7 @@ const departmentsData: DepartmentsData = {
   departments: [
     {
       name: 'Machine Learning',
-      path: 'machinelearning',
+      path: 'machine-learning',
       logo: {
         src: '/images/departments/departmentLogos/Machine-Learning-logo.png',
         alt: 'ML logo',
@@ -475,9 +475,9 @@ const departmentsData: DepartmentsData = {
     },
     {
       name: 'Operations (Internal)',
-      path: 'operationsinternal',
+      path: 'operations-internal',
       logo: {
-        src: '/images/departments/departmentLogos/Blockchain-Logo.png',
+        src: '/images/departments/departmentLogos/Internal-Op-Logo.png',
         alt: 'Ops Internal Logo',
       },
       purpose: 'To be filled',
@@ -580,9 +580,9 @@ const departmentsData: DepartmentsData = {
     },
     {
       name: 'Operations (External)',
-      path: 'operationsexternal',
+      path: 'operations-external',
       logo: {
-        src: '/images/departments/departmentLogos/Blockchain-Logo.png',
+        src: '/images/departments/departmentLogos/External-Op-Logo.png',
         alt: 'Ops External Logo',
       },
       purpose: 'To be filled',

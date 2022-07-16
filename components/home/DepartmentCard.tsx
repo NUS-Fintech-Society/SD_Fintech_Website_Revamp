@@ -13,21 +13,25 @@ const DepartmentCard = ({
 }: DepartmentCardProps) => {
   return (
     <Link href={'/departments/' + path}>
-      <a className=" group mb-7 grid max-w-sm overflow-hidden rounded-lg bg-gray-300 shadow-lg hover:bg-primary hover:text-white">
-        <div className="relative">
+      <a className="  group  basis-[320px] rounded-lg bg-[#efefef] shadow-lg hover:text-white ">
+        <div className="flex justify-center py-16">
           <Image
             src={coverImage.src}
             alt={coverImage.alt}
-            height={320}
-            width={384}
+            height={120}
+            width={116}
+            layout="intrinsic"
+            style={{
+              margin: 'auto',
+            }}
           />
         </div>
-        <div className="m-4">
-          <h1 className="mb-5 text-2xl font-semibold">{name}</h1>
-          <p className="text-base text-gray-700 group-hover:text-white">
+        <h1 className="h-[162px] rounded-b-lg bg-gray-300 p-10 text-center text-2xl font-semibold group-hover:bg-primary lg:text-3xl">
+          {name}
+        </h1>
+        {/* <p className="text-base text-gray-700 group-hover:text-white">
             {cardDescription}
-          </p>
-        </div>
+          </p> */}
       </a>
     </Link>
   );

@@ -58,7 +58,7 @@ const ProjectContent = ({
         </div>
       </div>
       <div className="mt-3 flex flex-wrap rounded-lg border-[1px] border-gray-600">
-        {members.map(({ src, alt, memberName }, index) => (
+        {members.map(({ src, alt, memberName }) => (
           <Fragment key={memberName}>
             <div className=" m-5 flex flex-wrap text-sm  lg:text-xl">
               <Image

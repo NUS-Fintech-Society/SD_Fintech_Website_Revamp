@@ -24,7 +24,7 @@ const Departments = ({
         directors={directors}
         roles={roles}
       />
-      <FeaturedProjects projects={projects} />
+      <FeaturedProjects key={name} projects={projects} />
     </>
   );
 };

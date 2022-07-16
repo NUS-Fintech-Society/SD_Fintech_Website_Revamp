@@ -7,7 +7,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className={overWriteChakraTheme}>
       <NavBar />
-      <div className="pt-[88px]">{children}</div>
+      <div className="pt-[74px]">{children}</div>
       <Footer />
     </div>
   );

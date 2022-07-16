@@ -13,7 +13,7 @@ const Departments = ({ departments }: DepartmentsProps) => {
     <MaxWidth>
       <div className="section-my">
         <div className=" section-title">Our Departments</div>
-        <div className="flex flex-wrap justify-center gap-10">
+        <div className="flex flex-wrap justify-center gap-16">
           {departments.map(
             ({ coverImage, cardDescription, name, path }, index) => (
               <Fragment key={index}>
