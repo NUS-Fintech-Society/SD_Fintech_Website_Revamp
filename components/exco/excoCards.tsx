@@ -4,7 +4,7 @@ import Image from 'next/image';
 const ExcoCard = ({exco} : CardProps) => {
     return (
         <>
-        <div className='w-5/12 border bg-slate-400 p-12'>
+        <div className=' sm:w-full md:w-5/12 overflow-hidden border bg-slate-400 p-12'>
             <div className='flex grid-cols-2 flex-row gap-10'>
                 <div className='flex w-4/12'>
                     <Image
