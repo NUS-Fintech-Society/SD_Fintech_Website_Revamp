@@ -10,7 +10,7 @@ const homeData: HomeData = {
         alt: 'random image 1',
       },
       cardDescription:
-        'This is a description that is supposed to appear on the cards',
+        'To foster a community of data-savvy members who are comfortable with wrangling and deriving insights from data.',
       popupDescription:
         'This is a lengthier description that appears in the popup',
       rolesOffered: [
@@ -43,7 +43,7 @@ const homeData: HomeData = {
         alt: 'random image 2',
       },
       cardDescription:
-        'This is a description that is supposed to appear on the cards',
+        'To create a community of fintech enthusiast developers who are passionate about learning and building fintech applications and products.',
       popupDescription:
         'This is a lengthier description that appears in the popup',
       rolesOffered: [
@@ -76,7 +76,7 @@ const homeData: HomeData = {
         alt: 'random image 2',
       },
       cardDescription:
-        'This is a description that is supposed to appear on the cards',
+        'To provide ample connections and opportunities to the best companies, organizations, and individuals in the blockchain sphere, create solutions of tangible and industrial value.',
       popupDescription:
         'This is a lengthier description that appears in the popup',
       rolesOffered: [
@@ -109,7 +109,7 @@ const homeData: HomeData = {
         alt: 'random image 2',
       },
       cardDescription:
-        'This is a description that is supposed to appear on the cards',
+        'To grow our outreach in the industry and expose our members to the best expertise and help with their career opportunities.',
       popupDescription:
         'This is a lengthier description that appears in the popup',
       rolesOffered: [
@@ -142,7 +142,7 @@ const homeData: HomeData = {
         alt: 'random image 2',
       },
       cardDescription:
-        'This is a description that is supposed to appear on the cards',
+        'To grow our outreach in the industry and expose our members to the best expertise and help with their career opportunities.',
       popupDescription:
         'This is a lengthier description that appears in the popup',
       rolesOffered: [

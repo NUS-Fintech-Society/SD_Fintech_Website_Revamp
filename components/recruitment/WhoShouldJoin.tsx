@@ -14,7 +14,7 @@ const WhoShouldJoin = () => {
           dignissimos corrupti error provident ducimus, rerum aliquid quod.
         </p>
         <a
-          href="www.google.com"
+          href="https://nusfintechsociety.notion.site/NUS-Fintech-Society-Recruitment-AY22-23-af1705d6afe44e9ca1c72c83d6e34c82"
           className="mx-auto mt-16 flex h-16 w-40 items-center justify-center rounded-lg bg-secondary text-xl font-bold text-white lg:h-20 lg:w-56 lg:text-3xl "
         >
           Apply Now

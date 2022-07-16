@@ -9,8 +9,7 @@ const DEPARTMENTS_ITEMS = [
   ['Machine Learning', '/departments/machine-learning'],
   ['Blockchain', '/departments/blockchain'],
   ['Software Development', '/departments/software'],
-  ['Operations (Internal)', '/departments/operations-internal'],
-  ['Operations (External)', '/departments/operations-external'],
+  ['Operations', '/departments/operations'],
 ];
 
 const ABOUT_US_ITEMS = [
