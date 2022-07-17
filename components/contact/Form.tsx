@@ -6,7 +6,7 @@ const Form = () => {
 
       <div className="mt-5">
         <form
-          action="https://formsubmit.co/4315e2af8dcb2879de7553d0123e6129"
+          action="https://formsubmit.co/nusfintechsociety.vercel.app"
           method="POST"
         >
           {/* email */}
