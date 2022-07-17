@@ -57,7 +57,7 @@ const NavBar = () => {
           </div>
 
           <ul
-            className={`fixed left-0 z-20  w-full bg-primary pt-10 pb-5 pl-9 transition-all duration-200 ease-in lg:pt-0
+            className={`fixed left-0 z-20  w-full bg-primary pt-10 pb-5 pl-9 transition-all duration-150 ease-in lg:pt-0
                     ${isOpen ? 'top-0 ' : 'top-[-700px]'}
                         lg:static lg:z-auto lg:mt-0 lg:flex lg:w-auto lg:items-center lg:pb-0 
                         lg:pl-0`}
@@ -68,7 +68,7 @@ const NavBar = () => {
               </Link>
             </li>
 
-            <li className="my-7  md:my-0 md:ml-8 md:py-3 lg:py-1">
+            <li className="my-7  hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
               <div className="lg:hidden">
                 <Link href="/about">
                   <a onClick={handleCloseNav}>About Us</a>
@@ -144,7 +144,7 @@ const NavBar = () => {
                 href="/recruitment"
                 className="rounded-md px-3 py-1 text-white"
               >
-                <a onClick={handleCloseNav}>Recruiment</a>
+                <a onClick={handleCloseNav}>Recruitment</a>
               </Link>
             </li>
 

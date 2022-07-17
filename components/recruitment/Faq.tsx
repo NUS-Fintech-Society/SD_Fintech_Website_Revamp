@@ -16,7 +16,7 @@ const Faq = ({ departmentFaq }: FaqProps) => {
               return (
                 <Fragment key={departmentName}>
                   <CustomAccordion title={departmentName}>
-                    <QuestionsAndAnswers questions={questions} />,
+                    <QuestionsAndAnswers questions={questions} />
                   </CustomAccordion>
                 </Fragment>
               );
