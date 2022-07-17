@@ -4,9 +4,7 @@ const WhoShouldJoin = () => {
   return (
     <MaxWidth>
       <div className="section-my pb-0 ">
-        <h2 className=" mb-20 text-2xl font-bold lg:text-4xl">
-          Who Should Join Us?
-        </h2>
+        <h2 className=" mb-10 text-h2 font-bold">Who Should Join Us?</h2>
         <p className=" text-xl lg:text-2xl">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque illum
           illo nisi quas odit, commodi necessitatibus! Assumenda, alias

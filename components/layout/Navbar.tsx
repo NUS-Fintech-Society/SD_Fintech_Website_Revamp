@@ -29,22 +29,22 @@ const NavBar = () => {
       <MaxWidth>
         <div className="flex items-center justify-between py-1 text-white">
           <div className="mt-2 flex cursor-pointer items-center font-bold">
-            {!isOpen && (
-              <Link href={'/'}>
-                <Image
-                  src="/images/fintechsoc-logo.png"
-                  alt="NUS FinTech Society Logo"
-                  width="130"
-                  height="58"
-                  layout="fixed"
-                />
-              </Link>
-            )}
+            {/* {!isOpen && ( */}
+            <Link href={'/'}>
+              <Image
+                src="/images/fintechsoc-logo.png"
+                alt="NUS FinTech Society Logo"
+                width="130"
+                height="58"
+                layout="fixed"
+              />
+            </Link>
+            {/* )} */}
           </div>
 
           <div
             onClick={() => setIsOpen(!isOpen)}
-            className="absolute right-5 top-8 cursor-pointer lg:hidden"
+            className="absolute right-[24px] top-[37px] z-30 -translate-y-1/2 cursor-pointer sm:right-[48px] lg:hidden"
           >
             {isOpen ? (
               <CloseIcon w={10} h={6} />
@@ -54,7 +54,7 @@ const NavBar = () => {
           </div>
 
           <ul
-            className={`fixed left-0 z-[-1]  w-full bg-primary pt-10 pb-5 pl-9 transition-all duration-100 ease-in lg:pt-0
+            className={`fixed left-0 z-20  w-full bg-primary pt-10 pb-5 pl-9 transition-all duration-200 ease-in lg:pt-0
                     ${isOpen ? 'top-0 ' : 'top-[-700px]'}
                         lg:static lg:z-auto lg:mt-0 lg:flex lg:w-auto lg:items-center lg:pb-0 
                         lg:pl-0`}
@@ -67,7 +67,10 @@ const NavBar = () => {
 
             <li className="my-7  md:my-0 md:ml-8 md:py-3 lg:py-1">
               <div className="lg:hidden">
-                <div className="rounded-md ">About</div>
+                <Link href={'/about'}>
+                  <a onClick={handleCloseNav}>About Us</a>
+                </Link>
+                {/* <div className="rounded-md ">About</div>
                 <ul>
                   {ABOUT_US_ITEMS.map((item) => (
                     <li key={item[1]} className="my-4 ml-3 hover:text-gray-400">
@@ -81,18 +84,23 @@ const NavBar = () => {
                       </Link>
                     </li>
                   ))}
-                </ul>
+                </ul> */}
               </div>
               <div className=" hidden lg:block">
-                <DropDown
+                {/* <DropDown
                   handleCloseNav={handleCloseNav}
                   title={'About'}
                   items={ABOUT_US_ITEMS}
-                />
+                /> */}
+                <Link href="/about">
+                  <a onClick={handleCloseNav} className=" h-full w-full p-2">
+                    About Us
+                  </a>
+                </Link>
               </div>
             </li>
 
-            <li className="my-7  md:my-0 md:ml-8 md:py-3 lg:py-1">
+            {/* <li className="my-7  md:my-0 md:ml-8 md:py-3 lg:py-1">
               <div className="lg:hidden">
                 <div className="rounded-md ">Departments</div>
                 <ul>
@@ -117,16 +125,16 @@ const NavBar = () => {
                   items={DEPARTMENTS_ITEMS}
                 />
               </div>
-            </li>
+            </li> */}
 
-            <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
+            {/* <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
               <Link
                 href={'/events'}
                 className="rounded-md px-3 py-1 text-white"
               >
                 <a onClick={handleCloseNav}>Events</a>
               </Link>
-            </li>
+            </li> */}
 
             <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
               <Link

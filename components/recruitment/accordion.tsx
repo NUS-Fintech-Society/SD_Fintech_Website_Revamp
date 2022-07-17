@@ -24,11 +24,7 @@ const Accordion = ({ title, children }: AccordionProps) => {
           borderTop="1px"
           borderTopRadius="lg"
         >
-          <Box
-            flex="1"
-            textAlign="left"
-            className="text-xl md:text-2xl lg:text-3xl"
-          >
+          <Box flex="1" textAlign="left" className="text-2xl">
             {title}
           </Box>
           <AccordionIcon />

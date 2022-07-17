@@ -18,7 +18,7 @@ const Form = () => {
               name="email"
               type="email"
               required
-              className=" w-full rounded-md border-2 border-[#B9B9B9] p-2 "
+              className=" w-full rounded-md border-2 border-gray-500 p-2 "
             />
           </div>
           {/* name */}
@@ -30,7 +30,7 @@ const Form = () => {
               name="name"
               type="text"
               required
-              className=" w-full rounded-md border-2 border-[#B9B9B9] p-2 "
+              className=" w-full rounded-md border-2 border-gray-500 p-2 "
             />
           </div>
           {/* message */}
@@ -42,7 +42,7 @@ const Form = () => {
               name="message"
               required
               rows={8}
-              className=" w-full rounded-md border-2 border-[#B9B9B9] p-2 "
+              className=" w-full rounded-md border-2 border-gray-500 p-2 "
             />
           </div>
           <button

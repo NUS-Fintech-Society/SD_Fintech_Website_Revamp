@@ -31,7 +31,7 @@ const Info = () => {
       </div>
       {/* email */}
       <div className="mt-5 flex pl-2">
-        <div className="mr-3 mt-2 flex items-start">
+        <div className="mr-3 mt-1 flex items-start">
           <Image
             src="/images/contact/mail.svg"
             alt="mail icon"

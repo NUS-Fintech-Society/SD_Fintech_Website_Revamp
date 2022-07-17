@@ -36,7 +36,7 @@ const homeData: HomeData = {
       ],
     },
     {
-      name: 'Software Engineering',
+      name: 'Software Development',
       path: 'software',
       coverImage: {
         src: '/images/departments/departmentLogos/Software-Development-Logo.png',
@@ -76,7 +76,7 @@ const homeData: HomeData = {
         alt: 'random image 2',
       },
       cardDescription:
-        'To provide ample connections and opportunities to the best companies, organizations, and individuals in the blockchain sphere, create solutions of tangible and industrial value.',
+        'To organise programmes and workshops to introduce FinTech to the wider community ',
       popupDescription:
         'This is a lengthier description that appears in the popup',
       rolesOffered: [
@@ -102,14 +102,14 @@ const homeData: HomeData = {
       ],
     },
     {
-      name: 'External Operations',
+      name: 'External Relations',
       path: 'operations-external',
       coverImage: {
         src: '/images/departments/departmentLogos/External-Op-Logo.png',
         alt: 'random image 2',
       },
       cardDescription:
-        'To grow our outreach in the industry and expose our members to the best expertise and help with their career opportunities.',
+        'To widen the outreach and expand FinTech Society’s network both within the NUS community and with industry partners.',
       popupDescription:
         'This is a lengthier description that appears in the popup',
       rolesOffered: [
@@ -135,7 +135,7 @@ const homeData: HomeData = {
       ],
     },
     {
-      name: 'Internal Operations',
+      name: 'Internal Affairs',
       path: 'operations-internal',
       coverImage: {
         src: '/images/departments/departmentLogos/Internal-Op-Logo.png',

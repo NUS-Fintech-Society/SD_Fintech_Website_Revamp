@@ -12,12 +12,14 @@ const Partners = ({ partnersImages }: PartnersProps) => {
   return (
     <MaxWidth>
       <div className="section-my">
-        <div className="section-title">Our Partners</div>
-        <div className="flex flex-wrap justify-center gap-16">
+        <h2 className="mb-16 text-center text-h2 font-bold">
+          Past and Present Partners
+        </h2>
+        <div className="mx-auto flex w-5/6 flex-wrap justify-center gap-10">
           {partnersImages.map(({ src, alt }, index) => {
             return (
               <Fragment key={index}>
-                <Image src={src} alt={alt} width="150" height="150" />
+                <Image src={src} alt={alt} width="100" height="100" />
               </Fragment>
             );
           })}

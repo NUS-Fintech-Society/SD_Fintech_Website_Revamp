@@ -14,9 +14,9 @@ const Landing = () => {
         />
       </div>
       <MaxWidth>
-        <div className="flex flex-col pt-[20vh]">
-          <div className="text-6xl  xl:text-8xl">NUS Fintech Society</div>
-          <div className="mt-1 mb-3 text-2xl italic text-[#005792D9] xl:text-4xl">
+        <div className="flex flex-col gap-y-3 pt-[20vh]">
+          <h1 className="text-6xl  xl:text-7xl">NUS Fintech Society</h1>
+          <div className="mt-1 mb-3 text-2xl italic text-secondary xl:text-4xl">
             Ideate. Innovate. Inspire
           </div>
           <div className="my-3 text-xl xl:text-2xl">
