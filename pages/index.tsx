@@ -1,11 +1,11 @@
-//type
+// type
 import type { NextPage } from 'next';
 import { HomeData } from '@data/interface/homeData';
 
-//library
+// library
 import Head from 'next/head';
 
-//code
+// code
 import Home from '@components/home';
 import { fetchHomeData } from '@data/mockFetch';
 

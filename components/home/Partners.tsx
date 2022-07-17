@@ -1,11 +1,11 @@
-//type
+// type
 import { PartnersProps } from '@interfaces/home/Partners';
 
-//library
+// library
 import { Fragment } from 'react';
 import Image from 'next/image';
 
-//code
+// code
 import MaxWidth from '@components/layout/MaxWidth';
 
 const Partners = ({ partnersImages }: PartnersProps) => {

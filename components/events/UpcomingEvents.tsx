@@ -1,5 +1,4 @@
 import MaxWidth from '@components/layout/MaxWidth';
-import Image from 'next/image';
 
 const UpcomingEvents = () => {
   return (

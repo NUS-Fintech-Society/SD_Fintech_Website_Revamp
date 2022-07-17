@@ -1,4 +1,25 @@
 {
-  "plugins": ["tailwindcss"],
-  "extends": ["plugin:tailwindcss/recommended", "next", "prettier"]
+  "env": {
+    "browser": true
+  },
+  "plugins": ["tailwindcss", "react"],
+  "extends": [
+    "plugin:tailwindcss/recommended",
+    "plugin:react/recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "next",
+    "prettier"
+  ],
+
+  "rules": {
+    "tailwindcss/no-custom-classname": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/function-component-definition": "off",
+    "react/jsx-filename-extension": "off",
+    "arrow-body-style": "off",
+    "react/jsx-props-no-spreading": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/no-array-index-key": "off"
+  }
 }

@@ -1,7 +1,7 @@
-//type
+// type
 import { HomeProps } from '@interfaces/home';
 
-//code
+// code
 import Milestones from '@components/home/Milestones';
 import Landing from '@components/home/Landing';
 import Departments from '@components/home/Departments';

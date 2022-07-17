@@ -1,4 +1,4 @@
-//code
+// code
 import Info from '@components/contact/Info';
 import MaxWidth from '@components/layout/MaxWidth';
 import Form from '@components/contact/Form';

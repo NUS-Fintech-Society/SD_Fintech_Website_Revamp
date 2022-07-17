@@ -1,7 +1,7 @@
-//type
+// type
 import { DropDownProps } from '@interfaces/layout/DropDownProps';
 
-//library
+// library
 import {
   Menu,
   MenuButton,
@@ -12,7 +12,7 @@ import {
 import Link from 'next/link';
 import { Fragment } from 'react';
 
-//code
+// code
 const DropDown = ({ items, title, handleCloseNav }: DropDownProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 

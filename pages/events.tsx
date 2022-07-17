@@ -1,11 +1,11 @@
-//type
+// type
 import type { NextPage } from 'next';
 import { EventsData } from '@data/interface/eventsData';
 
-//library
+// library
 import Head from 'next/head';
 
-//code
+// code
 import Events from '@components/events';
 import { fetchEventsData } from '@data/mockFetch';
 
@@ -26,7 +26,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      events
+      events,
     },
   };
 }

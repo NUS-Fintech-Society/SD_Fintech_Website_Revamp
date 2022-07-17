@@ -4,7 +4,7 @@ import { fetchRecruitmentData } from '@data/mockFetch';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-const RecruitmentPage: NextPage<RecruitmentData> = (props) => {
+const RecruitmentPage: NextPage<RecruitmentData> = (props: any) => {
   return (
     <>
       <Head>

@@ -1,7 +1,7 @@
-//type
+// type
 import { DepartmentInfoProps } from '@interfaces/departments/DepartmentInfo';
 
-//library
+// library
 import Image from 'next/image';
 import { Fragment } from 'react';
 

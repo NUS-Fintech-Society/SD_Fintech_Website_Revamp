@@ -1,21 +1,24 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import MaxWidth from '@components/layout/MaxWidth';
 import Image from 'next/image';
 import Link from 'next/link';
-import DropDown from '@components/layout/DropDown';
+// import DropDown from '@components/layout/DropDown';
 
-const DEPARTMENTS_ITEMS = [
-  ['Machine Learning', '/departments/machine-learning'],
-  ['Blockchain', '/departments/blockchain'],
-  ['Software Development', '/departments/software'],
-  ['Operations', '/departments/operations'],
-];
+// const DEPARTMENTS_ITEMS = [
+//   ['Machine Learning', '/departments/machine-learning'],
+//   ['Blockchain', '/departments/blockchain'],
+//   ['Software Development', '/departments/software'],
+//   ['Operations', '/departments/operations'],
+// ];
 
-const ABOUT_US_ITEMS = [
-  ['About Us', '/about'],
-  ['The EXCO', '/about/exco'],
-];
+// const ABOUT_US_ITEMS = [
+//   ['About Us', '/about'],
+//   ['The EXCO', '/about/exco'],
+// ];
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +33,7 @@ const NavBar = () => {
         <div className="flex items-center justify-between py-1 text-white">
           <div className="mt-2 flex cursor-pointer items-center font-bold">
             {/* {!isOpen && ( */}
-            <Link href={'/'}>
+            <Link href="/">
               <Image
                 src="/images/fintechsoc-logo.png"
                 alt="NUS FinTech Society Logo"
@@ -60,14 +63,14 @@ const NavBar = () => {
                         lg:pl-0`}
           >
             <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
-              <Link href={'/'} className="rounded-md px-3 py-1 text-white">
+              <Link href="/" className="rounded-md px-3 py-1 text-white">
                 <a onClick={handleCloseNav}>Home</a>
               </Link>
             </li>
 
             <li className="my-7  md:my-0 md:ml-8 md:py-3 lg:py-1">
               <div className="lg:hidden">
-                <Link href={'/about'}>
+                <Link href="/about">
                   <a onClick={handleCloseNav}>About Us</a>
                 </Link>
                 {/* <div className="rounded-md ">About</div>
@@ -138,7 +141,7 @@ const NavBar = () => {
 
             <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
               <Link
-                href={'/recruitment'}
+                href="/recruitment"
                 className="rounded-md px-3 py-1 text-white"
               >
                 <a onClick={handleCloseNav}>Recruiment</a>
@@ -147,7 +150,7 @@ const NavBar = () => {
 
             <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
               <Link
-                href={'/contact-us'}
+                href="/contact-us"
                 className="rounded-md px-3 py-1 text-white"
               >
                 <a onClick={handleCloseNav}>Contact Us</a>

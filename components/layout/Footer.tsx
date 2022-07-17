@@ -1,7 +1,7 @@
-//library
+// library
 import Image from 'next/image';
 
-//code
+// code
 import MaxWidth from '@components/layout/MaxWidth';
 
 const Footer = () => {

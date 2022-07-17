@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {
   AccordionItem,
   AccordionButton,
@@ -5,13 +6,14 @@ import {
   AccordionIcon,
   Box,
 } from '@chakra-ui/react';
+import React from 'react';
 
 type AccordionProps = {
   title: string;
   children: React.ReactNode;
 };
 
-const Accordion = ({ title, children }: AccordionProps) => {
+const CustomAccordion = ({ title, children }: AccordionProps) => {
   return (
     <AccordionItem borderTop="0" marginY="4" className="overflow-hidden  ">
       <h2>
@@ -35,4 +37,4 @@ const Accordion = ({ title, children }: AccordionProps) => {
   );
 };
 
-export default Accordion;
+export default CustomAccordion;

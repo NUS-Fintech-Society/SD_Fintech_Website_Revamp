@@ -1,8 +1,8 @@
-//type
+// type
 import Contact from '@components/contact';
 import type { NextPage } from 'next';
 
-//library
+// library
 import Head from 'next/head';
 
 const ContactUs: NextPage = () => {

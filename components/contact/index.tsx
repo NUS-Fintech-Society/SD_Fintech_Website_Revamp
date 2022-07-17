@@ -1,6 +1,6 @@
-//type
+// type
 
-//code
+// code
 import Form from '@components/contact/Form';
 import Info from '@components/contact/Info';
 import Landing from '@components/contact/landing';

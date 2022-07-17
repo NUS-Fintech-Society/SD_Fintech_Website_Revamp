@@ -1,7 +1,7 @@
-//type
+// type
 import { DepartmentsProps } from '@interfaces/departments';
 
-//code
+// code
 import DepartmentInfo from '@components/departments/DepartmentInfo';
 import FeaturedProjects from '@components/departments/FeaturedProjects';
 

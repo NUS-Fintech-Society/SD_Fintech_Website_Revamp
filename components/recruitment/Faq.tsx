@@ -1,6 +1,6 @@
 import { Accordion as AccordionWrapper } from '@chakra-ui/react';
 import MaxWidth from '@components/layout/MaxWidth';
-import Accordion from '@components/recruitment/Accordion';
+import CustomAccordion from '@components/recruitment/CustomAccordion';
 import QuestionsAndAnswers from '@components/recruitment/QuestionsAndAnswers';
 import { FaqProps } from '@interfaces/recruitment/Faq';
 import { Fragment } from 'react';
@@ -15,9 +15,9 @@ const Faq = ({ departmentFaq }: FaqProps) => {
             {departmentFaq.map(({ departmentName, questions }) => {
               return (
                 <Fragment key={departmentName}>
-                  <Accordion title={departmentName}>
+                  <CustomAccordion title={departmentName}>
                     <QuestionsAndAnswers questions={questions} />,
-                  </Accordion>
+                  </CustomAccordion>
                 </Fragment>
               );
             })}

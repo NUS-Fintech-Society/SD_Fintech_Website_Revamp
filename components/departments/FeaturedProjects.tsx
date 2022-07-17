@@ -1,20 +1,19 @@
-//type
+// type
 import { FeaturedProjectsProps } from '@interfaces/departments/FeaturedProjectsProps';
 
-//library
-import { Select } from '@chakra-ui/react';
+// library
 import { TriangleDownIcon } from '@chakra-ui/icons';
-import { Fragment, useEffect, useState } from 'react';
-import { Accordion as AccordionWrapper } from '@chakra-ui/react';
+import React, { Fragment, useState } from 'react';
+import { Accordion, Select } from '@chakra-ui/react';
 
-//code
+// code
 import MaxWidth from '@components/layout/MaxWidth';
-import Accordion from '@components/recruitment/Accordion';
 import ProjectContent from '@components/departments/ProjectContent';
+import CustomAccordion from '@components/recruitment/CustomAccordion';
 
 const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
   const [year, setYear] = useState('21/22');
-  var projectsByYear = projects.filter((project) => project.year === year);
+  const projectsByYear = projects.filter((project) => project.year === year);
 
   const handleChangeYear = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setYear(event.target.value);
@@ -32,7 +31,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
           width={{ base: 36, md: 64 }}
           size={{ base: 'md', md: 'lg' }}
           onChange={handleChangeYear}
-          borderColor={'black'}
+          borderColor="black"
           defaultValue="21/22"
         >
           <option value="21/22">2021/2022</option>
@@ -40,7 +39,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
         </Select>
       </div>
       <div className="mb-10">
-        <AccordionWrapper allowToggle allowMultiple className="mx-auto">
+        <Accordion allowToggle allowMultiple className="mx-auto">
           {projectsByYear.map(
             (
               {
@@ -54,19 +53,19 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
             ) => {
               return (
                 <Fragment key={index}>
-                  <Accordion title={projectName}>
+                  <CustomAccordion title={projectName}>
                     <ProjectContent
                       description={description}
                       projectImage={projectImage}
                       members={members}
                       collaborations={collaborations}
                     />
-                  </Accordion>
+                  </CustomAccordion>
                 </Fragment>
               );
             }
           )}
-        </AccordionWrapper>
+        </Accordion>
       </div>
     </MaxWidth>
   );

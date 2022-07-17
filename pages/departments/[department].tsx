@@ -1,47 +1,49 @@
-//type
+// type
 import type { NextPage } from 'next';
-import DepartmentsData from '@data/interface/departmentsData'
+import DepartmentsData from '@data/interface/departmentsData';
 
-//library
+// library
 import Head from 'next/head';
 
-//code
+// code
 import Departments from '@components/departments';
 import { fetchDepartmentsData } from '@data/mockFetch';
 
-const DepartmentPage: NextPage<DepartmentsData> = (props) => {
+const DepartmentPage: NextPage<DepartmentsData> = (props: any) => {
   return (
     <>
-    <Head>
+      <Head>
         <title>NUS Fintech Society</title>
         <link rel="icon" href="/favicon.ico" />
-    </Head>
-    <Departments {...props}/>
+      </Head>
+      <Departments {...props} />
     </>
   );
 };
 
 export const getStaticPaths = async () => {
-    const { departments } = await fetchDepartmentsData();
-    const paths = departments.map(department => {
-        return {
-            params: { department: department.path }
-        }
-    }) 
-
+  const { departments } = await fetchDepartmentsData();
+  const paths = departments.map((department) => {
     return {
-        paths: paths,
-        fallback: false
+      params: { department: department.path },
     };
-}
+  });
 
-export const getStaticProps = async (context: { params: { department: string; }; }) => {
-    const department = context.params.department;
-    const { departments } = await fetchDepartmentsData();
-    const data = departments.find(dpartment => dpartment.path === department);
-    return {
-        props: data
-    };
-}
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps = async (context: {
+  params: { department: string };
+}) => {
+  const { department } = context.params;
+  const { departments } = await fetchDepartmentsData();
+  const data = departments.find((dpartment) => dpartment.path === department);
+  return {
+    props: data,
+  };
+};
 
 export default DepartmentPage;

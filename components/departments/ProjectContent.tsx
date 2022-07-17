@@ -1,13 +1,13 @@
-//type
+// type
 import { ProjectContentProps } from '@interfaces/departments/ProjectContent';
 
-//library
+// library
 import Image from 'next/image';
 import { Fragment } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-//code
+// code
 const ProjectContent = ({
   description,
   projectImage,
@@ -27,12 +27,12 @@ const ProjectContent = ({
         <div className="mt-5 lg:w-1/2">
           <Carousel
             showStatus={false}
-            showArrows={true}
+            showArrows
             showThumbs={false}
             autoPlay
             swipeable
             emulateTouch
-            infiniteLoop={true}
+            infiniteLoop
             dynamicHeight={false}
             className="lg:ml-16"
           >
@@ -82,7 +82,7 @@ const ProjectContent = ({
         </div>
       </div>
       <div className="mt-3 flex flex-wrap rounded-lg border-[1px] border-gray-600 ">
-        {collaborations.map(({ src, alt, companyName }, index) => (
+        {collaborations.map(({ src, alt, companyName }) => (
           <Fragment key={companyName}>
             <div className=" m-5 flex flex-wrap text-sm  lg:text-xl">
               <Image

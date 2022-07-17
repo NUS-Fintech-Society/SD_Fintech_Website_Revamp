@@ -1,8 +1,8 @@
-//library
+// library
 import Image from 'next/image';
 import Head from 'next/head';
 
-//code
+// code
 import MaxWidth from '@components/layout/MaxWidth';
 
 const AboutPage = () => {
