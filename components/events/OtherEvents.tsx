@@ -11,7 +11,10 @@ import EventCard from '@components/events/EventCard';
 const OtherEvents = ({ events }: EventsProps) => {
   return (
     <MaxWidth>
-      <div className="mt-40 flex flex-wrap justify-center gap-10">
+      <div className="mt-16 text-xl font-bold sm:text-2xl lg:text-3xl">
+          Upcoming Events
+        </div>
+      <div className="mt-8 flex flex-wrap justify-center gap-10">
         {events.map(
           ({ coverImage, cardDescription, name, location, date }, index) => (
             <Fragment key={index}>

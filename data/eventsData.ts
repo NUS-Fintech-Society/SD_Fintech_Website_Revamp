@@ -3,9 +3,9 @@ import { EventsData } from '@data/interface/eventsData';
 const eventsData: EventsData = {
     events: [
         {
-            name: 'Machine Learning',
+            name: 'Event 1',
             coverImage: {
-                src: 'https://images.unsplash.com/photo-1617854818583-09e7f077a156?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80',
+                src: '/images/events/event1.jpg',
                 alt: 'random image 1',
             },
             cardDescription:
@@ -13,14 +13,14 @@ const eventsData: EventsData = {
             popupDescription:
                 'This is a lengthier description that appears in the popup',
             location: 'Kent Ridge MRT',
-            date: new Date("2019-09-16").toString(),
+            date: new Date("2022-07-18").toString(),
 
         },
 
         {
-            name: 'Hello Learning',
+            name: 'Event 2',
             coverImage: {
-                src: 'https://images.unsplash.com/photo-1617854818583-09e7f077a156?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80',
+                src: '/images/events/event2.jpg',
                 alt: 'random image 1',
             },
             cardDescription:
@@ -28,13 +28,13 @@ const eventsData: EventsData = {
             popupDescription:
                 'This is a lengthier description that appears in the popup',
             location: 'Kent Ridge MRT',
-            date: new Date("2019-05-16").toString(),
+            date: new Date("2022-09-25").toString(),
         },
 
         {
-            name: 'Machine Learning',
+            name: 'Event 3',
             coverImage: {
-                src: 'https://images.unsplash.com/photo-1617854818583-09e7f077a156?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80',
+                src: '/images/events/event3.jpeg',
                 alt: 'random image 1',
             },
             cardDescription:
@@ -42,7 +42,7 @@ const eventsData: EventsData = {
             popupDescription:
                 'This is a lengthier description that appears in the popup',
             location: 'Kent Ridge MRT',
-            date: new Date("2019-05-16").toString(),
+            date: new Date("2022-11-09").toString(),
         },
 
     ],
