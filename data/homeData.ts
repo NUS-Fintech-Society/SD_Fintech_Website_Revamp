@@ -6,7 +6,7 @@ const homeData: HomeData = {
       name: 'Machine Learning',
       path: 'machine-learning',
       coverImage: {
-        src: '/images/departments/departmentLogos/Machine-Learning-logo.png',
+        src: '/images/departments/departmentLogos/ml-logo.png',
         alt: 'random image 1',
       },
       cardDescription:
