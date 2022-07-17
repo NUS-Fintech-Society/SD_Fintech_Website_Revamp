@@ -50,9 +50,9 @@ const NavBar = () => {
             className="absolute right-[24px] top-[37px] z-30 -translate-y-1/2 cursor-pointer sm:right-[48px] lg:hidden"
           >
             {isOpen ? (
-              <CloseIcon w={10} h={6} />
+              <CloseIcon width={10} height={6} />
             ) : (
-              <HamburgerIcon w={10} h={7} />
+              <HamburgerIcon width={10} height={7} />
             )}
           </div>
 

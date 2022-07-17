@@ -6,8 +6,8 @@
   "extends": [
     "plugin:tailwindcss/recommended",
     "plugin:react/recommended",
-    "airbnb",
-    "airbnb/hooks",
+    // "airbnb",
+    // "airbnb/hooks",
     "next",
     "prettier"
   ],
