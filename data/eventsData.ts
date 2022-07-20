@@ -28,7 +28,7 @@ const eventsData: EventsData = {
             popupDescription:
                 'This is a lengthier description that appears in the popup',
             location: 'Kent Ridge MRT',
-            date: new Date("2022-09-25").toString(),
+            date: new Date("2022-07-18").toString(),
         },
 
         {
