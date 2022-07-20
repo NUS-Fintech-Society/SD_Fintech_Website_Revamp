@@ -6,6 +6,7 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import MaxWidth from '@components/layout/MaxWidth';
 import Image from 'next/image';
 import Link from 'next/link';
+import DropDown from '@components/layout/DropDown';
 // import DropDown from '@components/layout/DropDown';
 
 // const DEPARTMENTS_ITEMS = [
@@ -15,10 +16,10 @@ import Link from 'next/link';
 //   ['Operations', '/departments/operations'],
 // ];
 
-// const ABOUT_US_ITEMS = [
-//   ['About Us', '/about'],
-//   ['The EXCO', '/about/exco'],
-// ];
+const ABOUT_US_ITEMS = [
+  ['About Us', '/about'],
+  ['The EXCO', '/about/exco'],
+];
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,10 +71,10 @@ const NavBar = () => {
 
             <li className="my-7  hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
               <div className="lg:hidden">
-                <Link href="/about">
+                {/* <Link href="/about">
                   <a onClick={handleCloseNav}>About Us</a>
-                </Link>
-                {/* <div className="rounded-md ">About</div>
+                </Link> */}
+                <div className="rounded-md ">About</div>
                 <ul>
                   {ABOUT_US_ITEMS.map((item) => (
                     <li key={item[1]} className="my-4 ml-3 hover:text-gray-400">
@@ -87,19 +88,19 @@ const NavBar = () => {
                       </Link>
                     </li>
                   ))}
-                </ul> */}
+                </ul>
               </div>
               <div className=" hidden lg:block">
-                {/* <DropDown
+                <DropDown
                   handleCloseNav={handleCloseNav}
                   title={'About'}
                   items={ABOUT_US_ITEMS}
-                /> */}
-                <Link href="/about">
+                />
+                {/* <Link href="/about">
                   <a onClick={handleCloseNav} className=" h-full w-full p-2">
                     About Us
                   </a>
-                </Link>
+                </Link> */}
               </div>
             </li>
 

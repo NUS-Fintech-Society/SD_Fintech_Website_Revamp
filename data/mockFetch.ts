@@ -9,6 +9,8 @@ import homeData from '@data/homeData';
 import recruitmentData from '@data/recruitmentData';
 import eventsData from '@data/eventsData';
 import departmentsData from '@data/departmentsData';
+import ExcoData from '@data/interface/excoData';
+import excoData from '@data/excoData';
 
 // fake fetch to be replaced by backend calls in the future, used in getStaticProps of page files
 const fetchRecruitmentData: () => Promise<RecruitmentData> = async () =>
@@ -17,10 +19,12 @@ const fetchHomeData: () => Promise<HomeData> = async () => homeData;
 const fetchEventsData: () => Promise<EventsData> = async () => eventsData;
 const fetchDepartmentsData: () => Promise<DepartmentsData> = async () =>
   departmentsData;
+const fetchExcoData: () => Promise<ExcoData> = async () => excoData;
 
 export {
   fetchHomeData,
   fetchRecruitmentData,
   fetchDepartmentsData,
   fetchEventsData,
+  fetchExcoData,
 };
