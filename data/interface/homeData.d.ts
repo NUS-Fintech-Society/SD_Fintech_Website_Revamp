@@ -6,6 +6,7 @@ export interface HomeData {
 interface PartnersImage {
   alt: string;
   src: string;
+  url: string;
 }
 
 interface Department {

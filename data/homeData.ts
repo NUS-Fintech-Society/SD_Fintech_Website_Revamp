@@ -172,70 +172,87 @@ const homeData: HomeData = {
     {
       alt: 'AlphaLab Logo',
       src: '/images/home/partnerLogos/alphalab.png',
+      url: 'https://www.alphalab.capital/',
     },
     {
       alt: 'Bybit Logo',
       src: '/images/home/partnerLogos/bybit.png',
+      url: 'https://www.bybit.com/en-US/',
     },
     {
       alt: 'DeFiance Capital Logo',
       src: '/images/home/partnerLogos/defiancecap.png',
+      url: 'https://defiance.capital/',
     },
     {
       alt: 'Futu Logo',
       src: '/images/home/partnerLogos/futu.png',
+      url: 'https://www.futuholdings.com/en-us/',
     },
     {
       alt: 'Helicap Logo',
       src: '/images/home/partnerLogos/helicap.png',
+      url: 'https://helicap.com/',
     },
     {
       alt: 'Hg Exchange Logo',
       src: '/images/home/partnerLogos/hgexchange.png',
+      url: 'https://hg.exchange/',
     },
     {
       alt: 'Messari Logo',
       src: '/images/home/partnerLogos/messari.png',
+      url: 'https://messari.io/',
     },
     {
       alt: 'moledao Logo',
       src: '/images/home/partnerLogos/moledao.png',
+      url: 'https://www.moledao.io/#/',
     },
     {
       alt: 'Octava Logo',
       src: '/images/home/partnerLogos/octava.png',
+      url: 'https://www.octava.sg/',
     },
     {
       alt: 'OIO Logo',
       src: '/images/home/partnerLogos/oio.png',
+      url: 'https://oio.holdings/',
     },
     {
       alt: 'Revolut Logo',
       src: '/images/home/partnerLogos/revolut.png',
+      url: 'https://www.revolut.com/en-SG',
     },
     {
       alt: 'Ripple Logo',
       src: '/images/home/partnerLogos/ripple.png',
+      url: 'https://ripple.com/',
     },
     {
       alt: 'SeaMoney Logo',
       src: '/images/home/partnerLogos/seamoney.png',
+      url: 'https://www.seamoney.com/',
     },
     {
       alt: 'Spenmo Logo',
       src: '/images/home/partnerLogos/spenmo.png',
+      url: 'https://spenmo.com/',
     },
     {
       alt: 'Startbahn Logo',
       src: '/images/home/partnerLogos/startbahn.png',
+      url: 'https://startbahn.io/',
     },
     {
       alt: 'StashAway Logo',
       src: '/images/home/partnerLogos/stashaway.png',
+      url: 'https://www.stashaway.sg/',
     },
     {
       alt: 'Stellar Logo',
       src: '/images/home/partnerLogos/stellar.png',
+      url: 'https://www.stellar.org/?locale=en',
     },
   ],
 };
