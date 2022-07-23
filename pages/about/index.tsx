@@ -26,9 +26,6 @@ const AboutPage = () => {
         <MaxWidth>
           <div className="pt-[15vh] text-center">
             <h1 className=" hero-xl">About Us</h1>
-            <div className="hero-lg mt-9">
-              Discover the story behind NUS Fintech Society
-            </div>
           </div>
         </MaxWidth>
       </div>

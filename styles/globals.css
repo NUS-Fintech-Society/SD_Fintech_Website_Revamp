@@ -6,7 +6,7 @@
 
 @layer components {
   .section-my {
-    @apply my-28 lg:pb-28;
+    @apply my-28;
   }
 
   .hero-xl {
