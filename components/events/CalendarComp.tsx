@@ -13,9 +13,13 @@ const CalendarComp = ({ events }: EventsProps) => {
     setSelectedDate(e);
   };
 
-  const filteredEvents = events.filter(
-    (event) => new Date(event.date).getDate() == selectedDate.getDate()
-  );
+  const filteredEvents = events.filter((event) => {
+    const eventDate = new Date(event.date);
+    const sameDay = eventDate.getDate() === selectedDate.getDate();
+    const sameMonth = eventDate.getMonth() === selectedDate.getMonth();
+    const sameYear = eventDate.getFullYear() === selectedDate.getFullYear();
+    return sameDay && sameMonth && sameYear;
+  });
 
   return (
     <MaxWidth>
