@@ -1,16 +1,14 @@
 export interface EventsData {
-    events: Event[]
+  events: Event[];
 }
 
-
 interface Event {
-    coverImage: {
-        src: string;
-        alt: string;
-    };
-    name: string;
-    cardDescription: string;
-    popupDescription: string;
-    location: string;
-    date: string;
+  coverImage: {
+    src: string;
+    alt: string;
+  };
+  name: string;
+  cardDescription: string;
+  location: string;
+  date: string;
 }

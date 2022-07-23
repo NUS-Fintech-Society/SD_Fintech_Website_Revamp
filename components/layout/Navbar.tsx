@@ -7,14 +7,13 @@ import MaxWidth from '@components/layout/MaxWidth';
 import Image from 'next/image';
 import Link from 'next/link';
 import DropDown from '@components/layout/DropDown';
-// import DropDown from '@components/layout/DropDown';
 
-// const DEPARTMENTS_ITEMS = [
-//   ['Machine Learning', '/departments/machine-learning'],
-//   ['Blockchain', '/departments/blockchain'],
-//   ['Software Development', '/departments/software'],
-//   ['Operations', '/departments/operations'],
-// ];
+const DEPARTMENTS_ITEMS = [
+  ['Machine Learning', '/departments/machine-learning'],
+  ['Blockchain', '/departments/blockchain'],
+  ['Software Development', '/departments/software'],
+  // ['Operations', '/departments/operations'],
+];
 
 const ABOUT_US_ITEMS = [
   ['About Us', '/about'],
@@ -33,7 +32,6 @@ const NavBar = () => {
       <MaxWidth>
         <div className="flex items-center justify-between py-1 text-white">
           <div className="mt-2 flex cursor-pointer items-center font-bold">
-            {/* {!isOpen && ( */}
             <Link href="/">
               <Image
                 src="/images/fintechsoc-logo.png"
@@ -43,7 +41,6 @@ const NavBar = () => {
                 layout="fixed"
               />
             </Link>
-            {/* )} */}
           </div>
 
           <div
@@ -69,11 +66,8 @@ const NavBar = () => {
               </Link>
             </li>
 
-            <li className="my-7  hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
+            <li className="my-7   md:my-0 md:ml-8 md:py-3 lg:py-1">
               <div className="lg:hidden">
-                {/* <Link href="/about">
-                  <a onClick={handleCloseNav}>About Us</a>
-                </Link> */}
                 <div className="rounded-md ">About</div>
                 <ul>
                   {ABOUT_US_ITEMS.map((item) => (
@@ -81,7 +75,7 @@ const NavBar = () => {
                       <Link href={item[1]}>
                         <a
                           onClick={handleCloseNav}
-                          className=" h-full w-full p-2"
+                          className=" h-full w-full p-2 hover:text-gray-400"
                         >
                           {item[0]}
                         </a>
@@ -96,15 +90,10 @@ const NavBar = () => {
                   title={'About'}
                   items={ABOUT_US_ITEMS}
                 />
-                {/* <Link href="/about">
-                  <a onClick={handleCloseNav} className=" h-full w-full p-2">
-                    About Us
-                  </a>
-                </Link> */}
               </div>
             </li>
 
-            {/* <li className="my-7  md:my-0 md:ml-8 md:py-3 lg:py-1">
+            <li className="my-7  md:my-0 md:ml-8 md:py-3 lg:py-1">
               <div className="lg:hidden">
                 <div className="rounded-md ">Departments</div>
                 <ul>
@@ -129,7 +118,7 @@ const NavBar = () => {
                   items={DEPARTMENTS_ITEMS}
                 />
               </div>
-            </li> */}
+            </li>
 
             <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
               <Link

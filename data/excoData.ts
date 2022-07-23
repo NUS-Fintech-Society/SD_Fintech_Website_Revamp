@@ -9,6 +9,7 @@ const excoData: ExcoData = {
           role: 'Advisor',
           title: 'A/Prof. (Practice)',
           name: 'Keith Carter',
+          imgSrc: '/images/exco/advisor.jpg',
         },
       ],
     },
@@ -18,10 +19,12 @@ const excoData: ExcoData = {
         {
           role: 'Co-President',
           name: 'Jun Xiong',
+          imgSrc: '/images/exco/co-president2.jpg',
         },
         {
           role: 'Co-President',
           name: 'David',
+          imgSrc: '/images/exco/co-president1.jpg',
         },
       ],
     },
@@ -31,6 +34,7 @@ const excoData: ExcoData = {
         {
           role: 'VICE PRESIDENT (TECH)',
           name: 'Calvin',
+          imgSrc: '/images/exco/techwing.jpg',
         },
       ],
     },
@@ -40,10 +44,12 @@ const excoData: ExcoData = {
         {
           role: 'CO-DIRECTOR (BC)',
           name: 'Jones',
+          imgSrc: '/images/exco/blockchain1.jpg',
         },
         {
           role: 'CO-DIRECTOR (BC)',
           name: 'David',
+          imgSrc: '/images/exco/blockchain2.jpg',
         },
       ],
     },
@@ -53,10 +59,12 @@ const excoData: ExcoData = {
         {
           role: 'CO-DIRECTOR (ML)',
           name: 'Daniel',
+          imgSrc: '/images/exco/ml1.jpg',
         },
         {
           role: 'CO-DIRECTOR (ML)',
           name: 'Kleon',
+          imgSrc: '/images/exco/ml2.jpg',
         },
       ],
     },
@@ -66,6 +74,7 @@ const excoData: ExcoData = {
         {
           role: 'DIRECTOR (SD)',
           name: 'Owen',
+          imgSrc: '/images/exco/sd.jpg',
         },
       ],
     },
@@ -75,6 +84,7 @@ const excoData: ExcoData = {
         {
           role: 'VICE PRESIDENT (OPS)',
           name: 'Darren',
+          imgSrc: '/images/exco/op-wing.jpg',
         },
       ],
     },
@@ -84,6 +94,7 @@ const excoData: ExcoData = {
         {
           role: 'DIRECTOR (ER)',
           name: 'Elicia',
+          imgSrc: '/images/exco/.jpg',
         },
       ],
     },
@@ -93,10 +104,12 @@ const excoData: ExcoData = {
         {
           role: 'CO-DIRECTOR (IA)',
           name: 'James',
+          imgSrc: '/images/exco/ia1.jpg',
         },
         {
           role: 'CO-DIRECTOR (IA)',
           name: 'Jin',
+          imgSrc: '/images/exco/ia2.jpg',
         },
       ],
     },

@@ -7,7 +7,7 @@ const TopBanner = () => {
       <div className="relative h-[calc(50vh-64px)] min-h-[400px] w-screen">
         <div className="absolute -z-10 h-full w-full overflow-hidden">
           <Image
-            src="/images/exco/exco-banner.jpg"
+            src="/images/exco/banner.jpg"
             alt="Insert Photo Here"
             layout="fill"
             objectFit="cover"

@@ -11,6 +11,7 @@ export interface People {
   role: string;
   title?: string;
   name: string;
+  imgSrc: string;
 }
 
 export default ExcoData;

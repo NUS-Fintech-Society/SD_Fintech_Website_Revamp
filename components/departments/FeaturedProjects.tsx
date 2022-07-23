@@ -15,9 +15,9 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
   const [year, setYear] = useState('21/22');
   const projectsByYear = projects.filter((project) => project.year === year);
 
-  const handleChangeYear = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setYear(event.target.value);
-  };
+  // const handleChangeYear = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  //   setYear(event.target.value);
+  // };
 
   return (
     <MaxWidth>
@@ -25,7 +25,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
         <h2 className="mb-3 mr-5 text-2xl font-semibold lg:text-4xl">
           Featured Projects
         </h2>
-        <Select
+        {/* <Select
           icon={<TriangleDownIcon />}
           placeholder="Select Year"
           width={{ base: 36, md: 64 }}
@@ -36,7 +36,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
         >
           <option value="21/22">2021/2022</option>
           <option value="20/21">2020/2021</option>
-        </Select>
+        </Select> */}
       </div>
       <div className="mb-10">
         <Accordion allowToggle allowMultiple className="mx-auto">
@@ -44,7 +44,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
             (
               {
                 projectName,
-                description,
+                htmlContent,
                 projectImage,
                 members,
                 collaborations,
@@ -55,7 +55,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
                 <Fragment key={index}>
                   <CustomAccordion title={projectName}>
                     <ProjectContent
-                      description={description}
+                      htmlContent={htmlContent}
                       projectImage={projectImage}
                       members={members}
                       collaborations={collaborations}

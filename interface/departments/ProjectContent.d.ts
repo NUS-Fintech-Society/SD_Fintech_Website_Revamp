@@ -1,19 +1,4 @@
-export interface ProjectContentProps {
-  description: string;
-  projectImage: {
-    src: string;
-    alt: string;
-    height: string;
-    width: string;
-  }[];
-  members: {
-    memberName: string;
-    src: string;
-    alt: string;
-  }[];
-  collaborations: {
-    companyName: string;
-    src: string;
-    alt: string;
-  }[];
-}
+import { Project } from '@data/interface/departmentsData';
+
+export interface ProjectContentProps
+  extends Omit<Project, 'projectName' | 'year'> {}

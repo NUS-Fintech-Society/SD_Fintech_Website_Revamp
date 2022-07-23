@@ -3,27 +3,32 @@ import { ProjectContentProps } from '@interfaces/departments/ProjectContent';
 
 // library
 import Image from 'next/image';
-import { Fragment } from 'react';
+import { Fragment, useEffect, useRef } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 // code
 const ProjectContent = ({
-  description,
+  htmlContent,
   projectImage,
   members,
   collaborations,
 }: ProjectContentProps) => {
+  // const ref = useRef(null);
+  // useEffect(() => {
+  //   (ref.current as unknown as HTMLElement).innerHTML = htmlContent;
+  // }, []);
+
   return (
     <div className="m-5">
       <div className="flex flex-wrap justify-between">
-        <div className="xl:w-1/2 ">
-          {description.split('/n').map((paragraph) => (
-            <p key={paragraph.substring(0, 25)} className="py-3 text-lg">
-              {paragraph}
-            </p>
-          ))}
-        </div>
+        <div
+          // ref={ref}
+          className="overflow-x-auto xl:w-1/2"
+          dangerouslySetInnerHTML={{
+            __html: htmlContent,
+          }}
+        ></div>
         <div className="mt-5 lg:w-1/2">
           <Carousel
             showStatus={false}
@@ -37,15 +42,15 @@ const ProjectContent = ({
             className="lg:ml-16"
           >
             {projectImage.map((image) => (
-              <Fragment key={image.src}>
+              <div key={image.src} className="rounded-lg">
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  height={image.height}
-                  width={image.width}
-                  className="rounded-lg shadow-lg"
+                  height={270}
+                  width={400}
+                  className="rounded-lg "
                 />
-              </Fragment>
+              </div>
             ))}
           </Carousel>
         </div>

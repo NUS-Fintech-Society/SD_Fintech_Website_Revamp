@@ -32,7 +32,7 @@ const EventCard = ({
 
   return (
     <div className="w-[330px] rounded-lg p-8 shadow-lg">
-      <div className="text-center text-h4 font-bold">{name}</div>
+      <div className="text-h4 text-center font-bold">{name}</div>
       <div className="relative mt-2 flex justify-center">
         <Image
           src={coverImage.src}
@@ -53,12 +53,6 @@ const EventCard = ({
           <span className="font-bold text-secondary">Date: &nbsp;&nbsp;</span>
           {month}&nbsp;&nbsp;
           {day}
-        </div>
-        <div className=" ">
-          <span className="font-bold text-secondary">
-            Department: &nbsp;&nbsp;
-          </span>
-          {location}
         </div>
         <p className="mt-2 text-sm">{cardDescription}</p>
       </div>

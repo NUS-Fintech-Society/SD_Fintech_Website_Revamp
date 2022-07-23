@@ -3,45 +3,15 @@ import { EventsData } from '@data/interface/eventsData';
 const eventsData: EventsData = {
   events: [
     {
-      name: 'Event 1',
+      name: 'Welcome Tea',
       coverImage: {
-        src: '/images/events/event1.jpg',
-        alt: 'random image 1',
+        src: 'https://images.unsplash.com/photo-1595206133361-b1fe343e5e23?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80',
+        alt: 'Welcome Image',
       },
       cardDescription:
-        'This is a description that is test to appear on the cards',
-      popupDescription:
-        'This is a lengthier description that appears in the popup',
-      location: 'Kent Ridge MRT',
-      date: new Date().toString(),
-    },
-
-    {
-      name: 'Event 2',
-      coverImage: {
-        src: '/images/events/event2.jpg',
-        alt: 'random image 1',
-      },
-      cardDescription:
-        'This is a description that is supposed to appear on the cards',
-      popupDescription:
-        'This is a lengthier description that appears in the popup',
-      location: 'Kent Ridge MRT',
-      date: new Date().toString(),
-    },
-
-    {
-      name: 'Event 3',
-      coverImage: {
-        src: '/images/events/event3.jpeg',
-        alt: 'random image 1',
-      },
-      cardDescription:
-        'This is a description that is supposed to appear on the cards',
-      popupDescription:
-        'This is a lengthier description that appears in the popup',
-      location: 'Kent Ridge MRT',
-      date: new Date().toString(),
+        'Join us at our virtual Welcome Tea information sharing session to find out more about what we do and who we are looking for!',
+      location: 'Online',
+      date: new Date(2022, 8, 5).toString(),
     },
   ],
 };

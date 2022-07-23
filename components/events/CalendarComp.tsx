@@ -7,6 +7,13 @@ import 'react-calendar/dist/Calendar.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import EventCard from './EventCard';
 
+function isSameDate(date1: Date, date2: Date): Boolean {
+  const sameDay = date1.getDate() === date2.getDate();
+  const sameMonth = date1.getMonth() === date2.getMonth();
+  const sameYear = date1.getFullYear() === date2.getFullYear();
+  return sameDay && sameMonth && sameYear;
+}
+
 const CalendarComp = ({ events }: EventsProps) => {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const changeDate = (e: Date) => {
@@ -14,11 +21,7 @@ const CalendarComp = ({ events }: EventsProps) => {
   };
 
   const filteredEvents = events.filter((event) => {
-    const eventDate = new Date(event.date);
-    const sameDay = eventDate.getDate() === selectedDate.getDate();
-    const sameMonth = eventDate.getMonth() === selectedDate.getMonth();
-    const sameYear = eventDate.getFullYear() === selectedDate.getFullYear();
-    return sameDay && sameMonth && sameYear;
+    return isSameDate(new Date(event.date), selectedDate);
   });
 
   return (
@@ -58,10 +61,10 @@ const CalendarComp = ({ events }: EventsProps) => {
           ) : (
             <div className="max-w-xs overflow-hidden text-center">
               <div className="m-12 text-2xl text-gray-400 sm:text-4xl lg:text-4xl">
-                {selectedDate.getTime() === new Date().getTime() ? (
-                  <>No Events today.</>
+                {isSameDate(selectedDate, new Date()) ? (
+                  <>No event today</>
                 ) : (
-                  <>No Events on selected date.</>
+                  <>No event on selected date</>
                 )}
               </div>
             </div>

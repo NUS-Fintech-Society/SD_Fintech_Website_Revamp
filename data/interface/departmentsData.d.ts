@@ -25,7 +25,7 @@ interface Director {
 interface Project {
   projectName: string;
   year: string;
-  description: string;
+  htmlContent: string;
   projectImage: {
     src: string;
     alt: string;
