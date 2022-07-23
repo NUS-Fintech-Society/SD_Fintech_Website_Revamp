@@ -18,8 +18,11 @@
     "framer-motion": "^6.3.12",
     "next": "12.1.6",
     "react": "18.2.0",
+    "react-animated-text-content": "^1.0.1",
     "react-calendar": "^3.7.0",
+    "react-countup": "^6.3.0",
     "react-dom": "18.2.0",
+    "react-visibility-sensor": "^5.1.1",
     "react-icons": "^4.4.0",
     "react-responsive-carousel": "^3.2.23"
   },

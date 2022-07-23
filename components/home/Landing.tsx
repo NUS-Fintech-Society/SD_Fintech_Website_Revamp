@@ -1,5 +1,6 @@
 import MaxWidth from '@components/layout/MaxWidth';
 import Image from 'next/image';
+import AnimatedText from 'react-animated-text-content';
 
 const Landing = () => {
   return (
@@ -17,7 +18,13 @@ const Landing = () => {
         <div className="flex flex-col gap-y-3 pt-[20vh]">
           <h1 className="text-6xl  xl:text-7xl">NUS Fintech Society</h1>
           <div className="mt-1 mb-3 text-2xl italic text-secondary xl:text-4xl">
-            Ideate. Innovate. Inspire
+            <AnimatedText
+              type='words'
+              animationType='lights'
+            >
+              Ideate. Innovate. Inspire
+            </AnimatedText>
+            
           </div>
           <div className="my-3 text-xl xl:text-2xl">
             <b>Passionate &nbsp;&#8212;&nbsp;</b>
