@@ -131,14 +131,14 @@ const NavBar = () => {
               </div>
             </li> */}
 
-            {/* <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
+            <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
               <Link
                 href={'/events'}
                 className="rounded-md px-3 py-1 text-white"
               >
                 <a onClick={handleCloseNav}>Events</a>
               </Link>
-            </li> */}
+            </li>
 
             <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
               <Link

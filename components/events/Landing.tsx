@@ -15,9 +15,7 @@ const Landing = () => {
       </div>
       <MaxWidth>
         <div className=" pt-[15vh] text-center">
-          <div className=" text-5xl  font-bold text-[#FFFF] sm:text-6xl lg:text-7xl">
-            Events
-          </div>
+          <div className=" hero-xl">Events</div>
         </div>
       </MaxWidth>
     </div>
