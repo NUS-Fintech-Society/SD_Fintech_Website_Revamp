@@ -2,9 +2,8 @@
 import { FeaturedProjectsProps } from '@interfaces/departments/FeaturedProjectsProps';
 
 // library
-import { TriangleDownIcon } from '@chakra-ui/icons';
 import React, { Fragment, useState } from 'react';
-import { Accordion, Select } from '@chakra-ui/react';
+import { Accordion } from '@chakra-ui/react';
 
 // code
 import MaxWidth from '@components/layout/MaxWidth';

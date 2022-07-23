@@ -14,16 +14,10 @@ const ProjectContent = ({
   members,
   collaborations,
 }: ProjectContentProps) => {
-  // const ref = useRef(null);
-  // useEffect(() => {
-  //   (ref.current as unknown as HTMLElement).innerHTML = htmlContent;
-  // }, []);
-
   return (
     <div className="m-5">
       <div className="flex flex-wrap justify-between">
         <div
-          // ref={ref}
           className="overflow-x-auto xl:w-1/2"
           dangerouslySetInnerHTML={{
             __html: htmlContent,
@@ -55,7 +49,8 @@ const ProjectContent = ({
           </Carousel>
         </div>
       </div>
-      <div className="mt-7 flex">
+      {/* members */}
+      {/* <div className="mt-7 flex">
         <div className="rounded-lg  border-primary">
           <h2 className="my-2 mx-5 text-lg font-semibold md:text-xl lg:text-2xl ">
             Members
@@ -77,31 +72,34 @@ const ProjectContent = ({
             </div>
           </Fragment>
         ))}
-      </div>
-
-      <div className="mt-7 flex">
-        <div className="rounded-lg  border-primary">
-          <h2 className="my-2 mx-5 text-lg font-semibold md:text-xl lg:text-2xl ">
-            Collaborations
-          </h2>
-        </div>
-      </div>
-      <div className="mt-3 flex flex-wrap rounded-lg border-[1px] border-gray-600 ">
-        {collaborations.map(({ src, alt, companyName }) => (
-          <Fragment key={companyName}>
-            <div className=" m-5 flex flex-wrap text-sm  lg:text-xl">
-              <Image
-                src={src}
-                alt={alt}
-                height={80}
-                width={80}
-                className="rounded-full"
-              />
-              <h3 className="mt-7 ml-3">{companyName}</h3>
+      </div> */}
+      {collaborations.length > 0 && (
+        <>
+          <div className="mt-3 flex flex-wrap rounded-lg border-[1px] border-gray-600 ">
+            {collaborations.map(({ src, alt, companyName }) => (
+              <Fragment key={companyName}>
+                <div className=" m-5 flex flex-wrap text-sm  lg:text-xl">
+                  <Image
+                    src={src}
+                    alt={alt}
+                    height={80}
+                    width={80}
+                    className="rounded-full"
+                  />
+                  <h3 className="mt-7 ml-3">{companyName}</h3>
+                </div>
+              </Fragment>
+            ))}
+          </div>
+          <div className="mt-7 flex">
+            <div className="rounded-lg  border-primary">
+              <h2 className="my-2 mx-5 text-lg font-semibold md:text-xl lg:text-2xl ">
+                Collaborations
+              </h2>
             </div>
-          </Fragment>
-        ))}
-      </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };

@@ -92,13 +92,40 @@ const departmentsData: DepartmentsData = {
               alt: 'Member Image',
             },
           ],
-          collaborations: [
+          collaborations: [],
+        },
+        {
+          projectName: 'Magic Formula Investing: A Singapore Case Study',
+          year: '21/22',
+          htmlContent:
+            "<div class='flex flex-col gap-y-3'> <p>In 2006, Joel Greenblatt published his now-famous book, The Little Book that Beats the Market. In it, he describes a value investing strategy that he calls the Magic Formula. The unique feature of Magic Formula Investing is that it uses only two financial metrics, Return on Capital (ROC) and Earnings Yield (EY) to select a portfolio of stocks. Amazingly, according to Greenblatt, his Magic Formula Investing strategy could achieve an average of 30.8% in annual returns over 17 years when tested on the US market, far exceeding the market index — the S&P 500 — which returned 12.4% each year on average over that same 17-year time period.</p><p> Taking inspiration from Greenblatt’s Magic Formula, we decided to use ROC and EY as the only two features when training our machine learning models. Furthermore, since we found that the Magic Formula has yet to be extensively studied in our local (Singapore) context, we decided to apply this value investing strategy to SGX stocks and framed it as a machine learning problem. In this project, we explored using a variety of models including SVMs, KNNs, Neural Networks, and Gradient Boosted Models. Our best performing model achieved an accuracy of 86% in predicting outperformance of SGX stocks against the market index STI.</p><p> Members: Kleon Ang, Vinod ,Hans Neddyanto Tandjung, Nixon Widjaja</p><a href='https://medium.com/@nusfintech.ml/beating-the-singapore-stock-market-with-the-magic-formula-aa62989fda7d'> https://medium.com/@nusfintech.ml/beating-the-singapore-stock-market-with-the-magic-formula-aa62989fda7d</a></div>",
+          projectImage: [
             {
-              companyName: 'Company A',
-              src: 'https://images.unsplash.com/photo-1627843563095-f6e94676cfe0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tcGFueSUyMGxvZ298ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60',
-              alt: 'Company Logo',
+              src: '/images/departments/projectImages/blockchain/algo-trading1.jpg',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+            {
+              src: '/images/departments/projectImages/blockchain/algo-trading2.jpg',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
             },
           ],
+          members: [
+            {
+              memberName: 'Alicia Wong',
+              src: 'https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60',
+              alt: 'Member Image',
+            },
+            {
+              memberName: 'Brandon Tan',
+              src: 'https://images.unsplash.com/photo-1627161684458-a62da52b51c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=600&q=60',
+              alt: 'Member Image',
+            },
+          ],
+          collaborations: [],
         },
       ],
     },
