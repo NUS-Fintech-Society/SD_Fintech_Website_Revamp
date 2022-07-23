@@ -1,12 +1,11 @@
 import MaxWidth from '@components/layout/MaxWidth';
 import { EventsProps } from '@interfaces/events/Events';
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-calendar/dist/Calendar.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import EventCard from './EventCard';
-import Image from 'next/image';
 
 const CalendarComp = ({ events }: EventsProps) => {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -14,11 +13,9 @@ const CalendarComp = ({ events }: EventsProps) => {
     setSelectedDate(e);
   };
 
-  let filteredEvents;
-  filteredEvents = events.filter(
+  const filteredEvents = events.filter(
     (event) => new Date(event.date).getDate() == selectedDate.getDate()
   );
-  console.log(filteredEvents);
 
   return (
     <MaxWidth>
@@ -57,7 +54,7 @@ const CalendarComp = ({ events }: EventsProps) => {
           ) : (
             <div className="max-w-xs overflow-hidden text-center">
               <div className="m-12 text-2xl text-gray-400 sm:text-4xl lg:text-4xl">
-                {selectedDate === new Date() ? (
+                {selectedDate.getTime() === new Date().getTime() ? (
                   <>No Events today.</>
                 ) : (
                   <>No Events on selected date.</>
