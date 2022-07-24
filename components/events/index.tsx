@@ -1,13 +1,9 @@
-import UpcomingEvents from './UpcomingEvents';
-// import CalendarComp from './CalendarComp';
+import { EventsProps } from '@interfaces/events/Events';
+import dynamic from 'next/dynamic';
 import OtherEvents from './OtherEvents';
 import Landing from './Landing';
 
-import { EventsProps } from '@interfaces/events/Events';
-
-import dynamic from 'next/dynamic';
-
-//need to disable SSR for this component cos we are using date object generated at client side
+// need to disable SSR for this component cos we are using date object generated at client side
 const CalendarComp = dynamic(() => import('@components/events/CalendarComp'), {
   ssr: false,
 });

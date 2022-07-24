@@ -38,13 +38,13 @@ const departmentsData: DepartmentsData = {
             "<p>The forex market has very high volatility. It is the largest financial market in the world with a daily volume of up to 6.6 trillion. This gives more way to algorithmic trading, which identifies patterns in the market and learns from the patterns to obtain profitable trades</p><p>The team was able to incorporated multiple variations of models to investigate the different performances for different specifications of models. They managed to execute profitable automated forex trading using signals generated from ML Models.</p><ul > <li>Number of Trades: 4311</li><li>Number of Win Trades: 2909</li><li>Number of Lose Trades: 1402</li><li>Total Profit: 14740.84SGD</li></ul><b>Article: </b><a class='underline' href='https://medium.com/@nusfintech.ml/fx-algorithmic-trading-with-machine-learning-models-7d6821fa7e67'>https://medium.com/@nusfintech.ml/fx-algorithmic-trading-with-machine-learning-models-7d6821fa7e67</a><b>Members:</b><p>Huaian, Siqi, Gu Geng, Jia Xuan, Hong Po</p>",
           projectImage: [
             {
-              src: '/images/departments/projectImages/blockchain/algo-trading1.jpg',
+              src: '/images/departments/projectImages/machineLearning/algo-trading1.jpg',
               alt: 'Project Image',
               height: '500',
               width: '440',
             },
             {
-              src: '/images/departments/projectImages/blockchain/algo-trading2.jpg',
+              src: '/images/departments/projectImages/machineLearning/algo-trading2.jpg',
               alt: 'Project Image',
               height: '500',
               width: '440',
@@ -71,13 +71,13 @@ const departmentsData: DepartmentsData = {
             " <p>In 2006, Joel Greenblatt published his now-famous book, The Little Book that Beats the Market. In it, he describes a value investing strategy that he calls the Magic Formula. The unique feature of Magic Formula Investing is that it uses only two financial metrics, Return on Capital (ROC) and Earnings Yield (EY) to select a portfolio of stocks. Amazingly, according to Greenblatt, his Magic Formula Investing strategy could achieve an average of 30.8% in annual returns over 17 years when tested on the US market, far exceeding the market index — the S&P 500 — which returned 12.4% each year on average over that same 17-year time period.</p><p> Taking inspiration from Greenblatt’s Magic Formula, we decided to use ROC and EY as the only two features when training our machine learning models. Furthermore, since we found that the Magic Formula has yet to be extensively studied in our local (Singapore) context, we decided to apply this value investing strategy to SGX stocks and framed it as a machine learning problem. In this project, we explored using a variety of models including SVMs, KNNs, Neural Networks, and Gradient Boosted Models. Our best performing model achieved an accuracy of 86% in predicting outperformance of SGX stocks against the market index STI.</p><b>Article:</b><a href='https://medium.com/@nusfintech.ml/beating-the-singapore-stock-market-with-the-magic-formula-aa62989fda7d'> https://medium.com/@nusfintech.ml/beating-the-singapore-stock-market-with-the-magic-formula-aa62989fda7d</a> <b>Members:</b> <p>Kleon Ang, Vinod ,Hans Neddyanto Tandjung, Nixon Widjaja</p>",
           projectImage: [
             {
-              src: '/images/departments/projectImages/blockchain/magic-formula1.jpg',
+              src: '/images/departments/projectImages/machineLearning/magic-formula1.jpg',
               alt: 'Project Image',
               height: '500',
               width: '440',
             },
             {
-              src: '/images/departments/projectImages/blockchain/magic-formula2.jpg',
+              src: '/images/departments/projectImages/machineLearning/magic-formula2.jpg',
               alt: 'Project Image',
               height: '500',
               width: '440',
@@ -104,13 +104,13 @@ const departmentsData: DepartmentsData = {
             '<p>The US Federal Reserve meets roughly 8 times a year to discuss issues involving the economy. During these meetings, topics such as economic growth, inflation and unemployment are discussed. As such, analysts have taken a strong interest in Federal Open Market Committee(FOMC) minutes. Insights derived from the meeting can be utilised for applications such as portfolio optimisation and investment. However, such analyses can take time and are subject to personal biases. </p><p>To aid the analysis of the minutes and minimise potential inaccuracies, our team employed 2 models that satisfy different objectives. </p><ul> <li>Topic modelling is done by employing Latent Dirichlet Allocation (LDA). This tracks the topics discussed by the Federal Reserve committee over time, which provides new information for fresh insights.</li><li>Sentiment Analysis is done by employing the BERT model in order to determine hawkish / bullish sentiment, to generate predictions on federal funds rate.</li></ul> <b>Article:</b><a href="https://medium.com/@nusfintech.ml/nlp-on-fomc-meetings-50b48c447fe1">https://medium.com/@nusfintech.ml/nlp-on-fomc-meetings-50b48c447fe1</a><b>Members:</b><p>Keane, Andrew Walker, Ho Yan Qi, Dhruv Shah, Pang Jiarong Jacob</p>',
           projectImage: [
             {
-              src: '/images/departments/projectImages/blockchain/nlp1.jpg',
+              src: '/images/departments/projectImages/machineLearning/nlp1.jpg',
               alt: 'Project Image',
               height: '500',
               width: '440',
             },
             {
-              src: '/images/departments/projectImages/blockchain/nlp2.jpg',
+              src: '/images/departments/projectImages/machineLearning/nlp2.jpg',
               alt: 'Project Image',
               height: '500',
               width: '440',

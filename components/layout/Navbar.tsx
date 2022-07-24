@@ -87,7 +87,7 @@ const NavBar = () => {
               <div className=" hidden lg:block">
                 <DropDown
                   handleCloseNav={handleCloseNav}
-                  title={'About'}
+                  title="About"
                   items={ABOUT_US_ITEMS}
                 />
               </div>
@@ -114,17 +114,14 @@ const NavBar = () => {
               <div className=" hidden lg:block">
                 <DropDown
                   handleCloseNav={handleCloseNav}
-                  title={'Departments'}
+                  title="Departments"
                   items={DEPARTMENTS_ITEMS}
                 />
               </div>
             </li>
 
             <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
-              <Link
-                href={'/events'}
-                className="rounded-md px-3 py-1 text-white"
-              >
+              <Link href="/events" className="rounded-md px-3 py-1 text-white">
                 <a onClick={handleCloseNav}>Events</a>
               </Link>
             </li>

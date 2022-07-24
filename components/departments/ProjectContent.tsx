@@ -3,7 +3,7 @@ import { ProjectContentProps } from '@interfaces/departments/ProjectContent';
 
 // library
 import Image from 'next/image';
-import { Fragment, useEffect, useRef } from 'react';
+import { Fragment } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
@@ -11,7 +11,6 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 const ProjectContent = ({
   htmlContent,
   projectImage,
-  members,
   collaborations,
 }: ProjectContentProps) => {
   const hasImage = projectImage.length > 0;
@@ -21,10 +20,11 @@ const ProjectContent = ({
       <div className="flex flex-wrap justify-between ">
         <div
           className="flex flex-col gap-y-3 overflow-x-auto xl:w-1/2 [&>a]:underline [&>ul]:list-inside [&>ul]:list-disc"
+          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
             __html: htmlContent,
           }}
-        ></div>
+        />
         {hasImage && (
           <div className="mt-5 lg:w-1/2">
             <Carousel

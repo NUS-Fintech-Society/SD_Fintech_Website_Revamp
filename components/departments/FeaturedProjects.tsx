@@ -11,6 +11,7 @@ import ProjectContent from '@components/departments/ProjectContent';
 import CustomAccordion from '@components/recruitment/CustomAccordion';
 
 const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
+  // eslint-disable-next-line no-unused-vars
   const [year, setYear] = useState('21/22');
   const projectsByYear = projects.filter((project) => project.year === year);
 

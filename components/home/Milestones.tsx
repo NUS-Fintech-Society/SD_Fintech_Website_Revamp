@@ -20,7 +20,7 @@ const Milestones = () => {
                     start={memberCount ? 0 : undefined}
                     end={204}
                     duration={2}
-                    redraw={true}
+                    redraw
                   >
                     {({ countUpRef }) => (
                       <VisibilitySensor
@@ -46,7 +46,7 @@ const Milestones = () => {
                     start={projectsCount ? 0 : undefined}
                     end={23}
                     duration={1}
-                    redraw={true}
+                    redraw
                   >
                     {({ countUpRef }) => (
                       <VisibilitySensor

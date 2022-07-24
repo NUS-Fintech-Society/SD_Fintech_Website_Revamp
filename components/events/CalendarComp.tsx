@@ -38,7 +38,7 @@ const CalendarComp = ({ events }: EventsProps) => {
                 swipeable
                 emulateTouch
                 showIndicators
-                infiniteLoop={true}
+                infiniteLoop
               >
                 {filteredEvents.map(
                   ({ coverImage, cardDescription, name, location, date }) => (
