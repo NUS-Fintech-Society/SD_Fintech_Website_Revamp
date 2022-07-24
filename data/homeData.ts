@@ -103,7 +103,7 @@ const homeData: HomeData = {
     },
     {
       name: 'External Relations',
-      path: 'operations-external',
+      path: 'operations',
       coverImage: {
         src: '/images/departments/departmentLogos/External-Op-Logo.png',
         alt: 'random image 2',
@@ -136,7 +136,7 @@ const homeData: HomeData = {
     },
     {
       name: 'Internal Affairs',
-      path: 'operations-internal',
+      path: 'operations',
       coverImage: {
         src: '/images/departments/departmentLogos/Internal-Op-Logo.png',
         alt: 'random image 2',

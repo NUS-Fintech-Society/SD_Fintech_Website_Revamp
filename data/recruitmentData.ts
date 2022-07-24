@@ -90,12 +90,6 @@ const recruitmentData: RecruitmentData = {
       departmentName: 'Software Development',
       questions: [
         {
-          question:
-            'I have no experience in web development, can I still join?',
-          answer:
-            'Experience is preferred, but if you are new to web development, be prepared to spend extra time learning new things.',
-        },
-        {
           question: 'What roles are there? Frontend? Backend?',
           answer:
             'We have both frontend and backend projects. There are opportunities to do both types of projects.',

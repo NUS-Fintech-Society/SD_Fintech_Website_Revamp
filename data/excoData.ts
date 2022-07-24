@@ -94,7 +94,7 @@ const excoData: ExcoData = {
         {
           role: 'DIRECTOR (ER)',
           name: 'Elicia',
-          imgSrc: '/images/exco/.jpg',
+          imgSrc: '/images/exco/er.jpg',
         },
       ],
     },
