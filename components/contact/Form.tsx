@@ -6,7 +6,7 @@ const Form = () => {
 
       <div className="mt-5">
         <form
-          action="https://formsubmit.co/nusfintech.ops@gmail.com"
+          action="https://formsubmit.co/120d98fc78eb82935edd63ceac369850"
           method="POST"
         >
           {/* email */}
