@@ -30,7 +30,7 @@ const Landing = () => {
           </div>
           <div className=" text-xl xl:text-[26px]">
             <b>Goal Oriented &nbsp;&#8212;&nbsp;</b>
-            Leading more than 100 members with a strong grasp of their fields.
+            Leading more than 200 members with a strong grasp of their fields.
           </div>
         </div>
       </MaxWidth>
