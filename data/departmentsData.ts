@@ -152,7 +152,7 @@ const departmentsData: DepartmentsData = {
         {
           src: '/images/exco/blockchain2.jpg',
           alt: 'Image of director',
-          directorName: 'David',
+          directorName: 'Marcus',
         },
       ],
       roles: ['Research Analyst', 'Community Manager', 'Blockchain Developer'],

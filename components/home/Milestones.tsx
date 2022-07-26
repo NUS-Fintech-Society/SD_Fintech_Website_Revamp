@@ -17,9 +17,9 @@ const Milestones = () => {
               <div className="mb-3">
                 <span className="text-h2 text-black">
                   <CountUp
-                    start={memberCount ? 0 : undefined}
+                    start={memberCount ? 100 : undefined}
                     end={204}
-                    duration={2}
+                    duration={1.5}
                     redraw
                   >
                     {({ countUpRef }) => (
@@ -45,7 +45,7 @@ const Milestones = () => {
                   <CountUp
                     start={projectsCount ? 0 : undefined}
                     end={23}
-                    duration={1}
+                    duration={1.5}
                     redraw
                   >
                     {({ countUpRef }) => (

@@ -70,3 +70,7 @@ main repo.
 * Eslint 
 * TailwindCSS intelliSense
 * Prettier
+
+# Deployment
+The deployment repo is a forked repo under the nusfintech github account. (Deployment from org in vercel requires payment).
+To deploy changes, make a PR to the forked repo main branch.
