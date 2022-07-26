@@ -48,7 +48,7 @@ const excoData: ExcoData = {
         },
         {
           role: 'CO-DIRECTOR (BC)',
-          name: 'David',
+          name: 'Marcus',
           imgSrc: '/images/exco/blockchain2.jpg',
         },
       ],
