@@ -255,6 +255,44 @@ const homeData: HomeData = {
       url: 'https://www.stellar.org/?locale=en',
     },
   ],
+  featuredProjects: [
+    {
+      img: {
+        src: '/images/departments/projectImages/blockchain/xfers1.jpg',
+        alt: 'project picture',
+      },
+      title: 'Xfers NUS Transaction Risk Detection Website',
+      description:
+        'This project is a collaboration between NUS Fintech Society and Xfers, aimed to quantify the risks involved in transactions on the Blockchain. Our team hope to improve standard regulations on identifying suspicious transactions and addresses and increase access to fraud detection tools',
+    },
+    {
+      img: {
+        src: '/images/departments/projectImages/softwareDevelopment/insurtech1.jpg',
+        alt: 'project picture',
+      },
+      title: 'Insurtech Computer Vision',
+      description:
+        ' Our team sought to train a computer vision model to detect the location and severity of car damages in order to give an estimate of the cost of repairs, which could help insurance firms process claims faster and detect fraudulent claims',
+    },
+    {
+      img: {
+        src: '/images/departments/projectImages/machineLearning/algo-trading1.jpg',
+        alt: 'project picture',
+      },
+      title: 'FX Algorithmic Trading',
+      description:
+        'Our team was able to incorporated multiple variations of models to investigate performances for different specifications of models. We managed to execute profitable automated forex trading using signals generated from ML Models',
+    },
+    {
+      img: {
+        src: '/images/departments/projectImages/machineLearning/nlp2.jpg',
+        alt: 'project picture',
+      },
+      title: 'NLP on FOMC meetings',
+      description:
+        'Through Topic Modelling and Sentimental Analysis, our team was able to analyse FOMC minutes to tracks topics discussed by the Federal Reserve committee and determine hawkish / bullish sentiment, to generate predictions on federal funds rate',
+    },
+  ],
 };
 
 export default homeData;

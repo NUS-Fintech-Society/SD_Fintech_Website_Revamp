@@ -1,6 +1,10 @@
-export interface HomeData {
-  partnersImages: PartnersImage[];
-  departments: Department[];
+export interface FeaturedProjects {
+  img: {
+    src: string;
+    alt: string;
+  };
+  title: string;
+  description: string;
 }
 
 interface PartnersImage {
@@ -26,4 +30,9 @@ interface Department {
     question: string;
     answer: string;
   }[];
+}
+export interface HomeData {
+  partnersImages: PartnersImage[];
+  departments: Department[];
+  featuredProjects: FeaturedProjects[];
 }

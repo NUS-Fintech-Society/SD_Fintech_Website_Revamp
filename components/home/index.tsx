@@ -7,8 +7,9 @@ import Landing from '@components/home/Landing';
 import Departments from '@components/home/Departments';
 import Partners from '@components/home/Partners';
 import MaxWidth from '@components/layout/MaxWidth';
+import FeaturedProjects from '@components/home/FeaturedProjects';
 
-const Home = ({ partnersImages, departments }: HomeProps) => {
+const Home = ({ partnersImages, departments, featuredProjects }: HomeProps) => {
   return (
     <>
       <Landing />
@@ -27,11 +28,11 @@ const Home = ({ partnersImages, departments }: HomeProps) => {
             </p>
           </div>
         </div>
+        <Milestones />
+        <FeaturedProjects featuredProjects={featuredProjects} />
+        <Departments departments={departments} />
+        <Partners partnersImages={partnersImages} />
       </MaxWidth>
-
-      <Milestones />
-      <Departments departments={departments} />
-      <Partners partnersImages={partnersImages} />
     </>
   );
 };

@@ -4,6 +4,37 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    /* border-radius: 10px; */
+    background: none;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #d7ddde;
+
+    /* border: 3px solid #f6f7ed; */
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #c0a0b9;
+  }
+}
+
 @layer components {
   .section-my {
     @apply my-28;
