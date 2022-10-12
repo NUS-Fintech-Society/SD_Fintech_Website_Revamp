@@ -14,14 +14,13 @@ const Departments = ({ departments }: DepartmentsProps) => {
       <div className="flex flex-wrap justify-center gap-10">
         {departments.map(
           ({ coverImage, cardDescription, name, path }, index) => (
-            <Fragment key={index}>
               <DepartmentCard
+                key={index}
                 coverImage={coverImage}
                 cardDescription={cardDescription}
                 name={name}
                 path={path}
               />
-            </Fragment>
           )
         )}
       </div>

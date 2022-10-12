@@ -12,8 +12,8 @@ const DepartmentCard = ({
   path,
 }: DepartmentCardProps) => {
   return (
-    <Link href={'/departments/' + path}>
-      <a className="  group  flex basis-[320px] flex-col rounded-lg bg-[#efefef] shadow-lg hover:text-white">
+    <Link href={`/departments/${path}`}>
+      <a className="flex basis-[320px] flex-col rounded-lg bg-[#efefef] shadow-lg">
         <div className="flex justify-center py-10">
           <Image
             src={coverImage.src}
@@ -23,9 +23,9 @@ const DepartmentCard = ({
             layout="intrinsic"
           />
         </div>
-        <div className=" grow rounded-b-lg bg-gray-300 px-4 py-6 group-hover:bg-primary">
-          <h3 className=" mb-3 text-center text-xl font-semibold">{name}</h3>
-          <p className=" text-gray-700 group-hover:text-white">
+        <div className="grow rounded-b-lg bg-gray-300 px-4 py-6 group-hover:bg-primary">
+          <h3 className="text-3xl">{name}</h3>
+          <p className="text-gray-700">
             {cardDescription}
           </p>
         </div>
