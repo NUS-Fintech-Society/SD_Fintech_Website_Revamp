@@ -7,6 +7,7 @@ import MaxWidth from '@components/layout/MaxWidth';
 import Image from 'next/image';
 import Link from 'next/link';
 import DropDown from '@components/layout/DropDown';
+import {Box} from '@chakra-ui/react';
 
 const DEPARTMENTS_ITEMS = [
   ['Machine Learning', '/departments/machine-learning'],
@@ -28,124 +29,133 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="fixed top-0 z-10  w-[100vw] bg-primary">
-      <MaxWidth>
-        <div className="flex items-center justify-between py-1 text-white">
-          <div className="mt-2 flex cursor-pointer items-center font-bold">
+    <nav className="fixed top-0 z-10  w-[100vw]">
+      <Box  w="100%" h="100%" bgGradient= 'linear(to-b, #002750B3, #0027508F,#00275059,#00275036,#00275000)'>
+        <div className = "flex text-white h-[282px] w-full">
+
+          <div className="mt-[6px] ml-[100px] flex cursor-pointer font-bold">
             <Link href="/">
               <Image
                 src="/images/fintechsoc-logo.png"
                 alt="NUS FinTech Society Logo"
-                width="130"
-                height="58"
+                width="170px"
+                height="90px"
                 layout="fixed"
               />
             </Link>
           </div>
 
-          <div
-            onClick={() => setIsOpen(!isOpen)}
-            className="absolute right-[24px] top-[37px] z-30 -translate-y-1/2 cursor-pointer sm:right-[48px] lg:hidden"
-          >
-            {isOpen ? (
-              <CloseIcon width={10} height={6} />
-            ) : (
-              <HamburgerIcon width={10} height={7} />
-            )}
+
+          <div className='lg:ml-[332px] lg:mr-[100px] lg:mt-[24px] h-[55px] w-[980px] text-2xl '>
+            <div
+                onClick={() => setIsOpen(!isOpen)}
+                className="absolute right-[24px] top-[37px] z-30 -translate-y-1/2 cursor-pointer sm:right-[48px] lg:hidden"
+              >
+                {isOpen ? (
+                  <CloseIcon width={10} height={6} />
+                ) : (
+                  <HamburgerIcon width={10} height={7} />
+                )}
+            </div>
+
+
+            <ul
+              className={`fixed z-20 transition-all duration-150 ease-in lg:pt-0
+                      ${isOpen ? 'top-0' : 'top-[-800px]'}
+                          lg:static lg:z-auto lg:mt-0 lg:flex lg:w-auto lg:pb-0 
+                          lg:pl-0`}
+            >
+
+              <div className= "flex lg:divide-x ">
+                <li className=" my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-3 lg:py-1">
+                  <Link href="/" className="rounded-md px-3 py-1 text-white ">
+                    <a onClick={handleCloseNav}>Home</a>
+                  </Link>
+                </li>
+                
+
+                <li className="my-7 md:my-0 md:py-3 md:px-4 lg:py-1">
+                  <div className="lg:hidden">
+                    <div className="rounded-md ">About</div>
+                    <ul>
+                      {ABOUT_US_ITEMS.map((item) => (
+                        <li key={item[1]} className="my-4 ml-3 hover:text-gray-400">
+                          <Link href={item[1]}>
+                            <a
+                              onClick={handleCloseNav}
+                              className=" h-full w-full p-2 hover:text-gray-400"
+                            >
+                              {item[0]}
+                            </a>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className=" hidden lg:block">
+                    <DropDown
+                      handleCloseNav={handleCloseNav}
+                      title="About"
+                      items={ABOUT_US_ITEMS}
+                    />
+                  </div>
+                </li>
+
+                <li className="my-7  md:my-0 md:py-3 md:px-4 lg:py-1">
+                  <div className="lg:hidden">
+                    <div className="rounded-md ">Departments</div>
+                    <ul>
+                      {DEPARTMENTS_ITEMS.map((item) => (
+                        <li key={item[1]} className="my-4 ml-3 hover:text-gray-400">
+                          <Link href={item[1]}>
+                            <a
+                              onClick={handleCloseNav}
+                              className=" h-full w-full p-2"
+                            >
+                              {item[0]}
+                            </a>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className=" hidden lg:block">
+                    <DropDown
+                      handleCloseNav={handleCloseNav}
+                      title="Departments"
+                      items={DEPARTMENTS_ITEMS}
+                    />
+                  </div>
+                </li>
+
+                <li className="my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-3 lg:py-1">
+                  <Link href="/events" className="rounded-md px-3 py-1 text-white">
+                    <a onClick={handleCloseNav}>Events</a>
+                  </Link>
+                </li>
+
+                <li className="my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-3 lg:py-1">
+                  <Link
+                    href="/recruitment"
+                    className="rounded-md px-3 py-1 text-white"
+                  >
+                    <a onClick={handleCloseNav}>Recruitment</a>
+                  </Link>
+                </li>
+
+                <li className="my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-3 lg:py-1">
+                  <Link
+                    href="/contact-us"
+                    className="rounded-md px-3 py-1 text-white"
+                  >
+                    <a onClick={handleCloseNav}>Contact Us</a>
+                  </Link>
+                </li>
+              </div>        
+            </ul>
           </div>
-
-          <ul
-            className={`fixed left-0 z-20  w-full bg-primary pt-10 pb-5 pl-9 transition-all duration-150 ease-in lg:pt-0
-                    ${isOpen ? 'top-0 ' : 'top-[-700px]'}
-                        lg:static lg:z-auto lg:mt-0 lg:flex lg:w-auto lg:items-center lg:pb-0 
-                        lg:pl-0`}
-          >
-            <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
-              <Link href="/" className="rounded-md px-3 py-1 text-white">
-                <a onClick={handleCloseNav}>Home</a>
-              </Link>
-            </li>
-
-            <li className="my-7   md:my-0 md:ml-8 md:py-3 lg:py-1">
-              <div className="lg:hidden">
-                <div className="rounded-md ">About</div>
-                <ul>
-                  {ABOUT_US_ITEMS.map((item) => (
-                    <li key={item[1]} className="my-4 ml-3 hover:text-gray-400">
-                      <Link href={item[1]}>
-                        <a
-                          onClick={handleCloseNav}
-                          className=" h-full w-full p-2 hover:text-gray-400"
-                        >
-                          {item[0]}
-                        </a>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className=" hidden lg:block">
-                <DropDown
-                  handleCloseNav={handleCloseNav}
-                  title="About"
-                  items={ABOUT_US_ITEMS}
-                />
-              </div>
-            </li>
-
-            <li className="my-7  md:my-0 md:ml-8 md:py-3 lg:py-1">
-              <div className="lg:hidden">
-                <div className="rounded-md ">Departments</div>
-                <ul>
-                  {DEPARTMENTS_ITEMS.map((item) => (
-                    <li key={item[1]} className="my-4 ml-3 hover:text-gray-400">
-                      <Link href={item[1]}>
-                        <a
-                          onClick={handleCloseNav}
-                          className=" h-full w-full p-2"
-                        >
-                          {item[0]}
-                        </a>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className=" hidden lg:block">
-                <DropDown
-                  handleCloseNav={handleCloseNav}
-                  title="Departments"
-                  items={DEPARTMENTS_ITEMS}
-                />
-              </div>
-            </li>
-
-            <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
-              <Link href="/events" className="rounded-md px-3 py-1 text-white">
-                <a onClick={handleCloseNav}>Events</a>
-              </Link>
-            </li>
-
-            <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
-              <Link
-                href="/recruitment"
-                className="rounded-md px-3 py-1 text-white"
-              >
-                <a onClick={handleCloseNav}>Recruitment</a>
-              </Link>
-            </li>
-
-            <li className="my-7 hover:text-gray-400 md:my-0 md:ml-8 md:py-3 lg:py-1">
-              <Link
-                href="/contact-us"
-                className="rounded-md px-3 py-1 text-white"
-              >
-                <a onClick={handleCloseNav}>Contact Us</a>
-              </Link>
-            </li>
-          </ul>
         </div>
-      </MaxWidth>
+      </Box>
     </nav>
   );
 };
