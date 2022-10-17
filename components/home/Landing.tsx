@@ -5,7 +5,7 @@ import AnimatedText from 'react-animated-text-content';
 const Landing = () => {
   return (
     <div className="relative h-[calc(60vh-64px)] min-h-[400px] w-screen">
-      <div className="absolute -z-10 h-5/6 w-full overflow-hidden bg-primary">
+      <div className="absolute -z-10 h-[90%] w-full overflow-hidden bg-primary">
         <Image
           src="/images/home/home_img.jpg"
           alt="Insert Photo Here"
@@ -31,8 +31,8 @@ const Landing = () => {
           </div> */}
         </div>
       </MaxWidth>
-      <div className='absolute bottom-8 w-full  bg-primary xl:bottom-8'>
-        <div className="my-3 text-base italic text-white sm:ml-10 xl:text-[20px] ">
+      <div className='absolute bottom-1 w-full  bg-primary xl:bottom-1'>
+        <div className="my-3 text-base italic text-white sm:ml-24 xl:text-[20px] ">
           Driving R&D in emerging realms of Blockchain and Machine Learning.
         </div>
       </div>
