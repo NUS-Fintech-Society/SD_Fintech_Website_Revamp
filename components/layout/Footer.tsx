@@ -6,7 +6,8 @@ import MaxWidth from '@components/layout/MaxWidth';
 
 const Footer = () => {
   return (
-    <footer className="relative h-[calc(60vh-64px)] max-h-[200px] w-screen">
+    // [calc(60vh-64px)]
+    <footer className="relative h-150 max-h-[400px] w-screen">
       <div className="absolute -z-10 h-full w-full overflow-hidden bg-gray-50">
         <Image
           src="/images/home/footer.jpg"
@@ -17,22 +18,22 @@ const Footer = () => {
         />
       </div>
       <MaxWidth>
-        <div className="flex flex-col-reverse items-center gap-y-5 py-10 sm:flex-row sm:justify-between sm:gap-y-0">
+        <div className="flex flex-col-reverse items-center gap-y-5 sm:flex-row sm:justify-between sm:gap-y-0">
           <div>
             <Image
               src="/images/fintechsoc-logo.png"
               alt="NUS FinTech Society Logo"
               quality={100}
-              width="227"
-              height="116"
+              width="230"
+              height="130"
               layout="fixed"
             />
           </div>
           <div className="flex-col">
-            <h3 className="mb-5 text-center text-lg text-white">
+            <h3 className="mt-2 mb-5 text-center text-2xl text-white">
               Let's Connect
             </h3>
-            <div className="flex gap-8">
+            <div className="flex gap-6">
               <a
                 href="https://www.linkedin.com/company/nus-fintech-society/"
                 title="NUS FinTech Society LinkedIn Page"
