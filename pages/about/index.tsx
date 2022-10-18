@@ -11,35 +11,57 @@ const AboutPage = () => {
       <Head>
         <title>About • NUS Fintech Society</title>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Head> 
       {/* landing bg */}
-      <div className="relative h-[calc(50vh-64px)] min-h-[400px] w-screen">
-        <div className="absolute -z-10 h-full w-full overflow-hidden">
-          <Image
-            src="/images/soc-bg.jpg"
-            alt="Insert Photo Here"
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-          />
-        </div>
+      <div className="grid grid-cols-2 gap-0 rounded-b-[100px] bg-[#002750]">
+          <div className='flex items-center justify-center'>
+            <Image
+              src="/images/soc-bg.jpg"
+              alt="Insert Photo Here"
+              height={500}
+              width={500}
+              className="rounded-3xl"
+            />
+          </div>
+
         <MaxWidth>
-          <div className="pt-[15vh] text-center">
-            <h1 className=" hero-xl">About Us</h1>
+          <div className='grid grid-flow-col grid-rows-3 gap-0'>
+            <div className="mt-10 text-center">
+              <h1 className=" hero-xl">About Us.</h1>
+            </div>
+
+            <div>
+              <h2 className="mb-3 text-h2 font-bold text-white">Our Story</h2>
+              <p className="text-xl text-white lg:text-2xl">
+                NUS Fintech Society was founded in 2018 in collaboration with NUS
+                Fintech Lab under the NUS School of Computing. We identify ourselves
+                as Fintech enthusiasts looking for opportunities to learn and grow
+                our knowledge, skills and network in the Fintech space.
+              </p>
+            </div>
+
+            <div className='grid grid-cols-2 gap-0'>
+              <div>
+                <h2 className="text-h2 font-bold text-white">Mission</h2>
+                <p className="text-xl text-white lg:text-2xl">
+                  To educate students with Fintech knowledge through events and
+                  industry projects, and connect and establish relationships with
+                  industry partners.
+                </p>
+              </div>
+              
+              <div>
+                <h2 className="text-h2 font-bold text-white">Vision</h2>
+                <p className="text-xl text-white lg:text-2xl">
+                  To be the leading student-led Fintech Club known for incubating
+                  industry-ready Fintech talents and industry-grade financial
+                  digital transformation projects.
+                </p>
+              </div>
+            </div>
           </div>
         </MaxWidth>
       </div>
-      <MaxWidth>
-        <div className="section-my pb-0">
-          <h2 className="mb-10 text-h2 font-bold">Our History</h2>
-          <p className="text-xl lg:text-2xl">
-            NUS Fintech Society was founded in 2018 in collaboration with NUS
-            Fintech Lab under the NUS School of Computing. We identify ourselves
-            as Fintech enthusiasts looking for opportunities to learn and grow
-            our knowledge, skills and network in the Fintech space.
-          </p>
-        </div>
-      </MaxWidth>
       <MaxWidth>
         <div className="section-my">
           {/* <h2 className="mb-10 text-h2 font-bold ">Our Mission and Vision</h2> */}
