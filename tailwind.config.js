@@ -19,7 +19,7 @@ module.exports = {
         base: '16px',
       },
       maxWidth: {
-        main: '1280px',
+        main: '1536px',
       },
     },
   },
