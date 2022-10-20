@@ -32,7 +32,7 @@ const Landing = () => {
         </div>
       </MaxWidth>
       <div className='absolute bottom-1 w-full  bg-primary xl:bottom-1'>
-        <div className="my-3 text-base italic text-white sm:ml-24 xl:text-[20px] ">
+        <div className="my-3 ml-4 text-base italic text-white sm:ml-24 xl:text-[20px] ">
           Driving R&D in emerging realms of Blockchain and Machine Learning.
         </div>
       </div>
