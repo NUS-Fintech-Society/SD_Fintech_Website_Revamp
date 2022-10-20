@@ -62,7 +62,7 @@ const AboutPage = () => {
               </p>
             </div>
 
-            <div className='grid grid-cols-2'>
+            <div className='grid md:grid-cols-2'>
               <div>
                 <h2 className="text-h2 font-bold text-white">
                   <div className='flex items-center'>
