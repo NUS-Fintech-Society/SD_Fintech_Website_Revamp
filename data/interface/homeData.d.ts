@@ -20,6 +20,7 @@ interface Department {
   };
   name: string;
   path: string;
+  wingType: WingType,
   cardDescription: string;
   popupDescription: string;
   rolesOffered: string[];
@@ -31,6 +32,7 @@ interface Department {
     answer: string;
   }[];
 }
+
 export interface HomeData {
   partnersImages: PartnersImage[];
   departments: Department[];

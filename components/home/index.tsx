@@ -14,22 +14,6 @@ const Home = ({ partnersImages, departments, featuredProjects }: HomeProps) => {
     <>
       <Landing />
       <MaxWidth>
-        <div className="lg:gapx-3 mt-20 flex flex-wrap gap-y-10 ">
-          <div className="w-full text-center lg:w-1/2">
-            <div className=" mb-3 text-h3 font-bold">Passionate</div>
-            <p className="text-h3">
-              Driving R&D in emerging realms of Blockchain and Machine Learning.
-            </p>
-          </div>
-          <div className="w-full text-center lg:w-1/2">
-            <div className=" mb-3 text-h3 font-bold">Goal Oriented</div>
-            <p className="text-h3">
-              Leading more than 200 members with a strong grasp of their fields.
-            </p>
-          </div>
-        </div>
-        <Milestones />
-        <FeaturedProjects featuredProjects={featuredProjects} />
         <Departments departments={departments} />
         <Partners partnersImages={partnersImages} />
       </MaxWidth>

@@ -1,10 +1,16 @@
 import { HomeData } from '@data/interface/homeData';
 
+export enum WingType {
+  Technical,
+  Operations
+}
+
 const homeData: HomeData = {
   departments: [
     {
       name: 'Machine Learning',
       path: 'machine-learning',
+      wingType: WingType.Technical,
       coverImage: {
         src: '/images/departments/departmentLogos/ml-logo.png',
         alt: 'random image 1',
@@ -38,6 +44,7 @@ const homeData: HomeData = {
     {
       name: 'Software Development',
       path: 'software',
+      wingType: WingType.Technical,
       coverImage: {
         src: '/images/departments/departmentLogos/Software-Development-Logo.png',
         alt: 'random image 2',
@@ -71,6 +78,7 @@ const homeData: HomeData = {
     {
       name: 'Blockchain',
       path: 'blockchain',
+      wingType: WingType.Technical,
       coverImage: {
         src: '/images/departments/departmentLogos/Blockchain-Logo.png',
         alt: 'random image 2',
@@ -104,6 +112,7 @@ const homeData: HomeData = {
     {
       name: 'External Relations',
       path: 'operations',
+      wingType: WingType.Operations,
       coverImage: {
         src: '/images/departments/departmentLogos/External-Op-Logo.png',
         alt: 'random image 2',
@@ -137,6 +146,7 @@ const homeData: HomeData = {
     {
       name: 'Internal Affairs',
       path: 'operations',
+      wingType: WingType.Operations,
       coverImage: {
         src: '/images/departments/departmentLogos/Internal-Op-Logo.png',
         alt: 'random image 2',
