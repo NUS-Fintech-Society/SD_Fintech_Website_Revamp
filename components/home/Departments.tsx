@@ -1,9 +1,6 @@
 // type
 import { DepartmentsProps } from '@interfaces/home/Departments';
 
-// library
-import { Fragment } from 'react';
-
 // code
 import DepartmentCard from '@components/home/DepartmentCard';
 

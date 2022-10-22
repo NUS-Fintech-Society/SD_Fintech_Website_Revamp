@@ -27,7 +27,7 @@ const DepartmentCard = ({
         </div>
         <div className="grow rounded-b-lg pl-6 min-h-[256px]">
           <div className='min-h-[92px] flex items-center my-4 mr-12'>
-            <h3 className={`text-3xl font-semibold ${wingType == WingType.Technical ? "text-[#004C98]" : "text-[#009494]"}`}>{name}</h3>
+            <h3 className={`text-3xl font-semibold ${wingType === WingType.Technical ? "text-[#004C98]" : "text-[#009494]"}`}>{name}</h3>
           </div>
           <p className="text-[#303030] font-medium mr-20 mb-8 leading-5">
             {cardDescription}

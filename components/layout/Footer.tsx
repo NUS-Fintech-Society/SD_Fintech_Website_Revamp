@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
           <div className="flex-col">
             <h3 className="mt-8 sm:mt-2 mb-5 text-center text-2xl text-white">
-              Let's Connect
+              Let&apos;s Connect
             </h3>
             <div className="flex gap-6">
               <a
