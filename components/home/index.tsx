@@ -2,14 +2,12 @@
 import { HomeProps } from '@interfaces/home';
 
 // code
-import Milestones from '@components/home/Milestones';
 import Landing from '@components/home/Landing';
 import Departments from '@components/home/Departments';
 import Partners from '@components/home/Partners';
 import MaxWidth from '@components/layout/MaxWidth';
-import FeaturedProjects from '@components/home/FeaturedProjects';
 
-const Home = ({ partnersImages, departments, featuredProjects }: HomeProps) => {
+const Home = ({ partnersImages, departments }: HomeProps) => {
   return (
     <>
       <Landing />

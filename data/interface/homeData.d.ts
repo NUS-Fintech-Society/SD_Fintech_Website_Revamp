@@ -36,5 +36,4 @@ interface Department {
 export interface HomeData {
   partnersImages: PartnersImage[];
   departments: Department[];
-  featuredProjects: FeaturedProjects[];
 }
