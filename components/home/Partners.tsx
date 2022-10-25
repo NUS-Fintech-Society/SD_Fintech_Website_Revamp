@@ -10,23 +10,15 @@ import { Box, Text } from '@chakra-ui/react'
 const Partners = ({ partnersImages }: PartnersProps) => {
   return (
     <div className="section-my">
-      <div className='pb-12'>
-        <div className='h-28 rounded-3xl overflow-hidden bg-[#004F5080] ' >
-          
-          <p className='absolute text-5xl text-white font-medium my-8 ml-12 z-10'> 
-            Our Partners
-          </p>
-          <p className='absolute right-48 text-xl text-white font-normal my-8 z-10 w-4/12'> 
-            Our projects focus on solving problems that impact real people for internal use and industry partnerships
-          </p>
-          <Image src='/images/home/partnerLogos/ourpartners.png' alt='ourpartnersimage' width='1388px' height='130px' objectFit="cover" /> 
+      <div className='w-full flex flex-wrap rounded-[20px] p-8 mb-8 '>
+        <div className='w-full h-[122px] flex flex-wrap bg-[#004F5080] rounded-[20px]'>
+          <img src='/images/home/ourpartners.png' className= 'w-full h-full rounded-[20px]' />
         </div>
-        
-      </div> 
-
+        <div className='absolute flex m-[70px] mt-[40px] text-4xl text-center sm:text-5xl sm:mt-8 font-bold text-white'>
+          Our Partners
+        </div>
+      </div>
       
-    
-
       <div className="mx-auto flex w-5/6 flex-wrap justify-center gap-10">
         {partnersImages.map(({ src, alt, url }, index) => {
           return (
