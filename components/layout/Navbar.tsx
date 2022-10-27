@@ -31,9 +31,8 @@ const NavBar = () => {
   return (
     <nav className="fixed top-0 z-10  w-[100vw]">
       <Box  w="100%" h="100%" bgGradient= 'linear(to-b, #002750B3, #0027508F,#00275059,#00275036,#00275000)'>
-        <div className = "flex text-white h-[282px] w-full">
-
-          <div className="mt-[6px] ml-[100px] flex cursor-pointer font-bold">
+        <div className = "flex text-white h-[282px] ">
+          <div className="ml-20 flex cursor-pointer font-bold">
             <Link href="/">
               <Image
                 src="/images/fintechsoc-logo.png"
@@ -45,8 +44,7 @@ const NavBar = () => {
             </Link>
           </div>
 
-
-          <div className='lg:ml-[332px] lg:mr-[100px] lg:mt-[24px] h-[55px] w-[980px] text-2xl '>
+          <div className='h-[55px] text-l mt-6 mr-24 lg:ml-auto'>
             <div
                 onClick={() => setIsOpen(!isOpen)}
                 className="absolute right-[24px] top-[37px] z-30 -translate-y-1/2 cursor-pointer sm:right-[48px] lg:hidden"
@@ -61,22 +59,22 @@ const NavBar = () => {
 
             <ul
               className={`fixed z-20 transition-all duration-150 ease-in lg:pt-0
-                      ${isOpen ? 'top-0' : 'top-[-800px]'}
+                      ${isOpen ? 'top-0' : 'top-[-900px] '}
                           lg:static lg:z-auto lg:mt-0 lg:flex lg:w-auto lg:pb-0 
                           lg:pl-0`}
             >
 
-              <div className= "flex lg:divide-x ">
-                <li className=" my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-3 lg:py-1">
+              <div className= "flex flex-wrap lg:divide-x bg-[#002750BF] lg:bg-transparent">
+                <li className=" my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-1 ml-4 lg:mr-4">
                   <Link href="/" className="rounded-md px-3 py-1 text-white ">
                     <a onClick={handleCloseNav}>Home</a>
                   </Link>
                 </li>
                 
 
-                <li className="my-7 md:my-0 md:py-3 md:px-4 lg:py-1">
+                <li className="my-7 md:my-0 md:px-4 md:py-1 px-8">
                   <div className="lg:hidden">
-                    <div className="rounded-md ">About</div>
+                    <div className="rounded-md">About</div>
                     <ul>
                       {ABOUT_US_ITEMS.map((item) => (
                         <li key={item[1]} className="my-4 ml-3 hover:text-gray-400">
@@ -101,7 +99,7 @@ const NavBar = () => {
                   </div>
                 </li>
 
-                <li className="my-7  md:my-0 md:py-3 md:px-4 lg:py-1">
+                <li className="my-7  md:my-0 md:py-1 md:px-4 lg:py-1 ml-4 lg:ml-5">
                   <div className="lg:hidden">
                     <div className="rounded-md ">Departments</div>
                     <ul>
@@ -128,13 +126,13 @@ const NavBar = () => {
                   </div>
                 </li>
 
-                <li className="my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-3 lg:py-1">
+                <li className="my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-1 ml-4 lg:mr-5 ">
                   <Link href="/events" className="rounded-md px-3 py-1 text-white">
                     <a onClick={handleCloseNav}>Events</a>
                   </Link>
                 </li>
 
-                <li className="my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-3 lg:py-1">
+                <li className="my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-1 ml-4  px-4">
                   <Link
                     href="/recruitment"
                     className="rounded-md px-3 py-1 text-white"
@@ -143,7 +141,7 @@ const NavBar = () => {
                   </Link>
                 </li>
 
-                <li className="my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-3 lg:py-1">
+                <li className="my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-1 ml-4 lg:mr-5">
                   <Link
                     href="/contact-us"
                     className="rounded-md px-3 py-1 text-white"
