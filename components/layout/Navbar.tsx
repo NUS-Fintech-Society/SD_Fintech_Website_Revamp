@@ -126,7 +126,7 @@ const NavBar = () => {
                   </div>
                 </li>
 
-                <li className="my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-1 ml-4 lg:mr-5 ">
+                <li className="my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-1 ml-4 ">
                   <Link href="/events" className="rounded-md px-3 py-1 text-white">
                     <a onClick={handleCloseNav}>Events</a>
                   </Link>
