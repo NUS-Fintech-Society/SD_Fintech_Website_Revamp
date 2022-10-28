@@ -145,7 +145,7 @@ const AboutPage = () => {
           quality={100}
           className="opacity-50"
         />
-        <div className='pt-[50vh] text-center'>
+        <div className='absolute w-full pt-[50vh] text-center'>
           <h1 className='text-6xl text-white xl:text-7xl'>
             Meet the EXCO
           </h1>
