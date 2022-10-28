@@ -13,7 +13,7 @@ const AboutPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head> 
       {/* landing bg */}
-      <div className="grid grid-cols-2 rounded-b-[100px] bg-[#002750] pb-20">
+      <div className="grid grid-cols-2 rounded-b-[143px] bg-[#002750] pb-20">
           <div className='flex items-center justify-center'>
             <Image
               src="/images/soc-bg.jpg"
@@ -156,9 +156,9 @@ const AboutPage = () => {
           <Image
             src="/images/exco/advisor.jpg"
             alt="Insert Photo Here"
-            height={200}
-            width={200}
-            className="rounded-xl"
+            height={337}
+            width={337}
+            className="rounded-3xl"
           />
         </div>
       </div>
