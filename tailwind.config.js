@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        primary: ['Lato', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       },
       colors: {
         primary: '#141D48',
@@ -16,10 +16,10 @@ module.exports = {
       fontSize: {
         h2: '32px',
         h3: '24px',
-        base: '17px',
+        base: '16px',
       },
       maxWidth: {
-        main: '1280px',
+        main: '1536px',
       },
     },
   },
