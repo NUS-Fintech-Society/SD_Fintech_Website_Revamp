@@ -30,8 +30,7 @@ const Landing = () => {
           </div>
         </div>
       </MaxWidth>
-      <div className='absolute bottom-10 w-full bg-primary h-10'>
-      </div>
+      <div className='absolute bottom-10 w-full bg-primary h-10' />
     </div>
   );
 };

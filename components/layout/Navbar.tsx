@@ -3,11 +3,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import MaxWidth from '@components/layout/MaxWidth';
 import Image from 'next/image';
 import Link from 'next/link';
 import DropDown from '@components/layout/DropDown';
-import {Box} from '@chakra-ui/react';
 
 const DEPARTMENTS_ITEMS = [
   ['Machine Learning', '/departments/machine-learning'],
