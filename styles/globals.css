@@ -41,7 +41,7 @@
 
 @layer components {
   .section-my {
-    @apply my-28;
+    @apply my-20;
   }
 
   .hero-xl {
