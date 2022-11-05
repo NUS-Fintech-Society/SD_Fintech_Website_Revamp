@@ -4,37 +4,33 @@ import AnimatedText from 'react-animated-text-content';
 
 const Landing = () => {
   return (
-    <div className="relative h-[calc(60vh-64px)] min-h-[400px] w-screen">
-      <div className="absolute -z-10 h-[90%] w-full overflow-hidden bg-primary">
+    <div className="relative h-[calc(80vh)] min-h-[400px] w-screen -mb-10">
+      <div className='absolute w-full h-[50%] bg-gradient-to-b from-[#002750B3] via-[#00275059] to-[#00275000] -top-20' />
+      <div className="absolute -z-10 h-full w-full overflow-hidden bg-primary -top-20">
         <Image
           src="/images/home/home_img.jpg"
           alt="Insert Photo Here"
           layout="fill"
           objectFit="cover"
           quality={100}
-          className="rounded-br-full shadow"
+          className="rounded-br-[calc(50vh)] shadow"
         />
       </div>
       <MaxWidth>
-      <div className="flex flex-col gap-y-3 pt-[max(50px,_10vh)] text-center">
-          <h1 className='text-6xl text-white xl:text-7xl'>
-            NUS Fintech Society
-          </h1>
-          <div className="mt-1 mb-3 text-2xl text-white xl:text-4xl">
+        <div className="flex flex-col gap-y-3 pt-[max(50px,10vh)] text-center text-white">
+          <div className='text-6xl text-white font-bold'>
             <AnimatedText type="words" animationType="lights">
-              Ideate. Innovate. Inspire
+              NUS Fintech Society
             </AnimatedText>
           </div>
-          {/* <div className=" text-xl xl:text-[26px]">
-            <b>Goal Oriented &nbsp;&#8212;&nbsp;</b>
-            Leading more than 200 members with a strong grasp of their fields.
-          </div> */}
+          <div className="mt-1 text-2xl text-white">
+            <AnimatedText type="words" animationType="lights">
+              Ideate. Innovate. Inspire.
+            </AnimatedText>
+          </div>
         </div>
       </MaxWidth>
-      <div className='absolute bottom-1 w-full  bg-primary xl:bottom-1'>
-        <div className="my-3 ml-4 text-base italic text-white sm:ml-24 xl:text-[20px] ">
-          Driving R&D in emerging realms of Blockchain and Machine Learning.
-        </div>
+      <div className='absolute bottom-10 w-full bg-primary h-10'>
       </div>
     </div>
   );

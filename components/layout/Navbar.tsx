@@ -29,9 +29,8 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="fixed top-0 z-10  w-[100vw]">
-      <Box  w="100%" h="100%" bgGradient= 'linear(to-b, #002750B3, #0027508F,#00275059,#00275036,#00275000)'>
-        <div className = "flex text-white h-[282px] ">
+    <nav className="fixed top-0 z-10 w-[100vw]">
+        <div className = "flex text-white">
           <div className="ml-20 flex cursor-pointer font-bold">
             <Link href="/">
               <Image
@@ -153,7 +152,6 @@ const NavBar = () => {
             </ul>
           </div>
         </div>
-      </Box>
     </nav>
   );
 };
