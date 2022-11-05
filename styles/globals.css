@@ -33,6 +33,10 @@
   .scrollbar::-webkit-scrollbar-thumb:hover {
     background: #c0a0b9;
   }
+
+  .crop-photo {
+    clip-path: polygon(21% 0, 82% 23%, 100% 23%, 100% 100%, 0 100%, 0 23%);
+  }
 }
 
 @layer components {
