@@ -10,14 +10,9 @@ import { Box, Text } from '@chakra-ui/react'
 const Partners = ({ partnersImages }: PartnersProps) => {
   return (
     <div className="section-my">
-      <h3 className='absolute m-12 mt-[80px] hidden md:block md:ml-[475px] lg:ml-[710px] xl:ml-[950px]  text-xl text-white max-w-lg '>Past and Present</h3>
-      <div className='w-full flex flex-wrap rounded-[20px] p-8 mb-8 '>
-        <div className='w-full h-[122px] flex flex-wrap bg-[#004F5080] rounded-[20px]'>
-          <img src='/images/home/ourpartners.png' className= 'w-full h-full rounded-[20px]' />
-        </div>
-        <div className='absolute flex m-[70px] mt-[40px] text-4xl text-center sm:text-5xl sm:mt-8 font-bold text-white'>
-          Our Partners
-        </div>
+      <div className='w-full h-[122px] flex flex-wrap bg-black rounded-[20px] p-8 mb-8'>
+        <h2 className= 'text-4xl text-center sm:text-5xl font bold text-white'> Our Partners </h2>
+        <h3 className='hidden lg:block ml-auto text-xl text-right text-white max-w-lg mt-3'> Past and Present </h3>
       </div>
       
       <div className="mx-auto flex w-5/6 flex-wrap justify-center gap-10">
