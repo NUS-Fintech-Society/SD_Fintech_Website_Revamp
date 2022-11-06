@@ -3,12 +3,13 @@ import { FeaturedProjectsProps } from '@interfaces/departments/FeaturedProjectsP
 
 // library
 import React, { Fragment, useState } from 'react';
-import { Accordion } from '@chakra-ui/react';
+import Image from 'next/image';
 
 // code
 import MaxWidth from '@components/layout/MaxWidth';
 import ProjectContent from '@components/departments/ProjectContent';
 import CustomAccordion from '@components/recruitment/CustomAccordion';
+import ProjectCard from '@components/departments/ProjectCard';
 
 const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
   // eslint-disable-next-line no-unused-vars
@@ -20,27 +21,19 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
   // };
 
   return (
+    
     <MaxWidth>
-      <div className="my-10 flex flex-wrap justify-between text-xl md:text-2xl lg:text-3xl">
-        <h2 className="mb-3 mr-5 text-2xl font-semibold lg:text-4xl">
-          Featured Projects
-        </h2>
-        {/* <Select
-          icon={<TriangleDownIcon />}
-          placeholder="Select Year"
-          width={{ base: 36, md: 64 }}
-          size={{ base: 'md', md: 'lg' }}
-          onChange={handleChangeYear}
-          borderColor="black"
-          defaultValue="21/22"
-        >
-          <option value="21/22">2021/2022</option>
-          <option value="20/21">2020/2021</option>
-        </Select> */}
+    <h3 className='absolute m-12 mt-[60px] hidden md:block md:ml-[475px] lg:ml-[710px] xl:ml-[850px]  text-xl text-white max-w-lg '>Our projects focus on solving problems that impact real people for internal use and industry partnerships</h3>
+    <div className='w-full flex flex-wrap rounded-[20px] p-8 mb-8 '>
+      <div className='w-full h-[122px] flex flex-wrap bg-[#004F5080] rounded-[20px]'>
+        <img src='/images/home/partnerLogos/ourpartners.png' className= 'w-full h-full rounded-[20px]' />
       </div>
-      <div className="mb-10">
-        <Accordion allowToggle allowMultiple className="mx-auto">
-          {projectsByYear.map(
+      <div className='absolute flex m-[70px] mt-[40px] text-4xl text-center sm:text-5xl sm:mt-8 font-bold text-white'>
+        Featured Projects
+      </div>
+    </div>
+      <div className="mt-4 xl:mx-20 flex flex-wrap justify-center gap-16">
+      {projectsByYear.map(
             (
               {
                 projectName,
@@ -52,20 +45,15 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
               index
             ) => {
               return (
-                <Fragment key={index}>
-                  <CustomAccordion title={projectName}>
-                    <ProjectContent
-                      htmlContent={htmlContent}
-                      projectImage={projectImage}
-                      members={members}
-                      collaborations={collaborations}
-                    />
-                  </CustomAccordion>
-                </Fragment>
+                <ProjectCard
+              key={index}
+              coverImage={projectImage[0]}
+              cardDescription={htmlContent}
+              name={projectName}
+            />
               );
             }
           )}
-        </Accordion>
       </div>
     </MaxWidth>
   );
