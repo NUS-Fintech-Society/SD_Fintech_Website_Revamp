@@ -4,13 +4,17 @@ import { PartnersProps } from '@interfaces/home/Partners';
 // library
 import { Fragment } from 'react';
 import Image from 'next/image';
+import { Box, Text } from '@chakra-ui/react'
+
 
 const Partners = ({ partnersImages }: PartnersProps) => {
   return (
     <div className="section-my">
-      <h2 className="mb-16 text-center text-h2 font-bold">
-        Past and Present Partners
-      </h2>
+      <div className='w-full h-[122px] flex flex-wrap bg-black rounded-[20px] p-8 mb-8'>
+        <h2 className= 'text-4xl text-center sm:text-5xl font bold text-white'> Our Partners </h2>
+        <h3 className='hidden lg:block ml-auto text-xl text-right text-white max-w-lg mt-3'> Past and Present </h3>
+      </div>
+      
       <div className="mx-auto flex w-5/6 flex-wrap justify-center gap-10">
         {partnersImages.map(({ src, alt, url }, index) => {
           return (
