@@ -4,7 +4,6 @@ import { PartnersProps } from '@interfaces/home/Partners';
 // library
 import { Fragment } from 'react';
 import Image from 'next/image';
-import { Box, Text } from '@chakra-ui/react'
 
 
 const Partners = ({ partnersImages }: PartnersProps) => {

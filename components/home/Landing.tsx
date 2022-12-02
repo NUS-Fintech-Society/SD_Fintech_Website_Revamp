@@ -1,4 +1,3 @@
-import { Box } from '@chakra-ui/react';
 import MaxWidth from '@components/layout/MaxWidth';
 import Image from 'next/image';
 import AnimatedText from 'react-animated-text-content';
@@ -30,8 +29,7 @@ const Landing = () => {
           </div>
         </div>
       </MaxWidth>
-      <div className='absolute bottom-10 w-full bg-primary h-10'>
-      </div>
+      <div className='absolute bottom-10 w-full bg-primary h-10' />
     </div>
   );
 };
