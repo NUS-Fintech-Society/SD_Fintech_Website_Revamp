@@ -14,12 +14,7 @@ const DEPARTMENTS_ITEMS = [
   ['Operations', '/departments/operations'],
 ];
 
-const ABOUT_US_ITEMS = [
-  ['About Us', '/about'],
-  ['The EXCO', '/about/exco'],
-];
-
-const Navbar = () => {
+const HomeNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleCloseNav = () => {
@@ -27,21 +22,19 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute top-0 z-10 w-[100vw]">
-        <div className = "flex text-black">
-          <div className="ml-20 flex cursor-pointer font-bold">
+    <nav className="absolute top-3 z-10 w-[100vw]">
+        <div className = "flex text-white">
+          <div className="relative flex cursor-pointer font-bold ml-4 mt-3 h-[50px] w-[100px] sm:ml-20 sm:h-[77px] sm:w-[144px]">
             <Link href="/">
               <Image
                 src="/images/fintechsoc-logo.png"
                 alt="NUS FinTech Society Logo"
-                width="170px"
-                height="90px"
-                layout="fixed"
+                layout="fill"
               />
             </Link>
           </div>
 
-          <div className='h-[55px] text-l mt-6 mr-24 lg:ml-auto'>
+          <div className='h-[55px] mt-6 mr-24 lg:ml-auto'>
             <div
                 onClick={() => setIsOpen(!isOpen)}
                 className="absolute right-[24px] top-[37px] z-30 -translate-y-1/2 cursor-pointer sm:right-[48px] lg:hidden"
@@ -61,44 +54,23 @@ const Navbar = () => {
                           lg:pl-0`}
             >
 
-              <div className= "flex flex-wrap lg:divide-x bg-[#002750BF] lg:bg-transparent">
-                <li className=" my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-1 ml-4 lg:mr-4">
-                  <Link href="/" className="rounded-md px-3 py-1 text-black ">
+              <div className="flex flex-wrap lg:divide-x bg-[#002750BF] lg:bg-transparent">
+                <li className="my-7 hover:text-gray-400 md:my-0 px-4 py-1">
+                  <Link href="/" className="rounded-md px-3 py-1 text-white ">
                     <a onClick={handleCloseNav}>Home</a>
                   </Link>
                 </li>
                 
 
-                <li className="my-7 md:my-0 md:px-4 md:py-1 px-8">
-                  <div className="lg:hidden">
-                    <div className="rounded-md">About</div>
-                    <ul>
-                      {ABOUT_US_ITEMS.map((item) => (
-                        <li key={item[1]} className="my-4 ml-3 hover:text-gray-400">
-                          <Link href={item[1]}>
-                            <a
-                              onClick={handleCloseNav}
-                              className=" h-full w-full p-2 hover:text-gray-400"
-                            >
-                              {item[0]}
-                            </a>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className=" hidden lg:block">
-                    <DropDown
-                      handleCloseNav={handleCloseNav}
-                      title="About"
-                      items={ABOUT_US_ITEMS}
-                    />
-                  </div>
+                <li className="my-7 hover:text-gray-400 md:my-0 px-4 py-1">
+                  <Link href="/about" className="rounded-md px-3 py-1 text-white ">
+                    <a onClick={handleCloseNav}>About Us</a>
+                  </Link>
                 </li>
 
-                <li className="my-7  md:my-0 md:py-1 md:px-4 lg:py-1 ml-4 lg:ml-5">
+                <li className="my-7 md:my-0 py-1 px-4">
                   <div className="lg:hidden">
-                    <div className="rounded-md ">Departments</div>
+                    <div className="rounded-md">Departments</div>
                     <ul>
                       {DEPARTMENTS_ITEMS.map((item) => (
                         <li key={item[1]} className="my-4 ml-3 hover:text-gray-400">
@@ -114,7 +86,7 @@ const Navbar = () => {
                       ))}
                     </ul>
                   </div>
-                  <div className=" hidden lg:block">
+                  <div className="hidden lg:block">
                     <DropDown
                       handleCloseNav={handleCloseNav}
                       title="Departments"
@@ -123,25 +95,25 @@ const Navbar = () => {
                   </div>
                 </li>
 
-                <li className="my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-1 ml-4 ">
-                  <Link href="/events" className="rounded-md px-3 py-1 text-black">
+                <li className="my-7 hover:text-gray-400 md:my-0 px-4 py-1">
+                  <Link href="/events" className="rounded-md px-3 py-1 text-white">
                     <a onClick={handleCloseNav}>Events</a>
                   </Link>
                 </li>
 
-                <li className="my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-1 ml-4  px-4">
+                <li className="my-7 hover:text-gray-400 md:my-0 px-4 py-1">
                   <Link
                     href="/recruitment"
-                    className="rounded-md px-3 py-1 text-black"
+                    className="rounded-md px-3 py-1 text-white"
                   >
                     <a onClick={handleCloseNav}>Recruitment</a>
                   </Link>
                 </li>
 
-                <li className="my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-1 ml-4 lg:mr-5">
+                <li className="my-7 hover:text-gray-400 md:my-0 px-4 py-1">
                   <Link
                     href="/contact-us"
-                    className="rounded-md px-3 py-1 text-black"
+                    className="rounded-md px-3 py-1 text-white"
                   >
                     <a onClick={handleCloseNav}>Contact Us</a>
                   </Link>
@@ -154,4 +126,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default HomeNavbar;
