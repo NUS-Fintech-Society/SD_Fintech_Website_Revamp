@@ -136,32 +136,242 @@ const AboutPage = () => {
           </div>
         </MaxWidth>
       </div>
-      <div className='relative bottom-24 -z-10 h-[100vh] w-full overflow-hidden bg-[#004C98]'>
+     
+      <div className='pt-12 px-12'>
+        <div className='w-full flex flex-wrap bg-black p-3 rounded-[10px] sm:p-6 sm:rounded-[20px]'>
+          <h2 className="text-center sm:text-3xl font-bold text-white">Meet The EXCO</h2>
+          <h3 className='mt-1 ml-auto text-xs sm:text-lg text-right text-white max-w-lg'>Dedicated and Committed</h3>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center p-20">
+        <h1 className="text-7xl font-black text-black md:text-8xl">ADVISOR</h1>
+      </div>
+
+      <div className='flex justify-center'>
         <Image
-          src="/images/exco/meet-the-exco.jpg"
+          src="/images/exco/advisor.jpg"
           alt="Insert Photo Here"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-          className="opacity-50"
+          height={340}
+          width={340}
+          className="rounded-md" 
         />
-        <div className='absolute w-full pt-[50vh] text-center'>
-          <h1 className='text-6xl text-white xl:text-7xl'>
-            Meet the EXCO
-          </h1>
+      </div>
+
+      <div className="flex justify-center p-12">
+        <div className='items-center justify-center bg-[#161B50] rounded-lg p-8'>
+          <h3 className="flex justify-center text-xl font-light text-white">Advisor</h3>
+          <h3 className="flex justify-center text-xl font-light text-white pb-4">A/Prof. (Practice)</h3>
+          <h3 className="items-center text-5xl font-normal text-white">Keith Carter</h3>      
         </div>
       </div>
-      <div className='relative bottom-44  w-full rounded-t-[70px] bg-white'>
-        <div className='relative bottom-20 flex justify-center'>
+    
+      <div className="flex items-center justify-center p-24">
+        <h1 className="text-7xl font-black text-black md:text-8xl">CO-PRESIDENTS</h1>
+      </div>
+
+
+      <div className='flex flex-wrap justify-center'>
+        <div className='shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] rounded-lg p-20 lg:mr-12'>
           <Image
-            src="/images/exco/advisor.jpg"
+            src="/images/exco/co-president2.jpg"
             alt="Insert Photo Here"
-            height={337}
-            width={337}
-            className="rounded-3xl"
+            height={250}
+            width={250}
+            className="rounded-full" 
           />
+          <h3 className="pt-12 flex justify-center text-2xl font-light text-black">Co-Director</h3>
+          <h3 className="pt-4 flex justify-center text-3xl font-black text-black pb-4">Jun Xiong</h3>
+        </div>
+
+        <div className='shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] rounded-lg p-20 lg:ml-12'>
+          <Image
+            src="/images/exco/co-president1.jpg"
+            alt="Insert Photo Here"
+            height={250}
+            width={250}
+            className="rounded-full" 
+          />
+          <h3 className="pt-12 flex justify-center text-2xl font-light text-black">Co-Director</h3>
+          <h3 className="pt-4 flex justify-center text-3xl font-black text-black pb-4">David</h3>
         </div>
       </div>
+
+      <div className="flex items-center justify-center p-24">
+        <h1 className="text-7xl font-black text-black md:text-8xl">TECHNOLOGY WING</h1>
+      </div>
+
+      <div className='flex justify-center'>
+        <div className='shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] rounded-lg p-20 mr-12'>
+          <Image
+            src="/images/exco/techwing.jpg"
+            alt="Insert Photo Here" 
+            height={250}
+            width={250}
+            className="rounded-full" 
+          />
+          <h3 className="pt-12 flex justify-center text-2xl font-light text-black">Vice President (TECH) </h3>
+          <h3 className="pt-4 flex justify-center text-3xl font-black text-black pb-4">Calvin</h3>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center p-24">
+        <h1 className="text-7xl font-black text-black">MACHINE LEARNING</h1>
+      </div>
+
+      <div className='flex flex-wrap justify-center'>
+        <div className='shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] rounded-lg p-20 lg:mr-12'>
+          <Image
+            src="/images/exco/ml1.jpg"
+            alt="Insert Photo Here"
+            height={250}
+            width={250}
+            className="rounded-full" 
+          />
+          <h3 className="pt-12 flex justify-center text-2xl font-light text-black">Co-Director</h3>
+          <h3 className="pt-4 flex justify-center text-3xl font-black text-black pb-4">Daniel</h3>
+        </div>
+
+        <div className='shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] rounded-lg p-20 lg:ml-12'>
+          <Image
+            src="/images/exco/ml2.jpg"
+            alt="Insert Photo Here"
+            height={250}
+            width={250}
+            className="rounded-full" 
+          />
+          <h3 className="pt-12 flex justify-center text-2xl font-light text-black">Co-Director</h3>
+          <h3 className="pt-4 flex justify-center text-3xl font-black text-black pb-4">Kleon</h3>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center p-24">
+        <h1 className="text-7xl font-black text-black">BLOCKCHAIN</h1>
+      </div>
+
+      <div className='flex flex-wrap justify-center'>
+        <div className='shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] rounded-lg p-20 lg:mr-12'>
+          <Image
+            src="/images/exco/blockchain1.jpg"
+            alt="Insert Photo Here"
+            height={250}
+            width={250}
+            className="rounded-full" 
+          />
+          <h3 className="pt-12 flex justify-center text-2xl font-light text-black">Co-Director</h3>
+          <h3 className="pt-4 flex justify-center text-3xl font-black text-black pb-4">Jones</h3>
+        </div>
+
+        <div className='shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] rounded-lg p-20 lg:ml-12'>
+          <Image
+            src="/images/exco/blockchain2.jpg"
+            alt="Insert Photo Here"
+            height={250}
+            width={250}
+            className="rounded-full" 
+          />
+          <h3 className="pt-12 flex justify-center text-2xl font-light text-black">Co-Director</h3>
+          <h3 className="pt-4 flex justify-center text-3xl font-black text-black pb-4">Marcus</h3>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center p-24">
+        <h1 className="text-7xl font-black text-black">SOFTWARE DEVELOPMENT</h1>
+      </div>
+
+      <div className='flex flex-wrap justify-center'>
+        <div className='shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] rounded-lg p-20 lg:mr-12'>
+          <Image
+            src="/images/exco/sd1.jpg"
+            alt="Insert Photo Here"
+            height={250}
+            width={250}
+            className="rounded-full" 
+          />
+          <h3 className="pt-12 flex justify-center text-2xl font-light text-black">Co-Director</h3>
+          <h3 className="pt-4 flex justify-center text-3xl font-black text-black pb-4">Owen</h3>
+        </div>
+
+        <div className='shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] rounded-lg p-20 lg:ml-12'>
+          <Image
+            src="/images/exco/sd2.jpg"
+            alt="Insert Photo Here"
+            height={250}
+            width={250}
+            className="rounded-full" 
+          />
+          <h3 className="pt-12 flex justify-center text-2xl font-light text-black">Co-Director</h3>
+          <h3 className="pt-4 flex justify-center text-3xl font-black text-black pb-4">Jess</h3>
+        </div>
+      </div>
+
+
+      <div className="flex items-center justify-center p-24">
+        <h1 className="text-7xl font-black text-black md:text-8xl">OPERATIONS WING</h1>
+      </div>
+
+      <div className='flex justify-center'>
+        <div className='shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] rounded-lg p-20 mr-12'>
+          <Image
+            src="/images/exco/op-wing.jpg"
+            alt="Insert Photo Here" 
+            height={250}
+            width={250}
+            className="rounded-full" 
+          />
+          <h3 className="pt-12 flex justify-center text-2xl font-light text-black">Vice President (OPS) </h3>
+          <h3 className="pt-4 flex justify-center text-3xl font-black text-black pb-4">Darren</h3>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center p-24">
+        <h1 className="text-7xl font-black text-black">EXTERNAL RELATIONS</h1>
+      </div>
+
+      <div className='flex justify-center'>
+        <div className='shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] rounded-lg p-20 mr-12'>
+          <Image
+            src="/images/exco/er.jpg"
+            alt="Insert Photo Here" 
+            height={250}
+            width={250}
+            className="rounded-full" 
+          />
+          <h3 className="pt-12 flex justify-center text-2xl font-light text-black">Director</h3>
+          <h3 className="pt-4 flex justify-center text-3xl font-black text-black pb-4">Elicia</h3>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center p-24">
+        <h1 className="text-7xl font-black text-black">INTERNAL AFFAIRS</h1>
+      </div>
+
+      <div className='flex flex-wrap justify-center'>
+        <div className='shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] rounded-lg p-20 lg:mr-12'>
+          <Image
+            src="/images/exco/ia1.jpg"
+            alt="Insert Photo Here"
+            height={250}
+            width={250}
+            className="rounded-full" 
+          />
+          <h3 className="pt-12 flex justify-center text-2xl font-light text-black">Co-Director</h3>
+          <h3 className="pt-4 flex justify-center text-3xl font-black text-black pb-4">James</h3>
+        </div>
+
+        <div className='shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] rounded-lg p-20 lg:ml-12'>
+          <Image
+            src="/images/exco/ia2.jpg"
+            alt="Insert Photo Here"
+            height={250}
+            width={250}
+            className="rounded-full" 
+          />
+          <h3 className="pt-12 flex justify-center text-2xl font-light text-black">Co-Director</h3>
+          <h3 className="pt-4 flex justify-center text-3xl font-black text-black pb-4">Jin</h3>
+        </div>
+      </div>
+
     </>
   );
 };
