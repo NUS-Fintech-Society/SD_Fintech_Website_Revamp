@@ -27,7 +27,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute top-0 z-10 w-[100vw]">
+    <nav className="relative z-10 w-[100vw] text-sm">
         <div className = "flex text-black bg-white h-[105px]">
           <div className="relative ml-10 flex cursor-pointer font-bold h-[50px] w-[100px]">
             <Link href="/">
