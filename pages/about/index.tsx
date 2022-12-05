@@ -139,8 +139,8 @@ const AboutPage = () => {
      
       <div className='pt-12 px-12'>
         <div className='w-full flex flex-wrap bg-black p-3 rounded-[10px] sm:p-6 sm:rounded-[20px]'>
-          <h2 className="text-center sm:text-3xl font-bold text-white">Meet The EXCO</h2>
-          <h3 className='mt-1 ml-auto text-xs sm:text-lg text-right text-white max-w-lg'>Dedicated and Committed</h3>
+          <h2 className="text-center text-[15px] sm:text-3xl font-bold text-white">Meet The EXCO</h2>
+          <h3 className='mt-[4px] text-center ml-auto text-[10px] sm:text-lg text-right text-white max-w-lg'>Dedicated and Committed</h3>
         </div>
       </div>
 
@@ -166,7 +166,7 @@ const AboutPage = () => {
         </div>
       </div>
     
-      <div className="flex items-center justify-center p-[40.46px] sm:p-[35px] sm:my-8">
+      <div className="flex items-center justify-center py-[40.46px] sm:p-[35px] sm:my-8">
         <h1 className="text-[26.68px] leading-8 font-bold text-black sm:text-[40px] sm:leading-[3rem]">CO-PRESIDENTS</h1>
       </div>
 
@@ -203,7 +203,7 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center p-[40.46px] sm:p-[35px] sm:my-8">
+      <div className="flex items-center justify-center py-[40.46px] sm:p-[35px] sm:my-8">
         <h1 className="text-[26.68px] leading-8 font-bold text-black sm:text-[40px] sm:leading-[3rem]">TECHNOLOGY WING</h1>
       </div>
 
@@ -224,7 +224,7 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center p-[40.46px] sm:p-[35px] sm:my-8">
+      <div className="flex items-center justify-center py-[40.46px] sm:p-[35px] sm:my-8">
         <h1 className="text-[20px] leading-6 font-semibold text-black sm:text-[32px] sm:leading-[3rem]">MACHINE LEARNING</h1>
       </div>
 
@@ -260,7 +260,7 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center p-[40.46px] sm:p-[35px] sm:my-8">
+      <div className="flex items-center justify-center py-[40.46px] sm:p-[35px] sm:my-8">
         <h1 className="text-[20px] leading-6 font-semibold text-black sm:text-[32px] sm:leading-[3rem]">BLOCKCHAIN</h1>
       </div>
 
@@ -296,7 +296,7 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center p-[40.46px] sm:p-[35px] sm:my-8">
+      <div className="flex items-center justify-center py-[40.46px] sm:p-[35px] sm:my-8">
         <h1 className="text-[20px] leading-6 font-semibold text-black sm:text-[32px] sm:leading-[3rem]">SOFTWARE DEVELOPMENT</h1>
       </div>
 
@@ -333,7 +333,7 @@ const AboutPage = () => {
       </div>
 
 
-      <div className="flex items-center justify-center p-[40.46px] sm:p-[35px] sm:my-8">
+      <div className="flex items-center justify-center py-[40.46px] sm:p-[35px] sm:my-8">
         <h1 className="text-[26.68px] leading-8 font-bold text-black sm:text-[40px] sm:leading-[3rem]">OPERATIONS WING</h1>
       </div>
 
@@ -354,7 +354,7 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center p-[40.46px] sm:p-[35px] sm:my-8">
+      <div className="flex items-center justify-center py-[40.46px] sm:p-[35px] sm:my-8">
         <h1 className="text-[20px] leading-6 font-semibold text-black sm:text-[32px] sm:leading-[3rem]">EXTERNAL RELATIONS</h1>
       </div>
 
@@ -375,7 +375,7 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center p-[40.46px] sm:p-[35px] sm:my-8">
+      <div className="flex items-center justify-center py-[40.46px] sm:p-[35px] sm:my-8">
         <h1 className="text-[20px] leading-6 font-semibold text-black sm:text-[32px] sm:leading-[3rem]">INTERNAL AFFAIRS</h1>
       </div>
 
