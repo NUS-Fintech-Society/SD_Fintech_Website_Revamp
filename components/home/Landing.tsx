@@ -5,8 +5,8 @@ import AnimatedText from 'react-animated-text-content';
 const Landing = () => {
   return (
     <div className="relative sm:h-[calc(80vh)] min-h-[400px] w-screen -mb-10">
-      <div className='absolute w-full h-[50%] bg-gradient-to-b from-[#002750B3] via-[#00275059] to-[#00275000] -top-20' />
-      <div className="absolute -z-10 h-full w-full overflow-hidden bg-primary -top-20">
+      <div className='absolute w-full h-[50%] bg-gradient-to-b from-[#002750B3] via-[#00275059] to-[#00275000] -top-[90px]' />
+      <div className="absolute -z-10 h-full w-full overflow-hidden bg-primary -top-[90px]">
         <Image
           src="/images/home/home_img.jpg"
           alt="Insert Photo Here"
@@ -29,7 +29,7 @@ const Landing = () => {
           </div>
         </div>
       </MaxWidth>
-      <div className='absolute bottom-10 w-full bg-primary h-10' />
+      <div className='absolute bottom-[50px] w-full bg-primary h-10' />
     </div>
   );
 };

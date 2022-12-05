@@ -16,7 +16,7 @@ const Layout = ({ children }: LayoutProps) => {
     <div className={overWriteChakraTheme}>
       {!isSSR && window.location.pathname !== '/' && <Navbar />}
       {!isSSR && window.location.pathname === '/' && <HomeNavbar />}
-      <div className="pt-[74px] ">{children}</div>
+      {children}
       <Footer />
     </div>
   );

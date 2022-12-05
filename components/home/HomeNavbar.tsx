@@ -22,7 +22,7 @@ const HomeNavbar = () => {
   };
 
   return (
-    <nav className="absolute top-3 z-10 w-[100vw]">
+    <nav className="relative z-10 w-[100vw]">
         <div className = "flex text-white">
           <div className="relative flex cursor-pointer font-bold ml-4 mt-3 h-[50px] w-[100px] sm:ml-20 sm:h-[77px] sm:w-[144px]">
             <Link href="/">
