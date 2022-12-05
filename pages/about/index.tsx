@@ -14,7 +14,7 @@ const AboutPage = () => {
         <title>About • NUS Fintech Society</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className='ml-6 flex'>
+      <div className='ml-10 flex pb-12'>
         {/* About us icon */}
         <Image
           src="/images/main_icon.jpg"
@@ -23,8 +23,8 @@ const AboutPage = () => {
           width={169}
         />
         
-        <div className="ml-6 h-full">
-          <h1 className="align-middle text-6xl font-semibold text-[#002750] underline">About Us</h1>
+        <div className="relative ml-10">
+          <h1 className="absolute bottom-0 whitespace-nowrap text-6xl font-semibold text-[#002750] underline">About Us</h1>
         </div>
       </div>
 
