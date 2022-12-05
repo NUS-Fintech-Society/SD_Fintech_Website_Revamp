@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <nav className="absolute top-0 z-10 w-[100vw]">
-        <div className = "flex text-black">
+        <div className = "flex text-black bg-white h-[105px]">
           <div className="ml-20 flex cursor-pointer font-bold">
             <Link href="/">
               <Image
@@ -44,7 +44,7 @@ const Navbar = () => {
           <div className='h-[55px] text-l mt-6 mr-24 lg:ml-auto'>
             <div
                 onClick={() => setIsOpen(!isOpen)}
-                className="absolute right-[24px] top-[37px] z-30 -translate-y-1/2 cursor-pointer sm:right-[48px] lg:hidden"
+                className="absolute right-[24px] mt-3 top-[37px] z-30 -translate-y-1/2 cursor-pointer sm:right-[48px] lg:hidden"
               >
                 {isOpen ? (
                   <CloseIcon width={10} height={6} />
@@ -61,14 +61,14 @@ const Navbar = () => {
                           lg:pl-0`}
             >
 
-              <div className= "flex flex-wrap lg:divide-x bg-[#002750BF] lg:bg-transparent">
+              <div className= {`w-full flex flex-wrap ${isOpen ? 'rounded-xl' : 'rounded-full' } py-3 mr-[80px] bg-[#DDEEFE] text-[#002750] shadow-lg navbar navbar-expand-lg navbar-light`}>
                 <li className=" my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-1 ml-4 lg:mr-4">
                   <Link href="/" className="rounded-md px-3 py-1 text-black ">
                     <a onClick={handleCloseNav}>Home</a>
                   </Link>
                 </li>
                 
-
+                {/* lg:divide-x bg-[#002750BF] lg:bg-transparent */}
                 <li className="my-7 md:my-0 md:px-4 md:py-1 px-8">
                   <div className="lg:hidden">
                     <div className="rounded-md">About</div>
