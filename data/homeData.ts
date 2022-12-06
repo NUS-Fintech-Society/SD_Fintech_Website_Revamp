@@ -12,7 +12,7 @@ const homeData: HomeData = {
       path: 'machine-learning',
       wingType: WingType.Technical,
       coverImage: {
-        src: '/images/departments/departmentLogos/ml-logo.png',
+        src: '/images/departments/departmentLogos/ML main icon.svg',
         alt: 'random image 1',
       },
       cardDescription:
@@ -46,7 +46,7 @@ const homeData: HomeData = {
       path: 'software',
       wingType: WingType.Technical,
       coverImage: {
-        src: '/images/departments/departmentLogos/Software-Development-Logo.png',
+        src: '/images/departments/departmentLogos/SD main icon.svg',
         alt: 'random image 2',
       },
       cardDescription:
@@ -80,7 +80,7 @@ const homeData: HomeData = {
       path: 'blockchain',
       wingType: WingType.Technical,
       coverImage: {
-        src: '/images/departments/departmentLogos/Blockchain-Logo.png',
+        src: '/images/departments/departmentLogos/BC main icon.svg',
         alt: 'random image 2',
       },
       cardDescription:
@@ -114,7 +114,7 @@ const homeData: HomeData = {
       path: 'operations',
       wingType: WingType.Operations,
       coverImage: {
-        src: '/images/departments/departmentLogos/External-Op-Logo.png',
+        src: '/images/departments/departmentLogos/Ops main icon.svg',
         alt: 'random image 2',
       },
       cardDescription:
@@ -148,7 +148,7 @@ const homeData: HomeData = {
       path: 'operations',
       wingType: WingType.Operations,
       coverImage: {
-        src: '/images/departments/departmentLogos/Internal-Op-Logo.png',
+        src: '/images/departments/departmentLogos/Ops main icon.svg',
         alt: 'random image 2',
       },
       cardDescription:
