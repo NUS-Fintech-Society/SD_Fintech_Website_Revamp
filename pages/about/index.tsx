@@ -26,7 +26,7 @@ const AboutPage = () => {
         </div>
         
         <div className="relative ml-4 sm:ml-10">
-          <h1 className="absolute bottom-0 whitespace-nowrap text-4xl font-semibold text-[#002750] underline sm:text-6xl">About Us</h1>
+          <h1 className="absolute bottom-0 whitespace-nowrap text-4xl font-bold text-[#002750] underline sm:text-6xl">About Us</h1>
         </div>
       </div>
 
@@ -46,13 +46,13 @@ const AboutPage = () => {
 
         <div className='flex justify-center sm:mt-28'>  
           <Box boxShadow='2xl' p='6' rounded='xl' bg='white'
-            width={{base: '360px', md: "90%", xl: '95%'}}
-            height={{base: '100%', md: '95%', lg: '55%'}}>
-            <Tabs size='sm'>
+            width={{base: '90vw', md: "75vw", xl: '95%'}}
+            height={{base: '40vh', md: '35vh', lg: '30vh'}}>
+            <Tabs size='xs'>
               <TabList>
                 <Tab>
                   <h2 className="whitespace-nowrap text-xs font-bold sm:text-lg">
-                    <div className='flex items-center'>
+                    <div className='mr-2 flex items-center sm:mr-4 '>
                       <div className='mr-2'>
 
                         {/* Feather Icon */}
@@ -80,7 +80,7 @@ const AboutPage = () => {
                 </Tab>
                 <Tab>
                   <h2 className="text-xs font-bold sm:text-lg">
-                    <div className='flex items-center'>
+                    <div className='mr-2 flex items-center sm:mr-4'>
                       <div className='mr-2'>
                         <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M18.2602 10.9791L15.2355 14.8547L9.50019 6.83191V3.69801L16.0129 3.59354L14.4154 1.79677L16.0129
@@ -94,7 +94,7 @@ const AboutPage = () => {
                 </Tab>
                 <Tab>
                   <h2 className="text-xs font-bold sm:text-lg">
-                    <div className='flex items-center'>
+                    <div className='mr-2 flex items-center sm:mr-4'>
                       <div className='mr-2'>
                         <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M6.73924 17.9029C6.73081 17.7879 6.73081 17.6725 6.73924 17.5575C6.9962 15.8262 6.22532 14.4445 5.23118
