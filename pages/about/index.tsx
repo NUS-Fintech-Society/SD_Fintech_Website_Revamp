@@ -47,7 +47,7 @@ const AboutPage = () => {
         <div className='flex justify-center sm:mt-28'>  
           <Box boxShadow='2xl' p='6' rounded='xl' bg='white'
             width={{base: '90vw', md: "75vw", xl: '95%'}}
-            height={{base: '40vh', md: '35vh', lg: '30vh'}}>
+            height={{base: '40vh', md: '35vh', lg: '40vh'}}>
             <Tabs size='xs'>
               <TabList>
                 <Tab>
@@ -171,30 +171,356 @@ const AboutPage = () => {
           </Box>
         </div>
       </div>
-      <div className='relative bottom-24 -z-10 h-[100vh] w-full overflow-hidden bg-[#004C98]'>
-        <Image
-          src="/images/exco/meet-the-exco.jpg"
-          alt="Insert Photo Here"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-          className="opacity-50"
-        />
-        <div className='absolute w-full pt-[50vh] text-center'>
-          <h1 className='text-6xl text-white xl:text-7xl'>
-            Meet the EXCO
-          </h1>
+
+      <div className="px-12 pt-12">
+        <div className="flex w-full flex-wrap rounded-[10px] bg-black p-3 sm:rounded-[20px] sm:p-6">
+          <h2 className="text-center font-bold text-white sm:text-3xl">
+            Meet The EXCO
+          </h2>
+          <h3 className="mt-1 ml-auto max-w-lg text-right text-xs text-white sm:text-lg">
+            Dedicated and Committed
+          </h3>
         </div>
       </div>
-      <div className='relative bottom-44  w-full rounded-t-[70px] bg-white'>
-        <div className='relative bottom-20 flex justify-center'>
+
+      <div className="flex items-center justify-center p-[40.46px] sm:my-8 sm:p-[35px]">
+        <h1 className="text-[26.68px] font-bold leading-8 text-black sm:text-[40px] sm:leading-[3rem]">
+          ADVISOR
+        </h1>
+      </div>
+
+      <div className="flex justify-center">
+        <div className="relative h-[119px] w-[119px] rounded-[7.58px] sm:h-[337px] sm:w-[337px] sm:rounded-[21px]">
           <Image
             src="/images/exco/advisor.jpg"
             alt="Insert Photo Here"
-            height={337}
-            width={337}
-            className="rounded-3xl"
+            layout="fill"
           />
+        </div>
+      </div>
+
+      <div className="flex justify-center p-[6.7px] sm:p-[19px]">
+        <div className="h-[51.52px] w-[118.92px] items-center justify-center rounded-[6.5px] bg-[#161B50] sm:h-[146px] sm:w-[337px] sm:rounded-[18px]">
+          <h3 className="mt-2 flex justify-center text-[6.5px] font-normal leading-[0.5rem] text-white sm:mt-6 sm:text-[18px] sm:leading-[1.375rem] ">
+            Advisor
+          </h3>
+          <h3 className="flex justify-center  pb-1 text-[6.5px] font-normal leading-[0.5rem] text-white sm:pb-4  sm:text-[18px] sm:leading-[1.375rem]">
+            A/Prof. (Practice)
+          </h3>
+          <h3 className="flex justify-center text-[10.83px] font-normal leading-[0.813rem] text-white sm:text-[30px] sm:leading-[2.25rem]">
+            Keith Carter
+          </h3>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center py-[40.46px] sm:my-8 sm:p-[35px]">
+        <h1 className="text-[26.68px] font-bold leading-8 text-black sm:text-[40px] sm:leading-[3rem]">
+          CO-PRESIDENTS
+        </h1>
+      </div>
+
+      <div className="flex flex-row justify-center gap-x-5 sm:gap-x-16">
+        <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="flex justify-center">
+            <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
+              <Image
+                src="/images/exco/co-president2.jpg"
+                alt="Insert Photo Here"
+                layout="fill"
+                className="rounded-full"
+              />
+            </div>
+          </div>
+          <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
+            Co-Director
+          </h3>
+          <h3 className="flex justify-center pb-4 text-[6.67px] font-bold text-black sm:text-xl">
+            Jun Xiong
+          </h3>
+        </div>
+
+        <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="flex justify-center">
+            <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
+              <Image
+                src="/images/exco/co-president1.jpg"
+                alt="Insert Photo Here"
+                layout="fill"
+                className="rounded-full"
+              />
+            </div>
+          </div>
+          <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
+            Co-Director
+          </h3>
+          <h3 className="flex justify-center text-[6.67px] font-bold text-black sm:text-xl">
+            David
+          </h3>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center py-[40.46px] sm:my-8 sm:p-[35px]">
+        <h1 className="text-[26.68px] font-bold leading-8 text-black sm:text-[40px] sm:leading-[3rem]">
+          TECHNOLOGY WING
+        </h1>
+      </div>
+
+      <div className="flex justify-center">
+        <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="flex justify-center">
+            <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
+              <Image
+                src="/images/exco/techwing.jpg"
+                alt="Insert Photo Here"
+                layout="fill"
+                className="rounded-full"
+              />
+            </div>
+          </div>
+          <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
+            Vice President (TECH)
+          </h3>
+          <h3 className="flex justify-center pb-4 text-[6.67px] font-bold text-black sm:text-xl">
+            Calvin
+          </h3>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center py-[40.46px] sm:my-8 sm:p-[35px]">
+        <h1 className="text-[20px] font-semibold leading-6 text-black sm:text-[32px] sm:leading-[3rem]">
+          MACHINE LEARNING
+        </h1>
+      </div>
+
+      <div className="flex flex-row justify-center gap-x-5 sm:gap-x-16">
+        <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="flex justify-center">
+            <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
+              <Image
+                src="/images/exco/ml1.jpg"
+                alt="Insert Photo Here"
+                layout="fill"
+                className="rounded-full"
+              />
+            </div>
+          </div>
+          <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
+            Co-Director
+          </h3>
+          <h3 className="flex justify-center pb-4 text-[6.67px] font-bold text-black sm:text-xl">
+            Daniel
+          </h3>
+        </div>
+
+        <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="flex justify-center">
+            <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
+              <Image
+                src="/images/exco/ml2.jpg"
+                alt="Insert Photo Here"
+                layout="fill"
+                className="rounded-full"
+              />
+            </div>
+          </div>
+          <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
+            Co-Director
+          </h3>
+          <h3 className="flex justify-center text-[6.67px] font-bold text-black sm:text-xl">
+            Kleon
+          </h3>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center py-[40.46px] sm:my-8 sm:p-[35px]">
+        <h1 className="text-[20px] font-semibold leading-6 text-black sm:text-[32px] sm:leading-[3rem]">
+          BLOCKCHAIN
+        </h1>
+      </div>
+
+      <div className="flex flex-row justify-center gap-x-5 sm:gap-x-16">
+        <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="flex justify-center">
+            <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
+              <Image
+                src="/images/exco/blockchain1.jpg"
+                alt="Insert Photo Here"
+                layout="fill"
+                className="rounded-full"
+              />
+            </div>
+          </div>
+          <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
+            Co-Director
+          </h3>
+          <h3 className="flex justify-center pb-4 text-[6.67px] font-bold text-black sm:text-xl">
+            Jones
+          </h3>
+        </div>
+
+        <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="flex justify-center">
+            <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
+              <Image
+                src="/images/exco/blockchain2.jpg"
+                alt="Insert Photo Here"
+                layout="fill"
+                className="rounded-full"
+              />
+            </div>
+          </div>
+          <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
+            Co-Director
+          </h3>
+          <h3 className="flex justify-center text-[6.67px] font-bold text-black sm:text-xl">
+            Marcus
+          </h3>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center py-[40.46px] sm:my-8 sm:p-[35px]">
+        <h1 className="text-[20px] font-semibold leading-6 text-black sm:text-[32px] sm:leading-[3rem]">
+          SOFTWARE DEVELOPMENT
+        </h1>
+      </div>
+
+      <div className="flex flex-row justify-center gap-x-5 sm:gap-x-16">
+        <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="flex justify-center">
+            <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
+              <Image
+                src="/images/exco/sd1.jpg"
+                alt="Insert Photo Here"
+                layout="fill"
+                className="rounded-full"
+              />
+            </div>
+          </div>
+          <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
+            Co-Director
+          </h3>
+          <h3 className="flex justify-center pb-4 text-[6.67px] font-bold text-black sm:text-xl">
+            Owen
+          </h3>
+        </div>
+
+        <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="flex justify-center">
+            <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
+              <Image
+                src="/images/exco/sd2.jpg"
+                alt="Insert Photo Here"
+                layout="fill"
+                className="rounded-full"
+              />
+            </div>
+          </div>
+          <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
+            Co-Director
+          </h3>
+          <h3 className="flex justify-center text-[6.67px] font-bold text-black sm:text-xl">
+            Jess
+          </h3>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center py-[40.46px] sm:my-8 sm:p-[35px]">
+        <h1 className="text-[26.68px] font-bold leading-8 text-black sm:text-[40px] sm:leading-[3rem]">
+          OPERATIONS WING
+        </h1>
+      </div>
+
+      <div className="flex justify-center">
+        <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="flex justify-center">
+            <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
+              <Image
+                src="/images/exco/op-wing.jpg"
+                alt="Insert Photo Here"
+                layout="fill"
+                className="rounded-full"
+              />
+            </div>
+          </div>
+          <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
+            Vice President (OPS)
+          </h3>
+          <h3 className="flex justify-center pb-4 text-[6.67px] font-bold text-black sm:text-xl">
+            Darren
+          </h3>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center py-[40.46px] sm:my-8 sm:p-[35px]">
+        <h1 className="text-[20px] font-semibold leading-6 text-black sm:text-[32px] sm:leading-[3rem]">
+          EXTERNAL RELATIONS
+        </h1>
+      </div>
+
+      <div className="flex justify-center">
+        <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="flex justify-center">
+            <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
+              <Image
+                src="/images/exco/er.jpg"
+                alt="Insert Photo Here"
+                layout="fill"
+                className="rounded-full"
+              />
+            </div>
+          </div>
+          <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
+            Director
+          </h3>
+          <h3 className="flex justify-center pb-4 text-[6.67px] font-bold text-black sm:text-xl">
+            Elicia
+          </h3>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center py-[40.46px] sm:my-8 sm:p-[35px]">
+        <h1 className="text-[20px] font-semibold leading-6 text-black sm:text-[32px] sm:leading-[3rem]">
+          INTERNAL AFFAIRS
+        </h1>
+      </div>
+
+      <div className="flex flex-row justify-center gap-x-5 sm:gap-x-16">
+        <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="flex justify-center">
+            <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
+              <Image
+                src="/images/exco/ia1.jpg"
+                alt="Insert Photo Here"
+                layout="fill"
+                className="rounded-full"
+              />
+            </div>
+          </div>
+          <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
+            Co-Director
+          </h3>
+          <h3 className="flex justify-center pb-4 text-[6.67px] font-bold text-black sm:text-xl">
+            James
+          </h3>
+        </div>
+
+        <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="flex justify-center">
+            <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
+              <Image
+                src="/images/exco/ia2.jpg"
+                alt="Insert Photo Here"
+                layout="fill"
+                className="rounded-full"
+              />
+            </div>
+          </div>
+          <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
+            Co-Director
+          </h3>
+          <h3 className="flex justify-center text-[6.67px] font-bold text-black sm:text-xl">
+            Jin
+          </h3>
         </div>
       </div>
     </>

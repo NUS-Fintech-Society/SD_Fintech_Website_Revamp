@@ -14,11 +14,6 @@ const DEPARTMENTS_ITEMS = [
   ['Operations', '/departments/operations'],
 ];
 
-const ABOUT_US_ITEMS = [
-  ['About Us', '/about'],
-  ['The EXCO', '/about/exco'],
-];
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -27,129 +22,122 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute top-0 z-10 w-[100vw]">
-        <div className = "flex text-black">
-          <div className="ml-20 flex cursor-pointer font-bold">
-            <Link href="/">
-              <Image
-                src="/images/fintechsoc-logo.png"
-                alt="NUS FinTech Society Logo"
-                width="170px"
-                height="90px"
-                layout="fixed"
-              />
-            </Link>
+    <nav className="relative z-10 w-[100vw] text-sm">
+      <div className="flex h-[105px] bg-white text-black">
+        <div className="relative ml-10 flex h-[50px] w-[100px] cursor-pointer font-bold">
+          <Link href="/">
+            <Image
+              src="/images/black-fintech-logo.jpg"
+              alt="NUS FinTech Society Logo"
+              width="130px"
+              height="100px"
+              layout="fixed"
+            />
+          </Link>
+        </div>
+
+        <div className="mt-6 mr-24 h-[55px] lg:ml-auto">
+          <div
+            onClick={() => setIsOpen(!isOpen)}
+            className="absolute right-[24px] top-[37px] z-30 mt-3 -translate-y-1/2 cursor-pointer sm:right-[48px] lg:hidden"
+          >
+            {isOpen ? (
+              <CloseIcon width={10} height={6} />
+            ) : (
+              <HamburgerIcon width={10} height={7} />
+            )}
           </div>
 
-          <div className='h-[55px] text-l mt-6 mr-24 lg:ml-auto'>
-            <div
-                onClick={() => setIsOpen(!isOpen)}
-                className="absolute right-[24px] top-[37px] z-30 -translate-y-1/2 cursor-pointer sm:right-[48px] lg:hidden"
-              >
-                {isOpen ? (
-                  <CloseIcon width={10} height={6} />
-                ) : (
-                  <HamburgerIcon width={10} height={7} />
-                )}
-            </div>
-
-
-            <ul
-              className={`fixed z-20 transition-all duration-150 ease-in lg:pt-0
+          <ul
+            className={`fixed z-20 transition-all duration-150 ease-in lg:pt-0
                       ${isOpen ? 'top-0' : 'top-[-900px] '}
                           lg:static lg:z-auto lg:mt-0 lg:flex lg:w-auto lg:pb-0 
                           lg:pl-0`}
+          >
+            <div
+              className={`flex flex-wrap lg:divide-x ${
+                isOpen ? 'rounded-xl' : 'rounded-full py-3'
+              } bg-[#DDEEFE] text-[#002750]`}
             >
+              <li
+                className={` my-3 hover:text-gray-400 md:my-0 ${
+                  isOpen ? 'px-4' : 'px-7'
+                } py-1`}
+              >
+                <Link href="/" className="rounded-md px-3 py-1 text-black ">
+                  <a onClick={handleCloseNav}>HOME</a>
+                </Link>
+              </li>
 
-              <div className= "flex flex-wrap lg:divide-x bg-[#002750BF] lg:bg-transparent">
-                <li className=" my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-1 ml-4 lg:mr-4">
-                  <Link href="/" className="rounded-md px-3 py-1 text-black ">
-                    <a onClick={handleCloseNav}>Home</a>
-                  </Link>
-                </li>
-                
+              <li className="my-3 px-4 py-1 hover:text-gray-400 md:my-0">
+                <Link
+                  href="/about"
+                  className="rounded-md px-3 py-1 text-white "
+                >
+                  <a onClick={handleCloseNav}>ABOUT US</a>
+                </Link>
+              </li>
 
-                <li className="my-7 md:my-0 md:px-4 md:py-1 px-8">
-                  <div className="lg:hidden">
-                    <div className="rounded-md">About</div>
-                    <ul>
-                      {ABOUT_US_ITEMS.map((item) => (
-                        <li key={item[1]} className="my-4 ml-3 hover:text-gray-400">
-                          <Link href={item[1]}>
-                            <a
-                              onClick={handleCloseNav}
-                              className=" h-full w-full p-2 hover:text-gray-400"
-                            >
-                              {item[0]}
-                            </a>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className=" hidden lg:block">
-                    <DropDown
-                      handleCloseNav={handleCloseNav}
-                      title="About"
-                      items={ABOUT_US_ITEMS}
-                    />
-                  </div>
-                </li>
+              <li className="my-3  ml-4 md:my-0 md:py-1 md:px-4 lg:ml-5 lg:py-1">
+                <div className="lg:hidden">
+                  <div className="rounded-md ">DEPARTMENTS</div>
+                  <ul>
+                    {DEPARTMENTS_ITEMS.map((item) => (
+                      <li
+                        key={item[1]}
+                        className="my-4 ml-3 hover:text-gray-400"
+                      >
+                        <Link href={item[1]}>
+                          <a
+                            onClick={handleCloseNav}
+                            className=" h-full w-full p-2"
+                          >
+                            {item[0]}
+                          </a>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className=" hidden lg:block">
+                  <DropDown
+                    handleCloseNav={handleCloseNav}
+                    title="DEPARTMENTS"
+                    items={DEPARTMENTS_ITEMS}
+                  />
+                </div>
+              </li>
 
-                <li className="my-7  md:my-0 md:py-1 md:px-4 lg:py-1 ml-4 lg:ml-5">
-                  <div className="lg:hidden">
-                    <div className="rounded-md ">Departments</div>
-                    <ul>
-                      {DEPARTMENTS_ITEMS.map((item) => (
-                        <li key={item[1]} className="my-4 ml-3 hover:text-gray-400">
-                          <Link href={item[1]}>
-                            <a
-                              onClick={handleCloseNav}
-                              className=" h-full w-full p-2"
-                            >
-                              {item[0]}
-                            </a>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className=" hidden lg:block">
-                    <DropDown
-                      handleCloseNav={handleCloseNav}
-                      title="Departments"
-                      items={DEPARTMENTS_ITEMS}
-                    />
-                  </div>
-                </li>
+              <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-4 md:py-1 ">
+                <Link
+                  href="/events"
+                  className="rounded-md px-3 py-1 text-black"
+                >
+                  <a onClick={handleCloseNav}>EVENTS</a>
+                </Link>
+              </li>
 
-                <li className="my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-1 ml-4 ">
-                  <Link href="/events" className="rounded-md px-3 py-1 text-black">
-                    <a onClick={handleCloseNav}>Events</a>
-                  </Link>
-                </li>
+              <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-4 md:py-1">
+                <Link
+                  href="/recruitment"
+                  className="rounded-md px-3 py-1 text-black"
+                >
+                  <a onClick={handleCloseNav}>RECRUITMENT</a>
+                </Link>
+              </li>
 
-                <li className="my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-1 ml-4  px-4">
-                  <Link
-                    href="/recruitment"
-                    className="rounded-md px-3 py-1 text-black"
-                  >
-                    <a onClick={handleCloseNav}>Recruitment</a>
-                  </Link>
-                </li>
-
-                <li className="my-7 hover:text-gray-400 md:my-0 md:px-4 md:py-1 ml-4 lg:mr-5">
-                  <Link
-                    href="/contact-us"
-                    className="rounded-md px-3 py-1 text-black"
-                  >
-                    <a onClick={handleCloseNav}>Contact Us</a>
-                  </Link>
-                </li>
-              </div>        
-            </ul>
-          </div>
+              <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-4 md:py-1 lg:mr-5">
+                <Link
+                  href="/contact-us"
+                  className="rounded-md px-3 py-1 text-black"
+                >
+                  <a onClick={handleCloseNav}>CONTACT US</a>
+                </Link>
+              </li>
+            </div>
+          </ul>
         </div>
+      </div>
     </nav>
   );
 };

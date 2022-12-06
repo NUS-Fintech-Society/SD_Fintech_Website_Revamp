@@ -7,7 +7,7 @@ import MaxWidth from '@components/layout/MaxWidth';
 const Footer = () => {
   return (
     // [calc(60vh-64px)]
-    <footer className="relative h-[175px] sm:h-[160px] w-screen mt-20">
+    <footer className="relative mt-20 h-[175px] w-screen sm:h-[160px]">
       <div className="absolute -z-10 h-full w-full overflow-hidden bg-gray-50">
         <Image
           src="/images/home/footer.jpg"
@@ -19,16 +19,16 @@ const Footer = () => {
       </div>
       <MaxWidth>
         <div className="flex flex-col-reverse items-center gap-y-2.5 sm:flex-row sm:justify-between sm:gap-y-0">
-          <div className='relative sm:mt-10 h-[60px] w-[120px] sm:h-[77px] sm:w-[144px]'>
+          <div className="relative h-[60px] w-[120px] sm:mt-10 sm:h-[77px] sm:w-[144px]">
             <Image
               src="/images/fintechsoc-logo.png"
               alt="NUS FinTech Society Logo"
               quality={100}
-              layout='fill'
+              layout="fill"
             />
           </div>
           <div className="flex-col">
-            <h3 className="mt-8 sm:mt-10 mb-2 text-center text-sm sm:text-lg text-white font-medium">
+            <h3 className="mt-8 mb-2 text-center text-sm font-medium text-white sm:mt-10 sm:text-lg">
               Let&apos;s Connect
             </h3>
             <div className="flex gap-4">
@@ -37,7 +37,7 @@ const Footer = () => {
                 title="NUS FinTech Society LinkedIn Page"
               >
                 <svg
-                  className="h-5 w-5 sm:h-6 sm:w-6 fill-current text-white"
+                  className="h-5 w-5 fill-current text-white sm:h-6 sm:w-6"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
                 >
@@ -50,7 +50,7 @@ const Footer = () => {
                 title="NUS FinTech Society Instagram Page"
               >
                 <svg
-                  className="h-5 w-5 sm:h-6 sm:w-6 fill-current text-white"
+                  className="h-5 w-5 fill-current text-white sm:h-6 sm:w-6"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
                 >
@@ -63,7 +63,7 @@ const Footer = () => {
                 title="NUS FinTech Society Facebook Page"
               >
                 <svg
-                  className="h-5 w-5 sm:h-6 sm:w-6 fill-current text-white"
+                  className="h-5 w-5 fill-current text-white sm:h-6 sm:w-6"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
                 >
@@ -76,11 +76,12 @@ const Footer = () => {
                 title="NUS FinTech Society Twitter Page"
               >
                 <svg
-                  className="h-5 w-5 sm:h-6 sm:w-6 fill-current text-white"
+                  className="h-5 w-5 fill-current text-white sm:h-6 sm:w-6"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="328 355 335 276"
                 >
-                  <path d=" M 630, 425
+                  <path
+                    d=" M 630, 425
                             A 195, 195 0 0 1 331, 600
                             A 142, 142 0 0 0 428, 570
                             A  70,  70 0 0 1 370, 523
@@ -94,7 +95,8 @@ const Footer = () => {
                             A  65,  65 0 0 1 623, 401
                             A 117, 117 0 0 0 662, 390
                             A  65,  65 0 0 1 630, 425
-                            Z" />
+                            Z"
+                  />
                 </svg>
               </a>
               <a
@@ -102,7 +104,7 @@ const Footer = () => {
                 title="NUS FinTech Society Blockchain Medium Page"
               >
                 <svg
-                  className="h-5 w-5 sm:h-6 sm:w-6 fill-current text-white"
+                  className="h-5 w-5 fill-current text-white sm:h-6 sm:w-6"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 256 256"
                 >
@@ -114,7 +116,7 @@ const Footer = () => {
                 title="NUS FinTech Society Machine Learning Medium Page"
               >
                 <svg
-                  className="h-5 w-5 sm:h-6 sm:w-6 fill-current text-white"
+                  className="h-5 w-5 fill-current text-white sm:h-6 sm:w-6"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 32 32"
                 >
