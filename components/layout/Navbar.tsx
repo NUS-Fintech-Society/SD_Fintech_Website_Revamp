@@ -14,11 +14,6 @@ const DEPARTMENTS_ITEMS = [
   ['Operations', '/departments/operations'],
 ];
 
-const ABOUT_US_ITEMS = [
-  ['About Us', '/about'],
-  ['The EXCO', '/about/exco'],
-];
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
