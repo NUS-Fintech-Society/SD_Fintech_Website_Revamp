@@ -4,37 +4,32 @@ import AnimatedText from 'react-animated-text-content';
 
 const Landing = () => {
   return (
-    <div className="relative h-[calc(60vh-64px)] min-h-[400px] w-screen">
-      <div className="absolute -z-10 h-full w-full overflow-hidden">
+    <div className="relative -mb-10 min-h-[400px] w-screen sm:h-[calc(80vh)]">
+      <div className="absolute top-[-90px] h-[50%] w-full bg-gradient-to-b from-[#002750B3] via-[#00275059] to-[#00275000]" />
+      <div className="absolute top-[-90px] -z-10 h-full w-full overflow-hidden bg-primary">
         <Image
-          src="/images/home/landing.jpg"
+          src="/images/home/home_img.jpg"
           alt="Insert Photo Here"
           layout="fill"
           objectFit="cover"
           quality={100}
+          className="rounded-br-[calc(5vh)] shadow md:rounded-br-[calc(30vh)] lg:rounded-br-[calc(50vh)]"
         />
       </div>
+
       <MaxWidth>
-        <div className="flex flex-col gap-y-3 pt-[max(100px,_20vh)] text-center">
-          <h1 className="text-6xl  font-bold xl:text-7xl">
+        <div className="relative flex flex-col gap-y-3 text-center sm:pt-[max(20px,_5vh)]">
+          <h1 className="text-2xl font-bold text-white sm:text-6xl">
             NUS Fintech Society
           </h1>
-          <div className="mt-1 mb-3 text-2xl font-bold italic text-secondary xl:text-4xl">
+          <div className="-mt-2 text-xs font-medium text-white sm:mt-1 sm:text-2xl xl:text-4xl">
             <AnimatedText type="words" animationType="lights">
-              Ideate. Innovate. Inspire
+              Ideate, Innovate, Inspire
             </AnimatedText>
           </div>
-
-          {/* <div className="my-3 text-xl xl:text-[26px]">
-            <b>Passionate &nbsp;&#8212;&nbsp;</b>
-            Driving R&D in emerging realms of Blockchain and Machine Learning.
-          </div>
-          <div className=" text-xl xl:text-[26px]">
-            <b>Goal Oriented &nbsp;&#8212;&nbsp;</b>
-            Leading more than 200 members with a strong grasp of their fields.
-          </div> */}
         </div>
       </MaxWidth>
+      <div className="absolute bottom-[50px] h-10 w-full bg-primary" />
     </div>
   );
 };
