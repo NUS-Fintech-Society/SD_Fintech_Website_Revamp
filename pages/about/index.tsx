@@ -30,8 +30,8 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <div className="grid rounded-b-[143px] pb-20 lg:grid-cols-2">
-        <div className='flex justify-center'>
+      <div className="grid rounded-b-[143px] lg:grid-cols-2">
+        <div className='flex justify-center pb-4'>
           {/* landing bg */}
           <div className='h-[300px] w-[300px] sm:h-[500px] sm:w-[500px]'>
             <Image
@@ -44,16 +44,16 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <div className='flex justify-center sm:mt-28'>  
+        <div className='flex justify-center lg:mt-28'>  
           <Box boxShadow='2xl' p='6' rounded='xl' bg='white'
             width={{base: '90vw', md: "75vw", xl: '95%'}}
-            height={{base: '40vh', md: '35vh', lg: '40vh'}}>
+            height={{base: '50vh', md: '35vh', lg: '40vh'}}>
             <Tabs size='xs'>
               <TabList>
                 <Tab>
                   <h2 className="whitespace-nowrap text-xs font-bold sm:text-lg">
                     <div className='mr-2 flex items-center sm:mr-4 '>
-                      <div className='mr-2'>
+                      <div className='mx-2'>
 
                         {/* Feather Icon */}
                         <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,7 +81,7 @@ const AboutPage = () => {
                 <Tab>
                   <h2 className="text-xs font-bold sm:text-lg">
                     <div className='mr-2 flex items-center sm:mr-4'>
-                      <div className='mr-2'>
+                      <div className='mx-2'>
                         <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M18.2602 10.9791L15.2355 14.8547L9.50019 6.83191V3.69801L16.0129 3.59354L14.4154 1.79677L16.0129
                           0H8.66413V6.83191L0 22H28L18.2602 10.9791ZM9.50019 0.799145H14.197L13.313 1.77588L14.2024 2.78917L9.47889
@@ -95,7 +95,7 @@ const AboutPage = () => {
                 <Tab>
                   <h2 className="text-xs font-bold sm:text-lg">
                     <div className='mr-2 flex items-center sm:mr-4'>
-                      <div className='mr-2'>
+                      <div className='mx-2'>
                         <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M6.73924 17.9029C6.73081 17.7879 6.73081 17.6725 6.73924 17.5575C6.9962 15.8262 6.22532 14.4445 5.23118
                             13.1429C5.00792 12.8564 4.80994 12.5657 4.56983 12.3004C1.9539 8.95147 3.90005 3.36998 8.69803 2.75496C9.69811
