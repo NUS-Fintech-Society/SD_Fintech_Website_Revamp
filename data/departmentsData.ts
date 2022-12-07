@@ -6,7 +6,7 @@ const departmentsData: DepartmentsData = {
       name: 'Machine Learning',
       path: 'machine-learning',
       logo: {
-        src: '/images/departments/departmentLogos/ml-logo.png',
+        src: '/images/departments/departmentLogos/ML-main-icon.jpg',
         alt: 'ML logo',
       },
       purpose:
@@ -26,9 +26,10 @@ const departmentsData: DepartmentsData = {
         },
       ],
       roles: [
-        'Technical Analyst Trainee',
         'Technical Lead (Project/Quant)',
         'Technical Analyst (Project/Quant)',
+        'Technical Analyst Trainee',
+        
       ],
       projects: [
         {
@@ -136,7 +137,7 @@ const departmentsData: DepartmentsData = {
       name: 'Blockchain',
       path: 'blockchain',
       logo: {
-        src: '/images/departments/departmentLogos/Blockchain-Logo.png',
+        src: '/images/departments/departmentLogos/BC-main-icon.jpg',
         alt: 'Blockchain logo',
       },
       purpose:
@@ -290,7 +291,7 @@ const departmentsData: DepartmentsData = {
       name: 'Software Development',
       path: 'software',
       logo: {
-        src: '/images/departments/departmentLogos/Software-Development-Logo.png',
+        src: '/images/departments/departmentLogos/SD-main-icon.jpg',
         alt: 'SD logo',
       },
       purpose:
@@ -299,7 +300,7 @@ const departmentsData: DepartmentsData = {
         'To create a community of fintech enthusiast developers who are passionate about learning and building fintech applications and products',
       directors: [
         {
-          src: '/images/exco/sd.jpg',
+          src: '/images/exco/sd1.jpg',
           alt: 'Image of director',
           directorName: 'Owen',
         },
@@ -378,7 +379,7 @@ const departmentsData: DepartmentsData = {
       name: 'External',
       path: 'operations',
       logo: {
-        src: '/images/departments/departmentLogos/Internal-Op-Logo.png',
+        src: '/images/departments/departmentLogos/Ops-main-icon.jpg',
         alt: 'Ops Internal Logo',
       },
       purpose:
@@ -552,6 +553,12 @@ const departmentsData: DepartmentsData = {
         },
       ],
     },
+
+
+
+
+
+
   ],
 };
 
