@@ -22,13 +22,13 @@ const DepartmentInfo = ({
         <div className='relative h-[52px] w-[68.88px] sm:h-[139px] sm:w-[184px]'>
           <Image src={logo.src} alt={logo.alt} layout="fill" />
         </div>
-        <h1 className="ml-4 mt-3 border-b-2 border-black sm:text-[60px] sm:leading-[4.538rem] sm:mt-10 sm:ml-6 sm:border-b-4">{`${(name === 'External') || (name === 'Internal') ? "Operations": name}`}</h1>
+        <h1 className="ml-4 mt-3 border-b-2 border-[#002750] sm:text-[60px] sm:leading-[4.538rem] sm:mt-10 sm:ml-6 sm:border-b-4">{`${(name === 'External') || (name === 'Internal') ? "Operations": name}`}</h1>
       </div>
 
       <div className='mt-10 h-[287.65px] w-[293.41px] sm:h-[400px] sm:w-[798px] rounded-[12.86px] sm:rounded-[20px] bg-[#090071] bg-opacity-80 text-white'>
       
-        <div className="ml-5 py-5 text-[18.35px] leading-[1.388rem] font-bold sm:text-[30px] sm:leading-[2.269rem] sm:ml-12 sm:py-10">Roles</div>
-        <ul className="grid sm:grid-cols-2 gap-y-9 sm:gap-y-14  ml-5 text-[12px] leading-[1.044rem] sm:text-[22px] sm:leading-[1.688rem] sm:ml-12 font-normal ">
+        <div className="ml-5 py-5 text-[18.35px] leading-[1.388rem] font-bold sm:text-[30px] sm:leading-[2.269rem] sm:mx-12 sm:py-10">Roles</div>
+        <ul className="grid sm:grid-cols-2 gap-y-9 sm:gap-y-14  ml-5 text-[12px] leading-[1.044rem] sm:text-[22px] sm:leading-[1.688rem] sm:mx-12 font-normal ">
           {roles.map((role, index) => (
             <li key={index}>{role}</li>
             
