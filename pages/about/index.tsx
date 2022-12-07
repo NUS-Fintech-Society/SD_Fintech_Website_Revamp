@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import { Box } from '@chakra-ui/react'
 
+
 // code
 import MaxWidth from '@components/layout/MaxWidth';
 
@@ -30,7 +31,7 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <div className="grid rounded-b-[143px] lg:grid-cols-2">
+      <div className="grid gap-x-8 rounded-b-[143px] lg:grid-cols-2">
         <div className='flex justify-center pb-4'>
           {/* landing bg */}
           <div className='h-[300px] w-[300px] sm:h-[500px] sm:w-[500px]'>
@@ -47,7 +48,7 @@ const AboutPage = () => {
         <div className='flex justify-center lg:mt-28'>  
           <Box boxShadow='2xl' p='6' rounded='xl' bg='white'
             width={{base: '90vw', md: "75vw", xl: '95%'}}
-            height={{base: '50vh', md: '35vh', lg: '40vh'}}>
+            height={{base: '100%', md: '90%', lg: '60%'}}>
             <Tabs size='xs'>
               <TabList>
                 <Tab>
