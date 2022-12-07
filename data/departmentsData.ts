@@ -375,22 +375,102 @@ const departmentsData: DepartmentsData = {
       ],
     },
     {
-      name: 'Operations',
+      name: 'External',
       path: 'operations',
       logo: {
         src: '/images/departments/departmentLogos/Internal-Op-Logo.png',
         alt: 'Ops Internal Logo',
       },
       purpose:
-        '(Internal Affairs) Provide programmes and workshops for members of FinTech Society to build relationships and develop a love for FinTech. (External Relations)To reach out to external stakeholders and industry partners, strengthening FinTech Society’s network and presence .',
+        'Reach out to external stakeholders and industry partners, strengthening FinTech Society’s network and presence.',
       vision:
-        '(Internal Affairs) To organise programmes and workshops to introduce FinTech to the wider community. (External Relations) To widen the outreach and expand FinTech Society’s network both within the NUS community and with industry partners.',
+        'Widen the outreach and expand FinTech Society’s network both within the NUS community and with industry partners.',
       directors: [
         {
           src: '/images/exco/er.jpg',
           alt: 'Image of director',
           directorName: 'Elicia',
         },
+      ],
+      roles: [
+        'Partnership Lead/Executive',
+        'Marketing Lead/Executive',
+      ],
+      projects: [
+        {
+          projectName: 'Singapore FinTech Festival',
+          year: '21/22',
+          htmlContent:
+            '<p>For the Singapore Fintech Festival (SFF) event 2020, our society collaborated with Monetary Authority of Singapore and the other institutes of higher learning for the Talent Pavilion Segment (TP). TP is a one-stop-shop for jobs and skills focusing on Professionals, Managers, Executives and Technicians (PMETs), career switchers, students and fresh graduates to meet their talent-related needs. It is a partnership involving government agencies, labour movement, institutes of higher learning and industry collaborating to reimagine and redefine the future of work in the growing Technology space. </p><p>The FinTech Society was actively involved in planning and execution of the FinTech Literacy in Heartlands programme and the Round Table Discussions from 7 December, 2020 to 10th December 2020 as part of Talent Pavilion and SFF 2020. Our society is proud to have been able to collaborate with the Monetary Authority of Singapore for the third time this year. </p>',
+          projectImage: [
+            {
+              src: '/images/departments/projectImages/ops/fintech-festival.jpg',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+          ],
+          members: [
+            {
+              memberName: 'Alicia Wong',
+              src: 'https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60',
+              alt: 'Member Image',
+            },
+            {
+              memberName: 'Brandon Tan',
+              src: 'https://images.unsplash.com/photo-1627161684458-a62da52b51c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=600&q=60',
+              alt: 'Member Image',
+            },
+          ],
+          collaborations: [
+            {
+              src: '/images/departments/projectImages/ops/mas-logo.jpg',
+              alt: 'MAS logo',
+              companyName: 'MAS',
+            },
+          ],
+        },
+        {
+          projectName: 'NUS FinTech Month',
+          year: '21/22',
+          htmlContent:
+            '<p>FinTech Month is a series of workshops and hackathon designed to give tertiary students an insight into the world of FinTech. Through this one month of engaging activities catered to all tertiary students regardless of their background, we aimed to create an inclusive environment and encourage more people to explore this emerging field. </p><p>Despite this being our very first iteration of FinTech Month, we’re extremely proud and thankful to have received an overwhelming response of over 800 sign-ups. Please continue to look forward to our subsequent iterations in future years! </p>',
+          projectImage: [
+            {
+              src: '/images/departments/projectImages/ops/finmonth.jpg',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+          ],
+          members: [
+            {
+              memberName: 'Alicia Wong',
+              src: 'https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60',
+              alt: 'Member Image',
+            },
+            {
+              memberName: 'Brandon Tan',
+              src: 'https://images.unsplash.com/photo-1627161684458-a62da52b51c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=600&q=60',
+              alt: 'Member Image',
+            },
+          ],
+          collaborations: [],
+        },
+      ],
+    },
+    {
+      name: 'Internal',
+      path: 'operations',
+      logo: {
+        src: '/images/departments/departmentLogos/Internal-Op-Logo.png',
+        alt: 'Ops Internal Logo',
+      },
+      purpose:
+        'Provide programmes and workshops for members of FinTech Society to build relationships and develop a love for FinTech.',
+      vision:
+        'Organise programmes and workshops to introduce FinTech to the wider community.',
+      directors: [
         {
           src: '/images/exco/ia1.jpg',
           alt: 'Image of director',
@@ -403,13 +483,11 @@ const departmentsData: DepartmentsData = {
         },
       ],
       roles: [
-        'Project Management Lead/Executives (Internal Affairs)',
-        'Talent Management Lead/Executives (Internal Affairs)',
-        'Finance Lead/Executives (Internal Affairs)',
-        'Community Development Lead/Executives (Internal Affairs)',
-        'Product Manager (Internal Affairs)',
-        'Partnership Lead/Executive (External Relations)',
-        'Marketing Lead/Executive (External Relations)',
+        'Project Management Lead/Executives',
+        'Talent Management Lead/Executives',
+        'Finance Lead/Executives',
+        'Community Development Lead/Executives',
+        'Product Manager',
       ],
       projects: [
         {
