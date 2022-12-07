@@ -25,9 +25,9 @@ const AboutPage = () => {
             objectFit='cover'
           />
         </div>
-        
+
         <div className="relative ml-4 sm:ml-10">
-          <h1 className="absolute bottom-0 whitespace-nowrap text-4xl font-bold text-[#002750] underline sm:text-6xl">About Us</h1>
+          <h1 className="absolute bottom-0 whitespace-nowrap border-b-4 border-[#002750] text-4xl font-bold text-[#002750] sm:text-6xl">About Us</h1>
         </div>
       </div>
 
