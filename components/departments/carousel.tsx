@@ -14,7 +14,7 @@ const DeptCarousel = ({
   directors,
 }: DepartmentInfoProps) => {
   return (
-    <div className='relative h-[400px] w-[408px] rounded-3xl bg-[#090071]'>
+    <div className='relative rounded-3xl bg-[#090071] sm:h-[400px] sm:w-[408px]'>
       <Image
         src='/images/departments/purpose, vision, directors overlay.jpg'
         alt="Insert Photo Here"
@@ -25,11 +25,11 @@ const DeptCarousel = ({
       <Carousel>
         <div className='px-14 text-white'>
           <h2 className="mt-14 flex pb-3 text-3xl font-semibold">Purpose</h2>
-          <p className="mt-7 flex text-xl lg:text-2xl">{purpose}</p>
+          <p className="mt-7 mb-9 flex text-xl lg:text-2xl">{purpose}</p>
         </div>
         <div className='px-14'>
             <h2 className="mt-14 flex pb-3 text-3xl font-semibold text-white">Vision</h2>
-            <p className="mt-7 flex justify-start text-xl text-white lg:text-2xl">{vision}</p>
+            <p className="mt-7 mb-9 flex justify-start text-xl text-white lg:text-2xl">{vision}</p>
         </div>
         <div className='px-14'>
           <h2 className="mt-14 flex pb-3 text-3xl font-semibold text-white">
