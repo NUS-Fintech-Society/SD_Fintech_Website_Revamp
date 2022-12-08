@@ -4,6 +4,7 @@ import { DepartmentInfoProps } from '@interfaces/departments/DepartmentInfo';
 // library
 import Image from 'next/image';
 import { Fragment } from 'react';
+import DeptCarousel from '@components/departments/carousel';
 
 // code
 import MaxWidth from '@components/layout/MaxWidth';
@@ -18,6 +19,11 @@ const DepartmentInfo = ({
 }: DepartmentInfoProps) => {
   return (
     <MaxWidth>
+      <DeptCarousel
+        purpose={purpose}
+        vision={vision}
+        directors={directors} 
+      />
       <div className="mt-12 flex flex-wrap text-3xl font-semibold md:text-4xl lg:mt-24 lg:text-left lg:text-5xl">
         <Image src={logo.src} alt={logo.alt} height={90} width={90} />
         <h1 className="ml-2 mt-6 md:mt-4 md:ml-4">{`${name} Department`}</h1>
