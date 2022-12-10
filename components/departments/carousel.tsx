@@ -14,7 +14,7 @@ const DeptCarousel = ({
   directors,
 }: DepartmentInfoProps) => {
   return (
-    <div className='relative rounded-3xl bg-[#090071] sm:h-[400px] sm:w-[408px]'>
+    <div className='relative mt-10 h-[275px] w-[293.41px] rounded-3xl bg-[#090071] sm:h-[400px] sm:w-[408px]'>
       <Image
         src='/images/departments/purpose, vision, directors overlay.jpg'
         alt="Insert Photo Here"
@@ -23,29 +23,31 @@ const DeptCarousel = ({
         className='opacity-20'
       />
       <Carousel>
-        <div className='px-14 text-white'>
-          <h2 className="mt-14 flex pb-3 text-3xl font-semibold">Purpose</h2>
-          <p className="mt-3 mb-9 text-left text-xl lg:text-2xl">{purpose}</p>
+        <div className='px-8 text-white sm:px-14'>
+          <h2 className="mt-4 flex pb-3 text-xl font-semibold sm:mt-14 sm:text-3xl">Purpose</h2>
+          <p className="text-md text-left sm:mt-3 sm:mb-9 lg:text-2xl">{purpose}</p>
         </div>
-        <div className='px-14'>
-            <h2 className="mt-14 flex pb-3 text-3xl font-semibold text-white">Vision</h2>
-            <p className="mt-3 mb-9 text-left text-xl text-white lg:text-2xl">{vision}</p>
+        <div className='px-8 text-white sm:px-14'>
+            <h2 className="mt-4 flex pb-3 text-xl font-semibold sm:mt-14 sm:text-3xl">Vision</h2>
+            <p className="text-md text-left sm:mt-3 sm:mb-9 lg:text-2xl">{vision}</p>
         </div>
-        <div className='px-14'>
-          <h2 className="mt-14 flex pb-3 text-3xl font-semibold text-white">
+        <div className='px-8 text-white sm:px-14'>
+          <h2 className="mt-4 flex pb-3 text-xl font-semibold sm:mt-14 sm:text-3xl">
             Co-Directors
           </h2>
           {directors.map((director) => (
             <Fragment key={director.src}>
-              <div className="my-7 flex">
-                <Image
-                  src={director.src}
-                  alt={director.alt}
-                  width={105}
-                  height={105}
-                  className="rounded-full"
-                />
-                <h3 className=" mt-9 ml-5 align-bottom text-2xl font-semibold text-white md:text-lg lg:text-xl">
+              <div className="my-5 flex">
+                <div className='relative h-[75.6px] w-[75.6px] sm:h-[105px] sm:w-[105px]'>
+                  <Image
+                    src={director.src}
+                    alt={director.alt}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-full"
+                  /> 
+                </div>
+                <h3 className="text-md mt-3 ml-5 text-left align-bottom sm:mt-6 lg:text-2xl">
                   {director.directorName}
                 </h3>
               </div>
