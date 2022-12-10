@@ -35,7 +35,48 @@ const DeptCarousel = ({
           <h2 className="mt-4 flex pb-3 text-xl font-semibold sm:mt-14 sm:text-3xl">
             Co-Directors
           </h2>
-          {directors.map((director) => (
+          {directors.map((director) => {
+            return (
+              directors.length === 1 ? (
+
+                // Add more margins if there is only 1 director
+                <Fragment key={director.src}>
+                  <div className="mt-5 mb-32 flex sm:mb-44">
+                    <div className='relative h-[75.6px] w-[75.6px] sm:h-[105px] sm:w-[105px]'>
+                      <Image
+                        src={director.src}
+                        alt={director.alt}
+                        layout="fill"
+                        objectFit="cover"
+                        className="rounded-full"
+                      /> 
+                    </div>
+                    <h3 className="text-md mt-3 ml-5 text-left align-bottom sm:mt-6 lg:text-2xl">
+                      {director.directorName}
+                    </h3>
+                  </div>
+                </Fragment>
+              ) : (
+                <Fragment key={director.src}>
+                  <div className="mt-5 mb-8 flex">
+                    <div className='relative h-[75.6px] w-[75.6px] sm:h-[105px] sm:w-[105px]'>
+                      <Image
+                        src={director.src}
+                        alt={director.alt}
+                        layout="fill"
+                        objectFit="cover"
+                        className="rounded-full"
+                      /> 
+                    </div>
+                    <h3 className="text-md mt-3 ml-5 text-left align-bottom sm:mt-6 lg:text-2xl">
+                      {director.directorName}
+                    </h3>
+                  </div>
+                </Fragment>
+              )
+            )
+          })}
+          {/* {directors.map((director) => (
             <Fragment key={director.src}>
               <div className="my-5 flex">
                 <div className='relative h-[75.6px] w-[75.6px] sm:h-[105px] sm:w-[105px]'>
@@ -52,7 +93,7 @@ const DeptCarousel = ({
                 </h3>
               </div>
             </Fragment>
-          ))}
+          ))} */}
         </div>
       </Carousel>
     </div>

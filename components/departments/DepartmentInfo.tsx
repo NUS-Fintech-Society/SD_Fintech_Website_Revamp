@@ -26,7 +26,7 @@ const DepartmentInfo = ({
         <h1 className="ml-4 mt-3 border-b-2 border-[#002750] sm:text-[60px] sm:leading-[4.538rem] sm:mt-10 sm:ml-6 sm:border-b-4">{`${(name === 'External') || (name === 'Internal') ? "Operations": name}`}</h1>
       </div>
 
-      <div className='sm:flex sm:gap-x-10'>
+      <div className='md:flex sm:gap-x-10'>
         <div className='mt-10 h-[287.65px] w-[293.41px] sm:h-[400px] sm:w-[798px] rounded-[12.86px] sm:rounded-[20px] bg-[#090071] bg-opacity-80 text-white'>
         
           <div className="ml-5 py-5 text-[18.35px] leading-[1.388rem] font-bold sm:text-[30px] sm:leading-[2.269rem] sm:mx-12 sm:py-10">Roles</div>
