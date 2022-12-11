@@ -26,7 +26,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
   // };
 
   return (
-    <MaxWidth>
+    <div className="sm:section-my mt-10">
       {/* <div className='w-full h-[122px] flex flex-wrap bg-[#004F5080] rounded-[20px]'>
         <img src='/images/home/partnerLogos/bybit.png' className= 'w-full h-full rounded-[20px]' />
       </div> */}
@@ -38,6 +38,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
           Key Highlights
         </h3>
       </div>
+
       <div
         id="carouselDarkVariant"
         className="carousel slide carousel-dark relative"
@@ -125,34 +126,36 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
               )
             : null}
         </div>
-        {projectArray[1] ? <div>
-          <button
-            className="carousel-control-prev absolute top-0 bottom-0 left-0 flex items-center justify-center border-0 p-0 text-center hover:no-underline hover:outline-none focus:no-underline focus:outline-none"
-            type="button"
-            data-bs-target="#carouselDarkVariant"
-            data-bs-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon inline-block bg-no-repeat"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next absolute top-0 bottom-0 right-0 flex items-center justify-center border-0 p-0 text-center hover:no-underline hover:outline-none focus:no-underline focus:outline-none"
-            type="button"
-            data-bs-target="#carouselDarkVariant"
-            data-bs-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon inline-block bg-no-repeat"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div> : null}
+        {projectArray[1] ? (
+          <div>
+            <button
+              className="carousel-control-prev absolute top-0 bottom-0 left-0 flex items-center justify-center border-0 p-0 text-center hover:no-underline hover:outline-none focus:no-underline focus:outline-none"
+              type="button"
+              data-bs-target="#carouselDarkVariant"
+              data-bs-slide="prev"
+            >
+              <span
+                className="carousel-control-prev-icon inline-block bg-no-repeat"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Previous</span>
+            </button>
+            <button
+              className="carousel-control-next absolute top-0 bottom-0 right-0 flex items-center justify-center border-0 p-0 text-center hover:no-underline hover:outline-none focus:no-underline focus:outline-none"
+              type="button"
+              data-bs-target="#carouselDarkVariant"
+              data-bs-slide="next"
+            >
+              <span
+                className="carousel-control-next-icon inline-block bg-no-repeat"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Next</span>
+            </button>
+          </div>
+        ) : null}
       </div>
-    </MaxWidth>
+    </div>
   );
 };
 
