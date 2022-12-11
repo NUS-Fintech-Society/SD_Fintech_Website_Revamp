@@ -24,7 +24,8 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
     "react-responsive-carousel": "^3.2.23",
-    "react-visibility-sensor": "^5.1.1"
+    "react-visibility-sensor": "^5.1.1",
+    "tw-elements": "^1.0.0-alpha13"
   },
   "devDependencies": {
     "@types/node": "18.0.0",
