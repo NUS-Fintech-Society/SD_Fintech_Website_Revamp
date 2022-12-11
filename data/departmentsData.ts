@@ -516,6 +516,8 @@ const departmentsData: DepartmentsData = {
         {
           projectName: 'Singapore FinTech Festival',
           year: '21/22',
+          summary:
+            "NUS FinTech Society was actively involved in planning and execution of the FinTech Literacy in Heartlands programme and the Round Table Discussions from 7 December, 2020 to 10th December 2020 as part of Talent Pavilion and SFF 2020.",
           htmlContent:
             '<p>For the Singapore Fintech Festival (SFF) event 2020, our society collaborated with Monetary Authority of Singapore and the other institutes of higher learning for the Talent Pavilion Segment (TP). TP is a one-stop-shop for jobs and skills focusing on Professionals, Managers, Executives and Technicians (PMETs), career switchers, students and fresh graduates to meet their talent-related needs. It is a partnership involving government agencies, labour movement, institutes of higher learning and industry collaborating to reimagine and redefine the future of work in the growing Technology space. </p><p>The FinTech Society was actively involved in planning and execution of the FinTech Literacy in Heartlands programme and the Round Table Discussions from 7 December, 2020 to 10th December 2020 as part of Talent Pavilion and SFF 2020. Our society is proud to have been able to collaborate with the Monetary Authority of Singapore for the third time this year. </p>',
           projectImage: [
@@ -549,6 +551,8 @@ const departmentsData: DepartmentsData = {
         {
           projectName: 'NUS FinTech Month',
           year: '21/22',
+          summary:
+            "NUS FinTech Month is a series of workshops and hackathon designed to give tertiary students an insight into the world of FinTech. We aimed to create an inclusive environment and encourage more people to explore this emerging field.",
           htmlContent:
             '<p>FinTech Month is a series of workshops and hackathon designed to give tertiary students an insight into the world of FinTech. Through this one month of engaging activities catered to all tertiary students regardless of their background, we aimed to create an inclusive environment and encourage more people to explore this emerging field. </p><p>Despite this being our very first iteration of FinTech Month, we’re extremely proud and thankful to have received an overwhelming response of over 800 sign-ups. Please continue to look forward to our subsequent iterations in future years! </p>',
           projectImage: [
