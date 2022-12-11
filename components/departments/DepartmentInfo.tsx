@@ -3,11 +3,7 @@ import { DepartmentInfoProps } from '@interfaces/departments/DepartmentInfo';
 
 // library
 import Image from 'next/image';
-import { Fragment } from 'react';
 import DeptCarousel from '@components/departments/carousel';
-
-// code
-import MaxWidth from '@components/layout/MaxWidth';
 
 const DepartmentInfo = ({
   name,
@@ -29,7 +25,7 @@ const DepartmentInfo = ({
       </div>
 
       <div className="sm:flex sm:flex-wrap sm:gap-x-20">
-        <div className="mt-10 h-[300px] flex-1 rounded-xl bg-[#090071] bg-opacity-80 px-8 text-white sm:h-[400px] sm:rounded-[20px] sm:px-12 lg:min-w-[400px]">
+        <div className="mt-10 h-[300px] flex-1 rounded-xl bg-[#090071]/80 px-8 text-white sm:h-[400px] sm:rounded-[20px] sm:px-12 lg:min-w-[400px]">
           <div className="py-8 text-xl font-bold leading-[1.388rem] sm:py-10 sm:text-3xl">
             Roles
           </div>

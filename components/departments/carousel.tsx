@@ -1,6 +1,3 @@
-// Type
-import { DepartmentInfoProps } from '@interfaces/departments/DepartmentInfo';
-
 // Library
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -30,19 +27,19 @@ const DeptCarousel = ({
         className="opacity-20"
       />
       <Carousel>
-        <div className="px-8 py-8 text-white sm:px-14 sm:py-10">
+        <div className="p-8 text-white sm:px-14 sm:py-10">
           <h2 className="mb-8 flex text-xl font-bold sm:mb-10 sm:text-3xl">
             Purpose
           </h2>
           <p className="text-left sm:mb-9 sm:text-lg">{purpose}</p>
         </div>
-        <div className="px-8 py-8 text-white sm:px-14 sm:py-10">
+        <div className="p-8 text-white sm:px-14 sm:py-10">
           <h2 className="mb-8 flex text-xl font-bold sm:mb-10 sm:text-3xl">
             Vision
           </h2>
           <p className="text-left sm:mt-10 sm:mb-9 sm:text-lg">{vision}</p>
         </div>
-        <div className="px-8 py-8 text-white sm:px-14 sm:py-10">
+        <div className="p-8 text-white sm:px-14 sm:py-10">
           <h2 className="flex text-xl font-bold sm:mb-6 sm:text-3xl">
             Co-Directors
           </h2>

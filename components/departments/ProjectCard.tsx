@@ -12,13 +12,13 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <div>
-      <a className="mt-10 mb-10 flex h-[498px] w-[347px] basis-[350px] flex-col rounded-[20px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)]">
+      <a className="my-10 flex h-[498px] w-[347px] basis-[350px] flex-col rounded-[20px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)]">
         <div className="relative mb-3 flex h-[205px] w-[350px] justify-center overflow-hidden rounded-t-[20px]">
           <Image src={coverImage.src} alt={coverImage.alt} layout="fill" />
         </div>
         <div className="min-h-[256px] grow rounded-b-lg pl-6">
           <div className="my-2 mr-5 grid min-h-[92px] content-center">
-            <h3 className={`text-2xl font-bold text-[#004C98]`}>{name}</h3>
+            <h3 className="text-2xl font-bold text-[#004C98]">{name}</h3>
           </div>
           <div className="mr-5 mb-8 max-h-[170px] w-[304px] overflow-hidden text-base font-medium leading-5 text-[#303030]">
             {cardDescription}
