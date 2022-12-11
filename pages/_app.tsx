@@ -5,6 +5,7 @@ import Layout from '@components/layout/Layout';
 import theme from 'theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
+  
   return (
     <ChakraProvider theme={theme}>
       <Layout>
