@@ -4,6 +4,7 @@ import { DepartmentsProps } from '@interfaces/departments';
 // code
 import DepartmentInfo from '@components/departments/DepartmentInfo';
 import FeaturedProjects from '@components/departments/FeaturedProjects';
+import MaxWidth from '@components/layout/MaxWidth';
 
 const Departments = ({
   name,
@@ -15,7 +16,7 @@ const Departments = ({
   projects,
 }: DepartmentsProps) => {
   return (
-    <>
+    <MaxWidth>
       <DepartmentInfo
         name={name}
         logo={logo}
@@ -25,7 +26,7 @@ const Departments = ({
         roles={roles}
       />
       <FeaturedProjects key={name} projects={projects} />
-    </>
+    </MaxWidth>
   );
 };
 
