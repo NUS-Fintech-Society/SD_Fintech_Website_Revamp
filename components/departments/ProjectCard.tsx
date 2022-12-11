@@ -24,7 +24,7 @@ const ProjectCard = ({
           <div className='min-h-[92px] grid content-center my-2 mr-5'>
             <h3 className={`text-[#004C98] text-2xl font-bold`}>{name}</h3>
           </div>
-          <div className="max-h-[150px] w-[304px] text-[#303030] text-base font-medium mr-5 mb-8 leading-5 overflow-hidden">{cardDescription}</div>
+          <div className="max-h-[170px] w-[304px] text-[#303030] text-base font-medium mr-5 mb-8 leading-5 overflow-hidden">{cardDescription}</div>
         </div>
         <div className="flex space-x-2 justify-left">
           <Link href={`/departments/`}>
