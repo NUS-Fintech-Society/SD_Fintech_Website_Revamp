@@ -55,7 +55,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
       {/* <div className='w-full h-[122px] flex flex-wrap bg-[#004F5080] rounded-[20px]'>
         <img src='/images/home/partnerLogos/bybit.png' className= 'w-full h-full rounded-[20px]' />
       </div> */}
-      <div className="flex w-full flex-wrap rounded-[10px] bg-black p-3 sm:rounded-[20px] sm:p-6">
+      <div className="flex w-full flex-wrap rounded-[10px] mb-20 bg-black p-3 sm:rounded-[20px] sm:p-6">
         <h2 className="text-center font-bold text-white sm:text-3xl">
           Featured Projects
         </h2>
@@ -64,7 +64,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
         </h3>
       </div>
       {isBreakpoint ? 
-      <div className="mt-4 flex flex-wrap justify-center gap-16 xl:mx-20">
+      <div className="mt-4 flex flex-wrap justify-center gap-6 xl:mx-20">
       {projectsByYear.map(({ projectName, summary, projectImage }, index) => {
         return (
           <ProjectCard
@@ -81,7 +81,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
         className="carousel slide carousel-dark relative"
         data-bs-ride="carousel"
       >
-        <div className="carousel-indicators mb-30 absolute right-0 bottom-0 left-0 flex justify-center p-0">
+        <div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0">
           <button
             data-bs-target="#carouselDarkVariant"
             data-bs-slide-to="0"
@@ -107,7 +107,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
 
         <div className="carousel-inner relative w-full overflow-hidden">
           <div className="carousel-item active relative float-left w-full">
-            <div className="mt-4 flex flex-wrap justify-center gap-16 xl:mx-20">
+            <div className="mt-4 flex flex-wrap justify-center gap-6 xl:mx-20">
               {projectArray[0]
                 ? projectArray[0].map(
                     ({ projectName, summary, projectImage }, index) => {
