@@ -2,13 +2,37 @@
 import { FeaturedProjectsProps } from '@interfaces/departments/FeaturedProjectsProps';
 
 // library
-import React, { Fragment, useState } from 'react';
-import Image from 'next/image';
+import React, {useState, useCallback, useEffect } from 'react';
 
 // code
 import MaxWidth from '@components/layout/MaxWidth';
 import ProjectCard from '@components/departments/ProjectCard';
-import { arrayBuffer } from 'stream/consumers';
+
+const useMediaQuery = (width: any) => {
+  const [targetReached, setTargetReached] = useState(false);
+
+  const updateTarget = useCallback((e: any) => {
+    if (e.matches) {
+      setTargetReached(true);
+    } else {
+      setTargetReached(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${width}px)`);
+    media.addEventListener("change", updateTarget);
+
+    // Check on mount (callback is not called until a change occurs)
+    if (media.matches) {
+      setTargetReached(true);
+    }
+
+    return () => media.removeEventListener("change", updateTarget);
+  }, []);
+
+  return targetReached;
+};
 
 const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
   // eslint-disable-next-line no-unused-vars
@@ -20,6 +44,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
     const chunk = projectsByYear.slice(i, i + chunkSize);
     projectArray[projectArray.length] = chunk;
   }
+  const isBreakpoint = useMediaQuery(800);
 
   // const handleChangeYear = (event: React.ChangeEvent<HTMLSelectElement>) => {
   //   setYear(event.target.value);
@@ -38,7 +63,20 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
           Key Highlights
         </h3>
       </div>
-      <div
+      {isBreakpoint ? 
+      <div className="mt-4 flex flex-wrap justify-center gap-16 xl:mx-20">
+      {projectsByYear.map(({ projectName, summary, projectImage }, index) => {
+        return (
+          <ProjectCard
+            key={index}
+            coverImage={projectImage[0]}
+            cardDescription={summary}
+            name={projectName}
+          />
+        );
+        })}
+    </div>
+    : <div
         id="carouselDarkVariant"
         className="carousel slide carousel-dark relative"
         data-bs-ride="carousel"
@@ -151,7 +189,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
             <span className="visually-hidden">Next</span>
           </button>
         </div> : null}
-      </div>
+      </div>}
     </MaxWidth>
   );
 };

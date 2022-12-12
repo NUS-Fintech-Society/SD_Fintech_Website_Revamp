@@ -12,8 +12,8 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <div>
-      <a className="flex basis-[350px] flex-col rounded-[20px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] mt-10 mb-10 w-[347px] h-[498px]">
-        <div className="relative overflow-hidden w-[350px] h-[205px] rounded-t-[20px] mb-3 flex justify-center">
+      <a className="flex basis-[350px] flex-col rounded-[20px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] mt-10 mb-10 w-[260px] md:w-[347px] h-[500px] md:h-[498px]">
+        <div className="relative overflow-hidden w-[260px] md:w-[347px] h-[205px] rounded-t-[20px] mb-3 flex justify-center">
           <Image
             src={coverImage.src}
             alt={coverImage.alt}
@@ -22,9 +22,9 @@ const ProjectCard = ({
         </div>
         <div className="grow rounded-b-lg pl-6 min-h-[256px]">
           <div className='min-h-[92px] grid content-center my-2 mr-5'>
-            <h3 className={`text-[#004C98] text-2xl font-bold`}>{name}</h3>
+            <h3 className={`text-[#004C98] text-lg md:text-2xl font-bold`}>{name}</h3>
           </div>
-          <div className="max-h-[170px] w-[304px] text-[#303030] text-base font-medium mr-5 mb-8 leading-5 overflow-hidden">{cardDescription}</div>
+          <div className="h-[290px] w-[220px] md:w-[304px] text-[#303030] text-xs md:text-base font-medium mr-5 mb-8 leading-5 overflow-hidden">{cardDescription}</div>
         </div>
         <div className="flex space-x-2 justify-left">
           <Link href={`/departments/`}>
