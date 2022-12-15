@@ -2,36 +2,10 @@
 import { FeaturedProjectsProps } from '@interfaces/departments/FeaturedProjectsProps';
 
 // library
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState } from 'react';
 
 // code
 import ProjectCard from '@components/departments/ProjectCard';
-
-const useMediaQuery = (width: any) => {
-  const [targetReached, setTargetReached] = useState(false);
-
-  const updateTarget = useCallback((e: any) => {
-    if (e.matches) {
-      setTargetReached(true);
-    } else {
-      setTargetReached(false);
-    }
-  }, []);
-
-  useEffect(() => {
-    const media = window.matchMedia(`(max-width: ${width}px)`);
-    media.addEventListener('change', updateTarget);
-
-    // Check on mount (callback is not called until a change occurs)
-    if (media.matches) {
-      setTargetReached(true);
-    }
-
-    return () => media.removeEventListener('change', updateTarget);
-  }, []);
-
-  return targetReached;
-};
 
 const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
   // eslint-disable-next-line no-unused-vars
@@ -43,7 +17,6 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
     const chunk = projectsByYear.slice(i, i + chunkSize);
     projectArray[projectArray.length] = chunk;
   }
-  const isBreakpoint = useMediaQuery(800);
 
   return (
     <div className="sm:section-my mt-10">
@@ -57,7 +30,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
       </div>
 
       {/* Mobile */}
-      <div className="mt-10 md:mt-14 flex flex-wrap justify-center gap-10 md:gap-16 lg:hidden">
+      <div className="mt-10 flex flex-wrap justify-center gap-10 md:mt-14 md:gap-16 lg:hidden">
         {projectsByYear.map(({ projectName, summary, projectImage }, index) => {
           return (
             <ProjectCard
