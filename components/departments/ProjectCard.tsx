@@ -12,15 +12,17 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <div>
-      <a className="my-10 flex h-[498px] w-[347px] basis-[350px] flex-col rounded-[20px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)]">
-        <div className="relative mb-3 flex h-[205px] w-[350px] justify-center overflow-hidden rounded-t-[20px]">
+      <a className="lg:my-10 flex h-400px md:min-h-[500px] w-[225px] basis-[350px] flex-col rounded-[20px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] md:w-[347px] mx-auto">
+        <div className="relative mb-3 flex min-h-[132px] md:min-h-[205px] justify-center overflow-hidden rounded-t-[20px]">
           <Image src={coverImage.src} alt={coverImage.alt} layout="fill" />
         </div>
-        <div className="min-h-[256px] grow rounded-b-lg pl-6">
-          <div className="my-2 mr-5 grid min-h-[92px] content-center">
-            <h3 className="text-2xl font-bold text-[#004C98]">{name}</h3>
+        <div className="md:h-[300px] grow rounded-b-lg pl-6">
+          <div className="mr-5 grid min-h-[92px] content-center">
+            <h3 className="text-lg font-bold text-[#004C98] md:text-2xl">
+              {name}
+            </h3>
           </div>
-          <div className="mr-5 mb-8 max-h-[170px] w-[304px] overflow-hidden text-base font-medium leading-5 text-[#303030]">
+          <div className="mr-5 md:mb-8 overflow-hidden text-xs font-medium text-[#303030] md:w-[304px] md:text-base h-[144px] md:h-[300px]">
             {cardDescription}
           </div>
         </div>
