@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 
 // code
 import ProjectCard from '@components/departments/ProjectCard';
+import SectionHeader from '@components/layout/SectionHeader';
 
 const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
   // eslint-disable-next-line no-unused-vars
@@ -20,14 +21,11 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
 
   return (
     <div className="sm:section-my mt-10">
-      <div className="flex w-full flex-wrap rounded-[10px] bg-black p-3 sm:rounded-[20px] sm:p-6">
-        <h2 className="text-center font-bold text-white sm:text-3xl">
-          Featured Projects
-        </h2>
-        <h3 className="mt-1 ml-auto max-w-lg text-right text-xs text-white sm:text-lg">
-          Key Highlights
-        </h3>
-      </div>
+      <SectionHeader
+        color="green"
+        title="Featured Projects"
+        subtitle="Key Highlights"
+      />
 
       {/* Mobile */}
       <div className="mt-10 flex flex-wrap justify-center gap-10 md:mt-14 md:gap-16 lg:hidden">

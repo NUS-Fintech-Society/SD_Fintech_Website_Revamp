@@ -25,7 +25,14 @@ const DepartmentInfo = ({
       </div>
 
       <div className="sm:flex sm:flex-wrap sm:gap-x-20">
-        <div className="mt-10 h-[300px] flex-1 rounded-xl bg-[#090071]/80 px-8 text-white sm:h-[400px] sm:rounded-[20px] sm:px-12 lg:min-w-[400px]">
+        <div className="relative mt-10 h-[300px] flex-1 rounded-xl bg-[#090071]/70 px-8 text-white sm:h-[400px] sm:rounded-[20px] sm:px-12 lg:min-w-[400px]">
+          <Image
+            src="/images/section-header.jpg"
+            alt=""
+            layout="fill"
+            objectFit="cover"
+            className="-z-10 rounded-xl opacity-70 sm:rounded-[20px]"
+          />
           <div className="py-8 text-xl font-bold leading-[1.388rem] sm:py-10 sm:text-3xl">
             Roles
           </div>

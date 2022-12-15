@@ -15,10 +15,15 @@ const DepartmentCard = ({
 }: DepartmentCardProps) => {
   return (
     <Link href={`/departments/${path}`}>
-      <a className="flex basis-[75%] flex-col rounded-[20px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:basis-[350px]">
-        <div className="flex justify-center border-b-2 border-black">
-          <div className="relative h-[130px] w-[130px] sm:h-[200px] sm:w-[200px]">
-            <Image src={coverImage.src} alt={coverImage.alt} layout="fill" />
+      <a className="flex basis-[75%] flex-col rounded-[20px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:basis-[330px]">
+        <div className="flex justify-center">
+          <div className="relative h-[130px] w-[130px] sm:h-[205px] sm:w-[330px]">
+            <Image
+              src={coverImage.src}
+              alt={coverImage.alt}
+              layout="fill"
+              className="rounded-t-[20px]"
+            />
           </div>
         </div>
         <div className="min-h-[135px] grow rounded-b-lg pl-4 sm:min-h-[256px] sm:pl-6">

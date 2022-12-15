@@ -5,6 +5,7 @@ import { Box, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
 
 // code
 import MaxWidth from '@components/layout/MaxWidth';
+import SectionHeader from '@components/layout/SectionHeader';
 
 const AboutPage = () => {
   return (
@@ -17,7 +18,7 @@ const AboutPage = () => {
       <MaxWidth>
         <div className="mt-3 mb-8 flex flex-wrap text-[24.48px] font-bold leading-8 text-[#002750] sm:ml-4">
           <div className="relative h-[52px] w-[68.88px] sm:h-[139px] sm:w-[184px]">
-            <Image src='/images/main_icon.jpg' alt='Logo' layout="fill" />
+            <Image src="/images/about/main_icon.jpg" alt="Logo" layout="fill" />
           </div>
           <h1 className="ml-4 mt-3 border-b-2 border-[#002750] sm:mt-10 sm:ml-6 sm:border-b-4 sm:text-6xl sm:leading-[4.538rem]">
             About Us
@@ -40,7 +41,7 @@ const AboutPage = () => {
 
           <div className="mt-8 flex justify-center lg:mt-28">
             <Box
-              boxShadow="2xl"
+              boxShadow="lg"
               p="6"
               rounded="xl"
               bg="white"
@@ -225,14 +226,11 @@ const AboutPage = () => {
         </div>
 
         <div className="pt-12">
-          <div className="flex w-full flex-wrap rounded-[10px] bg-black p-3 sm:rounded-[20px] sm:p-6">
-            <h2 className="text-center font-bold text-white sm:text-3xl">
-              Meet The EXCO
-            </h2>
-            <h3 className="mt-1 ml-auto max-w-lg text-right text-xs text-white sm:text-lg">
-              Dedicated and Committed
-            </h3>
-          </div>
+          <SectionHeader
+            color="blue"
+            title="Meet the EXCO"
+            subtitle="Dedicated and Committed"
+          />
         </div>
 
         <div className="flex items-center justify-center p-[40.46px] sm:my-8 sm:p-[35px]">
@@ -244,7 +242,7 @@ const AboutPage = () => {
         <div className="flex justify-center">
           <div className="relative h-[119px] w-[119px] rounded-[7.58px] sm:h-[337px] sm:w-[337px] sm:rounded-[21px]">
             <Image
-              src="/images/exco/advisor.jpg"
+              src="/images/about/advisor.jpg"
               alt="Insert Photo Here"
               layout="fill"
             />
@@ -276,7 +274,7 @@ const AboutPage = () => {
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
-                  src="/images/exco/co-president2.jpg"
+                  src="/images/about/co-president2.jpg"
                   alt="Insert Photo Here"
                   layout="fill"
                   className="rounded-full"
@@ -295,7 +293,7 @@ const AboutPage = () => {
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
-                  src="/images/exco/co-president1.jpg"
+                  src="/images/about/co-president1.jpg"
                   alt="Insert Photo Here"
                   layout="fill"
                   className="rounded-full"
@@ -322,7 +320,7 @@ const AboutPage = () => {
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
-                  src="/images/exco/techwing.jpg"
+                  src="/images/about/techwing.jpg"
                   alt="Insert Photo Here"
                   layout="fill"
                   className="rounded-full"
@@ -349,7 +347,7 @@ const AboutPage = () => {
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
-                  src="/images/exco/ml1.jpg"
+                  src="/images/about/ml1.jpg"
                   alt="Insert Photo Here"
                   layout="fill"
                   className="rounded-full"
@@ -368,7 +366,7 @@ const AboutPage = () => {
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
-                  src="/images/exco/ml2.jpg"
+                  src="/images/about/ml2.jpg"
                   alt="Insert Photo Here"
                   layout="fill"
                   className="rounded-full"
@@ -395,7 +393,7 @@ const AboutPage = () => {
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
-                  src="/images/exco/blockchain1.jpg"
+                  src="/images/about/blockchain1.jpg"
                   alt="Insert Photo Here"
                   layout="fill"
                   className="rounded-full"
@@ -414,7 +412,7 @@ const AboutPage = () => {
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
-                  src="/images/exco/blockchain2.jpg"
+                  src="/images/about/blockchain2.jpg"
                   alt="Insert Photo Here"
                   layout="fill"
                   className="rounded-full"
@@ -441,7 +439,7 @@ const AboutPage = () => {
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
-                  src="/images/exco/sd1.jpg"
+                  src="/images/about/sd1.jpg"
                   alt="Insert Photo Here"
                   layout="fill"
                   className="rounded-full"
@@ -460,7 +458,7 @@ const AboutPage = () => {
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
-                  src="/images/exco/sd2.jpg"
+                  src="/images/about/sd2.jpg"
                   alt="Insert Photo Here"
                   layout="fill"
                   className="rounded-full"
@@ -487,7 +485,7 @@ const AboutPage = () => {
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
-                  src="/images/exco/op-wing.jpg"
+                  src="/images/about/op-wing.jpg"
                   alt="Insert Photo Here"
                   layout="fill"
                   className="rounded-full"
@@ -514,7 +512,7 @@ const AboutPage = () => {
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
-                  src="/images/exco/er.jpg"
+                  src="/images/about/er.jpg"
                   alt="Insert Photo Here"
                   layout="fill"
                   className="rounded-full"
@@ -541,7 +539,7 @@ const AboutPage = () => {
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
-                  src="/images/exco/ia1.jpg"
+                  src="/images/about/ia1.jpg"
                   alt="Insert Photo Here"
                   layout="fill"
                   className="rounded-full"
@@ -560,7 +558,7 @@ const AboutPage = () => {
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
-                  src="/images/exco/ia2.jpg"
+                  src="/images/about/ia2.jpg"
                   alt="Insert Photo Here"
                   layout="fill"
                   className="rounded-full"
