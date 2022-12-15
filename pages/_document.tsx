@@ -20,12 +20,10 @@ export default function Document() {
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
         />
-        <script src="https://cdn.tailwindcss.com"></script>
       </Head>
       <body className="font-inter">
         <Main />
         <NextScript />
-        <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
       </body>
     </Html>
   );
