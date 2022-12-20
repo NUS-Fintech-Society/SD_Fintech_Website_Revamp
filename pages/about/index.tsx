@@ -270,7 +270,7 @@ const AboutPage = () => {
         </div>
 
         <div className="flex flex-row justify-center gap-x-5 sm:gap-x-16">
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
@@ -289,7 +289,7 @@ const AboutPage = () => {
             </h3>
           </div>
 
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
@@ -316,7 +316,7 @@ const AboutPage = () => {
         </div>
 
         <div className="flex justify-center">
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
@@ -343,7 +343,7 @@ const AboutPage = () => {
         </div>
 
         <div className="flex flex-row justify-center gap-x-5 sm:gap-x-16">
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
@@ -362,7 +362,7 @@ const AboutPage = () => {
             </h3>
           </div>
 
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
@@ -389,7 +389,7 @@ const AboutPage = () => {
         </div>
 
         <div className="flex flex-row justify-center gap-x-5 sm:gap-x-16">
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
@@ -408,7 +408,7 @@ const AboutPage = () => {
             </h3>
           </div>
 
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
@@ -435,7 +435,7 @@ const AboutPage = () => {
         </div>
 
         <div className="flex flex-row justify-center gap-x-5 sm:gap-x-16">
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
@@ -454,7 +454,7 @@ const AboutPage = () => {
             </h3>
           </div>
 
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
@@ -481,7 +481,7 @@ const AboutPage = () => {
         </div>
 
         <div className="flex justify-center">
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
@@ -508,7 +508,7 @@ const AboutPage = () => {
         </div>
 
         <div className="flex justify-center">
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
@@ -535,7 +535,7 @@ const AboutPage = () => {
         </div>
 
         <div className="flex flex-row justify-center gap-x-5 sm:gap-x-16">
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
@@ -554,7 +554,7 @@ const AboutPage = () => {
             </h3>
           </div>
 
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
