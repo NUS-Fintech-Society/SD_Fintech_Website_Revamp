@@ -15,7 +15,7 @@ const Departments = ({ departments }: DepartmentsProps) => {
         title="Our Departments"
         subtitle="5 Core Departments"
       />
-      <div className="mt-10 flex flex-wrap justify-center gap-10 sm:mt-16 sm:gap-16 xl:mx-20">
+      <div className="mt-10 flex flex-wrap justify-center gap-10 sm:mt-16 sm:gap-16">
         {departments
           .slice(0, 3)
           .map(
@@ -31,7 +31,7 @@ const Departments = ({ departments }: DepartmentsProps) => {
             )
           )}
       </div>
-      <div className="mt-10 flex flex-wrap justify-center gap-10 sm:mt-16 sm:gap-16 xl:mx-20">
+      <div className="mt-10 flex flex-wrap justify-center gap-10 sm:mt-16 sm:gap-16">
         {departments
           .slice(3)
           .map(

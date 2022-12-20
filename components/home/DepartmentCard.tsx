@@ -17,11 +17,12 @@ const DepartmentCard = ({
     <Link href={`/departments/${path}`}>
       <a className="flex basis-[75%] flex-col rounded-[20px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:basis-[330px]">
         <div className="flex justify-center">
-          <div className="relative h-[130px] w-[130px] sm:h-[205px] sm:w-[330px]">
+          <div className="relative h-[130px] w-full sm:h-[205px] sm:w-[330px]">
             <Image
               src={coverImage.src}
               alt={coverImage.alt}
               layout="fill"
+              objectFit="cover"
               className="rounded-t-[20px]"
             />
           </div>
