@@ -14,7 +14,7 @@ const SectionHeader = ({
 
   return (
     <div
-      className={`relative flex w-full flex-wrap overflow-hidden rounded-[10px] bg-[${hexCode}]/50 p-3 sm:rounded-[20px] sm:p-6`}
+      className={`bg-[${hexCode}]/50 relative flex w-full flex-wrap overflow-hidden rounded-[10px] p-3 sm:rounded-[20px] sm:p-6`}
     >
       <Image
         src="/images/section-header.jpg"

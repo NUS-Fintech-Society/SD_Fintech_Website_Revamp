@@ -282,7 +282,7 @@ const AboutPage = () => {
               </div>
             </div>
             <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
-              Co-Director
+              Co-President
             </h3>
             <h3 className="flex justify-center pb-4 text-[6.67px] font-bold text-black sm:text-xl">
               Jun Xiong
@@ -301,7 +301,7 @@ const AboutPage = () => {
               </div>
             </div>
             <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
-              Co-Director
+              Co-President
             </h3>
             <h3 className="flex justify-center text-[6.67px] font-bold text-black sm:text-xl">
               David
