@@ -16,7 +16,7 @@ const Exco = ({ categories }: ExcoProps) => {
                 {category.people.map(({ role, title, name, imgSrc }) => (
                   <div
                     key={role + title}
-                    className="basis-[280px] rounded-lg border border-gray-400  p-2 sm:basis-[400px]"
+                    className="basis-[280px] rounded-lg border border-gray-400 p-2 sm:basis-[400px]"
                   >
                     <div className="flex">
                       <div className="relative h-[116px] w-[116px] sm:h-[160px] sm:w-[160px] ">

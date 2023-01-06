@@ -4,25 +4,29 @@ import { PartnersProps } from '@interfaces/home/Partners';
 // library
 import { Fragment } from 'react';
 import Image from 'next/image';
+import SectionHeader from '@components/layout/SectionHeader';
 
 const Partners = ({ partnersImages }: PartnersProps) => {
   return (
-    <div className="section-my">
-      <h2 className="mb-16 text-center text-h2 font-bold">
-        Past and Present Partners
-      </h2>
-      <div className="mx-auto flex w-5/6 flex-wrap justify-center gap-10">
+    <div className="sm:section-my mt-10">
+      <SectionHeader
+        color="green"
+        title="Our Partners"
+        subtitle="Past and Present"
+      />
+
+      <div className="mx-auto mt-10 flex w-5/6 flex-wrap justify-center gap-10 sm:mt-16">
         {partnersImages.map(({ src, alt, url }, index) => {
           return (
             <Fragment key={index}>
-              <div className="rounded-lg hover:drop-shadow-xl">
+              <div className="relative h-20 w-20 rounded-lg hover:drop-shadow-xl sm:h-[100px] sm:w-[100px]">
                 <a
                   href={url}
                   target="_blank"
                   rel="noreferrer"
                   className="cursor-default"
                 >
-                  <Image src={src} alt={alt} width="100" height="100" />
+                  <Image src={src} alt={alt} layout="fill" />
                 </a>
               </div>
             </Fragment>
