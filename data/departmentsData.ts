@@ -15,12 +15,12 @@ const departmentsData: DepartmentsData = {
         'To foster a community of data-savvy members who are comfortable with wrangling and deriving insights from data',
       directors: [
         {
-          src: '/images/exco/ml1.jpg',
+          src: '/images/about/ml1.jpg',
           alt: 'Image of director',
           directorName: 'Daniel',
         },
         {
-          src: '/images/exco/ml2.jpg',
+          src: '/images/about/ml2.jpg',
           alt: 'Image of director',
           directorName: 'Kleon',
         },
@@ -152,12 +152,12 @@ const departmentsData: DepartmentsData = {
         'Provide ample connections and opportunities to the best companies, organizations, and individuals in the blockchain sphere, create solutions of tangible and industrial value',
       directors: [
         {
-          src: '/images/exco/blockchain1.jpg',
+          src: '/images/about/blockchain1.jpg',
           alt: 'Image of director',
           directorName: 'Jones',
         },
         {
-          src: '/images/exco/blockchain2.jpg',
+          src: '/images/about/blockchain2.jpg',
           alt: 'Image of director',
           directorName: 'Marcus',
         },
@@ -314,7 +314,7 @@ const departmentsData: DepartmentsData = {
         'To create a community of fintech enthusiast developers who are passionate about learning and building fintech applications and products',
       directors: [
         {
-          src: '/images/exco/sd1.jpg',
+          src: '/images/about/sd1.jpg',
           alt: 'Image of director',
           directorName: 'Owen',
         },
@@ -406,7 +406,7 @@ const departmentsData: DepartmentsData = {
         'Widen the outreach and expand FinTech Society’s network both within the NUS community and with industry partners.',
       directors: [
         {
-          src: '/images/exco/er.jpg',
+          src: '/images/about/er.jpg',
           alt: 'Image of director',
           directorName: 'Elicia',
         },
@@ -495,12 +495,12 @@ const departmentsData: DepartmentsData = {
         'Organise programmes and workshops to introduce FinTech to the wider community.',
       directors: [
         {
-          src: '/images/exco/ia1.jpg',
+          src: '/images/about/ia1.jpg',
           alt: 'Image of director',
           directorName: 'James',
         },
         {
-          src: '/images/exco/ia2.jpg',
+          src: '/images/about/ia2.jpg',
           alt: 'Image of director',
           directorName: 'Jin',
         },
