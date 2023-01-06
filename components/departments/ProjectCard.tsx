@@ -26,7 +26,7 @@ const ProjectCard = ({
             {cardDescription}
           </div>
         </div>
-        <div className="justify-left flex space-x-2">
+        {/* <div className="justify-left flex space-x-2">
           <Link href="#">
             <button
               type="button"
@@ -35,7 +35,7 @@ const ProjectCard = ({
               Read More
             </button>
           </Link>
-        </div>
+        </div> */}
       </a>
     </div>
   );
