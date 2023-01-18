@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 const PastEventCard = () => {
   return (
-    <div className="relative m-10 h-[250px] w-[270px] p-8">
+    <div className="relative m-14 h-[124px] w-[140px] p-8 sm:h-[310.93px] sm:w-[350px]">
       <Image
         src="/images/events/eventsCardBackground.png"
         alt=""
@@ -16,10 +16,10 @@ const PastEventCard = () => {
         className="-z-10 rounded-2xl shadow-lg"
       />
       <div className='absolute bottom-5'>
-        <h3 className="text-xs text-white sm:text-base">
+        <h3 className="text-xs text-white sm:text-lg">
           17 OCT 2020
         </h3>
-        <h2 className="text-white sm:text-2xl">Event Name</h2>
+        <h2 className="text-white sm:text-3xl">Event Name</h2>
       </div>
     </div>
   );
