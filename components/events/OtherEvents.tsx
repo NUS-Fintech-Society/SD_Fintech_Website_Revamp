@@ -8,6 +8,7 @@ import SectionHeader from '@components/layout/SectionHeader';
 // code
 import MaxWidth from '@components/layout/MaxWidth';
 import EventCard from '@components/events/EventCard';
+import PastEventCard from './PastEventCard';
 
 const OtherEvents = ({ events }: EventsProps) => {
   return (
@@ -38,6 +39,8 @@ const OtherEvents = ({ events }: EventsProps) => {
         title="Past Events"
         subtitle="A walk down memory lane"
       />
+
+      <PastEventCard />
     </MaxWidth>
   );
 };
