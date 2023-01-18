@@ -3,6 +3,7 @@ import { EventsProps } from '@interfaces/events/Events';
 
 // library
 import { Fragment } from 'react';
+import SectionHeader from '@components/layout/SectionHeader';
 
 // code
 import MaxWidth from '@components/layout/MaxWidth';
@@ -31,6 +32,12 @@ const OtherEvents = ({ events }: EventsProps) => {
           )}
         </div>
       </div>
+
+      <SectionHeader
+        color="green"
+        title="Past Events"
+        subtitle="A walk down memory lane"
+      />
     </MaxWidth>
   );
 };
