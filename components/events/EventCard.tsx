@@ -31,7 +31,7 @@ const EventCard = ({
   const day = dateObj.getDate();
 
   return (
-    <div className="w-[330px] rounded-lg p-8 shadow-lg">
+    <div className="relative w-[330px] rounded-lg p-8 shadow-lg">
       <div className="text-h4 text-center font-bold">{name}</div>
       <div className="relative mt-2 flex justify-center">
         <Image
