@@ -18,7 +18,6 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
     const chunk = projectsByYear.slice(i, i + chunkSize);
     projectArray[projectArray.length] = chunk;
   }
-
   return (
     <div className="sm:section-my mt-10">
       <SectionHeader
