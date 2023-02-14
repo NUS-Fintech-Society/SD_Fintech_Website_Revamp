@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 const PastEventCard = () => {
   return (
-    <div className="relative m-14 h-[124px] w-[140px] rounded-2xl bg-[#004F50]/50 p-8 hover:-translate-y-0 sm:h-[310.93px] sm:w-[350px]">
+    <div className="relative h-[124px] w-[140px] rounded-2xl bg-[#004F50]/50 p-8 hover:-translate-y-0 sm:h-[310.93px] sm:w-[350px]">
       <Image
         src="/images/events/eventsCardBackground.png"
         alt=""
