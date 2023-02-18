@@ -5,7 +5,7 @@ import { EventCardProps } from '@interfaces/events/EventCard';
 // import Link from 'next/link';
 import Image from 'next/image';
 
-const PastEventCard = () => {
+const PastEventCard = () => { 
   return (
     <div className="relative h-[124px] w-[140px] rounded-2xl bg-[#004F50]/50 p-8 hover:-translate-y-0 sm:h-[310.93px] sm:w-[350px]">
       <Image
@@ -23,6 +23,6 @@ const PastEventCard = () => {
       </div>
     </div>
   );
-};
+}
 
 export default PastEventCard;
