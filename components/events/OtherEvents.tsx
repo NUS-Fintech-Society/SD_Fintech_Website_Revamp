@@ -52,7 +52,10 @@ function ExpandPastEventCard() {
           <div>
             <button className='mt-6 outline outline-offset-2 outline-white-500 text-white
               font-bold py-2 px-4 rounded-full'
-              onClick={() => setIsReadMore(true)}>
+              onClick={(event) => {
+                event.stopPropagation();
+                setIsReadMore(true);
+              }}>
               Read More...
             </button>
           </div>
