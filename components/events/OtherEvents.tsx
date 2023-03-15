@@ -13,7 +13,7 @@ import PastEventCard from './PastEventCard';
 
 function ExpandPastEventCard() {
   return (
-    <div className="relative h-[680px] w-[1400px] rounded-2xl p-8">
+    <div className="relative h-[680px] w-[1200px] rounded-2xl p-8">
       <Image
         src="/images/events/event_image.jpg"
         alt=""
@@ -67,7 +67,7 @@ const OtherEvents = ({ events }: EventsProps) => {
         />
       </MaxWidth>
 
-      <div className='relative'>
+      <div>
         <div className="mt-6 ml-8 grid grid-cols-2 gap-4 sm:ml-10 lg:grid-cols-3">
           <div onClick={() => setIsShown(current => !current)}>
             <PastEventCard />
@@ -87,10 +87,11 @@ const OtherEvents = ({ events }: EventsProps) => {
           <div onClick={() => setIsShown(current => !current)}>
             <PastEventCard />
           </div>
+          <div className='absolute z-20' onClick={() => setIsShown(current => !current)}>
+            {isShown && <ExpandPastEventCard />}
+          </div>
         </div>
-        <div className='pl-10'>
-          {isShown && <ExpandPastEventCard />}
-        </div>
+
       </div>
     </div>
   );
