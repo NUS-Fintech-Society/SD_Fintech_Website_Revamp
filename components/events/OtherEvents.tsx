@@ -13,18 +13,18 @@ import PastEventCard from './PastEventCard';
 
 function ExpandPastEventCard() {
   const [isReadMore, setIsReadMore] = useState(false);
-  // const readMoreRef = useRef(null);
+  const readMoreRef = useRef(null);
 
-  // useEffect(() => {
-  //   function handleClickOutside(event) {
-  //     if (readMoreRef.current && !readMoreRef.current.contains(event.target)) {
-  //       setIsReadMore(false);
-  //     }
-  //   }
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (readMoreRef.current && !readMoreRef.current.contains(event.target)) {
+        setIsReadMore(false);
+      }
+    }
 
-  //   window.addEventListener('click', handleClickOutside);
-  //   return () => window.removeEventListener('click', handleClickOutside);
-  // }, [readMoreRef]);
+    window.addEventListener('click', handleClickOutside);
+    return () => window.removeEventListener('click', handleClickOutside);
+  }, [readMoreRef]);
   return (
     <div className="relative h-[680px] w-[1200px] rounded-2xl bg-[#004C98]/50 p-8">
       <Image
@@ -64,13 +64,14 @@ function ExpandPastEventCard() {
 
 const OtherEvents = ({ events }: EventsProps) => {
   const [isShown, setIsShown] = useState(false);
+  const [isReadMore, setIsReadMore] = useState(false);
 
   const expandedCardRef = useRef(null);
 
   useEffect(() => {
     function handleClickOutside(event) {
       if (expandedCardRef.current && !expandedCardRef.current.contains(event.target)) {
-        setIsShown(false);
+        setIsShown(false); 
       }
     }
 
@@ -110,7 +111,7 @@ const OtherEvents = ({ events }: EventsProps) => {
       </MaxWidth>
 
       <div>
-        <div className="mt-6 ml-8 grid grid-cols-2 gap-4 sm:ml-10 lg:grid-cols-3">
+        <div ref={expandedCardRef} className="mt-6 ml-8 grid grid-cols-2 gap-4 sm:ml-10 lg:grid-cols-3">
           <div onClick={() => setIsShown(true)}>
             <PastEventCard />
           </div>
