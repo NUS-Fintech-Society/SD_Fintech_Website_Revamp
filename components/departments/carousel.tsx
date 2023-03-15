@@ -61,7 +61,7 @@ const DeptCarousel = ({
                   <h3 className="mt-6 text-left align-bottom font-semibold sm:mt-9 sm:text-2xl">
                     {director.directorName}
                   </h3>
-                  <div className='mt-7 ml-10 sm:mt-10 ml-12'>
+                  <div className='mt-7 ml-10 sm:mt-10 ml-11'>
                     <a
                       href={director.linkedin}
                       title="Director Linkedin Page"
@@ -95,7 +95,7 @@ const DeptCarousel = ({
                   </div>
 
           
-                  <div className='mt-7 ml-10 sm:mt-10 ml-12'>
+                  <div className='mt-6 ml-auto mr-32 sm:mt-10 sm:ml-auto sm:mr-11 md:mt-10 md:ml-auto md:mr-36 lg:mt-10 lg:ml-auto lg:mr-2 xl:mt-10 xl:ml-auto xl:mr-2'>
                     <a
                       href={director.linkedin}
                       title="Director Linkedin Page"
