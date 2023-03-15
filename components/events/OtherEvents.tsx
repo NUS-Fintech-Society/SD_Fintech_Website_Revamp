@@ -26,7 +26,7 @@ function ExpandPastEventCard() {
     return () => window.removeEventListener('click', handleClickOutside);
   }, [readMoreRef]);
   return (
-    <div className="relative h-[680px] w-[1200px] rounded-2xl bg-[#004C98]/50 p-8">
+    <div className="relative h-[180px] w-[330px] rounded-2xl bg-[#004C98]/50 p-8 md:h-[680px] md:w-[1200px]">
       <Image
         src="/images/events/event_image.jpg"
         alt=""
@@ -35,7 +35,7 @@ function ExpandPastEventCard() {
         className="-z-10 rounded-2xl shadow-lg"
       />
       {isReadMore ? (
-        <div className='mt-12'>
+        <div className='mt-2 md:mt-12'>
           <h2 className="font-bold text-white sm:text-5xl">Fintech Event 2020</h2>
           <h3 className="mt-6 text-xs text-white sm:text-2xl">
           This was an event that was held in the year 2020 along with Venmo.
@@ -67,7 +67,6 @@ function ExpandPastEventCard() {
 
 const OtherEvents = ({ events }: EventsProps) => {
   const [isShown, setIsShown] = useState(false);
-  const [isReadMore, setIsReadMore] = useState(false);
 
   const expandedCardRef = useRef(null);
 
@@ -114,7 +113,8 @@ const OtherEvents = ({ events }: EventsProps) => {
       </MaxWidth>
 
       <div>
-        <div ref={expandedCardRef} className="mt-6 ml-8 grid grid-cols-2 gap-4 sm:ml-10 lg:grid-cols-3">
+        <div ref={expandedCardRef} 
+          className={`mt-6 ml-8 grid grid-cols-2 gap-4 sm:ml-10 lg:grid-cols-3 ${isShown ? 'bg-black/50' : ''}`}>
           <div onClick={() => setIsShown(true)}>
             <PastEventCard />
           </div>
@@ -133,7 +133,6 @@ const OtherEvents = ({ events }: EventsProps) => {
           <div onClick={() => setIsShown(true)}>
             <PastEventCard />
           </div>
-          {/* <div className='absolute z-20' onClick={() => setIsShown(current => !current)}> */}
           <div className='absolute z-20'>
             {isShown && <ExpandPastEventCard />}
           </div>
