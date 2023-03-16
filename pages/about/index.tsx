@@ -235,31 +235,61 @@ const AboutPage = () => {
 
         <div className="flex items-center justify-center p-[40.46px] sm:my-8 sm:p-[35px]">
           <h1 className="text-[26.68px] font-bold leading-8 text-black sm:text-[40px] sm:leading-[3rem]">
-            ADVISOR
+            ADVISORS
           </h1>
         </div>
 
-        <div className="flex justify-center">
-          <div className="relative h-[119px] w-[119px] rounded-[7.58px] sm:h-[337px] sm:w-[337px] sm:rounded-[21px]">
-            <Image
-              src="/images/about/advisor.jpg"
-              alt="Insert Photo Here"
-              layout="fill"
-            />
+        <div className="flex justify-center gap-x-5 md:gap-x-16">
+          <div className="flex justify-center">
+            <div className="relative h-[119px] w-[119px] sm:h-[228px] sm:w-[228px] md:h-[337px] md:w-[337px]">
+              <Image
+                src="/images/about/advisor1.jpg"
+                alt="Insert Photo Here"
+                layout="fill"
+                className="rounded-[6.5px] sm:rounded-[21px]"
+              />
+            </div>
+          </div>
+
+          <div className="flex justify-center">
+            <div className="relative h-[119px] w-[119px] sm:h-[228px] sm:w-[228px] md:h-[337px] md:w-[337px]">
+              <Image
+                src="/images/about/advisor2.jpg"
+                alt="Insert Photo Here"
+                layout="fill"
+                className="rounded-[6.5px] sm:rounded-[21px]"
+              />
+            </div>
           </div>
         </div>
 
-        <div className="flex justify-center p-[6.7px] sm:p-[19px]">
-          <div className="h-[51.52px] w-[118.92px] items-center justify-center rounded-[6.5px] bg-[#161B50] sm:h-[146px] sm:w-[337px] sm:rounded-[18px]">
-            <h3 className="mt-2 flex justify-center text-[6.5px] font-normal leading-[0.5rem] text-white sm:mt-6 sm:text-[18px] sm:leading-[1.375rem] ">
-              Advisor
-            </h3>
-            <h3 className="flex justify-center  pb-1 text-[6.5px] font-normal leading-[0.5rem] text-white sm:pb-4  sm:text-[18px] sm:leading-[1.375rem]">
-              A/Prof. (Practice)
-            </h3>
-            <h3 className="flex justify-center text-[10.83px] font-normal leading-[0.813rem] text-white sm:text-[30px] sm:leading-[2.25rem]">
-              Keith Carter
-            </h3>
+        <div className="mt-2 flex justify-center gap-x-5 md:mt-5 md:gap-x-16">
+          <div className="flex justify-center">
+            <div className="h-[51.52px] w-[118.92px] items-center justify-center rounded-[6.5px] bg-[#161B50] sm:h-[100px] sm:w-[228px] sm:rounded-[18px] md:h-[146px] md:w-[337px]">
+              <h3 className="mt-3 flex justify-center text-[6.5px] font-normal leading-[0.5rem] text-white sm:mt-4 sm:text-sm md:mt-8 md:text-lg md:leading-[1.375rem] ">
+                Advisor
+              </h3>
+              <h3 className="flex justify-center text-[6.5px] font-normal leading-[0.5rem] text-white sm:text-sm md:text-lg md:leading-[1.375rem]">
+                Prof
+              </h3>
+              <h3 className="flex justify-center text-[10.83px] font-normal leading-[0.813rem] text-white sm:text-xl md:text-[30px] md:leading-[2.25rem]">
+                Hahn Jungpil
+              </h3>
+            </div>
+          </div>
+
+          <div className="flex justify-center">
+            <div className="h-[51.52px] w-[118.92px] items-center justify-center rounded-[6.5px] bg-[#161B50] sm:h-[100px] sm:w-[228px] sm:rounded-[18px] md:h-[146px] md:w-[337px]">
+              <h3 className="mt-3 flex justify-center text-[6.5px] font-normal leading-[0.5rem] text-white sm:mt-4 sm:text-sm md:mt-8 md:text-lg md:leading-[1.375rem] ">
+                Advisor
+              </h3>
+              <h3 className="flex justify-center text-[6.5px] font-normal leading-[0.5rem] text-white sm:text-sm md:text-lg md:leading-[1.375rem]">
+                Dr.
+              </h3>
+              <h3 className="flex justify-center text-[10.83px] font-normal leading-[0.813rem] text-white sm:text-xl md:text-[30px] md:leading-[2.25rem]">
+                Nicholas Garcia
+              </h3>
+            </div>
           </div>
         </div>
 
