@@ -26,7 +26,7 @@ function ExpandPastEventCard() {
     return () => window.removeEventListener('click', handleClickOutside);
   }, [readMoreRef]);
   return (
-    <div className="relative h-[180px] w-[330px] rounded-2xl bg-[#004C98]/50 p-8 md:h-[680px] md:w-[1200px]">
+    <div className="relative h-[180px] w-[330px] rounded-2xl bg-[#004C98]/50 p-8 md:h-[650px] md:w-[1050px]">
       <Image
         src="/images/events/event_image.jpg"
         alt=""
@@ -112,9 +112,9 @@ const OtherEvents = ({ events }: EventsProps) => {
         />
       </MaxWidth>
 
-      <div>
+      <div className={`${isShown ? 'bg-black/70' : ''}`}>
         <div ref={expandedCardRef} 
-          className={`mt-6 ml-8 grid grid-cols-2 gap-4 sm:ml-10 lg:grid-cols-3 ${isShown ? 'bg-black/50' : ''}`}>
+          className="mt-6 grid grid-cols-2 gap-4 px-8 sm:ml-10 md:px-16 lg:grid-cols-3">
           <div onClick={() => setIsShown(true)}>
             <PastEventCard />
           </div>
