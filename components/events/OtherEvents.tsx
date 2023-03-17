@@ -26,7 +26,7 @@ function ExpandPastEventCard() {
     return () => window.removeEventListener('click', handleClickOutside);
   }, [readMoreRef]);
   return (
-    <div className="relative h-[180px] w-[330px] rounded-2xl bg-[#004C98]/50 p-8 md:h-[650px] md:w-[1050px]">
+    <div className="relative h-[180px] w-[330px] rounded-2xl bg-[#004C98]/50 p-8 md:h-[630px] md:w-[1050px]">
       <Image
         src="/images/events/event_image.jpg"
         alt=""
@@ -36,8 +36,8 @@ function ExpandPastEventCard() {
       />
       {isReadMore ? (
         <div className='mt-2 md:mt-12'>
-          <h2 className="font-bold text-white sm:text-5xl">Fintech Event 2020</h2>
-          <h3 className="mt-6 text-xs text-white sm:text-2xl">
+          <h2 className="font-bold text-white md:text-5xl">Fintech Event 2020</h2>
+          <h3 className="mt-6 text-xs text-white md:text-2xl">
           This was an event that was held in the year 2020 along with Venmo.
           We had our first ever virtual Welcome Tea information sharing session 
           to find out more about what we do and who we are looking for !
@@ -45,13 +45,13 @@ function ExpandPastEventCard() {
         </div>
       ) : (
         <div className='absolute bottom-5'>
-          <h2 className="font-bold text-white sm:text-6xl">Fintech Event 2020</h2>
-          <h3 className="mt-6 text-xs text-white sm:text-2xl">
+          <h2 className="font-bold text-white md:text-6xl">Fintech Event 2020</h2>
+          <h3 className="mt-6 text-xs text-white md:text-2xl">
             This was an event that was held in the year 2020 about so and so...
           </h3>
           <div>
-            <button className='mt-6 outline outline-offset-2 outline-white-500 text-white
-              font-bold py-2 px-4 rounded-full'
+            <button className='mt-6 text-xs outline outline-offset-2 outline-white-500 text-white
+              font-bold py-2 px-4 rounded-full md:text-xl'
               onClick={(event) => {
                 event.stopPropagation();
                 setIsReadMore(true);
