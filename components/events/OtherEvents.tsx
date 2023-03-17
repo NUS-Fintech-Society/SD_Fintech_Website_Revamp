@@ -26,7 +26,7 @@ function ExpandPastEventCard() {
     return () => window.removeEventListener('click', handleClickOutside);
   }, [readMoreRef]);
   return (
-    <div className="relative h-[180px] w-[330px] rounded-2xl bg-[#004C98]/50 p-8 md:h-[630px] md:w-[1050px]">
+    <div className="relative h-[180px] w-[330px] rounded-2xl bg-[#004C98]/50 p-8 md:h-[630px] md:w-[1080px]">
       <Image
         src="/images/events/event_image.jpg"
         alt=""
@@ -35,7 +35,7 @@ function ExpandPastEventCard() {
         className="-z-10 rounded-2xl shadow-lg"
       />
       {isReadMore ? (
-        <div className='mt-2 md:mt-12'>
+        <div className='mt-2 md:mt-12' ref={readMoreRef}>
           <h2 className="font-bold text-white md:text-5xl">Fintech Event 2020</h2>
           <h3 className="mt-6 text-xs text-white md:text-2xl">
           This was an event that was held in the year 2020 along with Venmo.
