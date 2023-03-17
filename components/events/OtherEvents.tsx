@@ -112,9 +112,9 @@ const OtherEvents = ({ events }: EventsProps) => {
         />
       </MaxWidth>
 
-      <div className={`${isShown ? 'bg-black/70' : ''}`}>
+      <div className={`${isShown ? 'bg-black/70' : ''} flex justify-center`}>
         <div ref={expandedCardRef} 
-          className="mt-6 grid grid-cols-2 gap-4 px-8 sm:ml-10 md:px-16 lg:grid-cols-3">
+          className="mt-6 grid grid-cols-2 gap-4 sm:ml-10 lg:grid-cols-3">
           <div onClick={() => setIsShown(true)}>
             <PastEventCard />
           </div>
