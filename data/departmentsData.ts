@@ -18,11 +18,13 @@ const departmentsData: DepartmentsData = {
           src: '/images/about/ml1.jpg',
           alt: 'Image of director',
           directorName: 'Daniel',
+          linkedin: 'https://www.linkedin.com/in/daniel-twh/',
         },
         {
           src: '/images/about/ml2.jpg',
           alt: 'Image of director',
           directorName: 'Kleon',
+          linkedin: 'https://www.linkedin.com/in/kleonang/',
         },
       ],
       roles: [
@@ -155,11 +157,14 @@ const departmentsData: DepartmentsData = {
           src: '/images/about/blockchain1.jpg',
           alt: 'Image of director',
           directorName: 'Jones',
+          linkedin:'https://www.linkedin.com/in/jones-lim-965586178/',
         },
         {
           src: '/images/about/blockchain2.jpg',
           alt: 'Image of director',
           directorName: 'Marcus',
+          linkedin: 'https://www.linkedin.com/in/marcus-pang-yu-yang/',
+
         },
       ],
       roles: ['Research Analyst', 'Community Manager', 'Blockchain Developer'],
@@ -317,6 +322,14 @@ const departmentsData: DepartmentsData = {
           src: '/images/about/sd1.jpg',
           alt: 'Image of director',
           directorName: 'Owen',
+          linkedin: 'https://www.linkedin.com/in/owen-yap/',
+    
+        },
+        {
+          src: '/images/about/sd2.jpg',
+          alt: 'Image of director',
+          directorName: 'Jess', 
+        linkedin: 'https://www.linkedin.com/in/jessraphael/',
         },
       ],
       roles: [
@@ -409,6 +422,7 @@ const departmentsData: DepartmentsData = {
           src: '/images/about/er.jpg',
           alt: 'Image of director',
           directorName: 'Elicia',
+          linkedin: 'https://www.linkedin.com/in/elicia-low/',
         },
       ],
       roles: [
@@ -498,11 +512,13 @@ const departmentsData: DepartmentsData = {
           src: '/images/about/ia1.jpg',
           alt: 'Image of director',
           directorName: 'James',
+          linkedin: '',
         },
         {
           src: '/images/about/ia2.jpg',
           alt: 'Image of director',
           directorName: 'Jin',
+          linkedin: 'https://www.linkedin.com/in/jin-kutsuzawa-a5a7171a3/',
         },
       ],
       roles: [
