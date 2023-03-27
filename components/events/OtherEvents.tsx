@@ -50,7 +50,8 @@ function ExpandPastEventCard() {
             This was an event that was held in the year 2020 about so and so...
           </h3>
           <div>
-            <button type="button" className='outline-white-500 mt-6 rounded-full py-2 px-4 text-xs font-bold text-white outline outline-offset-2 md:text-xl'
+            <button type="button" className='mt-6 text-xs outline outline-offset-2 outline-white-500 text-white
+              font-bold py-2 px-4 rounded-full md:text-xl'
               onClick={(event) => {
                 event.stopPropagation();
                 setIsReadMore(true);
