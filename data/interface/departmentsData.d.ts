@@ -19,6 +19,7 @@ interface Department {
 interface Director {
   src: string;
   alt: string;
+  linkedin: string;
   directorName: string;
 }
 

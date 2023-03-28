@@ -61,7 +61,7 @@ const DeptCarousel = ({
                   <h3 className="mt-6 text-left align-bottom font-semibold sm:mt-9 sm:text-2xl">
                     {director.directorName}
                   </h3>
-                  <div className='mt-7 ml-10 sm:mt-10 ml-11'>
+                  <div className='mt-7 ml-10 sm:mt-10'>
                     <a
                       href={director.linkedin}
                       title="Director Linkedin Page"
