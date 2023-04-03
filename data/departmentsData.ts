@@ -407,11 +407,11 @@ const departmentsData: DepartmentsData = {
       ],
     },
     {
-      name: 'External',
-      path: 'operations',
+      name: 'External Relations',
+      path: 'external',
       logo: {
-        src: '/images/departments/departmentLogos/Ops-main-icon.jpg',
-        alt: 'Ops Internal Logo',
+        src: '/images/departments/departmentLogos/External-main-icon.jpg',
+        alt: 'External Logo',
       },
       purpose:
         'Reach out to external stakeholders and industry partners, strengthening FinTech Society’s network and presence.',
@@ -497,11 +497,11 @@ const departmentsData: DepartmentsData = {
       ],
     },
     {
-      name: 'Internal',
-      path: 'operations',
+      name: 'Internal Affairs',
+      path: 'internal',
       logo: {
-        src: '/images/departments/departmentLogos/Internal-Op-Logo.png',
-        alt: 'Ops Internal Logo',
+        src: '/images/departments/departmentLogos/Internal-main-icon.jpg',
+        alt: 'Internal Logo',
       },
       purpose:
         'Provide programmes and workshops for members of FinTech Society to build relationships and develop a love for FinTech.',
@@ -512,7 +512,7 @@ const departmentsData: DepartmentsData = {
           src: '/images/about/ia1.jpg',
           alt: 'Image of director',
           directorName: 'James',
-          linkedin: '',
+          linkedin: 'https://www.linkedin.com/in/james-teo-lee-chen/',
         },
         {
           src: '/images/about/ia2.jpg',
