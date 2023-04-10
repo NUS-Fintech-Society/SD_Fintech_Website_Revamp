@@ -419,10 +419,18 @@ const departmentsData: DepartmentsData = {
         'Widen the outreach and expand FinTech Society’s network both within the NUS community and with industry partners.',
       directors: [
         {
-          src: '/images/about/er.jpg',
-          alt: 'Image of director',
+          src: '/images/about/er1.jpg',
+          alt: 'Image of director1',
           directorName: 'Elicia',
           linkedin: 'https://www.linkedin.com/in/elicia-low/',
+          
+        },
+        {
+          src: '/images/about/er2.jpg',
+          alt: 'Image of director2',
+          directorName: 'Jasper',
+          linkedin: 'https://www.linkedin.com/in/jaspertzx/',
+          
         },
       ],
       roles: [
