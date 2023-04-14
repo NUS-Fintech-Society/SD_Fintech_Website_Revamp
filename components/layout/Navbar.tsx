@@ -11,7 +11,8 @@ const DEPARTMENTS_ITEMS = [
   ['Machine Learning', '/departments/machine-learning'],
   ['Blockchain', '/departments/blockchain'],
   ['Software Development', '/departments/software'],
-  ['Operations', '/departments/operations'],
+  ['External Relations', '/departments/external'],
+  ['Internal Affairs', '/departments/internal'],
 ];
 
 const Navbar = () => {
