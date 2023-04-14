@@ -13,11 +13,14 @@ import PastEventCard from './PastEventCard';
 
 function ExpandPastEventCard() {
   const [isReadMore, setIsReadMore] = useState(false);
-  const readMoreRef = useRef(null);
+  const readMoreRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    function handleClickOutside(event) {
-      if (readMoreRef.current && !readMoreRef.current.contains(event.target)) {
+    function handleClickOutside(event: Event) {
+      if (
+        readMoreRef.current &&
+        !readMoreRef.current.contains(event.target as Node)
+      ) {
         setIsReadMore(false);
       }
     }
@@ -35,45 +38,55 @@ function ExpandPastEventCard() {
         className="-z-10 rounded-2xl shadow-lg"
       />
       {isReadMore ? (
-        <div className='mt-2 md:mt-12' ref={readMoreRef}>
-          <h2 className="font-bold text-white md:text-5xl">Fintech Event 2020</h2>
+        <div className="mt-2 md:mt-12" ref={readMoreRef}>
+          <h2 className="font-bold text-white md:text-5xl">
+            Fintech Event 2020
+          </h2>
           <h3 className="mt-6 text-xs text-white md:text-2xl">
-          This was an event that was held in the year 2020 along with Venmo.
-          We had our first ever virtual Welcome Tea information sharing session 
-          to find out more about what we do and who we are looking for !
+            This was an event that was held in the year 2020 along with Venmo.
+            We had our first ever virtual Welcome Tea information sharing
+            session to find out more about what we do and who we are looking for
+            !
           </h3>
         </div>
       ) : (
-        <div className='absolute bottom-5'>
-          <h2 className="font-bold text-white md:text-6xl">Fintech Event 2020</h2>
+        <div className="absolute bottom-5">
+          <h2 className="font-bold text-white md:text-6xl">
+            Fintech Event 2020
+          </h2>
           <h3 className="mt-6 text-xs text-white md:text-2xl">
             This was an event that was held in the year 2020 about so and so...
           </h3>
           <div>
-            <button className='mt-6 text-xs outline outline-offset-2 outline-white-500 text-white
-              font-bold py-2 px-4 rounded-full md:text-xl'
+            <button
+              type="button"
+              className="outline-white-500 mt-6 rounded-full py-2 px-4 text-xs
+              font-bold text-white outline outline-offset-2 md:text-xl"
               onClick={(event) => {
                 event.stopPropagation();
                 setIsReadMore(true);
-              }}>
+              }}
+            >
               Read More...
             </button>
           </div>
         </div>
       )}
     </div>
-  )
+  );
 }
 
 const OtherEvents = ({ events }: EventsProps) => {
   const [isShown, setIsShown] = useState(false);
-
-  const expandedCardRef = useRef(null);
+  const expandedCardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    function handleClickOutside(event) {
-      if (expandedCardRef.current && !expandedCardRef.current.contains(event.target)) {
-        setIsShown(false); 
+    function handleClickOutside(event: Event) {
+      if (
+        expandedCardRef.current &&
+        !expandedCardRef.current.contains(event.target as Node)
+      ) {
+        setIsShown(false);
       }
     }
 
@@ -90,7 +103,10 @@ const OtherEvents = ({ events }: EventsProps) => {
           </h2>
           <div className="mt-8 flex flex-wrap justify-center gap-10">
             {events.map(
-              ({ coverImage, cardDescription, name, location, date }, index) => (
+              (
+                { coverImage, cardDescription, name, location, date },
+                index
+              ) => (
                 <Fragment key={index}>
                   <EventCard
                     coverImage={coverImage}
@@ -113,31 +129,87 @@ const OtherEvents = ({ events }: EventsProps) => {
       </MaxWidth>
 
       <div className={`${isShown ? 'bg-black/70' : ''} flex justify-center`}>
-        <div ref={expandedCardRef} 
-          className="mt-6 grid grid-cols-2 gap-4 sm:ml-10 lg:grid-cols-3">
-          <div onClick={() => setIsShown(true)}>
+        <div
+          ref={expandedCardRef}
+          className="mt-6 grid grid-cols-2 gap-4 sm:ml-10 lg:grid-cols-3"
+        >
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={() => setIsShown(true)}
+            onKeyDown={(event) => {
+              if (event.key === 'Enter') {
+                setIsShown(true);
+              }
+            }}
+          >
             <PastEventCard />
           </div>
-          <div onClick={() => setIsShown(true)}>
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={() => setIsShown(true)}
+            onKeyDown={(event) => {
+              if (event.key === 'Enter') {
+                setIsShown(true);
+              }
+            }}
+          >
             <PastEventCard />
           </div>
-          <div onClick={() => setIsShown(true)}>
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={() => setIsShown(true)}
+            onKeyDown={(event) => {
+              if (event.key === 'Enter') {
+                setIsShown(true);
+              }
+            }}
+          >
             <PastEventCard />
           </div>
-          <div onClick={() => setIsShown(true)}>
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={() => setIsShown(true)}
+            onKeyDown={(event) => {
+              if (event.key === 'Enter') {
+                setIsShown(true);
+              }
+            }}
+          >
             <PastEventCard />
           </div>
-          <div onClick={() => setIsShown(true)}>
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={() => setIsShown(true)}
+            onKeyDown={(event) => {
+              if (event.key === 'Enter') {
+                setIsShown(true);
+              }
+            }}
+          >
             <PastEventCard />
           </div>
-          <div onClick={() => setIsShown(true)}>
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={() => setIsShown(true)}
+            onKeyDown={(event) => {
+              if (event.key === 'Enter') {
+                setIsShown(true);
+              }
+            }}
+          >
             <PastEventCard />
           </div>
-          <div className='absolute z-20'>
+
+          <div className="absolute z-20">
             {isShown && <ExpandPastEventCard />}
           </div>
         </div>
-
       </div>
     </div>
   );

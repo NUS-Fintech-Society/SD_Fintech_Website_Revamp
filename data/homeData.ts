@@ -111,7 +111,7 @@ const homeData: HomeData = {
     },
     {
       name: 'External Relations',
-      path: 'operations',
+      path: 'external',
       wingType: WingType.Operations,
       coverImage: {
         src: '/images/departments/departmentCovers/ER.jpg',
@@ -145,7 +145,7 @@ const homeData: HomeData = {
     },
     {
       name: 'Internal Affairs',
-      path: 'operations',
+      path: 'internal',
       wingType: WingType.Operations,
       coverImage: {
         src: '/images/departments/departmentCovers/IA.jpg',

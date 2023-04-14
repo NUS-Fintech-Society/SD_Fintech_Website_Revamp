@@ -1,6 +1,3 @@
-// type
-import { EventCardProps } from '@interfaces/events/EventCard';
-
 // library
 // import Link from 'next/link';
 import Image from 'next/image';

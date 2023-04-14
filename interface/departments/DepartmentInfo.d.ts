@@ -10,6 +10,7 @@ export interface DepartmentInfoProps {
         src: string;
         alt: string;
         directorName: string;
+        linkedin: string;
     }[]
     roles: string[];
 }
