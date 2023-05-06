@@ -13,7 +13,6 @@ import SectionHeader from '@components/layout/SectionHeader';
 
 const OtherEvents = ({ events }: EventsProps) => {
   const [active, setActive] = useState(false);
-  console.log(active);
   const eventArray = [];
   const chunkSize = 6;
   for (let i = 0; i < events.length; i += chunkSize) {
@@ -23,29 +22,51 @@ const OtherEvents = ({ events }: EventsProps) => {
   return (
     <MaxWidth>
       <div className="section-my">
-      <SectionHeader
-        color="green"
-        title="Upcoming Events"
-        subtitle="What's up next?"
-      />
-      <button type="submit" onClick={() => setActive(!active)} className="inter mt-10 ml-40 rounded bg-[#cde3f9] py-2 px-4 text-base font-semibold text-[#004C98]">FILTER</button>
-      {active === true && <Filter/>}
-      {/* Mobile */}
-      {/* <div className="mt-8 flex flex-wrap justify-center gap-10">
-        {events.map(
-          ({ coverImage, cardDescription, name, location, date }, index) => (
-            <Fragment key={index}>
-              <EventCard
-                coverImage={coverImage}
-                cardDescription={cardDescription}
-                name={name}
-                location={location}
-                date={date}
-              />
-            </Fragment>
-          )
-        )}
-      </div> */}
+        <SectionHeader
+          color="green"
+          title="Upcoming Events"
+          subtitle="What's up next?"
+        />
+        <div className="desktop-filter-button mt-10 hidden md:block">
+          <button type="submit" 
+            onClick={() => setActive(!active)} 
+            className="inter mt-10 ml-40 rounded bg-[#cde3f9] py-2 px-4 text-base font-semibold text-[#004C98]">
+              FILTER
+          </button>
+        </div>
+        <div className="mobile-filter-button block md:hidden">
+          <button type="submit" 
+            onClick={() => setActive(!active)} 
+            className="inter mt-10 ml-2 mb-2 rounded bg-[#cde3f9] py-1 px-2 text-sm font-semibold text-[#004C98]">
+              FILTER
+          </button>
+        </div>
+        {active === true && <Filter/>}
+        
+        {/* Mobile & Tablet */}
+        <div
+          id="carouselDarkVariant"
+          className="carousel slide carousel-dark visible relative md:hidden"
+          data-bs-ride="carousel"
+          data-bs-interval="false"
+        >
+          <div className="carousel-inner relative w-full overflow-hidden">
+            {events.map(({ coverImage, cardDescription, name, location, date }, index) => (
+              <div className="carousel-item relative w-full" key={index}>
+                <div className="mt-3 flex flex-wrap justify-center gap-10">
+                  <EventCard
+                    coverImage={coverImage}
+                    cardDescription={cardDescription}
+                    name={name}
+                    location={location}
+                    date={date}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* Desktop Carousel */}
       <div
@@ -57,7 +78,7 @@ const OtherEvents = ({ events }: EventsProps) => {
 
         <div className="carousel-inner relative w-full overflow-hidden">
           <div className="carousel-item active relative float-left w-full">
-            <div className="mt-10 flex flex-wrap justify-center gap-10">
+            <div className="mt-3 flex flex-wrap justify-center gap-10">
               {eventArray[0] &&
                 eventArray[0].map(
                   (index) => { // Insert Here: { coverImage, cardDescription, name, location, date }
@@ -149,8 +170,6 @@ const OtherEvents = ({ events }: EventsProps) => {
             </button>
           </div>
         )}
-      </div>
-
       </div>
     </MaxWidth>
   );
