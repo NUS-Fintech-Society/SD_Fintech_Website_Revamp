@@ -1,11 +1,81 @@
-import { RecruitmentProps } from '@interfaces/recruitment';
+// import { RecruitmentProps } from '@interfaces/recruitment';
 import Landing from '@components/recruitment/Landing';
 import WhoShouldJoin from '@components/recruitment/WhoShouldJoin';
-import Faq from '@components/recruitment/Faq';
+import DepartmentRoles from '@components/recruitment/DepartmentRoles';
+// import Faq from '@components/recruitment/Faq';
 import MaxWidth from '@components/layout/MaxWidth';
 import Image from 'next/image';
+import { DepartmentRoleProps } from '@interfaces/recruitment/departmentRole';
 
-const Recruitment = ({ departmentFaq }: RecruitmentProps) => {
+const DEPARTMENTROLES = [
+  {
+    department: "Software Development",
+    roles: [
+      {
+        title: "Software Engineer",
+        img: "/images/recruitment/Roles Icon/SD - Software Engineer.svg"
+      },
+      {
+        title: "Technical Lead",
+        img: "/images/recruitment/Roles Icon/SD - Technical Lead.svg"
+      },
+      {
+        title: "Design Manager",
+        img: "/images/recruitment/Roles Icon/SD - Design Manager.svg"
+      },
+      {
+        title: "UI/UX Designer",
+        img: "/images/recruitment/Roles Icon/SD - UIUX.svg"
+      }
+    ]
+  },
+  {
+    department: "Machine Learning",
+    roles: [
+      {
+        title: "Technical Analyst Trainee",
+        img: "/images/recruitment/Roles Icon/ML - Technical Analyst Trainee.svg"
+      },
+      {
+        title: "Technical Lead (Project/Quadrant)",
+        img: "/images/recruitment/Roles Icon/ML - Technical Lead.svg"
+      },
+      {
+        title: "Technical Analyst (Project/Quadrant)",
+        img: "/images/recruitment/Roles Icon/ML - Technical Analyst.svg"
+      }
+    ]
+  },
+  {
+    department: "Blockchain",
+    roles: [
+      {
+        title: "Blockchain Lead Developer",
+        img: "/images/recruitment/Roles Icon/BC - Blockchain Lead Developer.svg"
+      },
+      {
+        title: "Blockchain Developer",
+        img: "/images/recruitment/Roles Icon/BC - Blockchain Developer.svg"
+      },
+      {
+        title: "Core Blockchain Developer",
+        img: "/images/recruitment/Roles Icon/BC - Core Blockchain Developer.svg"
+      },
+      {
+        title: "Community Manager",
+        img: "/images/recruitment/Roles Icon/BC - Community Manager.svg"
+      },
+      {
+        title: "Research Analyst",
+        img: "/images/recruitment/Roles Icon/BC - Research Analyst.svg"
+      }
+    ]
+  }
+];
+
+// const Recruitment = ({ departmentFaq }: RecruitmentProps) => {
+
+const Recruitment = () => {
   return (
     <>
       <Landing />
@@ -56,8 +126,15 @@ const Recruitment = ({ departmentFaq }: RecruitmentProps) => {
         </div>
       </MaxWidth>
       <WhoShouldJoin />
+      
+      {DEPARTMENTROLES.map((department: DepartmentRoleProps, index) => (
+        <DepartmentRoles
+          key={index}
+          department={department.department}
+          roles={department.roles}
+        />))}
 
-      <Faq departmentFaq={departmentFaq} />
+      {/* <Faq departmentFaq={departmentFaq} /> */}
     </>
   );
 };
