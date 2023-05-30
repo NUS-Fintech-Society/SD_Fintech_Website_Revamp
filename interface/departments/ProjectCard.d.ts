@@ -5,4 +5,5 @@ export interface ProjectCardProps {
     src: string;
     alt: string;
   };
+  isMobile: boolean
 }
