@@ -1,8 +1,20 @@
-import React from 'react'
+// type
+import type { NextPage } from 'next';
+import RecruitmentSubpageData from '@data/interface/recruitmentSubpageData';
 
-const RolePage = () => {
+// library
+import Head from 'next/head';
+import RecruitmentSubpage from '@components/recruitmentsSubpage';
+
+const RolePage: NextPage<RecruitmentSubpageData> = () => {
   return (
-    <div>RolePage</div>
+    <>
+    <Head>
+      <title>NUS Fintech Society</title>
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
+    <RecruitmentSubpage/>
+  </>
   )
 }
 
