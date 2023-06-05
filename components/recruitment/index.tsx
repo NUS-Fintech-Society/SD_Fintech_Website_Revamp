@@ -5,6 +5,61 @@ import Faq from '@components/recruitment/Faq';
 import MaxWidth from '@components/layout/MaxWidth';
 import Image from 'next/image';
 
+
+
+const Recruitment = ({ departmentFaq }: RecruitmentProps) => {
+  return (
+    <>
+    <MaxWidth>
+        <div className="mt-3 flex flex-wrap text-[24.48px] font-bold leading-8 text-[#002750] ">
+          <div className="relative w-[47.46px] h-[52px]  sm:w-[91.27px] sm:h-[100px]">
+            <Image src='/images/recruitment/Recruitment-logo.jpg' alt='Recruitment Logo' layout="fill" />
+          </div>
+          <h1 className="ml-4 mt-3 border-b-2 border-[#002750] sm:mt-10 sm:ml-6 sm:border-b-4 sm:text-6xl sm:leading-[4.538rem]">
+            Recruitment
+          </h1>
+        </div>
+
+
+        <div className="section-my pb-0">
+          <h2 className="font-bold text-center text-2xl text-[#002750] mb-5 sm:text-4xl sm:mb-16">
+            NUS Fintech Society Recruitment for AY 2023/2024
+          </h2>
+
+          <p className=" text-left text-sm text-[#002750] sm:text-xl">
+            At NUS Fintech Society, we work on <strong>industry-grade</strong> financial digital
+            transformation projects, carry out research projects and educate
+            students with Fintech knowledge. From blockchain developer to
+            software engineer to project management executive, we have <strong>both
+            technical and operational roles</strong>  for all who would like to join us.
+          </p>
+
+          <h2 className="font-bold text-left text-2xl text-[#002750] my-8 sm:text-4xl sm:my-16">
+            Who Should Join Us?
+          </h2>
+
+          <p className=" text-left text-sm text-[#002750] sm:text-xl">
+            The NUS FinTech Society is looking for <strong>passionate and driven people</strong> 
+            looking to be at the forefront of cutting edge technology in the
+            FinTech space. Learners of <strong>all skill levels are welcome</strong> and interested
+            parties can discover more from the <strong>roles listed below.</strong>
+          </p>
+
+
+
+        </div>
+      </MaxWidth>
+    
+      
+      <Faq departmentFaq={departmentFaq} />
+    </>
+  );
+};
+
+export default Recruitment;
+
+
+/*
 const Recruitment = ({ departmentFaq }: RecruitmentProps) => {
   return (
     <>
@@ -63,3 +118,5 @@ const Recruitment = ({ departmentFaq }: RecruitmentProps) => {
 };
 
 export default Recruitment;
+
+*/
