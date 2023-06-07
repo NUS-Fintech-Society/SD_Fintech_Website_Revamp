@@ -7,14 +7,22 @@ const SubteamsCard = ({
     image
 }: SubteamsCardProps) => {
     return (
-        <div className='text-[#004C98] text-center'>
-            <div className='bg-[#EEF6FE] w-[570px] h-[660px] rounded-[20px] py-20 px-10 space-y-10'>
-                <Image src={image.src} alt={image.alt} width={256} height={256} />
-                <h3 className='font-bold sm:text-2xl lg:text-4xl'>{name}</h3>
-                <h4 className='sm:text-2xl'>{description}</h4>
+        <div>
+            <div className='bg-[#EEF6FE] mx-auto flex flex-col w-[260px] h-[300px] rounded-[10px] md:min-w-[440px] md:min-h-[540px] lg:min-w-[500px] lg:min-h-[600px] md:rounded-[20px] px-10 space-y-5 justify-center'>
+                <div className='relative w-[100px] h-[100px] md:min-w-[256px] md:min-h-[256px] self-center md:mb-2'>
+                    <Image src={image.src} alt={image.alt} layout='fill' objectFit='contain'/>
+                </div>
+                <div className='text-[#004C98] text-center space-y-[17px]'>
+                    <h3 className='text-base font-semibold md:text-2xl lg:text-3xl'>
+                        {name}
+                        </h3>
+                    <h4 className='text-xs md:text-xl overflow-hidden'>
+                        {description}
+                        </h4>
+                </div>
             </div>
         </div>
     )
 }
 
-export default SubteamsCard
+export default SubteamsCard;
