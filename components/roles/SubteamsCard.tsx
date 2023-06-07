@@ -1,4 +1,4 @@
-import { SubteamsCardProps } from "@data/interface/recruitmentSubpageData"
+import { SubteamsCardProps } from "@data/interface/rolesData"
 import Image from 'next/image';
 
 const SubteamsCard = ({
