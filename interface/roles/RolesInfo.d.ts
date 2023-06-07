@@ -1,6 +1,5 @@
 export interface RolesInfoProps {
     name: string;
-    path: string;
     logo: {
         src: string;
         alt: string;
