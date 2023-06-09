@@ -127,15 +127,6 @@ const Navbar = () => {
                 </Link>
               </li>
 
-              <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-4 md:py-1">
-                <Link
-                  href="/recruitment/role"
-                  className="rounded-md px-3 py-1 text-black"
-                >
-                  <a onClick={handleCloseNav}>Recruitment Subpage</a>
-                </Link>
-              </li>
-
               <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-4 md:py-1 lg:mr-5">
                 <Link
                   href="/contact-us"

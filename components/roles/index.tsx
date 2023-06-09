@@ -14,6 +14,7 @@ const Roles = ({
     aboutUs,
     onboarding,
     requirements,
+    subteams,
 }: RoleProps) => {
     return (
         <MaxWidth>
@@ -23,7 +24,10 @@ const Roles = ({
                 logo={logo}
                 aboutUs={aboutUs}
                 onboarding={onboarding}
-                requirements={requirements}/>
+                requirements={requirements}
+                subteams={subteams}
+                />
+                
         </MaxWidth>
     );
 };

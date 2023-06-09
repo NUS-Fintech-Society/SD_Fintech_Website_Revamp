@@ -23,10 +23,18 @@ const rolesData: RolesData = {
             },            
             subteams: [
                 {
-                    name: 'Design',
-                    description: 'Design desc',
-                    image: {
-                        src: '/images/departments/departmentLogos/SD-main-icon.jpg',
+                    teamName: 'Engineering',
+                    teamDescription: 'In the engineering team, you will gain experience in deploying and managing live projects while contributing in frontend and backend development',
+                    teamImage: {
+                        src: '/images/recruitment/engineering.png',
+                        alt: 'Engineering logo',
+                    }
+                },
+                {
+                    teamName: 'Design',
+                    teamDescription: 'In the design team, you are tasked with designing and prototyping applications, and setting the design vision for Fintech Society',
+                    teamImage: {
+                        src: '/images/recruitment/design.png',
                         alt: 'Design logo',
                     }
                 }
@@ -53,11 +61,19 @@ const rolesData: RolesData = {
             },        
             subteams: [
                 {
-                    name: 'Engineering',
-                    description: 'Engineering desc',
-                    image: {
-                        src: '/images/departments/departmentLogos/SD-main-icon.jpg',
+                    teamName: 'Engineering',
+                    teamDescription: 'In the engineering team, you will gain experience in deploying and managing live projects while contributing in frontend and backend development',
+                    teamImage: {
+                        src: '/images/recruitment/engineering.png',
                         alt: 'Engineering logo',
+                    }
+                },
+                {
+                    teamName: 'Design',
+                    teamDescription: 'In the design team, you are tasked with designing and prototyping applications, and setting the design vision for Fintech Society',
+                    teamImage: {
+                        src: '/images/recruitment/design.png',
+                        alt: 'Design logo',
                     }
                 }
             ],
