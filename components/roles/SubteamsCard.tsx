@@ -1,4 +1,8 @@
+<<<<<<< HEAD:components/recruitmentsSubpage/SubteamsCard.tsx
 import { SubteamsCardProps } from '@interfaces/recruitmentSubpage/SubteamsCardProps';
+=======
+import { SubteamsCardProps } from "@data/interface/rolesData"
+>>>>>>> 23a282b020e8d7a50b3ed798e26319e604da0ae4:components/roles/SubteamsCard.tsx
 import Image from 'next/image';
 
 const SubteamsCard = ({
