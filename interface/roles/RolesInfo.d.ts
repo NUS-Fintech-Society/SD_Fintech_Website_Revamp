@@ -1,3 +1,5 @@
+import { SubteamsCardProps } from '@interfaces/roles/SubteamsCardProps'; 
+
 export interface RolesInfoProps {
     name: string;
     logo: {
@@ -16,4 +18,5 @@ export interface RolesInfoProps {
         header: string;
         desc: string;
     };
+    subteams: SubteamsCardProps[]
 }

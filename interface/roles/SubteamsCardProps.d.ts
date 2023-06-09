@@ -1,7 +1,7 @@
 export interface SubteamsCardProps {
-    name: string;
-    description: string;
-    image: {
+    teamName: string;
+    teamDescription: string;
+    teamImage: {
         src: string;
         alt: string;
     };

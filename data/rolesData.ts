@@ -23,9 +23,17 @@ const rolesData: RolesData = {
             },            
             subteams: [
                 {
-                    name: 'Design',
-                    description: 'Design desc',
-                    image: {
+                    teamName: 'Engineering',
+                    teamDescription: 'Engineering desc',
+                    teamImage: {
+                        src: '/images/departments/departmentLogos/SD-main-icon.jpg',
+                        alt: 'Engineering logo',
+                    }
+                },
+                {
+                    teamName: 'Design',
+                    teamDescription: 'Design desc',
+                    teamImage: {
                         src: '/images/departments/departmentLogos/SD-main-icon.jpg',
                         alt: 'Design logo',
                     }
@@ -53,11 +61,19 @@ const rolesData: RolesData = {
             },        
             subteams: [
                 {
-                    name: 'Engineering',
-                    description: 'Engineering desc',
-                    image: {
+                    teamName: 'Engineering',
+                    teamDescription: 'Engineering desc',
+                    teamImage: {
                         src: '/images/departments/departmentLogos/SD-main-icon.jpg',
                         alt: 'Engineering logo',
+                    }
+                },
+                {
+                    teamName: 'Design',
+                    teamDescription: 'Design desc',
+                    teamImage: {
+                        src: '/images/departments/departmentLogos/SD-main-icon.jpg',
+                        alt: 'Design logo',
                     }
                 }
             ],
