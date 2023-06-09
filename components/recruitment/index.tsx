@@ -4,6 +4,7 @@ import WhoShouldJoin from '@components/recruitment/WhoShouldJoin';
 import Faq from '@components/recruitment/Faq';
 import MaxWidth from '@components/layout/MaxWidth';
 import Image from 'next/image';
+import SignUp from './SignUp';
 
 const Recruitment = ({ departmentFaq }: RecruitmentProps) => {
   return (
@@ -56,6 +57,7 @@ const Recruitment = ({ departmentFaq }: RecruitmentProps) => {
         </div>
       </MaxWidth>
       <WhoShouldJoin />
+      <SignUp />
 
       <Faq departmentFaq={departmentFaq} />
     </>
