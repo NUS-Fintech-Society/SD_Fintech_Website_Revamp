@@ -14,6 +14,10 @@ export interface RolesInfoProps {
         header: string;
         desc: string;
     };
+    roleDescription: {
+        header: string;
+        desc: string;
+    };
     requirements: {
         header: string;
         desc: string;

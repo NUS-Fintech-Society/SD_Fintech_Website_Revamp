@@ -14,6 +14,7 @@ const RolesInfo = ({
   logo,
   aboutUs,
   onboarding,
+  roleDescription,
   requirements,
   subteams
 }: RolesInfoProps) => {
@@ -34,10 +35,11 @@ const RolesInfo = ({
 
       <RolesText header={aboutUs.header} desc={aboutUs.desc} />
 
-      <div className="mb-10 flex flex-col space-y-[30px] lg:space-y-0 lg:space-x-[70px] lg:flex-row justify-center">
+      {subteams.length !== 0 && <div className="mb-10 flex flex-col space-y-[30px] lg:space-y-0 lg:space-x-[70px] lg:flex-row justify-center">
         {renderSubteamsCard}
-      </div>
+      </div>}
       
+      <RolesText header={roleDescription.header} desc={roleDescription.desc} />
       <RolesText header={onboarding.header} desc={onboarding.desc} />
       <RolesText header={requirements.header} desc={requirements.desc} />
     </>

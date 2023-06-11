@@ -13,6 +13,7 @@ const Roles = ({
     logo,
     aboutUs,
     onboarding,
+    roleDescription,
     requirements,
     subteams,
 }: RoleProps) => {
@@ -24,6 +25,7 @@ const Roles = ({
                 logo={logo}
                 aboutUs={aboutUs}
                 onboarding={onboarding}
+                roleDescription={roleDescription}
                 requirements={requirements}
                 subteams={subteams}
                 />
