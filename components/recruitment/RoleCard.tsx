@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface RoleCardProps {
   title: string;
@@ -7,12 +8,14 @@ interface RoleCardProps {
 
 const RoleCard: React.FC<RoleCardProps> = ({ title, img }) => {
   return (
-    <div className="relative z-[-10] h-2/3 w-2/3 m-16 flex items-center rounded-lg bg-white p-4 shadow-xl overflow-hidden">
+    <div className="relative z-[-10] m-16 flex h-2/3 w-2/3 items-center overflow-hidden rounded-lg bg-white p-4 shadow-xl">
       <div>
-        <h1 className="text-xl font-semibold mr-4 text-center text-[#004C98]">{title}</h1>
+        <h1 className="mr-4 text-center text-xl font-semibold text-[#004C98]">
+          {title}
+        </h1>
       </div>
-      <div className="absolute z-[-5] top-[-10px] right-[-45px]">
-        <div className="bg-[#EEF6FE] rounded-full w-48 h-48 flex justify-center items-center">
+      <div className="absolute top-[-10px] right-[-45px] z-[-5]">
+        <div className="flex h-48 w-48 items-center justify-center rounded-full bg-[#EEF6FE]">
           {/* Replace the SVG with your desired icon */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +29,13 @@ const RoleCard: React.FC<RoleCardProps> = ({ title, img }) => {
         </div>
       </div>
       <div>
-        <img src={img} alt={title} className="h-36 w-36 object-center" />
+        <Image
+          src={img}
+          alt={title}
+          className="h-36 w-36 object-center"
+          height="100px"
+          width="100px"
+        />
       </div>
     </div>
   );

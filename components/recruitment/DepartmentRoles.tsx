@@ -9,7 +9,7 @@ const DepartmentRoles = ({ department, roles }: DepartmentRoleProps) => {
     <div className="sm:section-my my-16">
       <div className="mx-16">
         <SectionHeader color="blue" title={department} subtitle="" />
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           {roles.map((role: Role, index: number) => (
             <div key={index} className="relative">
               <RoleCard title={role.title} img={role.img} />

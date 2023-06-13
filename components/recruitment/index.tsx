@@ -6,6 +6,7 @@ import DepartmentRoles from '@components/recruitment/DepartmentRoles';
 import MaxWidth from '@components/layout/MaxWidth';
 import Image from 'next/image';
 import { DepartmentRoleProps } from '@interfaces/recruitment/departmentRole';
+import SignUp from './SignUp';
 
 const DEPARTMENTROLES = [
   {
@@ -134,6 +135,7 @@ const Recruitment = () => {
           roles={department.roles}
         />))}
 
+      <SignUp />
       {/* <Faq departmentFaq={departmentFaq} /> */}
     </>
   );
