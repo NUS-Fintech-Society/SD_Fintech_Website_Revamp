@@ -39,8 +39,8 @@ const RolesInfo = ({
         {renderSubteamsCard}
       </div>}
       
-      <RolesText header={roleDescription.header} desc={roleDescription.desc} />
       <RolesText header={onboarding.header} desc={onboarding.desc} />
+      <RolesText header={roleDescription.header} desc={roleDescription.desc} />
       <RolesText header={requirements.header} desc={requirements.desc} />
     </>
   );
