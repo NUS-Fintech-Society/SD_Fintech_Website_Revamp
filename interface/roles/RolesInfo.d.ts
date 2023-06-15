@@ -8,19 +8,19 @@ export interface RolesInfoProps {
     };
     aboutUs: {
         header: string;
-        desc: string;
+        desc: string[];
     };
     onboarding: {
         header: string;
-        desc: string;
+        desc: string[];
     };
     roleDescription: {
         header: string;
-        desc: string;
+        desc: string[];
     };
     requirements: {
         header: string;
-        desc: string;
+        desc: string[];
     };
     subteams: SubteamsCardProps[]
 }
