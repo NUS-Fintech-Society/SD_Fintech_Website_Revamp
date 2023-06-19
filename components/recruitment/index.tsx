@@ -29,6 +29,7 @@ const Recruitment = ({ departmentFaq }: RecruitmentProps) => {
           </h1>
         </div>
 
+{/*
         <div className="hidden xl:block xl:mt-16 xl:ml-auto">
           <div className = "rounded-md w-80 ml-auto mr-10 bg-white border-2 shadow-lg">
             <Tabs color='grey' size='sm' padding='1' onChange={() => setIsInternal(!isInternal)} >
@@ -39,8 +40,8 @@ const Recruitment = ({ departmentFaq }: RecruitmentProps) => {
             </Tabs>
           </div>
         </div>
+*/}
       </div>
-
 
         <div className="section-my pb-0">
           <h2 className="font-bold text-center text-2xl text-[#002750] mb-5 sm:text-4xl sm:mb-16">
