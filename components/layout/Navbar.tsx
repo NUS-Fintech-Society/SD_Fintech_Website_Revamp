@@ -15,6 +15,12 @@ const DEPARTMENTS_ITEMS = [
   ['Internal Affairs', '/departments/internal'],
 ];
 
+const RECRUITMENT_ITEMS = [
+  ['Technical Wing', '/recruitment/techwing'],
+  ['Operation Wing', '/recruitment/opwing'],
+];
+
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -118,6 +124,38 @@ const Navbar = () => {
                 </Link>
               </li>
 
+
+              <li className="my-3  ml-4 md:my-0 md:py-1 md:px-4 lg:ml-5 lg:py-1">
+                <div className="lg:hidden">
+                  <div className="rounded-md ">RECRUITMENT</div>
+                  <ul>
+                    {RECRUITMENT_ITEMS.map((item) => (
+                      <li
+                        key={item[1]}
+                        className="my-4 ml-3 hover:text-gray-400"
+                      >
+                        <Link href={item[1]}>
+                          <a
+                            onClick={handleCloseNav}
+                            className=" h-full w-full p-2"
+                          >
+                            {item[0]}
+                          </a>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className=" hidden lg:block">
+                  <DropDown
+                    handleCloseNav={handleCloseNav}
+                    title="RECRUITMENT"
+                    items={RECRUITMENT_ITEMS}
+                  />
+                </div>
+              </li>
+
+            {/*
               <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-4 md:py-1">
                 <Link
                   href="/recruitment"
@@ -126,6 +164,7 @@ const Navbar = () => {
                   <a onClick={handleCloseNav}>RECRUITMENT</a>
                 </Link>
               </li>
+                    */}
 
               <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-4 md:py-1 lg:mr-5">
                 <Link
@@ -144,3 +183,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
