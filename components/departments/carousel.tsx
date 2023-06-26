@@ -27,7 +27,7 @@ const DeptCarousel = ({
         objectFit="cover"
         className="opacity-20"
       />
-      <Carousel>
+      <Carousel showThumbs={false}>
         <div className="p-8 text-white sm:px-14 sm:py-10">
           <h2 className="mb-8 flex text-xl font-bold sm:mb-10 sm:text-3xl">
             Purpose

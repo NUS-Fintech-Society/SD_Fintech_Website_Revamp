@@ -1,0 +1,20 @@
+.carousel-container .carousel .carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-container .carousel .carousel-button-prev {
+  left: 10px;
+}
+
+.carousel-container .carousel .carousel-button-next {
+  right: 10px;
+}
