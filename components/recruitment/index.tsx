@@ -15,6 +15,71 @@ const Recruitment = ({ departmentFaq }: RecruitmentProps) => {
 
   
   const [isInternal, setIsInternal] = useState(true);
+  const DEPARTMENTROLES = [
+    {
+      department: "Software Development",
+      roles: [
+        {
+          title: "Software Engineer",
+          img: "/images/recruitment/Roles Icon/SD - Software Engineer.svg"
+        },
+        {
+          title: "Technical Lead",
+          img: "/images/recruitment/Roles Icon/SD - Technical Lead.svg"
+        },
+        {
+          title: "Design Manager",
+          img: "/images/recruitment/Roles Icon/SD - Design Manager.svg"
+        },
+        {
+          title: "UI/UX Designer",
+          img: "/images/recruitment/Roles Icon/SD - UIUX.svg"
+        }
+      ]
+    },
+    {
+      department: "Machine Learning",
+      roles: [
+        {
+          title: "Technical Analyst Trainee",
+          img: "/images/recruitment/Roles Icon/ML - Technical Analyst Trainee.svg"
+        },
+        {
+          title: "Technical Lead (Project/Quadrant)",
+          img: "/images/recruitment/Roles Icon/ML - Technical Lead.svg"
+        },
+        {
+          title: "Technical Analyst (Project/Quadrant)",
+          img: "/images/recruitment/Roles Icon/ML - Technical Analyst.svg"
+        }
+      ]
+    },
+    {
+      department: "Blockchain",
+      roles: [
+        {
+          title: "Blockchain Lead Developer",
+          img: "/images/recruitment/Roles Icon/BC - Blockchain Lead Developer.svg"
+        },
+        {
+          title: "Blockchain Developer",
+          img: "/images/recruitment/Roles Icon/BC - Blockchain Developer.svg"
+        },
+        {
+          title: "Core Blockchain Developer",
+          img: "/images/recruitment/Roles Icon/BC - Core Blockchain Developer.svg"
+        },
+        {
+          title: "Community Manager",
+          img: "/images/recruitment/Roles Icon/BC - Community Manager.svg"
+        },
+        {
+          title: "Research Analyst",
+          img: "/images/recruitment/Roles Icon/BC - Research Analyst.svg"
+        }
+      ]
+    }
+  ];
 
   return (
     <>
