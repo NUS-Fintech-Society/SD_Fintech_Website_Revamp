@@ -23,7 +23,7 @@ const Faq = ({ departmentFaq }: FaqProps) => {
             })}
           </>
         </AccordionWrapper>
-      </div>
+      </div> 
     </MaxWidth>
   );
 };
