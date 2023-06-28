@@ -11,7 +11,7 @@ const RecruitmentPage: NextPage<RecruitmentData> = (props: any) => {
         <title>NUS Fintech Society</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Recruitment {...props} />
+      <Recruitment {...props}/>
     </>
   );
 };
