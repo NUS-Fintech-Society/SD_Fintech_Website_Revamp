@@ -1,8 +1,8 @@
-// import { RecruitmentProps } from '@interfaces/recruitment';
+import { RecruitmentProps } from '@interfaces/recruitment';
 import Landing from '@components/recruitment/Landing';
 import WhoShouldJoin from '@components/recruitment/WhoShouldJoin';
 import DepartmentRoles from '@components/recruitment/DepartmentRoles';
-// import Faq from '@components/recruitment/Faq';
+
 import MaxWidth from '@components/layout/MaxWidth';
 import Image from 'next/image';
 import { DepartmentRoleProps } from '@interfaces/recruitment/departmentRole';
@@ -16,8 +16,8 @@ import { Tabs, TabList, Tab } from '@chakra-ui/react';
 const Recruitment = ({ departmentFaq }: RecruitmentProps) => {
 
   
-  const [isInternal, setIsInternal] = useState(true);
-  const DEPARTMENTROLES = [
+const [isInternal, setIsInternal] = useState(true);
+const DEPARTMENTROLES = [
     {
       department: "Software Development",
       roles: [
@@ -134,13 +134,8 @@ const Recruitment = ({ departmentFaq }: RecruitmentProps) => {
             parties can discover more from the <strong>roles listed below.</strong>
           </p>
 
-
-
         </div>
       </MaxWidth>
-    
-      
-      <Faq departmentFaq={departmentFaq} />
     </>
   );
 };

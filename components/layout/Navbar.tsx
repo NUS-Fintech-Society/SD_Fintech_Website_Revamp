@@ -16,8 +16,8 @@ const DEPARTMENTS_ITEMS = [
 ];
 
 const RECRUITMENT_ITEMS = [
-  ['Technical Wing', '/recruitment/techwing'],
-  ['Operation Wing', '/recruitment/opwing'],
+  ['Technical Wing', '/recruitment/technical-wing'],
+  ['Operation Wing', '/recruitment/operations-wing'],
 ];
 
 
