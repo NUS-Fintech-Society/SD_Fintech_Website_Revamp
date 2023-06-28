@@ -9,7 +9,7 @@ interface RoleCardProps {
 const RoleCard: React.FC<RoleCardProps> = ({ title, img }) => {
   return (
     <div className="relative z-[-10] m-16 flex h-2/3 w-2/3 items-center overflow-hidden rounded-lg bg-white p-4 shadow-xl">
-      <div>
+      <div className="w-2/3 max-w-2/3">
         <h1 className="mr-4 text-center text-xl font-semibold text-[#004C98]">
           {title}
         </h1>
@@ -28,13 +28,13 @@ const RoleCard: React.FC<RoleCardProps> = ({ title, img }) => {
           </svg>
         </div>
       </div>
-      <div>
+      <div className="ml-auto">
         <Image
           src={img}
           alt={title}
-          className="h-36 w-36 object-center"
-          height="100px"
-          width="100px"
+          className="h-100 w-100"
+          width={100}
+          height={100}
         />
       </div>
     </div>
