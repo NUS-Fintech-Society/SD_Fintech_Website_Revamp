@@ -8,9 +8,9 @@ interface RoleCardProps {
 
 const RoleCard: React.FC<RoleCardProps> = ({ title, img }) => {
   return (
-    <div className="relative z-[-10] m-16 flex h-2/3 w-2/3 items-center overflow-hidden rounded-lg bg-white p-4 shadow-xl">
+    <div className="relative z-[-10] my-8 mx-auto flex h-[160px] w-2/3 min-w-[215px] sm:h-[200px] sm:w-[300px] items-center overflow-hidden rounded-lg bg-white p-4 shadow-xl">
       <div className="max-w-2/3 w-2/3">
-        <h1 className="mr-4 text-center text-xl font-semibold text-[#004C98]">
+        <h1 className="mr-4 text-center sm:text-xl font-semibold text-[#004C98]">
           {title}
         </h1>
       </div>
