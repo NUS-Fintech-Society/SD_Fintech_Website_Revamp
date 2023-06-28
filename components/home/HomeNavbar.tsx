@@ -15,6 +15,12 @@ const DEPARTMENTS_ITEMS = [
   ['Internal Affairs', '/departments/internal'],
 ];
 
+const RECRUITMENT_ITEMS = [
+  ['Technical Wing', '/recruitment/technical-wing'],
+  ['Operation Wing', '/recruitment/operations-wing'],
+];
+
+
 const HomeNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -108,6 +114,37 @@ const HomeNavbar = () => {
                 </Link>
               </li>
 
+              <li className="my-7 py-1 px-4 md:my-0">
+                <div className="lg:hidden">
+                  <div className="rounded-md ">Recruitment</div>
+                  <ul>
+                    {RECRUITMENT_ITEMS.map((item) => (
+                      <li
+                        key={item[1]}
+                        className="my-4 ml-3 hover:text-gray-400"
+                      >
+                        <Link href={item[1]}>
+                          <a
+                            onClick={handleCloseNav}
+                            className=" h-full w-full p-2"
+                          >
+                            {item[0]}
+                          </a>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className=" hidden lg:block">
+                  <DropDown
+                    handleCloseNav={handleCloseNav}
+                    title="Recruitment"
+                    items={RECRUITMENT_ITEMS}
+                  />
+                </div>
+              </li>
+
+{/*
               <li className="my-7 px-4 py-1 hover:text-gray-400 md:my-0">
                 <Link
                   href="/recruitment"
@@ -116,6 +153,7 @@ const HomeNavbar = () => {
                   <a onClick={handleCloseNav}>Recruitment</a>
                 </Link>
               </li>
+*/}
 
               <li className="my-7 px-4 py-1 hover:text-gray-400 md:my-0">
                 <Link
