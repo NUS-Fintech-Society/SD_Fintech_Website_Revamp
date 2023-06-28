@@ -537,12 +537,12 @@ const AboutPage = () => {
           </h1>
         </div>
 
-        <div className="flex justify-center">
+        <div className="flex flex-row justify-center gap-x-5 sm:gap-x-16">
           <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
             <div className="flex justify-center">
               <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
                 <Image
-                  src="/images/about/er.jpg"
+                  src="/images/about/er1.jpg"
                   alt="Insert Photo Here"
                   layout="fill"
                   className="rounded-full"
@@ -550,10 +550,29 @@ const AboutPage = () => {
               </div>
             </div>
             <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
-              Director
+              Co-Director
             </h3>
             <h3 className="flex justify-center pb-4 text-[6.67px] font-bold text-black sm:text-xl">
               Elicia
+            </h3>
+          </div>
+
+          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
+            <div className="flex justify-center">
+              <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
+                <Image
+                  src="/images/about/er2.jpg"
+                  alt="Insert Photo Here"
+                  layout="fill"
+                  className="rounded-full"
+                />
+              </div>
+            </div>
+            <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
+              Co-Director
+            </h3>
+            <h3 className="flex justify-center text-[6.67px] font-bold text-black sm:text-xl">
+              Jasper
             </h3>
           </div>
         </div>

@@ -171,7 +171,7 @@ const OtherEvents = ({ events }: EventsProps) => {
           </div>
         )}
       </div>
-    </MaxWidth>
+    </div>
   );
 };
 

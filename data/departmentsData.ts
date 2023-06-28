@@ -18,11 +18,13 @@ const departmentsData: DepartmentsData = {
           src: '/images/about/ml1.jpg',
           alt: 'Image of director',
           directorName: 'Daniel',
+          linkedin: 'https://www.linkedin.com/in/daniel-twh/',
         },
         {
           src: '/images/about/ml2.jpg',
           alt: 'Image of director',
           directorName: 'Kleon',
+          linkedin: 'https://www.linkedin.com/in/kleonang/',
         },
       ],
       roles: [
@@ -155,11 +157,14 @@ const departmentsData: DepartmentsData = {
           src: '/images/about/blockchain1.jpg',
           alt: 'Image of director',
           directorName: 'Jones',
+          linkedin:'https://www.linkedin.com/in/jones-lim-965586178/',
         },
         {
           src: '/images/about/blockchain2.jpg',
           alt: 'Image of director',
           directorName: 'Marcus',
+          linkedin: 'https://www.linkedin.com/in/marcus-pang-yu-yang/',
+
         },
       ],
       roles: ['Research Analyst', 'Community Manager', 'Blockchain Developer'],
@@ -317,6 +322,14 @@ const departmentsData: DepartmentsData = {
           src: '/images/about/sd1.jpg',
           alt: 'Image of director',
           directorName: 'Owen',
+          linkedin: 'https://www.linkedin.com/in/owen-yap/',
+    
+        },
+        {
+          src: '/images/about/sd2.jpg',
+          alt: 'Image of director',
+          directorName: 'Jess', 
+        linkedin: 'https://www.linkedin.com/in/jessraphael/',
         },
       ],
       roles: [
@@ -394,11 +407,11 @@ const departmentsData: DepartmentsData = {
       ],
     },
     {
-      name: 'External',
-      path: 'operations',
+      name: 'External Relations',
+      path: 'external',
       logo: {
-        src: '/images/departments/departmentLogos/Ops-main-icon.jpg',
-        alt: 'Ops Internal Logo',
+        src: '/images/departments/departmentLogos/External-main-icon.jpg',
+        alt: 'External Logo',
       },
       purpose:
         'Reach out to external stakeholders and industry partners, strengthening FinTech Society’s network and presence.',
@@ -406,9 +419,18 @@ const departmentsData: DepartmentsData = {
         'Widen the outreach and expand FinTech Society’s network both within the NUS community and with industry partners.',
       directors: [
         {
-          src: '/images/about/er.jpg',
-          alt: 'Image of director',
+          src: '/images/about/er1.jpg',
+          alt: 'Image of director1',
           directorName: 'Elicia',
+          linkedin: 'https://www.linkedin.com/in/elicia-low/',
+          
+        },
+        {
+          src: '/images/about/er2.jpg',
+          alt: 'Image of director2',
+          directorName: 'Jasper',
+          linkedin: 'https://www.linkedin.com/in/jaspertzx/',
+          
         },
       ],
       roles: [
@@ -483,11 +505,11 @@ const departmentsData: DepartmentsData = {
       ],
     },
     {
-      name: 'Internal',
-      path: 'operations',
+      name: 'Internal Affairs',
+      path: 'internal',
       logo: {
-        src: '/images/departments/departmentLogos/Internal-Op-Logo.png',
-        alt: 'Ops Internal Logo',
+        src: '/images/departments/departmentLogos/Internal-main-icon.jpg',
+        alt: 'Internal Logo',
       },
       purpose:
         'Provide programmes and workshops for members of FinTech Society to build relationships and develop a love for FinTech.',
@@ -498,11 +520,13 @@ const departmentsData: DepartmentsData = {
           src: '/images/about/ia1.jpg',
           alt: 'Image of director',
           directorName: 'James',
+          linkedin: 'https://www.linkedin.com/in/james-teo-lee-chen/',
         },
         {
           src: '/images/about/ia2.jpg',
           alt: 'Image of director',
           directorName: 'Jin',
+          linkedin: 'https://www.linkedin.com/in/jin-kutsuzawa-a5a7171a3/',
         },
       ],
       roles: [

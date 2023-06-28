@@ -20,7 +20,7 @@ const DepartmentInfo = ({
           <Image src={logo.src} alt={logo.alt} layout="fill" />
         </div>
         <h1 className="ml-4 mt-3 border-b-2 border-[#002750] sm:mt-10 sm:ml-6 sm:border-b-4 sm:text-6xl sm:leading-[4.538rem]">{`${
-          name === 'External' || name === 'Internal' ? 'Operations' : name
+           name
         }`}</h1>
       </div>
 
