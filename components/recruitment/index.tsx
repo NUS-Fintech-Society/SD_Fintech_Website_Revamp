@@ -1,6 +1,3 @@
-// import { RecruitmentProps } from '@interfaces/recruitment';
-// import Landing from '@components/recruitment/Landing';
-// import WhoShouldJoin from '@components/recruitment/WhoShouldJoin';
 import DepartmentRoles from '@components/recruitment/DepartmentRoles';
 
 import MaxWidth from '@components/layout/MaxWidth';
@@ -11,7 +8,6 @@ import { DepartmentRoleProps } from '@interfaces/recruitment/departmentRole';
 import React from 'react';
 import SignUp from './SignUp';
 
-// const Recruitment = ({ departmentFaq }: RecruitmentProps) => {
 const Recruitment = () => {
   const router = useRouter();
   const isTechnical = router.asPath.includes('/technical-wing');
@@ -178,7 +174,7 @@ const Recruitment = () => {
 */}
         </div>
 
-        <div className="section-my pb-0">
+        <div className="section-my">
           <h2 className="mb-5 text-center text-2xl font-bold text-[#002750] sm:mb-16 sm:text-4xl">
             NUS Fintech Society Recruitment for AY 2023/2024
           </h2>
@@ -207,7 +203,7 @@ const Recruitment = () => {
           </p>
         </div>
       </MaxWidth>
-      <div className="p-6 md:p-14">
+      <div className="px-6 md:px-14">
         {isTechnical
         ? TECHNICAL.map((department: DepartmentRoleProps, index) => (
             <DepartmentRoles

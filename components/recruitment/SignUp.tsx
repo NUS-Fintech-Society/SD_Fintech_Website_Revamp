@@ -1,10 +1,16 @@
 import MaxWidth from '@components/layout/MaxWidth';
+import { useRouter } from 'next/router';
 
 const SignUp = () => {
+  const router = useRouter();
+  const isTechnical = router.asPath.includes('/technical-wing');
+  const bgColor = isTechnical ? "#EEF6FE" : "#CEF0F1"
+  const textColor = isTechnical ? '#004C98' : '#006C6C';
+
   return (
     <MaxWidth>
-      <div className="block rounded-lg bg-[#EEF6FE] p-6 md:p-14">
-        <div className="grid grid-flow-col grid-rows-4 gap-10 text-[#004C98] lg:grid-rows-3 lg:gap-20">
+      <div className={`bg-[${bgColor}] block rounded-lg p-6 md:p-14`}>
+        <div className={`text-[${textColor}] grid grid-flow-col grid-rows-4 gap-10 lg:grid-rows-3 lg:gap-20`}>
           <div className="w-[300px] sm:w-[1056px]">
             <h1 className="mb-1 text-2xl font-bold md:text-4xl">
               Sign Up Now!
