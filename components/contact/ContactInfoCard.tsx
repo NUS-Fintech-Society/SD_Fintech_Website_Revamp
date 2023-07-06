@@ -9,7 +9,7 @@ import SocialHandles from './SocialHandles';
 const ContactInfoCard = () => {
   return (
     <>
-      <div className="relative h-[340px] flex-1 gap-10 bg-[#002750]/80 px-10 py-12 sm:px-12 sm:py-16 text-white sm:h-[520px] lg:h-[550px] lg:w-[620px] lg:min-w-[400px] lg:rounded-r-[20px] lg:px-16">
+      <div className="relative h-[330px] bg-[#002750]/80 px-10 py-12 text-white sm:h-[520px] sm:px-12 sm:py-16 lg:w-[620px] lg:rounded-r-[20px] lg:px-16">
         <Image
           src="/images/contact/contact_info_image.jpg"
           alt=""
@@ -17,13 +17,13 @@ const ContactInfoCard = () => {
           objectFit="cover"
           className="-z-10 opacity-70 sm:rounded-r-[20px]"
         />
-        <div className="mb-8 text-center text-xl font-bold leading-[1.388rem] sm:mb-20 sm:text-4xl lg:text-4xl">
+        <div className="text-center text-xl font-bold leading-[1.388rem] sm:text-4xl lg:text-4xl">
           Contact Information
         </div>
 
-        {/* email */}
-        <div className="mb-6 sm:mb-10 flex items-center gap-10">
-          <div className="flex items-start">
+        {/* email and location */}
+        <div className="my-10 grid justify-center gap-5 text-left sm:my-20 sm:gap-10">
+          <div className="flex items-center gap-7 sm:gap-10">
             <Image
               src="/images/contact/email_icon.svg"
               alt="mail icon"
@@ -31,15 +31,12 @@ const ContactInfoCard = () => {
               width={30}
               height={30}
             />
+            <div className="text-sm font-semibold sm:text-xl">
+              nusfintech.ops@gmail.com
+            </div>
           </div>
-          <div className="font-semibold sm:text-xl">
-            nusfintech.ops@gmail.com
-          </div>
-        </div>
 
-        {/* location */}
-        <div className="mb-10 sm:mb-20 flex items-center gap-10">
-          <div className="flex items-start">
+          <div className="flex items-center gap-7 sm:gap-10">
             <Image
               src="/images/contact/location_icon.svg"
               alt="location icon"
@@ -47,11 +44,11 @@ const ContactInfoCard = () => {
               width={30}
               height={30}
             />
-          </div>
-          <div className="font-semibold sm:text-xl">
-            <div>NUS School of Computing, COM1</div>
-            <div>13 Computing Drive</div>
-            <div>Singapore 117417</div>
+            <div className="text-sm font-semibold sm:text-xl">
+              NUS School of Computing, COM1 <br />
+              13 Computing Drive <br />
+              Singapore 117417
+            </div>
           </div>
         </div>
 
