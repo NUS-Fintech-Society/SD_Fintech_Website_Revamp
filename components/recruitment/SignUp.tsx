@@ -11,7 +11,7 @@ const SignUp = () => {
     <MaxWidth>
       <div className={`bg-[${bgColor}] block rounded-lg p-6 md:p-14`}>
         <div className={`text-[${textColor}] grid grid-flow-col grid-rows-4 gap-10 lg:grid-rows-3 lg:gap-20`}>
-          <div className="w-[300px] sm:w-[1056px]">
+          <div className="w-[300px] sm:w-[900px]">
             <h1 className="mb-1 text-2xl font-bold md:text-4xl">
               Sign Up Now!
             </h1>
