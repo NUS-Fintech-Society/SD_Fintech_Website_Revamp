@@ -1,9 +1,12 @@
 import DepartmentRoles from '@components/recruitment/DepartmentRoles';
+import {Tab, Tabs,TabList} from '@chakra-ui/react';
 
 import MaxWidth from '@components/layout/MaxWidth';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { DepartmentRoleProps } from '@interfaces/recruitment/departmentRole';
+
 
 import React from 'react';
 import SignUp from './SignUp';
@@ -11,6 +14,13 @@ import SignUp from './SignUp';
 const Recruitment = () => {
   const router = useRouter();
   const isTechnical = router.asPath.includes('/technical-wing');
+  const [selectedTab, setSelectedTab] = isTechnical? React.useState(0) : React.useState(1)
+
+  const handleTabChange = () => {
+    selectedTab === 1 ? setSelectedTab(0) : setSelectedTab(1)
+
+  };
+  
 
   const TECHNICAL = [
     {
@@ -160,23 +170,36 @@ const Recruitment = () => {
             </h1>
           </div>
 
-          {/*
-        <div className="hidden xl:block xl:mt-16 xl:ml-auto">
-          <div className = "rounded-md w-80 ml-auto mr-10 bg-white border-2 shadow-lg">
-            <Tabs color='grey' size='sm' padding='1' onChange={() => setIsInternal(!isInternal)} >
-              <TabList>
-                <Tab className="flex-1" _selected={{ color: "#090071", bg:"#EDECF6", fontWeight:"bold"}}>Technical Wing</Tab>
-                <Tab className="flex-1" _selected={{ color: "#090071",bg:"#EDECF6",  fontWeight:"bold" }}>Operation Wing</Tab>
-              </TabList>
-            </Tabs>
+          
+          <div className=" hidden xl:block xl:block xl:mt-16 xl:ml-auto">
+            <div className="bg-white border-2 shadow-lg rounded-md xl:w-80 xl:ml-auto xl:mr-10 ">
+              <Tabs color='grey' size='sm' padding='1' onChange={handleTabChange} index={selectedTab}> 
+                <TabList>
+                  <Link href="/recruitment/technical-wing">
+                    <Tab className="flex-1" _selected={{ color: "#090071", bg: "#EDECF6", fontWeight: "bold" }}>
+                      Technical Wing
+                    </Tab>
+                  </Link>
+                  <Link href="/recruitment/operations-wing">
+                    <Tab className="flex-1" _selected={{ color: "#090071", bg: "#EDECF6", fontWeight: "bold" }}>
+                      Operations Wing
+                    </Tab>  
+                  </Link>
+                </TabList>
+              </Tabs>
+            </div>
           </div>
-        </div>
-*/}
-        </div>
+          </div>
+
 
         <div className="section-my">
           <h2 className="mb-5 text-center text-2xl font-bold text-[#002750] sm:mb-16 sm:text-4xl">
-            NUS Fintech Society Recruitment for AY 2023/2024
+            NUS Fintech Society Recruitment for AY 2023/2024 
+          </h2>
+          <h2 className="xl:hidden mb-5 text-center text-2xl font-bold text-[#002750] sm:mb-16 sm:text-4xl">
+            <span className='border-b-2 border-[#002750]'>
+              {isTechnical ? 'Technical Wing' : 'Operations Wing'}
+            </span>
           </h2>
 
           <p className=" text-left text-sm text-[#002750] sm:text-xl">
