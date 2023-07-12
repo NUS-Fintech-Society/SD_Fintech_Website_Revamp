@@ -10,13 +10,15 @@ const ContactInfoCard = () => {
   return (
     <>
       <div className="relative h-[330px] bg-[#002750]/80 px-10 py-12 text-white sm:h-[520px] sm:px-12 sm:py-16 lg:w-[620px] lg:rounded-r-[20px] lg:px-16">
-        <Image
-          src="/images/contact/contact_info_image.jpg"
-          alt=""
-          layout="fill"
-          objectFit="cover"
-          className="-z-10 opacity-70 sm:rounded-r-[20px]"
-        />
+        <div className="absolute -z-10 -mx-10 -my-12 h-full w-full sm:-mx-12 sm:-my-16 lg:-m-16">
+          <Image
+            src="/images/contact/contact_info_image.jpg"
+            alt="Contact Info Logo"
+            layout="fill"
+            objectFit="cover"
+            className="opacity-70 lg:rounded-r-[20px]"
+          />
+        </div>
         <div className="text-center text-xl font-bold leading-[1.388rem] sm:text-4xl lg:text-4xl">
           Contact Information
         </div>
