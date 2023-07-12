@@ -2,112 +2,58 @@
 import { EventsProps } from '@interfaces/events/Events';
 
 // library
-import { Fragment, useState, useEffect, useRef } from 'react';
-import SectionHeader from '@components/layout/SectionHeader';
-import Image from 'next/image';
+import { Fragment, useState } from 'react';
 
 // code
 import MaxWidth from '@components/layout/MaxWidth';
 import EventCard from '@components/events/EventCard';
-import PastEventCard from './PastEventCard';
-
-function ExpandPastEventCard() {
-  const [isReadMore, setIsReadMore] = useState(false);
-  const readMoreRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    function handleClickOutside(event: Event) {
-      if (
-        readMoreRef.current &&
-        !readMoreRef.current.contains(event.target as Node)
-      ) {
-        setIsReadMore(false);
-      }
-    }
-
-    window.addEventListener('click', handleClickOutside);
-    return () => window.removeEventListener('click', handleClickOutside);
-  }, [readMoreRef]);
-  return (
-    <div className="relative h-[180px] w-[330px] rounded-2xl bg-[#004C98]/50 p-8 md:h-[630px] md:w-[1080px]">
-      <Image
-        src="/images/events/event_image.jpg"
-        alt=""
-        layout="fill"
-        objectFit="cover"
-        className="-z-10 rounded-2xl shadow-lg"
-      />
-      {isReadMore ? (
-        <div className="mt-2 md:mt-12" ref={readMoreRef}>
-          <h2 className="font-bold text-white md:text-5xl">
-            Fintech Event 2020
-          </h2>
-          <h3 className="mt-6 text-xs text-white md:text-2xl">
-            This was an event that was held in the year 2020 along with Venmo.
-            We had our first ever virtual Welcome Tea information sharing
-            session to find out more about what we do and who we are looking for
-            !
-          </h3>
-        </div>
-      ) : (
-        <div className="absolute bottom-5">
-          <h2 className="font-bold text-white md:text-6xl">
-            Fintech Event 2020
-          </h2>
-          <h3 className="mt-6 text-xs text-white md:text-2xl">
-            This was an event that was held in the year 2020 about so and so...
-          </h3>
-          <div>
-            <button
-              type="button"
-              className="outline-white-500 mt-6 rounded-full py-2 px-4 text-xs
-              font-bold text-white outline outline-offset-2 md:text-xl"
-              onClick={(event) => {
-                event.stopPropagation();
-                setIsReadMore(true);
-              }}
-            >
-              Read More...
-            </button>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
+import Filter from '@components/events/Filter';
+import EventCardEdited from '@components/events/EventCardEdited';
+import SectionHeader from '@components/layout/SectionHeader';
 
 const OtherEvents = ({ events }: EventsProps) => {
-  const [isShown, setIsShown] = useState(false);
-  const expandedCardRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    function handleClickOutside(event: Event) {
-      if (
-        expandedCardRef.current &&
-        !expandedCardRef.current.contains(event.target as Node)
-      ) {
-        setIsShown(false);
-      }
-    }
-
-    window.addEventListener('click', handleClickOutside);
-    return () => window.removeEventListener('click', handleClickOutside);
-  }, [expandedCardRef]);
-
+  const [active, setActive] = useState(false);
+  const eventArray = [];
+  const chunkSize = 6;
+  for (let i = 0; i < events.length; i += chunkSize) {
+    const chunk = events.slice(i, i + chunkSize);
+    eventArray[eventArray.length] = chunk;
+  }
   return (
-    <div>
-      <MaxWidth>
-        <div className="section-my">
-          <h2 className="mb-10 text-center text-h2 font-bold">
-            All Upcoming Events
-          </h2>
-          <div className="mt-8 flex flex-wrap justify-center gap-10">
-            {events.map(
-              (
-                { coverImage, cardDescription, name, location, date },
-                index
-              ) => (
-                <Fragment key={index}>
+    <MaxWidth>
+      <div className="section-my">
+        <SectionHeader
+          color="green"
+          title="Upcoming Events"
+          subtitle="What's up next?"
+        />
+        <div className="desktop-filter-button mt-10 hidden md:block">
+          <button type="submit" 
+            onClick={() => setActive(!active)} 
+            className="inter mt-10 ml-40 rounded bg-[#cde3f9] py-2 px-4 text-base font-semibold text-[#004C98]">
+              FILTER
+          </button>
+        </div>
+        <div className="mobile-filter-button block md:hidden">
+          <button type="submit" 
+            onClick={() => setActive(!active)} 
+            className="inter mt-10 ml-2 mb-2 rounded bg-[#cde3f9] py-1 px-2 text-sm font-semibold text-[#004C98]">
+              FILTER
+          </button>
+        </div>
+        {active === true && <Filter/>}
+        
+        {/* Mobile & Tablet */}
+        <div
+          id="carouselDarkVariant"
+          className="carousel slide carousel-dark visible relative md:hidden"
+          data-bs-ride="carousel"
+          data-bs-interval="false"
+        >
+          <div className="carousel-inner relative w-full overflow-hidden">
+            {events.map(({ coverImage, cardDescription, name, location, date }, index) => (
+              <div className="carousel-item relative w-full" key={index}>
+                <div className="mt-3 flex flex-wrap justify-center gap-10">
                   <EventCard
                     coverImage={coverImage}
                     cardDescription={cardDescription}
@@ -115,101 +61,115 @@ const OtherEvents = ({ events }: EventsProps) => {
                     location={location}
                     date={date}
                   />
-                </Fragment>
-              )
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop Carousel */}
+      <div
+        id="carouselDarkVariant"
+        className="carousel slide carousel-dark relative hidden lg:block"
+        data-bs-ride="carousel"
+        data-bs-interval="false"
+      >
+
+        <div className="carousel-inner relative w-full overflow-hidden">
+          <div className="carousel-item active relative float-left w-full">
+            <div className="mt-3 flex flex-wrap justify-center gap-10">
+              {eventArray[0] &&
+                eventArray[0].map(
+                  (index) => { // Insert Here: { coverImage, cardDescription, name, location, date }
+                    return (
+                      <Fragment key={index}>
+                        <EventCardEdited/>
+                    </Fragment>
+                    );
+                  }
+                )}
+            </div>
+          </div>
+
+          {eventArray[1] &&
+            eventArray[1].map(
+              ({ coverImage, cardDescription, name, location, date }, index) => {
+                return (
+                  <div
+                    className="carousel-item relative float-left w-full"
+                    key={index}
+                  >
+                    <div className="mt-4 flex flex-wrap justify-center gap-16">
+                      <Fragment key={index}>
+                          <EventCard
+                            coverImage={coverImage}
+                            cardDescription={cardDescription}
+                            name={name}
+                            location={location}
+                            date={date}
+                          />
+                      </Fragment>
+                    </div>
+                  </div>
+                );
+              }
             )}
-          </div>
+
+          {eventArray[2] &&
+            eventArray[2].map(
+              ({ coverImage, cardDescription, name, location, date }, index) => {
+                return (
+                  <div
+                    className="carousel-item relative float-left w-full"
+                    key={index}
+                  >
+                    <div className="mt-4 flex flex-wrap justify-center gap-16">
+                      <Fragment key={index}>
+                        <EventCard
+                          coverImage={coverImage}
+                          cardDescription={cardDescription}
+                          name={name}
+                          location={location}
+                          date={date}
+                        />
+                      </Fragment>
+                    </div>
+                  </div>
+                );
+              }
+            )}
         </div>
 
-        <SectionHeader
-          color="green"
-          title="Past Events"
-          subtitle="A walk down memory lane"
-        />
-      </MaxWidth>
+        {eventArray[1] && (
+          <div>
+            <button
+              className="carousel-control-prev absolute inset-y-0 left-[-100px] flex items-center justify-center border-0 p-0 text-center hover:no-underline hover:outline-none focus:no-underline focus:outline-none"
+              type="button"
+              data-bs-target="#carouselDarkVariant"
+              data-bs-slide="prev"
+            >
+              <span
+                className="carousel-control-prev-icon inline-block bg-no-repeat"
+                aria-hidden="true"
+              />
+              <span className="visually-hidden">Previous</span>
+            </button>
 
-      <div className={`${isShown ? 'bg-black/70' : ''} flex justify-center`}>
-        <div
-          ref={expandedCardRef}
-          className="mt-6 grid grid-cols-2 gap-4 sm:ml-10 lg:grid-cols-3"
-        >
-          <div
-            role="button"
-            tabIndex={0}
-            onClick={() => setIsShown(true)}
-            onKeyDown={(event) => {
-              if (event.key === 'Enter') {
-                setIsShown(true);
-              }
-            }}
-          >
-            <PastEventCard />
+            <button
+              className="carousel-control-next absolute inset-y-0 right-[-100px] flex items-center justify-center border-0 p-0 text-center hover:no-underline hover:outline-none focus:no-underline focus:outline-none"
+              type="button"
+              data-bs-target="#carouselDarkVariant"
+              data-bs-slide="next"
+            >
+              <span
+                className="carousel-control-next-icon inline-block bg-no-repeat"
+                aria-hidden="true"
+              />
+              <span className="visually-hidden">Next</span>
+            </button>
           </div>
-          <div
-            role="button"
-            tabIndex={0}
-            onClick={() => setIsShown(true)}
-            onKeyDown={(event) => {
-              if (event.key === 'Enter') {
-                setIsShown(true);
-              }
-            }}
-          >
-            <PastEventCard />
-          </div>
-          <div
-            role="button"
-            tabIndex={0}
-            onClick={() => setIsShown(true)}
-            onKeyDown={(event) => {
-              if (event.key === 'Enter') {
-                setIsShown(true);
-              }
-            }}
-          >
-            <PastEventCard />
-          </div>
-          <div
-            role="button"
-            tabIndex={0}
-            onClick={() => setIsShown(true)}
-            onKeyDown={(event) => {
-              if (event.key === 'Enter') {
-                setIsShown(true);
-              }
-            }}
-          >
-            <PastEventCard />
-          </div>
-          <div
-            role="button"
-            tabIndex={0}
-            onClick={() => setIsShown(true)}
-            onKeyDown={(event) => {
-              if (event.key === 'Enter') {
-                setIsShown(true);
-              }
-            }}
-          >
-            <PastEventCard />
-          </div>
-          <div
-            role="button"
-            tabIndex={0}
-            onClick={() => setIsShown(true)}
-            onKeyDown={(event) => {
-              if (event.key === 'Enter') {
-                setIsShown(true);
-              }
-            }}
-          >
-            <PastEventCard />
-          </div>
-
-          <div className="absolute z-20">
-            {isShown && <ExpandPastEventCard />}
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );
