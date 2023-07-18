@@ -29,7 +29,7 @@ const RolesInfo = ({
         <div className="relative h-[52px] w-[68.88px] sm:h-[139px] sm:w-[184px]">
           <Image src={logo.src} alt={logo.alt} layout="fill" />
         </div>
-        <h1 className="ml-4 mt-3 border-b-2 border-[#002750] sm:mt-10 sm:ml-6 sm:border-b-4 sm:text-6xl sm:leading-[4.538rem]">{`${name
+        <h1 className="ml-4 mt-3 underline underline-offset-[6px] sm:underline-offset-[14px] sm:mt-10 sm:ml-6 sm:text-6xl sm:leading-[4.538rem]">{`${name
           }`}</h1>
       </div>
 
