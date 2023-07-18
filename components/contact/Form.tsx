@@ -1,4 +1,8 @@
-import { Select } from '@chakra-ui/react'
+import { Select } from '@chakra-ui/react';
+import rolesData from '@data/rolesData';
+import departmentsData from '@data/departmentsData';
+import { DepartmentsProps } from '@interfaces/departments';
+import { RoleProps } from '@interfaces/roles';
 
 const Form = () => {
   return (
@@ -37,17 +41,19 @@ const Form = () => {
 
           <div className="mb-5">
             <Select variant='filled' placeholder='Role' bg='#f5f5f7' boxShadow='md' w={['280px', '280px', '480px', '600px']} h={['30px', '30px', '40px', '45px']}>
-              <option value='option1'>Option 1</option>
-              <option value='option2'>Option 2</option>
-              <option value='option3'>Option 3</option>
+              <option value='NA'>Not Applicable</option>
+              {rolesData.roles.map((role: RoleProps, index: any) => 
+                <option value={role.name} key={index}>{role.name}</option>
+              )}
             </Select>
           </div>
 
           <div className="mb-5">
             <Select variant='filled' placeholder='Relevant Department' bg='#f5f5f7' boxShadow='md' w={['280px', '280px', '480px', '600px']} h={['30px', '30px', '40px', '45px']}>
-              <option value='option1'>Option 1</option>
-              <option value='option2'>Option 2</option>
-              <option value='option3'>Option 3</option>
+              <option value='NA'>Not Applicable</option>
+              {departmentsData.departments.map((department: DepartmentsProps, index: any) => 
+                <option value={department.name} key={index}>{department.name}</option>
+              )}
             </Select>
           </div>
 
