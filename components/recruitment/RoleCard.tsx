@@ -14,10 +14,10 @@ const RoleCard: React.FC<RoleCardProps> = ({ title, img }) => {
   const iconColor = isTechnical ? '#EEF6FE' : '#E1F2F3';
 
   return (
-    <div className="relative z-[-10] mx-auto my-8 flex h-[160px] w-2/3 min-w-[215px] items-center overflow-hidden rounded-lg bg-white p-4 shadow-xl sm:h-[200px] sm:w-[300px]">
+    <div className="relative z-[-10] mx-auto flex h-[160px] w-2/3 min-w-[215px] items-center overflow-hidden rounded-lg bg-white p-4 shadow-xl sm:h-[200px] sm:w-[340px]">
       <div className="max-w-2/3 w-2/3">
         <h1
-          className={`text-[${textColor}] mr-4 text-center font-semibold sm:text-xl`}
+          className={`text-[${textColor}] mr-5 text-center font-semibold sm:text-xl`}
         >
           {title}
         </h1>

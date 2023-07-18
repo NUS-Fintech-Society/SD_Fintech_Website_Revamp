@@ -29,18 +29,22 @@ const Recruitment = () => {
         {
           title: 'Software Engineer',
           img: '/images/recruitment/Roles Icon/SD - Software Engineer.svg',
+          path: 'software-engineer',
         },
         {
           title: 'Technical Lead',
           img: '/images/recruitment/Roles Icon/SD - Technical Lead.svg',
+          path: 'sd-technical-lead',
         },
         {
           title: 'Design Manager',
           img: '/images/recruitment/Roles Icon/SD - Design Manager.svg',
+          path: 'design-manager',
         },
         {
           title: 'UI/UX Designer',
           img: '/images/recruitment/Roles Icon/SD - UIUX.svg',
+          path: 'uiux-designer',
         },
       ],
     },
@@ -50,14 +54,17 @@ const Recruitment = () => {
         {
           title: 'Technical Analyst Trainee',
           img: '/images/recruitment/Roles Icon/ML - Technical Analyst Trainee.svg',
+          path: 'technical-analyst-trainee',
         },
         {
           title: 'Technical Lead (Project/Quadrant)',
           img: '/images/recruitment/Roles Icon/ML - Technical Lead.svg',
+          path: 'ml-technical-lead',
         },
         {
           title: 'Technical Analyst (Project/Quadrant)',
           img: '/images/recruitment/Roles Icon/ML - Technical Analyst.svg',
+          path: 'technical-analyst',
         },
       ],
     },
@@ -67,22 +74,27 @@ const Recruitment = () => {
         {
           title: 'Blockchain Lead Developer',
           img: '/images/recruitment/Roles Icon/BC - Blockchain Lead Developer.svg',
+          path: 'blockchain-lead-developer',
         },
         {
           title: 'Blockchain Developer',
           img: '/images/recruitment/Roles Icon/BC - Blockchain Developer.svg',
+          path: 'blockchain-developer',
         },
         {
           title: 'Core Blockchain Developer',
           img: '/images/recruitment/Roles Icon/BC - Core Blockchain Developer.svg',
+          path: 'core-blockchain-developer',
         },
         {
           title: 'Community Manager',
           img: '/images/recruitment/Roles Icon/BC - Community Manager.svg',
+          path: 'community-manager',
         },
         {
           title: 'Research Analyst',
           img: '/images/recruitment/Roles Icon/BC - Research Analyst.svg',
+          path: 'research-analyst',
         },
       ],
     },
@@ -93,20 +105,24 @@ const Recruitment = () => {
       department: 'External Relations',
       roles: [
         {
-          title: 'Partnerships Lead',
+          title: 'Partnership Lead',
           img: '/images/recruitment/Roles Icon/ER - Partnerships Lead.svg',
+          path: 'partnership-lead',
         },
         {
-          title: 'Partnerships Executive',
+          title: 'Partnership Executive',
           img: '/images/recruitment/Roles Icon/ER - Partnerships Executive.svg',
+          path: 'partnership-executive',
         },
         {
           title: 'Marketing Lead',
           img: '/images/recruitment/Roles Icon/ER - Marketing Lead.svg',
+          path: 'marketing-lead',
         },
         {
           title: 'Marketing Executive',
           img: '/images/recruitment/Roles Icon/ER - Marketing Executive.svg',
+          path: 'marketing-executive',
         },
       ],
     },
@@ -116,38 +132,47 @@ const Recruitment = () => {
         {
           title: 'Project Management Lead',
           img: '/images/recruitment/Roles Icon/IA - Project Management Lead.svg',
+          path: 'project-management-lead',
         },
         {
           title: 'Project Management Executive',
           img: '/images/recruitment/Roles Icon/IA - Project Management Executive.svg',
+          path: 'project-management-executive',
         },
         {
           title: 'Talent Management Lead',
           img: '/images/recruitment/Roles Icon/IA - Talent Management Lead.svg',
+          path: 'talent-management-lead',
         },
         {
           title: 'Talent Management Executive',
           img: '/images/recruitment/Roles Icon/IA - Talent Management Executive.svg',
+          path: 'talent-management-executive',
         },
         {
           title: 'Finance Lead',
           img: '/images/recruitment/Roles Icon/IA - Finance Lead.svg',
+          path: 'finance-lead',
         },
         {
           title: 'Finance Executive',
           img: '/images/recruitment/Roles Icon/IA - Finance Executive.svg',
+          path: 'finance-executive',
         },
         {
           title: 'Community Development Lead',
           img: '/images/recruitment/Roles Icon/IA - Community Development Lead.svg',
+          path: 'community-development-lead',
         },
         {
           title: 'Community Development Executive',
           img: '/images/recruitment/Roles Icon/IA - Community Development Executive.svg',
+          path: 'community-development-executive',
         },
         {
           title: 'Product Manager',
           img: '/images/recruitment/Roles Icon/IA - Product Manager.svg',
+          path: 'product-manager',
         },
       ],
     },

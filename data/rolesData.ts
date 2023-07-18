@@ -6,7 +6,7 @@ const rolesData: RolesData = {
             name: 'Software Engineer',
             path: 'software-engineer',
             logo: {
-                src: '/images/departments/departmentLogos/SD-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/SD - Software Engineer.svg',
                 alt: 'SD logo',
             },
             aboutUs: {
@@ -60,7 +60,7 @@ const rolesData: RolesData = {
             name: 'Technical Lead',
             path: 'sd-technical-lead',
             logo: {
-                src: '/images/departments/departmentLogos/SD-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/SD - Technical Lead.svg',
                 alt: 'SD logo',
             },
             aboutUs: {
@@ -118,7 +118,7 @@ const rolesData: RolesData = {
             name: 'UI/UX Designer',
             path: 'uiux-designer',
             logo: {
-                src: '/images/departments/departmentLogos/SD-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/SD - UIUX.svg',
                 alt: 'SD logo',
             },
             aboutUs: {
@@ -175,7 +175,7 @@ const rolesData: RolesData = {
             name: 'Design Manager',
             path: 'design-manager',
             logo: {
-                src: '/images/departments/departmentLogos/SD-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/SD - Design Manager.svg',
                 alt: 'SD logo',
             },
             aboutUs: {
@@ -229,7 +229,7 @@ const rolesData: RolesData = {
             name: 'Blockchain Developer',
             path: 'blockchain-developer',
             logo: {
-                src: '/images/departments/departmentLogos/BC-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/BC - Blockchain Developer.svg',
                 alt: 'BC logo',
             },
             aboutUs: {
@@ -265,7 +265,7 @@ const rolesData: RolesData = {
             name: 'Core Blockchain Developer',
             path: 'core-blockchain-developer',
             logo: {
-                src: '/images/departments/departmentLogos/BC-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/BC - Core Blockchain Developer.svg',
                 alt: 'BC logo',
             },
             aboutUs: {
@@ -302,7 +302,7 @@ const rolesData: RolesData = {
             name: 'Blockchain Lead Developer',
             path: 'blockchain-lead-developer',
             logo: {
-                src: '/images/departments/departmentLogos/BC-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/BC - Blockchain Lead Developer.svg',
                 alt: 'BC logo',
             },
             aboutUs: {
@@ -338,7 +338,7 @@ const rolesData: RolesData = {
             name: 'Community Manager',
             path: 'community-manager',
             logo: {
-                src: '/images/departments/departmentLogos/BC-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/BC - Community Manager.svg',
                 alt: 'BC logo',
             },
             aboutUs: {
@@ -370,7 +370,7 @@ const rolesData: RolesData = {
             name: 'Research Analyst',
             path: 'research-analyst',
             logo: {
-                src: '/images/departments/departmentLogos/BC-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/BC - Research Analyst.svg',
                 alt: 'BC logo',
             },
             aboutUs: {
@@ -407,7 +407,7 @@ const rolesData: RolesData = {
             name: 'Technical Analyst (Project/Quant)',
             path: 'technical-analyst',
             logo: {
-                src: '/images/departments/departmentLogos/ML-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/ML - Technical Analyst.svg',
                 alt: 'ML logo',
             },
             aboutUs: {
@@ -464,7 +464,7 @@ const rolesData: RolesData = {
             name: 'Technical Lead (Project/Quant)',
             path: 'ml-technical-lead',
             logo: {
-                src: '/images/departments/departmentLogos/ML-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/ML - Technical Lead.svg',
                 alt: 'ML logo',
             },
             aboutUs: {
@@ -522,7 +522,7 @@ const rolesData: RolesData = {
             name: 'Technical Analyst Trainee',
             path: 'technical-analyst-trainee',
             logo: {
-                src: '/images/departments/departmentLogos/ML-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/ML - Technical Analyst Trainee.svg',
                 alt: 'ML logo',
             },
             aboutUs: {
@@ -557,7 +557,7 @@ const rolesData: RolesData = {
             name: 'Project Management Lead',
             path: 'project-management-lead',
             logo: {
-                src: '/images/departments/departmentLogos/Internal-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/IA - Project Management Lead.svg',
                 alt: 'IA logo',
             },
             aboutUs: {
@@ -593,7 +593,7 @@ const rolesData: RolesData = {
             name: 'Project Management Executive',
             path: 'project-management-executive',
             logo: {
-                src: '/images/departments/departmentLogos/Internal-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/IA - Project Management Executive.svg',
                 alt: 'IA logo',
             },
             aboutUs: {
@@ -632,7 +632,7 @@ const rolesData: RolesData = {
             name: 'Talent Management Lead',
             path: 'talent-management-lead',
             logo: {
-                src: '/images/departments/departmentLogos/Internal-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/IA - Talent Management Lead.svg',
                 alt: 'IA logo',
             },
             aboutUs: {
@@ -667,7 +667,7 @@ const rolesData: RolesData = {
             name: 'Talent Management Executive',
             path: 'talent-management-executive',
             logo: {
-                src: '/images/departments/departmentLogos/Internal-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/IA - Talent Management Executive.svg',
                 alt: 'IA logo',
             },
             aboutUs: {
@@ -706,7 +706,7 @@ const rolesData: RolesData = {
             name: 'Finance Lead',
             path: 'finance-lead',
             logo: {
-                src: '/images/departments/departmentLogos/Internal-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/IA - Finance Lead.svg',
                 alt: 'IA logo',
             },
             aboutUs: {
@@ -742,7 +742,7 @@ const rolesData: RolesData = {
             name: 'Finance Executive',
             path: 'finance-executive',
             logo: {
-                src: '/images/departments/departmentLogos/Internal-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/IA - Finance Executive.svg',
                 alt: 'IA logo',
             },
             aboutUs: {
@@ -782,7 +782,7 @@ const rolesData: RolesData = {
             name: 'Community Development Lead',
             path: 'community-development-lead',
             logo: {
-                src: '/images/departments/departmentLogos/Internal-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/IA - Community Development Lead.svg',
                 alt: 'IA logo',
             },
             aboutUs: {
@@ -818,7 +818,7 @@ const rolesData: RolesData = {
             name: 'Community Development Executive',
             path: 'community-development-executive',
             logo: {
-                src: '/images/departments/departmentLogos/Internal-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/IA - Community Development Executive.svg',
                 alt: 'IA logo',
             },
             aboutUs: {
@@ -859,7 +859,7 @@ const rolesData: RolesData = {
             name: 'Product Manager',
             path: 'product-manager',
             logo: {
-                src: '/images/departments/departmentLogos/Internal-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/IA - Product Manager.svg',
                 alt: 'IA logo',
             },
             aboutUs: {
@@ -896,7 +896,7 @@ const rolesData: RolesData = {
             name: 'Partnership Lead',
             path: 'partnership-lead',
             logo: {
-                src: '/images/departments/departmentLogos/External-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/ER - Partnerships Lead.svg',
                 alt: 'ER logo',
             },
             aboutUs: {
@@ -937,7 +937,7 @@ const rolesData: RolesData = {
             name: 'Partnership Executive',
             path: 'partnership-executive',
             logo: {
-                src: '/images/departments/departmentLogos/External-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/ER - Partnerships Executive.svg',
                 alt: 'ER logo',
             },
             aboutUs: {
@@ -976,7 +976,7 @@ const rolesData: RolesData = {
             name: 'Marketing Lead',
             path: 'marketing-lead',
             logo: {
-                src: '/images/departments/departmentLogos/External-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/ER - Marketing Lead.svg',
                 alt: 'ER logo',
             },
             aboutUs: {
@@ -1020,7 +1020,7 @@ const rolesData: RolesData = {
             name: 'Marketing Executive',
             path: 'marketing-executive',
             logo: {
-                src: '/images/departments/departmentLogos/External-main-icon.jpg',
+                src: '/images/recruitment/Roles Icon/ER - Marketing Executive.svg',
                 alt: 'ER logo',
             },
             aboutUs: {
