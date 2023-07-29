@@ -30,9 +30,9 @@ const FAQ = ({ departmentFaq }: FaqProps) => {
             >
               <span className="tab-label">
                 {activeTab === 'General' ? (
-                  <strong className="text-3xl text-[#036167]">General</strong>
+                  <strong className="text-xs 2xl:text-2xl xl:text-xl lg:text-lg text-[#036167]">General</strong>
                 ) : (
-                  <span className="text-3xl text-[#004F4E]">General</span>
+                  <span className="text-xs 2xl:text-2xl xl:text-xl lg:text-lg text-[#004F4E]">General</span>
                 )}
               </span>
             </div>
@@ -42,11 +42,11 @@ const FAQ = ({ departmentFaq }: FaqProps) => {
             >
               <span className="tab-label">
                 {activeTab === 'Blockchain' ? (
-                  <strong className="text-3xl text-[#036167]">
+                  <strong className="text-xs 2xl:text-2xl xl:text-xl lg:text-lg text-[#036167]">
                     Blockchain
                   </strong>
                 ) : (
-                  <span className="text-3xl text-[#004F4E]">
+                  <span className="text-xs 2xl:text-2xl xl:text-xl lg:text-lg text-[#004F4E]">
                     Blockchain
                   </span>
                 )}
@@ -58,9 +58,9 @@ const FAQ = ({ departmentFaq }: FaqProps) => {
             >
               <span className="tab-label">
                 {activeTab === 'Machine Learning' ? (
-                  <strong className="text-3xl text-[#036167]">Machine Learning</strong>
+                  <strong className="text-xs 2xl:text-2xl xl:text-xl lg:text-lg text-[#036167]">Machine Learning</strong>
                 ) : (
-                  <span className="text-3xl text-[#004F4E]">Machine Learning</span>
+                  <span className="text-xs 2xl:text-2xl xl:text-xl lg:text-lg text-[#004F4E]">Machine Learning</span>
                 )}
               </span>
             </div>
@@ -70,11 +70,11 @@ const FAQ = ({ departmentFaq }: FaqProps) => {
             >
               <span className="tab-label">
                 {activeTab === 'Software Development' ? (
-                  <strong className="text-3xl text-[#036167]">
+                  <strong className="text-xs 2xl:text-2xl xl:text-xl lg:text-lg text-[#036167]">
                     Software Development
                   </strong>
                 ) : (
-                  <span className="text-3xl text-[#004F4E]">Software Development</span>
+                  <span className="text-xs 2xl:text-2xl xl:text-xl lg:text-lg text-[#004F4E]">Software Development</span>
                 )}
               </span>
             </div>
@@ -84,11 +84,11 @@ const FAQ = ({ departmentFaq }: FaqProps) => {
             >
               <span className="tab-label">
                 {activeTab === 'Operations' ? (
-                  <strong className="text-3xl text-[#036167]">
+                  <strong className="text-xs 2xl:text-2xl xl:text-xl lg:text-lg text-[#036167]">
                     Operations
                   </strong>
                 ) : (
-                  <span className="text-3xl text-[#004F4E]">Operations</span>
+                  <span className="text-xs 2xl:text-2xl xl:text-xl lg:text-lg text-[#004F4E]">Operations</span>
                 )}
               </span>
             </div>
