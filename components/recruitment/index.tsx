@@ -1,9 +1,12 @@
 import DepartmentRoles from '@components/recruitment/DepartmentRoles';
+import {Tab, Tabs,TabList} from '@chakra-ui/react';
 
 import MaxWidth from '@components/layout/MaxWidth';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { DepartmentRoleProps } from '@interfaces/recruitment/departmentRole';
+
 
 import React from 'react';
 import SignUp from './SignUp';
@@ -11,6 +14,13 @@ import SignUp from './SignUp';
 const Recruitment = () => {
   const router = useRouter();
   const isTechnical = router.asPath.includes('/technical-wing');
+  const [selectedTab, setSelectedTab] = isTechnical? React.useState(0) : React.useState(1)
+
+  const handleTabChange = () => {
+    selectedTab === 1 ? setSelectedTab(0) : setSelectedTab(1)
+
+  };
+  
 
   const TECHNICAL = [
     {
@@ -19,18 +29,22 @@ const Recruitment = () => {
         {
           title: 'Software Engineer',
           img: '/images/recruitment/Roles Icon/SD - Software Engineer.svg',
+          path: 'software-engineer',
         },
         {
           title: 'Technical Lead',
           img: '/images/recruitment/Roles Icon/SD - Technical Lead.svg',
+          path: 'sd-technical-lead',
         },
         {
           title: 'Design Manager',
           img: '/images/recruitment/Roles Icon/SD - Design Manager.svg',
+          path: 'design-manager',
         },
         {
           title: 'UI/UX Designer',
           img: '/images/recruitment/Roles Icon/SD - UIUX.svg',
+          path: 'uiux-designer',
         },
       ],
     },
@@ -40,14 +54,17 @@ const Recruitment = () => {
         {
           title: 'Technical Analyst Trainee',
           img: '/images/recruitment/Roles Icon/ML - Technical Analyst Trainee.svg',
+          path: 'technical-analyst-trainee',
         },
         {
           title: 'Technical Lead (Project/Quadrant)',
           img: '/images/recruitment/Roles Icon/ML - Technical Lead.svg',
+          path: 'ml-technical-lead',
         },
         {
           title: 'Technical Analyst (Project/Quadrant)',
           img: '/images/recruitment/Roles Icon/ML - Technical Analyst.svg',
+          path: 'technical-analyst',
         },
       ],
     },
@@ -57,22 +74,27 @@ const Recruitment = () => {
         {
           title: 'Blockchain Lead Developer',
           img: '/images/recruitment/Roles Icon/BC - Blockchain Lead Developer.svg',
+          path: 'blockchain-lead-developer',
         },
         {
           title: 'Blockchain Developer',
           img: '/images/recruitment/Roles Icon/BC - Blockchain Developer.svg',
+          path: 'blockchain-developer',
         },
         {
           title: 'Core Blockchain Developer',
           img: '/images/recruitment/Roles Icon/BC - Core Blockchain Developer.svg',
+          path: 'core-blockchain-developer',
         },
         {
           title: 'Community Manager',
           img: '/images/recruitment/Roles Icon/BC - Community Manager.svg',
+          path: 'community-manager',
         },
         {
           title: 'Research Analyst',
           img: '/images/recruitment/Roles Icon/BC - Research Analyst.svg',
+          path: 'research-analyst',
         },
       ],
     },
@@ -83,20 +105,24 @@ const Recruitment = () => {
       department: 'External Relations',
       roles: [
         {
-          title: 'Partnerships Lead',
+          title: 'Partnership Lead',
           img: '/images/recruitment/Roles Icon/ER - Partnerships Lead.svg',
+          path: 'partnership-lead',
         },
         {
-          title: 'Partnerships Executive',
+          title: 'Partnership Executive',
           img: '/images/recruitment/Roles Icon/ER - Partnerships Executive.svg',
+          path: 'partnership-executive',
         },
         {
           title: 'Marketing Lead',
           img: '/images/recruitment/Roles Icon/ER - Marketing Lead.svg',
+          path: 'marketing-lead',
         },
         {
           title: 'Marketing Executive',
           img: '/images/recruitment/Roles Icon/ER - Marketing Executive.svg',
+          path: 'marketing-executive',
         },
       ],
     },
@@ -106,38 +132,47 @@ const Recruitment = () => {
         {
           title: 'Project Management Lead',
           img: '/images/recruitment/Roles Icon/IA - Project Management Lead.svg',
+          path: 'project-management-lead',
         },
         {
           title: 'Project Management Executive',
           img: '/images/recruitment/Roles Icon/IA - Project Management Executive.svg',
+          path: 'project-management-executive',
         },
         {
           title: 'Talent Management Lead',
           img: '/images/recruitment/Roles Icon/IA - Talent Management Lead.svg',
+          path: 'talent-management-lead',
         },
         {
           title: 'Talent Management Executive',
           img: '/images/recruitment/Roles Icon/IA - Talent Management Executive.svg',
+          path: 'talent-management-executive',
         },
         {
           title: 'Finance Lead',
           img: '/images/recruitment/Roles Icon/IA - Finance Lead.svg',
+          path: 'finance-lead',
         },
         {
           title: 'Finance Executive',
           img: '/images/recruitment/Roles Icon/IA - Finance Executive.svg',
+          path: 'finance-executive',
         },
         {
           title: 'Community Development Lead',
           img: '/images/recruitment/Roles Icon/IA - Community Development Lead.svg',
+          path: 'community-development-lead',
         },
         {
           title: 'Community Development Executive',
           img: '/images/recruitment/Roles Icon/IA - Community Development Executive.svg',
+          path: 'community-development-executive',
         },
         {
           title: 'Product Manager',
           img: '/images/recruitment/Roles Icon/IA - Product Manager.svg',
+          path: 'product-manager',
         },
       ],
     },
@@ -160,23 +195,36 @@ const Recruitment = () => {
             </h1>
           </div>
 
-          {/*
-        <div className="hidden xl:block xl:mt-16 xl:ml-auto">
-          <div className = "rounded-md w-80 ml-auto mr-10 bg-white border-2 shadow-lg">
-            <Tabs color='grey' size='sm' padding='1' onChange={() => setIsInternal(!isInternal)} >
-              <TabList>
-                <Tab className="flex-1" _selected={{ color: "#090071", bg:"#EDECF6", fontWeight:"bold"}}>Technical Wing</Tab>
-                <Tab className="flex-1" _selected={{ color: "#090071",bg:"#EDECF6",  fontWeight:"bold" }}>Operation Wing</Tab>
-              </TabList>
-            </Tabs>
+          
+          <div className=" hidden xl:block xl:block xl:mt-16 xl:ml-auto">
+            <div className="bg-white border-2 shadow-lg rounded-md xl:w-80 xl:ml-auto xl:mr-10 ">
+              <Tabs color='grey' size='sm' padding='1' onChange={handleTabChange} index={selectedTab}> 
+                <TabList>
+                  <Link href="/recruitment/technical-wing">
+                    <Tab className="flex-1" _selected={{ color: "#090071", bg: "#EDECF6", fontWeight: "bold" }}>
+                      Technical Wing
+                    </Tab>
+                  </Link>
+                  <Link href="/recruitment/operations-wing">
+                    <Tab className="flex-1" _selected={{ color: "#090071", bg: "#EDECF6", fontWeight: "bold" }}>
+                      Operations Wing
+                    </Tab>  
+                  </Link>
+                </TabList>
+              </Tabs>
+            </div>
           </div>
-        </div>
-*/}
-        </div>
+          </div>
+
 
         <div className="section-my">
           <h2 className="mb-5 text-center text-2xl font-bold text-[#002750] sm:mb-16 sm:text-4xl">
-            NUS Fintech Society Recruitment for AY 2023/2024
+            NUS Fintech Society Recruitment for AY 2023/2024 
+          </h2>
+          <h2 className="xl:hidden mb-5 text-center text-2xl font-bold text-[#002750] sm:mb-16 sm:text-4xl">
+            <span className='border-b-2 border-[#002750]'>
+              {isTechnical ? 'Technical Wing' : 'Operations Wing'}
+            </span>
           </h2>
 
           <p className=" text-left text-sm text-[#002750] sm:text-xl">

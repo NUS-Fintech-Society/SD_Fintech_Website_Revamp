@@ -11,7 +11,7 @@ const ContactUs: NextPage<RecruitmentData> = (props) => {
   return (
     <>
       <Head>
-        <title>NUS Fintech Society: Contact Us</title>
+        <title>Contact Us • NUS Fintech Society</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Contact {...props} />
