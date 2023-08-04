@@ -5,7 +5,12 @@ import { useState } from 'react';
 import { FaqProps } from '@interfaces/recruitment/Faq';
 import Accordion from '@components/contact/accordion';
 
-type TabName = 'General' | 'Blockchain' | 'Machine Learning' | 'Software Development' | 'Operations';
+type TabName =
+  | 'General'
+  | 'Blockchain'
+  | 'Machine Learning'
+  | 'Software Development'
+  | 'Operations';
 
 const FAQ = ({ departmentFaq }: FaqProps) => {
   const [activeTab, setActiveTab] = useState<TabName>('General');
@@ -22,7 +27,7 @@ const FAQ = ({ departmentFaq }: FaqProps) => {
     <div className="mt-8">
       <div className="mx-auto grid max-w-screen-xl grid-cols-10 gap-4">
         {/* Left column */}
-        <div className="col-span-3 rounded-lg bg-[#E6F0F0] p-8 hidden md:block">
+        <div className="col-span-3 hidden rounded-lg bg-[#E6F0F0] p-8 md:block">
           <div className="flex h-full flex-col justify-start gap-12">
             <div
               className={`tab ${activeTab === 'General' ? 'active' : ''}`}
@@ -30,9 +35,13 @@ const FAQ = ({ departmentFaq }: FaqProps) => {
             >
               <span className="tab-label">
                 {activeTab === 'General' ? (
-                  <strong className="text-xs 2xl:text-2xl xl:text-xl lg:text-lg text-[#036167]">General</strong>
+                  <strong className="text-xs text-[#036167] lg:text-lg xl:text-xl 2xl:text-2xl">
+                    General
+                  </strong>
                 ) : (
-                  <span className="text-xs 2xl:text-2xl xl:text-xl lg:text-lg text-[#004F4E]">General</span>
+                  <span className="text-xs text-[#004F4E] lg:text-lg xl:text-xl 2xl:text-2xl">
+                    General
+                  </span>
                 )}
               </span>
             </div>
@@ -42,39 +51,49 @@ const FAQ = ({ departmentFaq }: FaqProps) => {
             >
               <span className="tab-label">
                 {activeTab === 'Blockchain' ? (
-                  <strong className="text-xs 2xl:text-2xl xl:text-xl lg:text-lg text-[#036167]">
+                  <strong className="text-xs text-[#036167] lg:text-lg xl:text-xl 2xl:text-2xl">
                     Blockchain
                   </strong>
                 ) : (
-                  <span className="text-xs 2xl:text-2xl xl:text-xl lg:text-lg text-[#004F4E]">
+                  <span className="text-xs text-[#004F4E] lg:text-lg xl:text-xl 2xl:text-2xl">
                     Blockchain
                   </span>
                 )}
               </span>
             </div>
             <div
-              className={`tab ${activeTab === 'Machine Learning' ? 'active' : ''}`}
+              className={`tab ${
+                activeTab === 'Machine Learning' ? 'active' : ''
+              }`}
               onClick={() => handleTabClick('Machine Learning')}
             >
               <span className="tab-label">
                 {activeTab === 'Machine Learning' ? (
-                  <strong className="text-xs 2xl:text-2xl xl:text-xl lg:text-lg text-[#036167]">Machine Learning</strong>
+                  <strong className="text-xs text-[#036167] lg:text-lg xl:text-xl 2xl:text-2xl">
+                    Machine Learning
+                  </strong>
                 ) : (
-                  <span className="text-xs 2xl:text-2xl xl:text-xl lg:text-lg text-[#004F4E]">Machine Learning</span>
+                  <span className="text-xs text-[#004F4E] lg:text-lg xl:text-xl 2xl:text-2xl">
+                    Machine Learning
+                  </span>
                 )}
               </span>
             </div>
             <div
-              className={`tab ${activeTab === 'Software Development' ? 'active' : ''}`}
+              className={`tab ${
+                activeTab === 'Software Development' ? 'active' : ''
+              }`}
               onClick={() => handleTabClick('Software Development')}
             >
               <span className="tab-label">
                 {activeTab === 'Software Development' ? (
-                  <strong className="text-xs 2xl:text-2xl xl:text-xl lg:text-lg text-[#036167]">
+                  <strong className="text-xs text-[#036167] lg:text-lg xl:text-xl 2xl:text-2xl">
                     Software Development
                   </strong>
                 ) : (
-                  <span className="text-xs 2xl:text-2xl xl:text-xl lg:text-lg text-[#004F4E]">Software Development</span>
+                  <span className="text-xs text-[#004F4E] lg:text-lg xl:text-xl 2xl:text-2xl">
+                    Software Development
+                  </span>
                 )}
               </span>
             </div>
@@ -84,11 +103,13 @@ const FAQ = ({ departmentFaq }: FaqProps) => {
             >
               <span className="tab-label">
                 {activeTab === 'Operations' ? (
-                  <strong className="text-xs 2xl:text-2xl xl:text-xl lg:text-lg text-[#036167]">
+                  <strong className="text-xs text-[#036167] lg:text-lg xl:text-xl 2xl:text-2xl">
                     Operations
                   </strong>
                 ) : (
-                  <span className="text-xs 2xl:text-2xl xl:text-xl lg:text-lg text-[#004F4E]">Operations</span>
+                  <span className="text-xs text-[#004F4E] lg:text-lg xl:text-xl 2xl:text-2xl">
+                    Operations
+                  </span>
                 )}
               </span>
             </div>
@@ -98,54 +119,54 @@ const FAQ = ({ departmentFaq }: FaqProps) => {
         {/* Right column */}
         <div className="col-span-10 md:col-span-7">
           {/* Mobile View */}
-          <div className="md:hidden flex flex-col gap-4">
+          <div className="flex flex-col gap-4 md:hidden">
             {/* Display tab headers */}
             <div className="mb-4 flex justify-center gap-4">
               <div
-                className={`px-4 py-2 rounded-full ${
+                className={`rounded-full px-4 py-2 ${
                   activeTab === 'General'
-                    ? 'bg-[#E6F0F0] text-[#024B50] font-bold drop-shadow-md'
-                    : 'bg-white text-[#D2D2D2] font-bold drop-shadow-md'
+                    ? 'bg-[#E6F0F0] font-bold text-[#024B50] drop-shadow-md'
+                    : 'bg-white font-bold text-[#D2D2D2] drop-shadow-md'
                 }`}
                 onClick={() => handleTabClick('General')}
               >
                 General
               </div>
               <div
-                className={`px-4 py-2 rounded-full ${
+                className={`rounded-full px-4 py-2 ${
                   activeTab === 'Blockchain'
-                    ? 'bg-[#E6F0F0] text-[#024B50] font-bold drop-shadow-md'
-                    : 'bg-white text-[#D2D2D2] font-bold drop-shadow-md'
+                    ? 'bg-[#E6F0F0] font-bold text-[#024B50] drop-shadow-md'
+                    : 'bg-white font-bold text-[#D2D2D2] drop-shadow-md'
                 }`}
                 onClick={() => handleTabClick('Blockchain')}
               >
                 BC
               </div>
               <div
-                className={`px-4 py-2 rounded-full ${
+                className={`rounded-full px-4 py-2 ${
                   activeTab === 'Machine Learning'
-                    ? 'bg-[#E6F0F0] text-[#024B50] font-bold drop-shadow-md'
-                    : 'bg-white text-[#D2D2D2] font-bold drop-shadow-md'
+                    ? 'bg-[#E6F0F0] font-bold text-[#024B50] drop-shadow-md'
+                    : 'bg-white font-bold text-[#D2D2D2] drop-shadow-md'
                 }`}
                 onClick={() => handleTabClick('Machine Learning')}
               >
                 ML
               </div>
               <div
-                className={`px-4 py-2 rounded-full ${
+                className={`rounded-full px-4 py-2 ${
                   activeTab === 'Software Development'
-                    ? 'bg-[#E6F0F0] text-[#024B50] font-bold drop-shadow-md'
-                    : 'bg-white text-[#D2D2D2] font-bold drop-shadow-md'
+                    ? 'bg-[#E6F0F0] font-bold text-[#024B50] drop-shadow-md'
+                    : 'bg-white font-bold text-[#D2D2D2] drop-shadow-md'
                 }`}
                 onClick={() => handleTabClick('Software Development')}
               >
                 SD
               </div>
               <div
-                className={`px-4 py-2 rounded-full ${
+                className={`rounded-full px-4 py-2 ${
                   activeTab === 'Operations'
-                    ? 'bg-[#E6F0F0] text-[#024B50] font-bold drop-shadow-md'
-                    : 'bg-white text-[#D2D2D2] font-bold drop-shadow-md'
+                    ? 'bg-[#E6F0F0] font-bold text-[#024B50] drop-shadow-md'
+                    : 'bg-white font-bold text-[#D2D2D2] drop-shadow-md'
                 }`}
                 onClick={() => handleTabClick('Operations')}
               >

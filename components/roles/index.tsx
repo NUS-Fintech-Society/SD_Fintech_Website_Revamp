@@ -9,7 +9,6 @@ import RolesInfo from './RolesInfo';
 
 const Roles = ({
     name,
-    path,
     logo,
     aboutUs,
     onboarding,
@@ -21,7 +20,6 @@ const Roles = ({
         <MaxWidth>
             <RolesInfo
                 name={name}
-                path={path}
                 logo={logo}
                 aboutUs={aboutUs}
                 onboarding={onboarding}

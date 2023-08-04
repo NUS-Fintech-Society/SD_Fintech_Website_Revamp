@@ -16,12 +16,16 @@ const RolesInfo = ({
   onboarding,
   roleDescription,
   requirements,
-  subteams
+  subteams,
 }: RolesInfoProps) => {
-
-  const renderSubteamsCard = subteams.map((data, index) =>
-    <SubteamsCard key={index} teamName={data.teamName} teamDescription={data.teamDescription} teamImage={data.teamImage} />
-  )
+  const renderSubteamsCard = subteams.map((data, index) => (
+    <SubteamsCard
+      key={index}
+      teamName={data.teamName}
+      teamDescription={data.teamDescription}
+      teamImage={data.teamImage}
+    />
+  ));
 
   return (
     <>
@@ -29,16 +33,17 @@ const RolesInfo = ({
         <div className="relative h-[52px] w-[68.88px] sm:h-[139px] sm:w-[184px]">
           <Image src={logo.src} alt={logo.alt} layout="fill" />
         </div>
-        <h1 className="ml-4 mt-3 underline underline-offset-[6px] sm:underline-offset-[14px] sm:mt-10 sm:ml-6 sm:text-6xl sm:leading-[4.538rem]">{`${name
-          }`}</h1>
+        <h1 className="ml-4 mt-3 underline underline-offset-[6px] sm:mt-10 sm:ml-6 sm:text-6xl sm:leading-[4.538rem] sm:underline-offset-[14px]">{`${name}`}</h1>
       </div>
 
       <RolesText header={aboutUs.header} desc={aboutUs.desc} />
 
-      {subteams.length !== 0 && <div className="mb-10 flex flex-col space-y-[30px] lg:space-y-0 lg:space-x-[70px] lg:flex-row justify-center">
-        {renderSubteamsCard}
-      </div>}
-      
+      {subteams.length !== 0 && (
+        <div className="mb-10 flex flex-col justify-center space-y-[30px] lg:flex-row lg:space-y-0 lg:space-x-[70px]">
+          {renderSubteamsCard}
+        </div>
+      )}
+
       <RolesText header={onboarding.header} desc={onboarding.desc} />
       <RolesText header={roleDescription.header} desc={roleDescription.desc} />
       <RolesText header={requirements.header} desc={requirements.desc} />

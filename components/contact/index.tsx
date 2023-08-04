@@ -1,8 +1,3 @@
-// type
-
-// library
-import Image from 'next/image';
-
 // code
 // import Form from '@components/contact/Form';
 // import Info from '@components/contact/Info';
@@ -10,16 +5,15 @@ import Image from 'next/image';
 import MaxWidth from '@components/layout/MaxWidth';
 import Image from 'next/image';
 import SectionHeader from '@components/layout/SectionHeader';
-import ContactInfoCard from './ContactInfoCard';
-
 import FAQ from '@components/contact/faq';
 import { RecruitmentProps } from '@interfaces/recruitment';
+import ContactInfoCard from './ContactInfoCard';
 
 const Contact = ({ departmentFaq }: RecruitmentProps) => {
   return (
     <>
       <MaxWidth>
-        <div className="flex mb-20">
+        <div className="mb-20 flex">
           <div className="mt-3 flex flex-wrap text-[24.48px] font-bold leading-8 text-[#002750] ">
             <div className="relative h-[52px] w-[47.46px]  sm:h-[100px] sm:w-[91.27px]">
               <Image

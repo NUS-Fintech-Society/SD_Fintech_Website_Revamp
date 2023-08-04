@@ -14,7 +14,7 @@ const DepartmentRoles = ({ department, roles }: DepartmentRoleProps) => {
   return (
     <div className="sm:section-my my-16">
       <SectionHeader color={color} title={department} subtitle="" />
-      <div className='w-fit mx-auto'>
+      <div className="mx-auto w-fit">
         <div className="mt-8 grid grid-cols-1 gap-10 lg:grid-cols-2 xl:grid-cols-3">
           {roles.map((role: Role, index: number) => (
             <Link key={index} href={role.path} passHref>
