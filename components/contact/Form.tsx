@@ -19,6 +19,13 @@ const commonStyles = {
 };
 
 const Form = () => {
+  let emailApiUrl = process.env.EMAIL_API_DEV; 
+  let redirectUrl = "http://localhost:3000/contact-us";
+  if (process.env.NODE_ENV === 'production') {
+    emailApiUrl = process.env.EMAIL_API_PROD;
+    redirectUrl = "https://fintechsociety.comp.nus.edu.sg/contact-us";
+  }
+
   return (
     <div className="m-2 flex flex-col items-center md:m-5 lg:mt-0">
       <h1 className="mt-2 w-4/5 self-center text-center text-base font-bold text-[#004080] md:text-2xl lg:mt-4 lg:w-fit lg:text-3xl">
@@ -27,7 +34,7 @@ const Form = () => {
 
       <div className="mt-5 flex">
         <form
-          action="https://formsubmit.co/57ba0ba7fab2eeecf5e10de6f0388f08"
+          action={emailApiUrl}
           method="POST"
         >
           <Input type="hidden" name="_template" value="table" />
@@ -36,11 +43,10 @@ const Form = () => {
             name="_subject"
             value="Enquiry for NUS Fintech Society"
           />
-          {/* Replace with domain name */}
           <Input
             type="hidden"
             name="_next"
-            value="http://localhost:3000/contact-us"
+            value={redirectUrl}
           />
 
           <Stack spacing={[5, 5, 6]} marginBottom={[5, 5, 6]}>
