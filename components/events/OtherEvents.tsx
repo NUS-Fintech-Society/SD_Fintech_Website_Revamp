@@ -97,6 +97,8 @@ const OtherEvents = ({ events }: EventsProps) => {
   return (
     <div>
       <MaxWidth>
+      {/*
+
         <div className="section-my">
           <h2 className="mb-10 text-center text-h2 font-bold">
             All Upcoming Events
@@ -120,13 +122,19 @@ const OtherEvents = ({ events }: EventsProps) => {
             )}
           </div>
         </div>
+        */}
 
         <SectionHeader
           color="green"
           title="Past Events"
           subtitle="A walk down memory lane"
         />
+
+        <div className="flex justify-center items-center">
+          <div className='mt-8 text-base md:mt-10 md:text-2xl lg:mt-16 lg:text-3xl'>No Events To Display</div>
+        </div>
       </MaxWidth>
+      {/*
 
       <div className={`${isShown ? 'bg-black/70' : ''} flex justify-center`}>
         <div
@@ -211,6 +219,7 @@ const OtherEvents = ({ events }: EventsProps) => {
           </div>
         </div>
       </div>
+      */}
     </div>
   );
 };

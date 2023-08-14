@@ -12,7 +12,7 @@ import SignUp from './SignUp';
 
 const Recruitment = () => {
   const router = useRouter();
-  const isTechnical = router.asPath.includes('/technical-wing') ? 0 : 1;
+  const isTechnical = router.asPath.includes('/technical-wing') ? 1 : 0;
   const [selectedTab, setSelectedTab] = React.useState(isTechnical);
 
   const handleTabChange = () => {
@@ -58,12 +58,12 @@ const Recruitment = () => {
           path: 'technical-analyst-trainee',
         },
         {
-          title: 'Technical Lead (Project/Quadrant)',
+          title: 'Technical Lead (Project/Quant)',
           img: '/images/recruitment/Roles Icon/ML - Technical Lead.svg',
           path: 'ml-technical-lead',
         },
         {
-          title: 'Technical Analyst (Project/Quadrant)',
+          title: 'Technical Analyst (Project/Quant)',
           img: '/images/recruitment/Roles Icon/ML - Technical Analyst.svg',
           path: 'technical-analyst',
         },
@@ -203,7 +203,7 @@ const Recruitment = () => {
                 size="sm"
                 padding="1"
                 onChange={handleTabChange}
-                index={selectedTab}
+                index={selectedTab === 1 ? 0 : 1}
               >
                 <TabList>
                   <Link href="/recruitment/technical-wing">
