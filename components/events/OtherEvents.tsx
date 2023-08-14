@@ -96,7 +96,7 @@ const OtherEvents = ({ events }: EventsProps) => {
 
   return (
     <div>
-      <MaxWidth>
+      
       {/*
 
         <div className="section-my">
@@ -133,7 +133,7 @@ const OtherEvents = ({ events }: EventsProps) => {
         <div className="flex justify-center items-center">
           <div className='mt-8 text-base md:mt-10 md:text-2xl lg:mt-16 lg:text-3xl'>No Events To Display</div>
         </div>
-      </MaxWidth>
+      
       {/*
 
       <div className={`${isShown ? 'bg-black/70' : ''} flex justify-center`}>
