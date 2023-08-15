@@ -95,7 +95,7 @@ const DeptCarousel = ({
                   </div>
 
           
-                  <div className='mt-6 ml-auto mr-32 sm:mt-10 sm:ml-auto sm:mr-11 md:mt-10 md:ml-auto md:mr-36 lg:mt-10 lg:ml-auto lg:mr-2 xl:mt-10 xl:ml-auto xl:mr-2'>
+                  <div className='mt-7 ml-auto mr-16 sm:mt-10 sm:ml-auto sm:mr-16 md:mt-10 md:ml-auto md:mr-36 lg:mt-10 lg:ml-auto lg:mr-2 xl:mt-10 xl:ml-auto xl:mr-2'>
                     <a
                       href={director.linkedin}
                       title="Director Linkedin Page"
