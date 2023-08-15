@@ -8,6 +8,8 @@ import SectionHeader from '@components/layout/SectionHeader';
 import FAQ from '@components/contact/faq';
 import { RecruitmentProps } from '@interfaces/recruitment';
 import ContactInfoCard from './ContactInfoCard';
+import Form from './Form';
+import Info from './Info';
 
 const Contact = ({ departmentFaq }: RecruitmentProps) => {
   return (
@@ -42,20 +44,21 @@ const Contact = ({ departmentFaq }: RecruitmentProps) => {
           />
         </div>
         <FAQ departmentFaq={departmentFaq} />
-        {/* <div className="section-my flex w-full flex-wrap text-lg md:text-xl lg:justify-around">
-          <div className="mb-10 w-full lg:order-2 lg:flex lg:w-1/2">
+      
+      </MaxWidth>
+
+        <div className="section-my flex w-full flex-wrap text-lg md:text-xl lg:justify-around lg:items-center">
+          <div className="mb-10 mt-20 w-full order-2 lg:mt-10 lg:order-1 lg:flex lg:w-1/2">
             <div className="lg:w-5/6">
-              <Info />
+              <ContactInfoCard />
             </div>
           </div>
-          <div className="w-full lg:order-1 lg:w-1/2">
+          <div className="w-full order-1 lg:order-2 lg:w-1/2">
             <div className="lg:w-5/6">
               <Form />
             </div>
           </div>
-        </div> */}
-      </MaxWidth>
-      <ContactInfoCard />
+        </div>
     </>
   );
 };
