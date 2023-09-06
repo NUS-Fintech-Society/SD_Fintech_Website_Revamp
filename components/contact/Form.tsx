@@ -20,7 +20,7 @@ const Form = () => {
 
       <div className="mt-5 flex">
         <form
-          action="https://formsubmit.co/57ba0ba7fab2eeecf5e10de6f0388f08"
+          action="https://formsubmit.co/pijurasa@mailgolem.com"
           method="POST"
         >
           <Input type="hidden" name="_template" value="table" />
