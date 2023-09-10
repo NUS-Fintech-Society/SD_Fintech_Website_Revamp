@@ -4,12 +4,14 @@ import {
   Input,
   Select,
   Stack,
-  Textarea,
+  Textarea
 } from '@chakra-ui/react';
 import departmentsData from '@data/departmentsData';
 import rolesData from '@data/rolesData';
 import { DepartmentsProps } from '@interfaces/departments';
 import { RoleProps } from '@interfaces/roles';
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 const commonStyles = {
   bg: '#f5f5f7',
@@ -19,11 +21,18 @@ const commonStyles = {
 };
 
 const Form = () => {
-  let emailApiUrl = process.env.EMAIL_API_DEV; 
-  let redirectUrl = "http://localhost:3000/contact-us";
-  if (process.env.NODE_ENV === 'production') {
-    emailApiUrl = process.env.EMAIL_API_PROD;
-    redirectUrl = "https://fintechsociety.comp.nus.edu.sg/contact-us";
+  const emailApiUrl = process.env.EMAIL_API; 
+  const { asPath } = useRouter();
+  const origin =
+      typeof window !== 'undefined' && window.location.origin
+          ? window.location.origin
+          : 'https://fintechsociety.comp.nus.edu.sg';
+
+  const routerUrl = `${origin}${asPath}`;
+  const [subject, setSubject] = useState("")
+
+  const handleInput = (value: string): void => {
+    setSubject(value)
   }
 
   return (
@@ -41,12 +50,12 @@ const Form = () => {
           <Input
             type="hidden"
             name="_subject"
-            value="Enquiry for NUS Fintech Society"
+            value={subject}
           />
           <Input
             type="hidden"
             name="_next"
-            value={redirectUrl}
+            value={routerUrl}
           />
 
           <Stack spacing={[5, 5, 6]} marginBottom={[5, 5, 6]}>
@@ -99,6 +108,17 @@ const Form = () => {
             </Select>
 
             <FormControl isRequired>
+              <Input
+                name="Subject"
+                variant="filled"
+                placeholder="Subject"
+                value={subject}
+                onChange={e => handleInput(e.target.value)}
+                {...commonStyles}
+              />
+            </FormControl>
+
+            <FormControl isRequired>
               <Textarea
                 name="Message"
                 variant="filled"
@@ -125,3 +145,5 @@ const Form = () => {
 };
 
 export default Form;
+
+
