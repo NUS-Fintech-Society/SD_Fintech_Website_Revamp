@@ -11,7 +11,7 @@ import rolesData from '@data/rolesData';
 import { DepartmentsProps } from '@interfaces/departments';
 import { RoleProps } from '@interfaces/roles';
 import { useState } from 'react';
-
+import { useRouter } from 'next/router';
 
 const commonStyles = {
   bg: '#f5f5f7',
@@ -21,17 +21,17 @@ const commonStyles = {
 };
 
 const Form = () => {
-  //change redirect url to be the router path 
-  //add subject to form and use it to change the subject of the email
-  
   const emailApiUrl = process.env.EMAIL_API; 
-  // console.log(emailApiUrl)
-  const redirectUrl = process.env.REDIRECT_URL;
-  // console.log(redirectUrl)
+  const { asPath } = useRouter();
+  const origin =
+      typeof window !== 'undefined' && window.location.origin
+          ? window.location.origin
+          : 'https://fintechsociety.comp.nus.edu.sg';
 
+  const routerUrl = `${origin}${asPath}`;
   const [subject, setSubject] = useState("")
 
-  function handleInput(value: string): void {
+  const handleInput = (value: string): void => {
     setSubject(value)
   }
 
@@ -55,7 +55,7 @@ const Form = () => {
           <Input
             type="hidden"
             name="_next"
-            value="https://fintechsociety.comp.nus.edu.sg/contact-us"
+            value={routerUrl}
           />
 
           <Stack spacing={[5, 5, 6]} marginBottom={[5, 5, 6]}>
@@ -112,8 +112,8 @@ const Form = () => {
                 name="Subject"
                 variant="filled"
                 placeholder="Subject"
-                value={subject} // Bind the subject state to the input value
-                onChange={e => handleInput(e.target.value)} // Update the subject
+                value={subject}
+                onChange={e => handleInput(e.target.value)}
                 {...commonStyles}
               />
             </FormControl>
