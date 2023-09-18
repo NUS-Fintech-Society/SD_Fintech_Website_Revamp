@@ -269,8 +269,6 @@ const Recruitment = () => {
             can discover more from the <strong>roles listed below.</strong>
           </p>
         </div>
-      </MaxWidth>
-      <div className="px-6 md:px-14">
         {isTechnical
           ? TECHNICAL.map((department: DepartmentRoleProps, index) => (
               <DepartmentRoles
@@ -286,8 +284,8 @@ const Recruitment = () => {
                 roles={department.roles}
               />
             ))}
-      </div>
-      <SignUp />
+        <SignUp />
+      </MaxWidth>
     </>
   );
 };
