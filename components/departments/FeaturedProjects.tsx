@@ -30,7 +30,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
       />
 
       {/* Filter Button */}
-      <div className=" ml-4 mt-12 flex items-center">
+      {/* <div className=" ml-4 mt-12 flex items-center">
         <button
           type="button"
           className="flex items-center rounded-md bg-[#036167] px-4 py-2 text-white"
@@ -38,7 +38,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
           <span className="mr-2">FILTER</span>
           <FaAngleDown />
         </button>
-      </div>
+      </div> */}
 
       {/* Mobile Carousel */}
       <div className="mt-10 flex flex-wrap justify-center gap-10 md:mt-14 md:gap-16 lg:hidden">
