@@ -3,7 +3,7 @@ import { FeaturedProjectsProps } from '@interfaces/departments/FeaturedProjectsP
 
 // library
 import React, { useState } from 'react';
-import { FaAngleDown } from 'react-icons/fa';
+// import { FaAngleDown } from 'react-icons/fa';
 
 // code
 import ProjectCard from '@components/departments/ProjectCard';

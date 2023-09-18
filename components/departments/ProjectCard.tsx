@@ -2,7 +2,7 @@
 import { ProjectCardProps } from '@interfaces/departments/ProjectCard';
 
 // library
-import Link from 'next/link';
+// import Link from 'next/link';
 import Image from 'next/image';
 
 const ProjectCard = ({

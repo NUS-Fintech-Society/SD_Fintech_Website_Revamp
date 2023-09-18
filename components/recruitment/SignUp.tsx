@@ -1,4 +1,3 @@
-import MaxWidth from '@components/layout/MaxWidth';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
