@@ -19,9 +19,7 @@ const DepartmentInfo = ({
         <div className="relative h-[52px] w-[68.88px] sm:h-[139px] sm:w-[184px]">
           <Image src={logo.src} alt={logo.alt} layout="fill" />
         </div>
-        <h1 className="ml-4 mt-3 border-b-2 border-[#002750] sm:mt-10 sm:ml-6 sm:border-b-4 sm:text-6xl sm:leading-[4.538rem]">{`${
-           name
-        }`}</h1>
+        <h1 className="ml-4 mt-3 border-b-2 border-[#002750] sm:ml-6 sm:mt-10 sm:border-b-4 sm:text-6xl sm:leading-[4.538rem]">{`${name}`}</h1>
       </div>
 
       <div className="sm:flex sm:flex-wrap sm:gap-x-20">
@@ -36,7 +34,7 @@ const DepartmentInfo = ({
           <div className="py-8 text-xl font-bold leading-[1.388rem] sm:py-10 sm:text-3xl">
             Roles
           </div>
-          <ul className="grid gap-y-6 leading-[1.044rem] sm:grid-cols-2 sm:gap-y-14 sm:gap-x-10 sm:text-lg">
+          <ul className="grid gap-y-6 leading-[1.044rem] sm:grid-cols-2 sm:gap-x-10 sm:gap-y-14 sm:text-lg">
             {roles.map((role, index) => (
               <li key={index}>{role}</li>
             ))}

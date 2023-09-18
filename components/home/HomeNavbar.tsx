@@ -20,7 +20,6 @@ const RECRUITMENT_ITEMS = [
   ['Operations Wing', '/recruitment/operations-wing'],
 ];
 
-
 const HomeNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -41,7 +40,7 @@ const HomeNavbar = () => {
           </Link>
         </div>
 
-        <div className="mt-6 mr-24 h-[55px] lg:ml-auto">
+        <div className="mr-24 mt-6 h-[55px] lg:ml-auto">
           <div
             onClick={() => setIsOpen(!isOpen)}
             className="absolute right-[24px] top-[37px] z-30 -translate-y-1/2 cursor-pointer sm:right-[48px] lg:hidden"
@@ -75,7 +74,7 @@ const HomeNavbar = () => {
                 </Link>
               </li>
 
-              <li className="my-7 py-1 px-4 md:my-0">
+              <li className="my-7 px-4 py-1 md:my-0">
                 <div className="lg:hidden">
                   <div className="rounded-md">Departments</div>
                   <ul>
@@ -114,7 +113,7 @@ const HomeNavbar = () => {
                 </Link>
               </li>
 
-              <li className="my-7 py-1 px-4 md:my-0">
+              <li className="my-7 px-4 py-1 md:my-0">
                 <div className="lg:hidden">
                   <div className="rounded-md ">Recruitment</div>
                   <ul>
@@ -144,7 +143,7 @@ const HomeNavbar = () => {
                 </div>
               </li>
 
-{/*
+              {/*
               <li className="my-7 px-4 py-1 hover:text-gray-400 md:my-0">
                 <Link
                   href="/recruitment"

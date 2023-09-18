@@ -24,7 +24,7 @@ const SectionHeader = ({
         className="-z-10"
       />
       <h2 className="text-center font-bold text-white sm:text-3xl">{title}</h2>
-      <h3 className="mt-1 ml-auto max-w-lg text-right text-xs text-white sm:text-lg">
+      <h3 className="ml-auto mt-1 max-w-lg text-right text-xs text-white sm:text-lg">
         {subtitle}
       </h3>
     </div>

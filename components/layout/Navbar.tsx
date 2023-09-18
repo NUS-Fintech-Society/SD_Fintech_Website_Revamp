@@ -20,7 +20,6 @@ const RECRUITMENT_ITEMS = [
   ['Operations Wing', '/recruitment/operations-wing'],
 ];
 
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -43,7 +42,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="mt-6 mr-24 h-[55px] lg:ml-auto">
+        <div className="mr-24 mt-6 h-[55px] lg:ml-auto">
           <div
             onClick={() => setIsOpen(!isOpen)}
             className="absolute right-[24px] top-[37px] z-30 mt-3 -translate-y-1/2 cursor-pointer sm:right-[48px] lg:hidden"
@@ -85,7 +84,7 @@ const Navbar = () => {
                 </Link>
               </li>
 
-              <li className="my-3  ml-4 md:my-0 md:py-1 md:px-4 lg:ml-5 lg:py-1">
+              <li className="my-3  ml-4 md:my-0 md:px-4 md:py-1 lg:ml-5 lg:py-1">
                 <div className="lg:hidden">
                   <div className="rounded-md ">DEPARTMENTS</div>
                   <ul>
@@ -124,8 +123,7 @@ const Navbar = () => {
                 </Link>
               </li>
 
-
-              <li className="my-3  ml-4 md:my-0 md:py-1 md:px-4 lg:ml-5 lg:py-1">
+              <li className="my-3  ml-4 md:my-0 md:px-4 md:py-1 lg:ml-5 lg:py-1">
                 <div className="lg:hidden">
                   <div className="rounded-md ">RECRUITMENT</div>
                   <ul>
@@ -155,7 +153,7 @@ const Navbar = () => {
                 </div>
               </li>
 
-            {/*
+              {/*
               <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-4 md:py-1">
                 <Link
                   href="/recruitment"
@@ -183,5 +181,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-

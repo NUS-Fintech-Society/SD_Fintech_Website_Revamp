@@ -196,7 +196,7 @@ const Recruitment = () => {
             </h1>
           </div>
 
-          <div className="hidden xl:mt-16 xl:ml-auto xl:block">
+          <div className="hidden xl:ml-auto xl:mt-16 xl:block">
             <div className="rounded-md border-2 bg-white shadow-lg xl:ml-auto xl:mr-10 xl:w-80 ">
               <Tabs
                 color="grey"

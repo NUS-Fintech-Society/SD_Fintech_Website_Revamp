@@ -81,7 +81,7 @@ const ProjectContent = ({
         <>
           <div className="mt-7 flex">
             <div className="rounded-lg  border-primary">
-              <h2 className="my-2 mx-5 text-lg font-semibold md:text-xl lg:text-2xl ">
+              <h2 className="mx-5 my-2 text-lg font-semibold md:text-xl lg:text-2xl ">
                 Collaborations
               </h2>
             </div>

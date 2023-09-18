@@ -16,11 +16,11 @@ const AboutPage = () => {
       </Head>
 
       <MaxWidth>
-        <div className="mt-3 mb-8 flex flex-wrap text-[24.48px] font-bold leading-8 text-[#002750] sm:ml-4">
+        <div className="mb-8 mt-3 flex flex-wrap text-[24.48px] font-bold leading-8 text-[#002750] sm:ml-4">
           <div className="relative h-[52px] w-[68.88px] sm:h-[139px] sm:w-[184px]">
             <Image src="/images/about/main_icon.jpg" alt="Logo" layout="fill" />
           </div>
-          <h1 className="ml-4 mt-3 border-b-2 border-[#002750] sm:mt-10 sm:ml-6 sm:border-b-4 sm:text-6xl sm:leading-[4.538rem]">
+          <h1 className="ml-4 mt-3 border-b-2 border-[#002750] sm:ml-6 sm:mt-10 sm:border-b-4 sm:text-6xl sm:leading-[4.538rem]">
             About Us
           </h1>
         </div>

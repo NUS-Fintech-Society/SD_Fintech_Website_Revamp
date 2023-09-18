@@ -33,7 +33,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
       <div className=" ml-4 mt-12 flex items-center">
         <button
           type="button"
-          className="flex items-center rounded-md bg-[#036167] py-2 px-4 text-white"
+          className="flex items-center rounded-md bg-[#036167] px-4 py-2 text-white"
         >
           <span className="mr-2">FILTER</span>
           <FaAngleDown />

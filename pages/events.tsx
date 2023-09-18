@@ -9,14 +9,14 @@ import Head from 'next/head';
 import Events from '@components/events';
 import { fetchEventsData } from '@data/mockFetch';
 
-const EventsPage: NextPage<EventsData> = (props) => {
+const EventsPage: NextPage<EventsData> = () => {
   return (
     <>
       <Head>
         <title>NUS Fintech Society</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Events {...props} />
+      <Events />
     </>
   );
 };

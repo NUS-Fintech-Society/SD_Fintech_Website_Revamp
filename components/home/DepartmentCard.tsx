@@ -28,7 +28,7 @@ const DepartmentCard = ({
           </div>
         </div>
         <div className="min-h-[135px] grow rounded-b-lg pl-4 sm:min-h-[256px] sm:pl-6">
-          <div className="mt-3 mr-12 flex h-[50px] items-center sm:min-h-[92px]">
+          <div className="mr-12 mt-3 flex h-[50px] items-center sm:min-h-[92px]">
             <h3
               className={`font-semibold sm:text-2xl ${
                 wingType === WingType.Technical
@@ -39,7 +39,7 @@ const DepartmentCard = ({
               {name}
             </h3>
           </div>
-          <p className="mr-4 mb-8 text-xs font-medium text-[#303030] sm:mr-12 sm:text-base sm:leading-5">
+          <p className="mb-8 mr-4 text-xs font-medium text-[#303030] sm:mr-12 sm:text-base sm:leading-5">
             {cardDescription}
           </p>
         </div>

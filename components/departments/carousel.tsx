@@ -38,7 +38,7 @@ const DeptCarousel = ({
           <h2 className="mb-8 flex text-xl font-bold sm:mb-10 sm:text-3xl">
             Vision
           </h2>
-          <p className="text-left sm:mt-10 sm:mb-9 sm:text-lg">{vision}</p>
+          <p className="text-left sm:mb-9 sm:mt-10 sm:text-lg">{vision}</p>
         </div>
         <div className="p-8 text-white sm:px-14 sm:py-10">
           <h2 className="flex text-xl font-bold sm:mb-6 sm:text-3xl">
@@ -48,7 +48,7 @@ const DeptCarousel = ({
             return directors.length === 1 ? (
               // Add more margins if there is only 1 director
               <Fragment key={director.src}>
-                <div className="mt-3 mb-28 flex sm:mt-5 sm:mb-36">
+                <div className="mb-28 mt-3 flex sm:mb-36 sm:mt-5">
                   <div className="relative mr-6 h-[75px] w-[75px] sm:h-[105px] sm:w-[105px]">
                     <Image
                       src={director.src}
@@ -61,11 +61,8 @@ const DeptCarousel = ({
                   <h3 className="mt-6 text-left align-bottom font-semibold sm:mt-9 sm:text-2xl">
                     {director.directorName}
                   </h3>
-                  <div className='mt-7 ml-10 sm:mt-10'>
-                    <a
-                      href={director.linkedin}
-                      title="Director Linkedin Page"
-                    >
+                  <div className="ml-10 mt-7 sm:mt-10">
+                    <a href={director.linkedin} title="Director Linkedin Page">
                       <svg
                         className="h-5 w-5 fill-current text-white sm:h-6 sm:w-6"
                         xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +76,7 @@ const DeptCarousel = ({
               </Fragment>
             ) : (
               <Fragment key={director.src}>
-                <div className="mt-6 mb-5 flex sm:mt-5">
+                <div className="mb-5 mt-6 flex sm:mt-5">
                   <div className="relative mr-6 h-[75px] w-[75px] sm:h-[105px] sm:w-[105px]">
                     <Image
                       src={director.src}
@@ -94,12 +91,8 @@ const DeptCarousel = ({
                     {director.directorName}
                   </div>
 
-          
-                  <div className='mt-7 ml-auto mr-16 sm:mt-10 sm:ml-auto sm:mr-16 md:mt-10 md:ml-auto md:mr-36 lg:mt-10 lg:ml-auto lg:mr-2 xl:mt-10 xl:ml-auto xl:mr-2'>
-                    <a
-                      href={director.linkedin}
-                      title="Director Linkedin Page"
-                    >
+                  <div className="ml-auto mr-16 mt-7 sm:ml-auto sm:mr-16 sm:mt-10 md:ml-auto md:mr-36 md:mt-10 lg:ml-auto lg:mr-2 lg:mt-10 xl:ml-auto xl:mr-2 xl:mt-10">
+                    <a href={director.linkedin} title="Director Linkedin Page">
                       <svg
                         className="h-5 w-5 fill-current text-white sm:h-6 sm:w-6"
                         xmlns="http://www.w3.org/2000/svg"
@@ -109,9 +102,6 @@ const DeptCarousel = ({
                       </svg>
                     </a>
                   </div>
-             
-
-
                 </div>
               </Fragment>
             );

@@ -28,7 +28,7 @@ const Footer = () => {
             />
           </div>
           <div className="flex-col">
-            <h3 className="mt-8 mb-2 text-center text-sm font-medium text-white sm:mt-10 sm:text-lg">
+            <h3 className="mb-2 mt-8 text-center text-sm font-medium text-white sm:mt-10 sm:text-lg">
               Let&apos;s Connect
             </h3>
             <div className="flex gap-4">
