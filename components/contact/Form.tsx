@@ -4,12 +4,14 @@ import {
   Input,
   Select,
   Stack,
-  Textarea,
+  Textarea
 } from '@chakra-ui/react';
 import departmentsData from '@data/departmentsData';
 import rolesData from '@data/rolesData';
 import { DepartmentsProps } from '@interfaces/departments';
 import { RoleProps } from '@interfaces/roles';
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 const commonStyles = {
   bg: '#f5f5f7',
@@ -19,6 +21,20 @@ const commonStyles = {
 };
 
 const Form = () => {
+  const emailApiUrl = process.env.EMAIL_API; 
+  const { asPath } = useRouter();
+  const origin =
+      typeof window !== 'undefined' && window.location.origin
+          ? window.location.origin
+          : 'https://fintechsociety.comp.nus.edu.sg';
+
+  const routerUrl = `${origin}${asPath}`;
+  const [subject, setSubject] = useState("")
+
+  const handleInput = (value: string): void => {
+    setSubject(value)
+  }
+
   return (
     <div className="m-2 flex flex-col items-center md:m-5 lg:mt-0">
       <h1 className="mt-2 w-4/5 self-center text-center text-base font-bold text-[#004080] md:text-2xl lg:mt-4 lg:w-fit lg:text-3xl">
@@ -27,20 +43,19 @@ const Form = () => {
 
       <div className="mt-5 flex">
         <form
-          action="https://formsubmit.co/57ba0ba7fab2eeecf5e10de6f0388f08"
+          action={emailApiUrl}
           method="POST"
         >
           <Input type="hidden" name="_template" value="table" />
           <Input
             type="hidden"
             name="_subject"
-            value="Enquiry for NUS Fintech Society"
+            value={subject}
           />
-          {/* Replace with domain name */}
           <Input
             type="hidden"
             name="_next"
-            value="http://localhost:3000/contact-us"
+            value={routerUrl}
           />
 
           <Stack spacing={[5, 5, 6]} marginBottom={[5, 5, 6]}>
@@ -93,6 +108,17 @@ const Form = () => {
             </Select>
 
             <FormControl isRequired>
+              <Input
+                name="Subject"
+                variant="filled"
+                placeholder="Subject"
+                value={subject}
+                onChange={e => handleInput(e.target.value)}
+                {...commonStyles}
+              />
+            </FormControl>
+
+            <FormControl isRequired>
               <Textarea
                 name="Message"
                 variant="filled"
@@ -119,3 +145,5 @@ const Form = () => {
 };
 
 export default Form;
+
+
