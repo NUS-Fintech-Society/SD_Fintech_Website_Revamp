@@ -1,7 +1,3 @@
-export interface EventsData {
-  events: Event[];
-}
-
 interface Event {
   coverImage: {
     src: string;
@@ -12,3 +8,8 @@ interface Event {
   location: string;
   date: string;
 }
+
+export interface EventsData {
+  events: Event[];
+}
+
