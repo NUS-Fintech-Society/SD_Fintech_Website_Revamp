@@ -1,5 +1,5 @@
 // code
-// import Form from '@components/contact/Form';
+// import Form from '@components/contact/ContactForm';
 // import Info from '@components/contact/Info';
 // import Landing from '@components/contact/landing';
 import MaxWidth from '@components/layout/MaxWidth';
@@ -8,7 +8,7 @@ import SectionHeader from '@components/layout/SectionHeader';
 import FAQ from '@components/contact/faq';
 import { RecruitmentProps } from '@interfaces/recruitment';
 import ContactInfoCard from './ContactInfoCard';
-import Form from './Form';
+import ContactForm from './ContactForm';
 
 const Contact = ({ departmentFaq }: RecruitmentProps) => {
   return (
@@ -53,7 +53,7 @@ const Contact = ({ departmentFaq }: RecruitmentProps) => {
         </div>
         <div className="order-1 w-full lg:order-2 lg:w-1/2">
           <div className="lg:w-5/6">
-            <Form />
+            <ContactForm />
           </div>
         </div>
       </div>
