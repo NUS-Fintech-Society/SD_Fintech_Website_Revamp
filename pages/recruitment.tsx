@@ -9,7 +9,7 @@ const RecruitmentPage: NextPage<RecruitmentData> = (props: any) => {
     <>
       <Head>
         <title>NUS Fintech Society</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/black-fintech-logo.png" />
       </Head>
       <Recruitment {...props} />
     </>

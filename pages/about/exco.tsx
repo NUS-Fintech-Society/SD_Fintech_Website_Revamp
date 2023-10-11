@@ -9,7 +9,7 @@ const ExcoPage: NextPage<ExcoData> = (props) => {
     <>
       <Head>
         <title>NUS Fintech Society</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="../images/FintechSocietyLogo.png" />
       </Head>
       <Exco {...props} />
     </>
