@@ -12,7 +12,7 @@ const AboutPage = () => {
     <>
       <Head>
         <title>About • NUS Fintech Society</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="../images/FintechSocietyLogo.png" />
       </Head>
 
       <MaxWidth>
