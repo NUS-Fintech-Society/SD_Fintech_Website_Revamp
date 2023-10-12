@@ -13,25 +13,25 @@ const ContactForm = () => {
           <p className="font-semibold">
             Internal Affairs and External Relations:&nbsp;
           </p>
-          <a href="mailto:nusfintech.ops@gmail.com">nusfintech.ops@gmail.com</a>
+          <a className="underline" href="mailto:nusfintech.ops@gmail.com">nusfintech.ops@gmail.com</a>
         </div>
         <div className="text-[#004080] md:text-lg lg:text-xl">
           <p className="font-semibold">Blockchain:&nbsp;</p>
-          <a href="mailto:nusfintech.bc@gmail.com">nusfintech.bc@gmail.com</a>
+          <a className="underline" href="mailto:nusfintech.bc@gmail.com">nusfintech.bc@gmail.com</a>
         </div>
         <div className="text-[#004080] md:text-lg lg:text-xl">
           <p className="font-semibold">Quant:&nbsp;</p>
-          <a href="mailto:nusfintech.quant@gmail.com">
+          <a className="underline" href="mailto:nusfintech.quant@gmail.com">
             nusfintech.quant@gmail.com
           </a>
         </div>
         <div className="text-[#004080] md:text-lg lg:text-xl">
           <p className="font-semibold">Software Development:&nbsp;</p>
-          <a href="mailto:nusfintech.dev@gmail.com">nusfintech.dev@gmail.com</a>
+          <a className="underline" href="mailto:nusfintech.dev@gmail.com">nusfintech.dev@gmail.com</a>
         </div>
         <div className="text-[#004080] md:text-lg lg:text-xl">
           <p className="font-semibold">Machine Learning:&nbsp;</p>
-          <a href="mailto:nusfintech.ml@gmail.com">nusfintech.ml@gmail.com</a>
+          <a className="underline" href="mailto:nusfintech.ml@gmail.com">nusfintech.ml@gmail.com</a>
         </div>
       </div>
     </div>
