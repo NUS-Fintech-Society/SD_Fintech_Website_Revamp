@@ -7,7 +7,7 @@ import MaxWidth from '@components/layout/MaxWidth';
 const Footer = () => {
   return (
     // [calc(60vh-64px)]
-    <footer className="relative block h-[175px] w-screen items-end sm:h-[160px]">
+    <footer className="relative bottom-0 mt-auto h-[175px] w-screen sm:h-[160px]">
       <div className="absolute -z-10 h-full w-full overflow-hidden bg-gray-50">
         <Image
           src="/images/home/footer.jpg"

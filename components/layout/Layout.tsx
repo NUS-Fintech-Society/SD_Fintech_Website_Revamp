@@ -5,7 +5,8 @@ import { useEffect, useState } from 'react';
 import Footer from './Footer';
 
 const Layout = ({ children }: LayoutProps) => {
-  const overWriteChakraTheme = 'text-base overflow-x-hidden relative';
+  const overWriteChakraTheme =
+    'flex flex-col min-h-screen text-base overflow-x-hidden';
   const [isSSR, setIsSSR] = useState(true);
 
   useEffect(() => {
