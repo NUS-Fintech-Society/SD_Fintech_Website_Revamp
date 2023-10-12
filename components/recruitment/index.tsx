@@ -15,6 +15,16 @@ const Recruitment = () => {
   const isTechnical = router.asPath.includes('/technical-wing') ? 1 : 0;
   const [selectedTab, setSelectedTab] = React.useState(isTechnical);
 
+  const getRecruitmentYear = () => {
+    const currentDate = new Date();
+    
+    if (currentDate.getMonth() >= 6) {
+      return `${currentDate.getFullYear()}/${currentDate.getFullYear() + 1}`;
+    }
+
+    return `${currentDate.getFullYear() - 1}/${currentDate.getFullYear()}`;
+  }
+
   const handleTabChange = () => {
     if (selectedTab === 1) {
       setSelectedTab(0);
@@ -238,7 +248,7 @@ const Recruitment = () => {
 
         <div className="section-my">
           <h2 className="mb-5 text-center text-2xl font-bold text-[#002750] sm:mb-16 sm:text-4xl">
-            NUS Fintech Society Recruitment for AY 2023/2024
+            NUS Fintech Society Recruitment for AY {getRecruitmentYear()}
           </h2>
           <h2 className="mb-5 text-center text-2xl font-bold text-[#002750] sm:mb-16 sm:text-4xl xl:hidden">
             <span className="border-b-2 border-[#002750]">
