@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import Footer from './Footer';
 
 const Layout = ({ children }: LayoutProps) => {
-  const overWriteChakraTheme = 'text-base overflow-x-hidden';
+  const overWriteChakraTheme = 'min-h-screen text-base overflow-x-hidden';
   const [isSSR, setIsSSR] = useState(true);
 
   useEffect(() => {
@@ -13,10 +13,12 @@ const Layout = ({ children }: LayoutProps) => {
   }, []);
 
   return (
-    <div className={overWriteChakraTheme}>
-      {!isSSR && window.location.pathname !== '/' && <Navbar />}
-      {!isSSR && window.location.pathname === '/' && <HomeNavbar />}
-      {children}
+    <div className="relative flex min-h-screen flex-col">
+      <div className={overWriteChakraTheme}>
+        {!isSSR && window.location.pathname !== '/' && <Navbar />}
+        {!isSSR && window.location.pathname === '/' && <HomeNavbar />}
+        {children}
+      </div>
       <Footer />
     </div>
   );
