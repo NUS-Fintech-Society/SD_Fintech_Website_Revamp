@@ -14,7 +14,7 @@ const DepartmentPage: NextPage<DepartmentsData> = (props: any) => {
     <>
       <Head>
         <title>NUS Fintech Society</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="../images/FintechSocietyLogo.png" />
       </Head>
       <Departments {...props} />
     </>

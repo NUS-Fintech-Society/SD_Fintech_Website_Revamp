@@ -19,12 +19,13 @@ const Footer = () => {
       </div>
       <MaxWidth>
         <div className="flex flex-col-reverse items-center gap-y-2.5 sm:flex-row sm:justify-between sm:gap-y-0">
-          <div className="relative h-[60px] w-[120px] sm:mt-10 sm:h-[77px] sm:w-[144px]">
+          <div className="relative h-[60px] w-[120px] sm:mt-10 sm:h-[77px] sm:w-[144px] cursor-pointer">
             <Image
               src="/images/fintechsoc-logo.png"
               alt="NUS FinTech Society Logo"
               quality={100}
               layout="fill"
+              className="footer-link"
             />
           </div>
           <div className="flex-col">

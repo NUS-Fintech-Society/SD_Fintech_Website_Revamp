@@ -45,8 +45,8 @@ const Contact = ({ departmentFaq }: RecruitmentProps) => {
         <FAQ departmentFaq={departmentFaq} />
       </MaxWidth>
 
-      <div className="section-my flex w-full flex-wrap text-lg md:text-xl lg:items-center lg:justify-around">
-        <div className="order-2 mb-10 mt-20 w-full lg:order-1 lg:mt-10 lg:flex lg:w-1/2">
+      <div className="section-my mb-10 mt-20 flex w-full flex-wrap text-lg md:text-xl lg:items-center lg:justify-around">
+        <div className="order-2 w-full lg:order-1 lg:flex lg:w-1/2">
           <div className="lg:w-5/6">
             <ContactInfoCard />
           </div>

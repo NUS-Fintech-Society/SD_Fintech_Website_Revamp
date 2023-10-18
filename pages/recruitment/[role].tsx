@@ -12,14 +12,14 @@ import { fetchRolesData } from '@data/mockFetch';
 const RolePage: NextPage<RolesData> = (props: any) => {
   return (
     <>
-    <Head>
-      <title>NUS Fintech Society</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-    <Roles {...props}/>
-  </>
-  )
-}
+      <Head>
+        <title>NUS Fintech Society</title>
+        <link rel="icon" href="../images/FintechSocietyLogo.png" />
+      </Head>
+      <Roles {...props} />
+    </>
+  );
+};
 
 export const getStaticPaths = async () => {
   const { roles } = await fetchRolesData();
@@ -35,9 +35,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async (context: {
-  params: { role: string };
-}) => {
+export const getStaticProps = async (context: { params: { role: string } }) => {
   const { role } = context.params;
   const { roles } = await fetchRolesData();
   const data = roles.find((recruitmentRole) => recruitmentRole.path === role);
@@ -46,4 +44,4 @@ export const getStaticProps = async (context: {
   };
 };
 
-export default RolePage
+export default RolePage;

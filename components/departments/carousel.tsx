@@ -2,7 +2,8 @@
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Image from 'next/image';
-import { Fragment } from 'react';
+import { Fragment, useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
 const DeptCarousel = ({
   purpose,
@@ -18,6 +19,25 @@ const DeptCarousel = ({
     linkedin: string;
   }[];
 }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const router = useRouter();
+
+  const updateIndex = (index : number) => {
+    setCurrentIndex(index)
+  }
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setCurrentIndex(0);
+    };
+
+    router.events.on('routeChangeStart', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange);
+    };
+  }, [router]);
+
   return (
     <div className="relative mx-auto mt-10 h-[300px] w-full rounded-xl bg-[#090071] sm:h-[400px] sm:rounded-[20px] lg:w-[400px]">
       <Image
@@ -27,7 +47,7 @@ const DeptCarousel = ({
         objectFit="cover"
         className="opacity-20"
       />
-      <Carousel showThumbs={false}>
+      <Carousel showThumbs={false} onChange={updateIndex} selectedItem={currentIndex}>
         <div className="p-8 text-white sm:px-14 sm:py-10">
           <h2 className="mb-8 flex text-xl font-bold sm:mb-10 sm:text-3xl">
             Purpose
