@@ -18,7 +18,7 @@ const Landing = () => {
       </div>
 
       <MaxWidth>
-        <div className="relative flex flex-col gap-y-3 text-center sm:pt-[max(20px,_5vh)]">
+        <div className="relative flex flex-col gap-y-3 text-center sm:pt-[max(20px,_5vh)] cursor-default">
           <h1 className="text-2xl font-bold text-white sm:text-6xl">
             NUS Fintech Society
           </h1>
