@@ -24,7 +24,7 @@ const Partners = ({ partnersImages }: PartnersProps) => {
                   href={url}
                   target="_blank"
                   rel="noreferrer"
-                  className="cursor-default"
+                  className="cursor-pointer"
                 >
                   <Image src={src} alt={alt} layout="fill" />
                 </a>
