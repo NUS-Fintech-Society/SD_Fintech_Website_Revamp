@@ -1,4 +1,4 @@
-import { EventsData } from '@data/interface/eventsData';
+import EventsData from '@data/interface/eventsData';
 
 const eventsData: EventsData = {
   events: [
@@ -11,7 +11,8 @@ const eventsData: EventsData = {
       cardDescription:
         'Join us at our virtual Welcome Tea information sharing session to find out more about what we do and who we are looking for!',
       location: 'Online',
-      date: new Date(2022, 7, 6).toString(),
+      date: new Date('2022-08-06T18:00:00').toISOString(),
+      type: 'Internal'
     },
   ],
 };

@@ -1,5 +1,5 @@
 import { Event } from '@data/interface/eventsData';
 
-export interface EventsProps {
+export default interface EventsProps {
   events: Event[];
 }
