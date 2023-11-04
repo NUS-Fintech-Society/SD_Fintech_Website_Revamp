@@ -16,7 +16,9 @@ const ProjectCard = ({
 
   return (
     <div className={`mb-4 ${cardMargin}`}>
-      <a className={`h-400px mx-auto flex ${cardWidth} flex-col rounded-[20px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] md:min-h-[500px] md:w-[347px] lg:my-10`}>
+      <a
+        className={`h-400px mx-auto flex ${cardWidth} flex-col rounded-[20px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] md:min-h-[500px] md:w-[347px] lg:my-10`}
+      >
         <div className="relative mb-3 flex min-h-[132px] justify-center overflow-hidden rounded-t-[20px] md:min-h-[205px]">
           <Image src={coverImage.src} alt={coverImage.alt} layout="fill" />
         </div>

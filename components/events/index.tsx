@@ -3,8 +3,9 @@ import EventsProps from '@interfaces/events/Events';
 import MaxWidth from '@components/layout/MaxWidth';
 import Image from 'next/image';
 import OtherEvents from './OtherEvents';
-import { Event } from '@data/interface/eventsData';
 import FeaturedEvent from './FeaturedEvent';
+import UpcomingEvents from './UpcomingEvents';
+import PastEvents from './PastEvents';
 // import Landing from './Landing';
 
 // need to disable SSR for this component cos we are using date object generated at client side
@@ -13,11 +14,6 @@ import FeaturedEvent from './FeaturedEvent';
 // });
 
 const Events = ({ events }: EventsProps) => {
-  const sortedEvents = events.sort(
-    (a: Event, b: Event) =>
-      new Date(a.date).getTime() - new Date(b.date).getTime()
-  );
-  const featuredEvent = sortedEvents[0];
   return (
     <>
       <MaxWidth>
@@ -33,9 +29,9 @@ const Events = ({ events }: EventsProps) => {
             Events
           </h1>
         </div>
-        <FeaturedEvent event={featuredEvent} />
-
-        <OtherEvents />
+        <FeaturedEvent events={events} />
+        <UpcomingEvents events={events} />
+        <PastEvents events={events} />
       </MaxWidth>
     </>
   );
