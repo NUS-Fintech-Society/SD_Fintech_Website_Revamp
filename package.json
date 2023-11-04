@@ -17,6 +17,7 @@
     "@emotion/styled": "^11.11.0",
     "dateformat": "^5.0.3",
     "framer-motion": "^10.16.4",
+    "moment": "^2.29.4",
     "next": "12.1.6",
     "react": "18.2.0",
     "react-animated-text-content": "^1.0.1",

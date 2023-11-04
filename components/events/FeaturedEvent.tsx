@@ -1,17 +1,7 @@
 import EventsProps from '@interfaces/events/Events';
 import { Event } from '@data/interface/eventsData';
 import Image from 'next/image';
-
-function formatAMPM(date: Date) {
-  let hours = date.getHours();
-  let minutes: number = date.getMinutes();
-  let ampm = hours >= 12 ? 'PM' : 'AM';
-  hours = hours % 12;
-  hours = hours ? hours : 12; // the hour '0' should be '12'
-  let minutesStr = minutes < 10 ? '0' + minutes : minutes;
-  const strTime = hours + ':' + minutesStr + ' ' + ampm;
-  return strTime;
-}
+import moment from 'moment';
 
 const FeaturedEvent = ({ events }: EventsProps) => {
   const upcomingEvents: Event[] = events.filter(
@@ -40,7 +30,7 @@ const FeaturedEvent = ({ events }: EventsProps) => {
   const month = MONTHS[dateObj.getMonth()];
   const day = dateObj.getDate();
   const year = dateObj.getFullYear();
-  const time = formatAMPM(dateObj);
+  const time = moment(dateObj).format('LT');
 
   return (
     <>

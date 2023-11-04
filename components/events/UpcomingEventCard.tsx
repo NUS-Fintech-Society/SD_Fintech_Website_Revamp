@@ -1,21 +1,11 @@
 // type
 import { Button } from '@chakra-ui/react';
 import EventCardProps from '@interfaces/events/EventCard';
+import moment from 'moment';
 
 // library
 // import Link from 'next/link';
 import Image from 'next/image';
-
-function formatAMPM(date: Date) {
-  let hours = date.getHours();
-  let minutes: number = date.getMinutes();
-  let ampm = hours >= 12 ? 'PM' : 'AM';
-  hours = hours % 12;
-  hours = hours ? hours : 12; // the hour '0' should be '12'
-  let minutesStr = minutes < 10 ? '0' + minutes : minutes;
-  const strTime = hours + ':' + minutesStr + ' ' + ampm;
-  return strTime;
-}
 
 const UpcomingEventCard = ({
   coverImage,
@@ -44,7 +34,7 @@ const UpcomingEventCard = ({
   const day = dateObj.getDate();
   const dayStr = day < 10 ? '0' + day : day;
   const year = dateObj.getFullYear();
-  const time = formatAMPM(dateObj);
+  const time = moment(dateObj).format('LT');
 
   return (
     <div className="flex h-[275px] w-[250px] flex-col rounded-xl border-2 p-4 shadow-lg">
