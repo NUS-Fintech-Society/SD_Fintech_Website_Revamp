@@ -14,7 +14,7 @@ const PastEvents = ({ events }: EventsProps) => {
         title="Past Events"
         subtitle="A walk down memory lane."
       />
-      <div className="mt-10 flex grid w-full grid-flow-col grid-rows-2 flex-wrap gap-1 overflow-hidden sm:mt-16 sm:gap-4">
+      <div className="mt-10 flex grid w-full grid-flow-col grid-rows-2 flex-wrap place-content-start gap-1 overflow-hidden sm:mt-16 sm:gap-4">
         {pastEvents.map(
           (
             { coverImage, name, cardDescription, location, date, type },

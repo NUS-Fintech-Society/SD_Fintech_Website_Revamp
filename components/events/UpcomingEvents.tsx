@@ -24,7 +24,7 @@ const UpcomingEvents = ({ events }: EventsProps) => {
         <FaAngleDown />
         </button>
       </div> */}
-      <div className="mt-10 flex grid w-full grid-flow-col grid-rows-2 flex-wrap gap-1 overflow-hidden sm:mt-16 sm:gap-4">
+      <div className="mt-10 flex grid w-full grid-flow-col grid-rows-2 flex-wrap place-content-start gap-1 overflow-hidden sm:mt-16 sm:gap-4">
         {upcomingEvents.map(
           (
             { coverImage, name, cardDescription, location, date, type },
