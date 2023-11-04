@@ -40,7 +40,7 @@ const UpcomingEvents = ({ events }: EventsProps) => {
         <option value="External">External</option>
       </Select>
       {filteredEvents.length > 0 ? (
-        <div className="flex grid w-full grid-flow-col grid-rows-2 flex-wrap place-content-start gap-1 overflow-hidden sm:gap-4">
+        <div className="grid w-full grid-flow-col grid-rows-2 place-content-start gap-1 overflow-hidden sm:gap-4">
           {filteredEvents.map(
             (
               { coverImage, name, cardDescription, location, date, type },
