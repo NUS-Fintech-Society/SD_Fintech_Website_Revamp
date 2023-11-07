@@ -17,9 +17,12 @@ const ProjectCarousel = ({ projects }: FeaturedProjectsProps) => {
     projectChunks.push(chunk);
   }
 
+  // Generates key for the project. This to reset the carousel slider position when the project list is updated.
+  // https://github.com/leandrowd/react-responsive-carousel/issues/536
+  const projectsKey = JSON.stringify(projects);
   return (
     <div className="carousel-container">
-    <Carousel showThumbs={false} >
+    <Carousel key={projectsKey} showThumbs={false} >
       {projectChunks.map((chunk, index) => (
         <div key={index} className="carousel-item relative float-left w-full">
           <div className="mt-4 flex flex-wrap justify-center gap-24">
