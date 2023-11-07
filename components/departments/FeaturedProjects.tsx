@@ -26,12 +26,21 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
   // eslint-disable-next-line no-unused-vars
   const [year, setYear] = useState('21/22');
   const [category, setCategory] = useState('All');
-  const projectsByYear = projects.filter((project) => project.year === year);
+  const [projectsByCategory, setProjectsByCategory] = useState(projects);
+  // const projectsByYear = projects.filter((project) => project.year === year);
+
+  /*
   const projectArray = [];
   const chunkSize = 3;
   for (let i = 0; i < projectsByYear.length; i += chunkSize) {
     const chunk = projectsByYear.slice(i, i + chunkSize);
     projectArray[projectArray.length] = chunk;
+  }
+  */
+  
+  function updateCategoryAndProjects(category: string) {
+    setCategory(category);
+    setProjectsByCategory(projects.filter((project) => category === "All" ? true : project.category === category));
   }
 
   return (
@@ -60,18 +69,18 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
       <MenuList>
         {category === "All" &&  (
         <>
-          <MenuItem onClick={() => setCategory("Ongoing")}>Ongoing</MenuItem>
-          <MenuItem onClick={() => setCategory("Past")}>Past</MenuItem>
+          <MenuItem onClick={() => updateCategoryAndProjects("Ongoing")}>Ongoing</MenuItem>
+          <MenuItem onClick={() => updateCategoryAndProjects("Past")}>Past</MenuItem>
         </>)}
         {category === "Ongoing" &&  (
         <>
-          <MenuItem onClick={() => setCategory("All")}>All</MenuItem>
-          <MenuItem onClick={() => setCategory("Past")}>Past</MenuItem>
+          <MenuItem onClick={() => updateCategoryAndProjects("All")}>All</MenuItem>
+          <MenuItem onClick={() => updateCategoryAndProjects("Past")}>Past</MenuItem>
         </>)}
         {category === "Past" &&  (
         <>
-          <MenuItem onClick={() => setCategory("All")}>All</MenuItem>
-          <MenuItem onClick={() => setCategory("Ongoing")}>Ongoing</MenuItem>
+          <MenuItem onClick={() => updateCategoryAndProjects("All")}>All</MenuItem>
+          <MenuItem onClick={() => updateCategoryAndProjects("Ongoing")}>Ongoing</MenuItem>
         </>)}
       </MenuList>
     </Menu>
@@ -79,7 +88,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
 
       {/* Mobile Carousel */}
       <div className="mt-10 flex flex-wrap justify-center gap-10 md:mt-14 md:gap-16 lg:hidden">
-        {projectsByYear.map(({ projectName, summary, projectImage }, index) => {
+        {projectsByCategory.map(({ projectName, summary, projectImage }, index) => {
           return (
             <div className="w-full" key={index}>
               <ProjectCard
@@ -95,7 +104,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
 
       {/* Desktop Carousel */}
       <div className="hidden lg:block">
-        <ProjectCarousel projects={projects} />
+        <ProjectCarousel projects={projectsByCategory} />
       </div>
     </div>
   );
