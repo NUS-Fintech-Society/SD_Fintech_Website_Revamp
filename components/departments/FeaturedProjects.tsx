@@ -67,38 +67,30 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
       </div>
     */}
       <Menu>
-        <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+        <MenuButton
+          as={Button}
+          rightIcon={<ChevronDownIcon />}
+          className="rounded-[13px] bg-teal-700 text-white p-2 ml-8 mt-4"
+        >
           {category}
         </MenuButton>
         <MenuList>
           {category === 'All' && (
             <>
-              <MenuItem onClick={() => updateCategoryAndProjects('Ongoing')}>
-                Ongoing
-              </MenuItem>
-              <MenuItem onClick={() => updateCategoryAndProjects('Past')}>
-                Past
-              </MenuItem>
+              <MenuItem onClick={() => updateCategoryAndProjects('Ongoing')}>Ongoing</MenuItem>
+              <MenuItem onClick={() => updateCategoryAndProjects('Past')}>Past</MenuItem>
             </>
           )}
           {category === 'Ongoing' && (
             <>
-              <MenuItem onClick={() => updateCategoryAndProjects('All')}>
-                All
-              </MenuItem>
-              <MenuItem onClick={() => updateCategoryAndProjects('Past')}>
-                Past
-              </MenuItem>
+              <MenuItem onClick={() => updateCategoryAndProjects('All')}>All</MenuItem>
+              <MenuItem onClick={() => updateCategoryAndProjects('Past')}>Past</MenuItem>
             </>
           )}
           {category === 'Past' && (
             <>
-              <MenuItem onClick={() => updateCategoryAndProjects('All')}>
-                All
-              </MenuItem>
-              <MenuItem onClick={() => updateCategoryAndProjects('Ongoing')}>
-                Ongoing
-              </MenuItem>
+              <MenuItem onClick={() => updateCategoryAndProjects('All')}>All</MenuItem>
+              <MenuItem onClick={() => updateCategoryAndProjects('Ongoing')}>Ongoing</MenuItem>
             </>
           )}
         </MenuList>
