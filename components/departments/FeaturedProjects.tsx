@@ -14,7 +14,7 @@ import {
   MenuGroup,
   MenuOptionGroup,
   MenuDivider,
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
 
 // code
 import ProjectCard from '@components/departments/ProjectCard';
@@ -37,10 +37,14 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
     projectArray[projectArray.length] = chunk;
   }
   */
-  
-  function updateCategoryAndProjects(category: string) {
-    setCategory(category);
-    setProjectsByCategory(projects.filter((project) => category === "All" ? true : project.category === category));
+
+  function updateCategoryAndProjects(newCategory: string) {
+    setCategory(newCategory);
+    setProjectsByCategory(
+      projects.filter((project) =>
+        newCategory === 'All' ? true : project.category === newCategory
+      )
+    );
   }
 
   return (
@@ -62,44 +66,60 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
         </button>
       </div>
     */}
-    <Menu>
-      <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-        {category}
-      </MenuButton>
-      <MenuList>
-        {category === "All" &&  (
-        <>
-          <MenuItem onClick={() => updateCategoryAndProjects("Ongoing")}>Ongoing</MenuItem>
-          <MenuItem onClick={() => updateCategoryAndProjects("Past")}>Past</MenuItem>
-        </>)}
-        {category === "Ongoing" &&  (
-        <>
-          <MenuItem onClick={() => updateCategoryAndProjects("All")}>All</MenuItem>
-          <MenuItem onClick={() => updateCategoryAndProjects("Past")}>Past</MenuItem>
-        </>)}
-        {category === "Past" &&  (
-        <>
-          <MenuItem onClick={() => updateCategoryAndProjects("All")}>All</MenuItem>
-          <MenuItem onClick={() => updateCategoryAndProjects("Ongoing")}>Ongoing</MenuItem>
-        </>)}
-      </MenuList>
-    </Menu>
-
+      <Menu>
+        <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+          {category}
+        </MenuButton>
+        <MenuList>
+          {category === 'All' && (
+            <>
+              <MenuItem onClick={() => updateCategoryAndProjects('Ongoing')}>
+                Ongoing
+              </MenuItem>
+              <MenuItem onClick={() => updateCategoryAndProjects('Past')}>
+                Past
+              </MenuItem>
+            </>
+          )}
+          {category === 'Ongoing' && (
+            <>
+              <MenuItem onClick={() => updateCategoryAndProjects('All')}>
+                All
+              </MenuItem>
+              <MenuItem onClick={() => updateCategoryAndProjects('Past')}>
+                Past
+              </MenuItem>
+            </>
+          )}
+          {category === 'Past' && (
+            <>
+              <MenuItem onClick={() => updateCategoryAndProjects('All')}>
+                All
+              </MenuItem>
+              <MenuItem onClick={() => updateCategoryAndProjects('Ongoing')}>
+                Ongoing
+              </MenuItem>
+            </>
+          )}
+        </MenuList>
+      </Menu>
 
       {/* Mobile Carousel */}
       <div className="mt-10 flex flex-wrap justify-center gap-10 md:mt-14 md:gap-16 lg:hidden">
-        {projectsByCategory.map(({ projectName, summary, projectImage }, index) => {
-          return (
-            <div className="w-full" key={index}>
-              <ProjectCard
-                coverImage={projectImage[0]}
-                cardDescription={summary}
-                name={projectName}
-                isMobile // Add this prop to indicate mobile mode
-              />
-            </div>
-          );
-        })}
+        {projectsByCategory.map(
+          ({ projectName, summary, projectImage }, index) => {
+            return (
+              <div className="w-full" key={index}>
+                <ProjectCard
+                  coverImage={projectImage[0]}
+                  cardDescription={summary}
+                  name={projectName}
+                  isMobile // Add this prop to indicate mobile mode
+                />
+              </div>
+            );
+          }
+        )}
       </div>
 
       {/* Desktop Carousel */}

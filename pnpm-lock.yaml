@@ -5099,10 +5099,11 @@ packages:
     peerDependencies:
       browserslist: '>= 4.21.0'
     dependencies:
-<<<<<<< HEAD
-      browserslist: 4.22.1
-=======
       browserslist: 4.22.0
+      escalade: 3.1.1
+      picocolors: 1.0.0
+
+  /uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
       punycode: 2.3.0
