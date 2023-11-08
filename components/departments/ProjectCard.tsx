@@ -16,7 +16,9 @@ const ProjectCard = ({
 
   return (
     <div className={`mb-4 ${cardMargin}`}>
-      <a className={`h-400px mx-auto flex ${cardWidth} flex-col rounded-[20px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] md:min-h-[500px] md:w-[347px] lg:my-10`}>
+      <a
+        className={`h-400px mx-auto flex ${cardWidth} flex-col rounded-[20px] shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] md:min-h-[500px] md:w-[347px] lg:my-10`}
+      >
         <div className="relative mb-3 flex min-h-[132px] justify-center overflow-hidden rounded-t-[20px] md:min-h-[205px]">
           <Image src={coverImage.src} alt={coverImage.alt} layout="fill" />
         </div>
@@ -41,8 +43,11 @@ const ProjectCard = ({
             </button>
           </Link>
         </div> */}
-        <div className="flex justify-left space-x-2 p-5">
-          <button className="bg-blue-900 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded-full text-xs">
+        <div className="justify-left flex space-x-2 p-5">
+          <button
+            className="rounded-full bg-blue-900 px-3 py-2 text-xs font-bold text-white hover:bg-blue-700"
+            type="button"
+          >
             Read More
           </button>
         </div>
