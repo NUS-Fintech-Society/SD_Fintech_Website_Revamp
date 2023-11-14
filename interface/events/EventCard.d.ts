@@ -1,3 +1,5 @@
-import { Event } from "@data/interface/eventsData";
+import { Event } from '@data/interface/eventsData';
 
-export default interface EventCardProps extends Event{}
+export default interface EventCardProps extends Event {
+  type?: string;
+}
