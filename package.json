@@ -25,6 +25,7 @@
     "react-countup": "^6.3.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
+    "react-multi-carousel": "^2.8.4",
     "react-responsive-carousel": "^3.2.23",
     "react-visibility-sensor": "^5.1.1",
     "tw-elements": "^1.0.0-alpha13"
