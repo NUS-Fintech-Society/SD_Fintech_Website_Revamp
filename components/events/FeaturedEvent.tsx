@@ -37,7 +37,7 @@ const FeaturedEvent = ({ events }: EventsProps) => {
           <div>{featuredEvent.cardDescription}</div>
         </div>
         <div className="absolute right-0 flex h-full w-2/5 flex-col justify-between bg-[#EBE5F2] p-5">
-          {/* <CountdownTimer targetDate={dateObj} /> */}
+          <CountdownTimer targetDate={dateObj} />
           <div className="mx-2 flex justify-between xl:mx-6">
             <div className="flex flex-col">
               <p className="text-xs font-bold text-[#6f00ff] lg:text-base xl:text-xl">

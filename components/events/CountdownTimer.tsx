@@ -5,8 +5,10 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
   const [timeRemaining, setTimeRemaining] = useState(
     targetDate.getTime() - Date.now()
   );
+  const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
+    setHasMounted(true);
     const intervalId = setInterval(() => {
       setTimeRemaining(targetDate.getTime() - Date.now());
     }, 1000);
@@ -18,6 +20,10 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
   const hours = Math.floor((timeRemaining / (1000 * 60 * 60)) % 24);
   const minutes = Math.floor((timeRemaining / (1000 * 60)) % 60);
   const seconds = Math.floor((timeRemaining / 1000) % 60);
+
+  if (!hasMounted) {
+    return null;
+  }
 
   return (
     <div className="grid grid-cols-4 gap-2 xl:gap-4">
