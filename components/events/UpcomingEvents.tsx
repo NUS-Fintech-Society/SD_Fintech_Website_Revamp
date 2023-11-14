@@ -8,10 +8,14 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 const responsive = {
-  superLargeDesktop: {
-    breakpoint: { max: 1536, min: 1280 },
+  monitor: {
+    breakpoint: { max: 1536, min: 1420 },
     items: 4,
     partialVisibilityGutter: 30,
+  },
+  superLargeDesktop: {
+    breakpoint: { max: 1420, min: 1280 },
+    items: 4,
   },
   desktop: {
     breakpoint: { max: 1280, min: 1124 },
@@ -127,7 +131,7 @@ const UpcomingEvents = ({ events }: EventsProps) => {
               showDots={true}
               responsive={responsive}
               ssr={false} // means to not render carousel on server-side.
-              infinite={true}
+              infinite={false}
               // autoPlay={true}
               // autoPlaySpeed={3000}
               keyBoardControl={true}
