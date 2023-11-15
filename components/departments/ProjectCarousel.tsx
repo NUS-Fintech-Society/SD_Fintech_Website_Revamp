@@ -22,25 +22,27 @@ const ProjectCarousel = ({ projects }: FeaturedProjectsProps) => {
   const projectsKey = JSON.stringify(projects);
   return (
     <div className="carousel-container">
-    <Carousel key={projectsKey} showThumbs={false} >
-      {projectChunks.map((chunk, index) => (
-        <div key={index} className="carousel-item relative float-left w-full">
-          <div className="mt-4 flex flex-wrap justify-center gap-24">
-            {chunk.map(({ projectName, summary, projectImage }, cardIndex) => (
-              <ProjectCard
-                key={cardIndex}
-                coverImage={projectImage[0]}
-                cardDescription={summary}
-                name={projectName}
-                isMobile={false}
-              />
-            ))}
+      <Carousel showThumbs={false}>
+        {projectChunks.map((chunk, index) => (
+          <div key={index} className="carousel-item relative float-left w-full">
+            <div className="mt-4 flex flex-wrap justify-center gap-24">
+              {chunk.map(
+                ({ projectName, summary, projectImage }, cardIndex) => (
+                  <ProjectCard
+                    key={cardIndex}
+                    coverImage={projectImage[0]}
+                    cardDescription={summary}
+                    name={projectName}
+                    isMobile={false}
+                  />
+                )
+              )}
+            </div>
           </div>
-        </div>
-      ))}
-    </Carousel>
-  </div>
-);
+        ))}
+      </Carousel>
+    </div>
+  );
 };
 
 export default ProjectCarousel;

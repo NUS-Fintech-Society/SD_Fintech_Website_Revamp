@@ -1,11 +1,11 @@
 import MaxWidth from '@components/layout/MaxWidth';
-import { EventsProps } from '@interfaces/events/Events';
+import EventsProps from '@interfaces/events/Events';
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-calendar/dist/Calendar.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import EventCard from './EventCard';
+import UpcomingEventCard from './UpcomingEventCard';
 
 function isSameDate(date1: Date, date2: Date): Boolean {
   const sameDay = date1.getDate() === date2.getDate();
@@ -46,7 +46,7 @@ const CalendarComp = ({ events }: EventsProps) => {
                       key={name + location + date}
                       className="flex justify-center py-3"
                     >
-                      <EventCard
+                      <UpcomingEventCard
                         coverImage={coverImage}
                         cardDescription={cardDescription}
                         name={name}

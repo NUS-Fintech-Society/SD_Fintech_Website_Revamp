@@ -15,7 +15,7 @@ const DepartmentInfo = ({
 }: DepartmentInfoProps) => {
   return (
     <>
-      <div className="mt-3 flex flex-wrap text-[24.48px] font-bold leading-8 text-[#002750] ">
+      <div className="mt-3 flex flex-wrap text-[24.48px] font-bold leading-8 text-[#002750]">
         <div className="relative h-[52px] w-[68.88px] sm:h-[139px] sm:w-[184px]">
           <Image src={logo.src} alt={logo.alt} layout="fill" />
         </div>
