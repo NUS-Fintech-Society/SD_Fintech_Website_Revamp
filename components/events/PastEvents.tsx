@@ -7,7 +7,7 @@ import 'react-multi-carousel/lib/styles.css';
 
 const responsive = {
   monitor: {
-    breakpoint: { max: 1536, min: 1420 },
+    breakpoint: { max: 4000, min: 1420 },
     items: 4,
     partialVisibilityGutter: 30,
   },
@@ -76,6 +76,7 @@ const PastEvents = ({ events }: EventsProps) => {
           // autoPlaySpeed={3000}
           keyBoardControl={true}
           partialVisible={true}
+          itemClass="carousel-item-padding-40-px"
         >
           {pastEvents.map(
             (
