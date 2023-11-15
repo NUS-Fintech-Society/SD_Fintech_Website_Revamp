@@ -43,6 +43,14 @@ const ProjectCard = ({
             </button>
           </Link>
         </div> */}
+        <div className="justify-left flex space-x-2 p-5">
+          <button
+            className="rounded-full bg-blue-900 px-3 py-2 text-xs font-bold text-white hover:bg-blue-700"
+            type="button"
+          >
+            Read More
+          </button>
+        </div>
       </a>
     </div>
   );
