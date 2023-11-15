@@ -9,7 +9,7 @@ const responsive = {
   monitor: {
     breakpoint: { max: 4000, min: 1420 },
     items: 4,
-    partialVisibilityGutter: 30,
+    // partialVisibilityGutter: 30,
   },
   superLargeDesktop: {
     breakpoint: { max: 1420, min: 1280 },
@@ -18,7 +18,7 @@ const responsive = {
   desktop: {
     breakpoint: { max: 1280, min: 1124 },
     items: 3,
-    partialVisibilityGutter: 30,
+    // partialVisibilityGutter: 30,
   },
   smallDesktop: {
     breakpoint: { max: 1124, min: 1000 },
@@ -27,7 +27,7 @@ const responsive = {
   tablet: {
     breakpoint: { max: 1000, min: 810 },
     items: 2,
-    partialVisibilityGutter: 30,
+    // partialVisibilityGutter: 30,
   },
   smallTablet: {
     breakpoint: { max: 810, min: 750 },
@@ -36,7 +36,7 @@ const responsive = {
   mobileLandscape: {
     breakpoint: { max: 750, min: 640 },
     items: 1,
-    partialVisibilityGutter: 140,
+    // partialVisibilityGutter: 140,
   },
   mobile: {
     breakpoint: { max: 640, min: 0 },
