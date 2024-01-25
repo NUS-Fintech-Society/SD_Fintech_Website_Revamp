@@ -616,16 +616,16 @@ const departmentsData: DepartmentsData = {
         '',
       directors: [
         {
-          src: '/images/about/ia1.jpg',
+          src: '/images/about/quant1.jpg',
           alt: 'Image of director',
-          directorName: 'James',
-          linkedin: 'https://www.linkedin.com/in/james-teo-lee-chen/',
+          directorName: 'Justin Leng',
+          linkedin: '',
         },
         {
-          src: '/images/about/ia2.jpg',
+          src: '/images/about/quant2.jpg',
           alt: 'Image of director',
-          directorName: 'Jin',
-          linkedin: 'https://www.linkedin.com/in/jin-kutsuzawa-a5a7171a3/',
+          directorName: 'Hur Sinhaeng (Claire)',
+          linkedin: '',
         },
       ],
       roles: [
