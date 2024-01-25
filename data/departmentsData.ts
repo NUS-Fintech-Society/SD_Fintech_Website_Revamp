@@ -603,12 +603,36 @@ const departmentsData: DepartmentsData = {
         },
       ],
     },
-
-
-
-
-
-
+    {
+      name: 'Quant',
+      path: 'quant',
+      logo: {
+        src: '/images/departments/departmentLogos/Internal-main-icon.jpg',
+        alt: 'Internal Logo',
+      },
+      purpose:
+        '',
+      vision:
+        '',
+      directors: [
+        {
+          src: '/images/about/ia1.jpg',
+          alt: 'Image of director',
+          directorName: 'James',
+          linkedin: 'https://www.linkedin.com/in/james-teo-lee-chen/',
+        },
+        {
+          src: '/images/about/ia2.jpg',
+          alt: 'Image of director',
+          directorName: 'Jin',
+          linkedin: 'https://www.linkedin.com/in/jin-kutsuzawa-a5a7171a3/',
+        },
+      ],
+      roles: [
+      ],
+      projects: [
+      ],
+    },
   ],
 };
 
