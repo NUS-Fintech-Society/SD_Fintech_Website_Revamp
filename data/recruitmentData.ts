@@ -101,6 +101,11 @@ const recruitmentData: RecruitmentData = {
       ],
     },
     {
+      departmentName: 'Quant',
+      questions: [
+      ],
+    },
+    {
       departmentName: 'Operations',
       questions: [
         {
