@@ -76,6 +76,26 @@ const homeData: HomeData = {
       ],
     },
     {
+      name: 'Quant',
+      path: 'quant',
+      wingType: WingType.Technical,
+      coverImage: {
+        src: '/images/departments/departmentCovers/SD.jpg',
+        alt: 'random image 2',
+      },
+      cardDescription:
+        '',
+      popupDescription:
+        '',
+      rolesOffered: [
+      ],
+      learnMoreLink: 'https://fintechsociety.comp.nus.edu.sg/#contact',
+      roleInfoLink: 'https://fintechsociety.comp.nus.edu.sg/#contact',
+      applyNowLink: 'https://fintechsociety.comp.nus.edu.sg/#contact',
+      faq: [
+      ],
+    },
+    {
       name: 'Blockchain',
       path: 'blockchain',
       wingType: WingType.Technical,
