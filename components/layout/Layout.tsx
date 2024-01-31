@@ -15,8 +15,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="relative flex min-h-screen flex-col">
       <div className={overWriteChakraTheme}>
-        {!isSSR && window.location.pathname !== '/' && <Navbar />}
-        {!isSSR && window.location.pathname === '/' && <HomeNavbar />}
+        <Navbar />
         {children}
       </div>
       <Footer />
