@@ -6,8 +6,27 @@ import { Box, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
 // code
 import MaxWidth from '@components/layout/MaxWidth';
 import SectionHeader from '@components/layout/SectionHeader';
+import Title from '@components/aboutus/Title';
+import ExcoCard from '@components/aboutus/ExcoCard';
+import { fetchExcoData } from '@data/mockFetch';
+import { useEffect, useState } from 'react';
+import { EXCO_ENUM } from '@data/excoEnum';
+import SmallerTitle from '@components/aboutus/SmallerTitle';
 
 const AboutPage = () => {
+  const [excoData, setExcoData] = useState<any>(null);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const { categories } = await fetchExcoData();
+        setExcoData(categories);
+      } catch (error) {
+        // Handle error if needed
+        console.error('Error fetching data:', error);
+      }
+    };
+    fetchData();
+  }, []);
   return (
     <>
       <Head>
@@ -24,7 +43,6 @@ const AboutPage = () => {
             About Us
           </h1>
         </div>
-
         <div className="grid gap-x-8 rounded-b-[143px] lg:grid-cols-2">
           <div className="flex justify-center pb-4">
             {/* landing bg */}
@@ -233,11 +251,7 @@ const AboutPage = () => {
           />
         </div>
 
-        <div className="flex items-center justify-center p-[40.46px] sm:my-8 sm:p-[35px]">
-          <h1 className="text-[26.68px] font-bold leading-8 text-black sm:text-[40px] sm:leading-[3rem]">
-            ADVISORS
-          </h1>
-        </div>
+        <Title title="ADVISORS" />
 
         <div className="flex justify-center gap-x-5 md:gap-x-16">
           <div className="flex justify-center">
@@ -293,335 +307,41 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-center py-[40.46px] sm:my-8 sm:p-[35px]">
-          <h1 className="text-[26.68px] font-bold leading-8 text-black sm:text-[40px] sm:leading-[3rem]">
-            CO-PRESIDENTS
-          </h1>
-        </div>
+        <Title title="PRESIDENT" />
 
-        <div className="flex flex-row justify-center gap-x-5 sm:gap-x-16">
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
-            <div className="flex justify-center">
-              <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
-                <Image
-                  src="/images/about/co-president2.jpg"
-                  alt="Insert Photo Here"
-                  layout="fill"
-                  className="rounded-full"
-                />
-              </div>
-            </div>
-            <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
-              Co-President
-            </h3>
-            <h3 className="flex justify-center pb-4 text-[6.67px] font-bold text-black sm:text-xl">
-              Jun Xiong
-            </h3>
-          </div>
+        {excoData && <ExcoCard data={excoData[EXCO_ENUM.PRESIDENT].people} />}
 
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
-            <div className="flex justify-center">
-              <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
-                <Image
-                  src="/images/about/co-president1.jpg"
-                  alt="Insert Photo Here"
-                  layout="fill"
-                  className="rounded-full"
-                />
-              </div>
-            </div>
-            <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
-              Co-President
-            </h3>
-            <h3 className="flex justify-center text-[6.67px] font-bold text-black sm:text-xl">
-              David
-            </h3>
-          </div>
-        </div>
+        <Title title="TECHNOLOGY WING" />
 
-        <div className="flex items-center justify-center py-[40.46px] sm:my-8 sm:p-[35px]">
-          <h1 className="text-[26.68px] font-bold leading-8 text-black sm:text-[40px] sm:leading-[3rem]">
-            TECHNOLOGY WING
-          </h1>
-        </div>
+        {excoData && <ExcoCard data={excoData[EXCO_ENUM.TECHWING].people} />}
 
-        <div className="flex justify-center">
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
-            <div className="flex justify-center">
-              <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
-                <Image
-                  src="/images/about/techwing.jpg"
-                  alt="Insert Photo Here"
-                  layout="fill"
-                  className="rounded-full"
-                />
-              </div>
-            </div>
-            <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
-              Vice President (TECH)
-            </h3>
-            <h3 className="flex justify-center pb-4 text-[6.67px] font-bold text-black sm:text-xl">
-              Calvin
-            </h3>
-          </div>
-        </div>
+        <SmallerTitle title="MACHINE LEARNING" />
 
-        <div className="flex items-center justify-center py-[40.46px] sm:my-8 sm:p-[35px]">
-          <h1 className="text-[20px] font-semibold leading-6 text-black sm:text-[32px] sm:leading-[3rem]">
-            MACHINE LEARNING
-          </h1>
-        </div>
+        {excoData && <ExcoCard data={excoData[EXCO_ENUM.ML].people} />}
 
-        <div className="flex flex-row justify-center gap-x-5 sm:gap-x-16">
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
-            <div className="flex justify-center">
-              <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
-                <Image
-                  src="/images/about/ml1.jpg"
-                  alt="Insert Photo Here"
-                  layout="fill"
-                  className="rounded-full"
-                />
-              </div>
-            </div>
-            <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
-              Co-Director
-            </h3>
-            <h3 className="flex justify-center pb-4 text-[6.67px] font-bold text-black sm:text-xl">
-              Daniel
-            </h3>
-          </div>
+        <SmallerTitle title="BLOCKCHAIN" />
 
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
-            <div className="flex justify-center">
-              <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
-                <Image
-                  src="/images/about/ml2.jpg"
-                  alt="Insert Photo Here"
-                  layout="fill"
-                  className="rounded-full"
-                />
-              </div>
-            </div>
-            <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
-              Co-Director
-            </h3>
-            <h3 className="flex justify-center text-[6.67px] font-bold text-black sm:text-xl">
-              Kleon
-            </h3>
-          </div>
-        </div>
+        {excoData && <ExcoCard data={excoData[EXCO_ENUM.BLOCKCHAIN].people} />}
 
-        <div className="flex items-center justify-center py-[40.46px] sm:my-8 sm:p-[35px]">
-          <h1 className="text-[20px] font-semibold leading-6 text-black sm:text-[32px] sm:leading-[3rem]">
-            BLOCKCHAIN
-          </h1>
-        </div>
+        <SmallerTitle title="QUANT" />
 
-        <div className="flex flex-row justify-center gap-x-5 sm:gap-x-16">
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
-            <div className="flex justify-center">
-              <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
-                <Image
-                  src="/images/about/blockchain1.jpg"
-                  alt="Insert Photo Here"
-                  layout="fill"
-                  className="rounded-full"
-                />
-              </div>
-            </div>
-            <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
-              Co-Director
-            </h3>
-            <h3 className="flex justify-center pb-4 text-[6.67px] font-bold text-black sm:text-xl">
-              Jones
-            </h3>
-          </div>
+        {excoData && <ExcoCard data={excoData[EXCO_ENUM.QUANT].people} />}
 
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
-            <div className="flex justify-center">
-              <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
-                <Image
-                  src="/images/about/blockchain2.jpg"
-                  alt="Insert Photo Here"
-                  layout="fill"
-                  className="rounded-full"
-                />
-              </div>
-            </div>
-            <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
-              Co-Director
-            </h3>
-            <h3 className="flex justify-center text-[6.67px] font-bold text-black sm:text-xl">
-              Marcus
-            </h3>
-          </div>
-        </div>
+        <SmallerTitle title="SOFTWARE DEVELOPMENT" />
 
-        <div className="flex items-center justify-center py-[40.46px] sm:my-8 sm:p-[35px]">
-          <h1 className="text-[20px] font-semibold leading-6 text-black sm:text-[32px] sm:leading-[3rem]">
-            SOFTWARE DEVELOPMENT
-          </h1>
-        </div>
+        {excoData && <ExcoCard data={excoData[EXCO_ENUM.SD].people} />}
 
-        <div className="flex flex-row justify-center gap-x-5 sm:gap-x-16">
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
-            <div className="flex justify-center">
-              <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
-                <Image
-                  src="/images/about/sd1.jpg"
-                  alt="Insert Photo Here"
-                  layout="fill"
-                  className="rounded-full"
-                />
-              </div>
-            </div>
-            <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
-              Co-Director
-            </h3>
-            <h3 className="flex justify-center pb-4 text-[6.67px] font-bold text-black sm:text-xl">
-              Owen
-            </h3>
-          </div>
+        <Title title="OPERATIONS WING" />
 
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
-            <div className="flex justify-center">
-              <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
-                <Image
-                  src="/images/about/sd2.jpg"
-                  alt="Insert Photo Here"
-                  layout="fill"
-                  className="rounded-full"
-                />
-              </div>
-            </div>
-            <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
-              Co-Director
-            </h3>
-            <h3 className="flex justify-center text-[6.67px] font-bold text-black sm:text-xl">
-              Jess
-            </h3>
-          </div>
-        </div>
+        {excoData && <ExcoCard data={excoData[EXCO_ENUM.OPSWING].people} />}
 
-        <div className="flex items-center justify-center py-[40.46px] sm:my-8 sm:p-[35px]">
-          <h1 className="text-[26.68px] font-bold leading-8 text-black sm:text-[40px] sm:leading-[3rem]">
-            OPERATIONS WING
-          </h1>
-        </div>
+        <SmallerTitle title="EXTERNAL RELATIONS" />
 
-        <div className="flex justify-center">
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
-            <div className="flex justify-center">
-              <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
-                <Image
-                  src="/images/about/op-wing.jpg"
-                  alt="Insert Photo Here"
-                  layout="fill"
-                  className="rounded-full"
-                />
-              </div>
-            </div>
-            <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
-              Vice President (OPS)
-            </h3>
-            <h3 className="flex justify-center pb-4 text-[6.67px] font-bold text-black sm:text-xl">
-              Darren
-            </h3>
-          </div>
-        </div>
+        {excoData && <ExcoCard data={excoData[EXCO_ENUM.ER].people} />}
 
-        <div className="flex items-center justify-center py-[40.46px] sm:my-8 sm:p-[35px]">
-          <h1 className="text-[20px] font-semibold leading-6 text-black sm:text-[32px] sm:leading-[3rem]">
-            EXTERNAL RELATIONS
-          </h1>
-        </div>
+        <SmallerTitle title="INTERNAL AFFAIRS" />
 
-        <div className="flex flex-row justify-center gap-x-5 sm:gap-x-16">
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
-            <div className="flex justify-center">
-              <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
-                <Image
-                  src="/images/about/er1.jpg"
-                  alt="Insert Photo Here"
-                  layout="fill"
-                  className="rounded-full"
-                />
-              </div>
-            </div>
-            <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
-              Co-Director
-            </h3>
-            <h3 className="flex justify-center pb-4 text-[6.67px] font-bold text-black sm:text-xl">
-              Elicia
-            </h3>
-          </div>
-
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
-            <div className="flex justify-center">
-              <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
-                <Image
-                  src="/images/about/er2.jpg"
-                  alt="Insert Photo Here"
-                  layout="fill"
-                  className="rounded-full"
-                />
-              </div>
-            </div>
-            <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
-              Co-Director
-            </h3>
-            <h3 className="flex justify-center text-[6.67px] font-bold text-black sm:text-xl">
-              Jasper
-            </h3>
-          </div>
-        </div>
-
-        <div className="flex items-center justify-center py-[40.46px] sm:my-8 sm:p-[35px]">
-          <h1 className="text-[20px] font-semibold leading-6 text-black sm:text-[32px] sm:leading-[3rem]">
-            INTERNAL AFFAIRS
-          </h1>
-        </div>
-
-        <div className="flex flex-row justify-center gap-x-5 sm:gap-x-16">
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
-            <div className="flex justify-center">
-              <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
-                <Image
-                  src="/images/about/ia1.jpg"
-                  alt="Insert Photo Here"
-                  layout="fill"
-                  className="rounded-full"
-                />
-              </div>
-            </div>
-            <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
-              Co-Director
-            </h3>
-            <h3 className="flex justify-center pb-4 text-[6.67px] font-bold text-black sm:text-xl">
-              James
-            </h3>
-          </div>
-
-          <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
-            <div className="flex justify-center">
-              <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
-                <Image
-                  src="/images/about/ia2.jpg"
-                  alt="Insert Photo Here"
-                  layout="fill"
-                  className="rounded-full"
-                />
-              </div>
-            </div>
-            <h3 className="mt-2 flex justify-center text-[5.48px] font-normal text-black sm:mt-6 sm:text-xl">
-              Co-Director
-            </h3>
-            <h3 className="flex justify-center text-[6.67px] font-bold text-black sm:text-xl">
-              Jin
-            </h3>
-          </div>
-        </div>
+        {excoData && <ExcoCard data={excoData[EXCO_ENUM.IA].people} />}
       </MaxWidth>
     </>
   );
