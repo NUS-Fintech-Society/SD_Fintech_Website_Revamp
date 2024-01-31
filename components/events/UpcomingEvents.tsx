@@ -1,11 +1,11 @@
 import EventsProps from '@interfaces/events/Events';
 import { Event } from '@data/interface/eventsData';
 import SectionHeader from '@components/layout/SectionHeader';
-import UpcomingEventCard from './UpcomingEventCard';
 import { useState } from 'react';
 import { Select } from '@chakra-ui/react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import UpcomingEventCard from './UpcomingEventCard';
 
 const responsive = {
   monitor: {

@@ -2,9 +2,9 @@ import EventsProps from '@interfaces/events/Events';
 import { Event } from '@data/interface/eventsData';
 import Image from 'next/image';
 import moment from 'moment';
-import CountdownTimer from './CountdownTimer';
 import { Button, IconButton } from '@chakra-ui/react';
 import { CalendarIcon } from '@chakra-ui/icons';
+import CountdownTimer from './CountdownTimer';
 
 const FeaturedEvent = ({ events }: EventsProps) => {
   const upcomingEvents: Event[] = events.filter(
@@ -76,7 +76,7 @@ const FeaturedEvent = ({ events }: EventsProps) => {
             <Button
               variant="solid"
               colorScheme="purple"
-              borderRadius={'xl'}
+              borderRadius="xl"
               size="lg"
               _hover={{ bg: '#6f00ff', color: 'white' }}
               className="w-2/3 bg-purple-500 text-xs text-white md:text-base lg:text-xl"
@@ -85,7 +85,7 @@ const FeaturedEvent = ({ events }: EventsProps) => {
             </Button>
             <IconButton
               colorScheme="white"
-              variant={'outline'}
+              variant="outline"
               aria-label="book Calendar"
               size="lg"
               icon={<CalendarIcon />}

@@ -53,12 +53,12 @@ const UpcomingEventCard = ({
         variant="outline"
         colorScheme="blue"
         borderRadius="full"
-        size={'sm'}
+        size="sm"
         borderColor="#004C98"
         color="#004C98"
         borderWidth="1px"
         _hover={{ bg: '#004C98', color: 'white' }}
-        marginTop={'auto'}
+        marginTop="auto"
       >
         More Details
       </Button>

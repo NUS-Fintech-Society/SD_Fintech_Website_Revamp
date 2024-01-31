@@ -6,7 +6,6 @@
   "extends": [
     "plugin:tailwindcss/recommended",
     "plugin:react/recommended",
-    "airbnb",
     "next",
     "prettier"
   ],
@@ -23,6 +22,6 @@
     "import/extensions": "off",
     "prefer-template": "off",
     "jsx-a11y/anchor-is-valid": "off",
-    "no-unused-vars": "off",
+    "no-unused-vars": "off"
   }
 }

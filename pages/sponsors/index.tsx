@@ -1,12 +1,15 @@
 import { useBreakpointValue } from '@chakra-ui/react';
 import React from 'react';
 import Image from 'next/image';
-import { HeaderContainer, RowContainer, SponsorWrapper } from './styles';
+import {
+  HeaderContainer,
+  RowContainer,
+  SponsorWrapper,
+} from '../../styles/sponsors/styles';
 import { Organization } from '../../components/types/Organization';
 import { Gold, Organisers, Platinum, Silver } from '../../data/organization';
 
 export default function Sponsor() {
-  
   function organizationItem(organization: Organization) {
     return (
       <a
@@ -16,7 +19,7 @@ export default function Sponsor() {
         key={organization.name}
         className={`${
           organization.name === 'Tokka Labs' ? 'bg-[#0C1747]' : 'bg-white'
-        } rounded-lg shadow-lg px-4 py-2 w-fit h-24 flex justify-center items-center`}
+        } flex h-24 w-fit items-center justify-center rounded-lg px-4 py-2 shadow-lg`}
       >
         <Image
           className="scale-75"
@@ -30,7 +33,7 @@ export default function Sponsor() {
   }
   function organizationRow(organizations: Organization[], index: number) {
     const row = organizations.map((organization) =>
-      organizationItem(organization),
+      organizationItem(organization)
     );
 
     return (
@@ -43,7 +46,7 @@ export default function Sponsor() {
 
   function organizationSection(
     organizations: Organization[],
-    rowLength: number,
+    rowLength: number
   ) {
     const result = [];
 
