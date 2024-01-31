@@ -1,8 +1,4 @@
-export default interface EventsData {
-  events: Event[];
-}
-
-interface Event {
+export interface Event {
   coverImage: {
     src: string;
     alt: string;
@@ -14,4 +10,6 @@ interface Event {
   type: string; // Internal or External
 }
 
-
+export default interface EventsData {
+  events: Event[];
+}

@@ -1,6 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
@@ -31,15 +28,19 @@ const Navbar = () => {
   return (
     <nav className="relative z-10 w-[100vw] text-sm">
       <div className="flex h-[105px] bg-white text-black">
-        <div className="relative ml-10 flex h-[50px] w-[100px] cursor-pointer font-bold">
+        <div className="relative ml-10 flex w-[100px] cursor-pointer items-center font-bold">
           <Link href="/">
-            <Image
-              src="/images/black-fintech-logo.jpg"
-              alt="NUS FinTech Society Logo"
-              width="130px"
-              height="100px"
-              layout="fixed"
-            />
+            <div className="relative">
+              <Image
+                // className="relative z-10 rounded-full"
+                src="/images/black-fintech-logo.jpg"
+                alt="NUS FinTech Society Logo"
+                width="100px"
+                height="100px"
+                layout="fixed"
+              />
+              {/* <div className="absolute -inset-1 h-[80px] w-[80px] rounded-full bg-gradient-to-br from-[#f3ecdb] via-[#f3ecdb] to-[#DDEEFE] blur-xl" /> */}
+            </div>
           </Link>
         </div>
 
@@ -86,8 +87,8 @@ const Navbar = () => {
               </li>
 
               <li className="my-3  ml-4 md:my-0 md:px-4 md:py-1 lg:ml-5 lg:py-1">
-                <div className="lg:hidden">
-                  <div className="rounded-md ">DEPARTMENTS</div>
+                <div className="lg:hidden hover:lg:visible">
+                  <div className="rounded-md">DEPARTMENTS</div>
                   <ul>
                     {DEPARTMENTS_ITEMS.map((item) => (
                       <li
@@ -106,7 +107,7 @@ const Navbar = () => {
                     ))}
                   </ul>
                 </div>
-                <div className=" hidden lg:block">
+                <div className="hidden lg:block">
                   <DropDown
                     handleCloseNav={handleCloseNav}
                     title="DEPARTMENTS"
@@ -164,6 +165,15 @@ const Navbar = () => {
                 </Link>
               </li>
                     */}
+
+              <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-4 md:py-1 ">
+                <Link
+                  href="/sponsors"
+                  className="rounded-md px-3 py-1 text-black"
+                >
+                  <a onClick={handleCloseNav}>SPONSORS</a>
+                </Link>
+              </li>
 
               <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-4 md:py-1 lg:mr-5">
                 <Link
