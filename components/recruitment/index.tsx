@@ -109,6 +109,11 @@ const Recruitment = () => {
         },
       ],
     },
+    {
+      department: 'Quant',
+      roles: [
+      ],
+    },
   ];
 
   const OPERATIONS = [

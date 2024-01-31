@@ -882,12 +882,36 @@ const departmentsData: DepartmentsData = {
         },
       ],
     },
-
-
-
-
-
-
+    {
+      name: 'Quant',
+      path: 'quant',
+      logo: {
+        src: '/images/departments/departmentLogos/Internal-main-icon.jpg',
+        alt: 'Internal Logo',
+      },
+      purpose:
+        '',
+      vision:
+        '',
+      directors: [
+        {
+          src: '/images/about/quant1.jpg',
+          alt: 'Image of director',
+          directorName: 'Justin Leng',
+          linkedin: '',
+        },
+        {
+          src: '/images/about/quant2.jpg',
+          alt: 'Image of director',
+          directorName: 'Hur Sinhaeng (Claire)',
+          linkedin: '',
+        },
+      ],
+      roles: [
+      ],
+      projects: [
+      ],
+    },
   ],
 };
 
