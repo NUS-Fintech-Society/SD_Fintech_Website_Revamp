@@ -7,9 +7,15 @@ const excoData: ExcoData = {
       people: [
         {
           role: 'Advisor',
-          title: 'A/Prof. (Practice)',
-          name: 'Keith Carter',
-          imgSrc: '/images/exco/advisor.jpg',
+          title: 'Prof',
+          name: 'Hahn Jungpil',
+          imgSrc: '/images/about/advisor1.jpg',
+        },
+        {
+          role: 'Advisor',
+          title: 'Dr.',
+          name: 'Nicholas Garcia',
+          imgSrc: '/images/about/advisor2.jpg',
         },
       ],
     },
@@ -19,7 +25,7 @@ const excoData: ExcoData = {
         {
           role: 'PRESIDENT',
           name: 'Zhang Longhao',
-          imgSrc: '/images/exco/co-president2.jpg',
+          imgSrc: '/images/about/president.jpg',
         },
       ],
     },
@@ -29,7 +35,7 @@ const excoData: ExcoData = {
         {
           role: 'VICE PRESIDENT (TECH)',
           name: 'Hoe Jun Leong',
-          imgSrc: '/images/exco/techwing.jpg',
+          imgSrc: '/images/about/techwing.jpg',
         },
       ],
     },
@@ -39,12 +45,12 @@ const excoData: ExcoData = {
         {
           role: 'CO-DIRECTOR (BC)',
           name: 'Keith Lim Jun Jie',
-          imgSrc: '/images/exco/blockchain1.jpg',
+          imgSrc: '/images/about/blockchain1.jpg',
         },
         {
           role: 'CO-DIRECTOR (BC)',
           name: 'Poh Say Keong',
-          imgSrc: '/images/exco/blockchain2.jpg',
+          imgSrc: '/images/about/blockchain2.jpg',
         },
       ],
     },
@@ -54,12 +60,12 @@ const excoData: ExcoData = {
         {
           role: 'CO-DIRECTOR (QUANT)',
           name: 'Justin Leng',
-          imgSrc: '/images/exco/blockchain1.jpg',
+          imgSrc: '/images/about/quant1.jpg',
         },
         {
           role: 'CO-DIRECTOR (QUANT)',
           name: 'Hur Sinhaeng (Claire)',
-          imgSrc: '/images/exco/blockchain2.jpg',
+          imgSrc: '/images/about/quant2.jpg',
         },
       ],
     },
@@ -69,17 +75,17 @@ const excoData: ExcoData = {
         {
           role: 'CO-DIRECTOR (ML)',
           name: 'Hans Neddyanto Tandjung',
-          imgSrc: '/images/exco/ml1.jpg',
+          imgSrc: '/images/about/ml1.jpg',
         },
         {
           role: 'CO-DIRECTOR (ML)',
           name: 'Yu Shi Jie',
-          imgSrc: '/images/exco/ml1.jpg',
+          imgSrc: '/images/about/ml2.jpg',
         },
         {
           role: 'CO-DIRECTOR (ML)',
           name: 'Han Wei Lun',
-          imgSrc: '/images/exco/ml2.jpg',
+          imgSrc: '/images/about/ml3.jpg',
         },
       ],
     },
@@ -89,12 +95,12 @@ const excoData: ExcoData = {
         {
           role: 'CO-DIRECTOR (SD)',
           name: 'Michelle Adeline',
-          imgSrc: '/images/exco/sd1.jpg',
+          imgSrc: '/images/about/sd1.jpg',
         },
         {
           role: 'CO-DIRECTOR (SD)',
           name: 'Justin Peng',
-          imgSrc: '/images/exco/sd2.jpg',
+          imgSrc: '/images/about/sd2.jpg',
         },
       ],
     },
@@ -104,7 +110,7 @@ const excoData: ExcoData = {
         {
           role: 'VICE PRESIDENT (OPS)',
           name: 'Jasper Tan',
-          imgSrc: '/images/exco/op-wing.jpg',
+          imgSrc: '/images/about/op-wing.jpg',
         },
       ],
     },
@@ -114,12 +120,12 @@ const excoData: ExcoData = {
         {
           role: 'CO-DIRECTOR (ER)',
           name: 'Daro Tan Wei Liang',
-          imgSrc: '/images/exco/er.jpg',
+          imgSrc: '/images/about/er1.jpg',
         },
         {
           role: 'CO-DIRECTOR (ER)',
           name: 'Brayden Quah Sew Him',
-          imgSrc: '/images/exco/er.jpg',
+          imgSrc: '/images/about/er2.jpg',
         },
       ],
     },
@@ -129,7 +135,7 @@ const excoData: ExcoData = {
         {
           role: 'DIRECTOR (IA)',
           name: 'Tay Han',
-          imgSrc: '/images/exco/ia1.jpg',
+          imgSrc: '/images/about/ia1.jpg',
         },
       ],
     },

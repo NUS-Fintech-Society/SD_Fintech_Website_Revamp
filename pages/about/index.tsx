@@ -12,6 +12,7 @@ import { fetchExcoData } from '@data/mockFetch';
 import { useEffect, useState } from 'react';
 import { EXCO_ENUM } from '@data/excoEnum';
 import SmallerTitle from '@components/aboutus/SmallerTitle';
+import AdvisorCard from '@components/aboutus/AdvisorCard';
 
 const AboutPage = () => {
   const [excoData, setExcoData] = useState<any>(null);
@@ -253,59 +254,7 @@ const AboutPage = () => {
 
         <Title title="ADVISORS" />
 
-        <div className="flex justify-center gap-x-5 md:gap-x-16">
-          <div className="flex justify-center">
-            <div className="relative h-[119px] w-[119px] sm:h-[228px] sm:w-[228px] md:h-[337px] md:w-[337px]">
-              <Image
-                src="/images/about/advisor1.jpg"
-                alt="Insert Photo Here"
-                layout="fill"
-                className="rounded-[6.5px] sm:rounded-[21px]"
-              />
-            </div>
-          </div>
-
-          <div className="flex justify-center">
-            <div className="relative h-[119px] w-[119px] sm:h-[228px] sm:w-[228px] md:h-[337px] md:w-[337px]">
-              <Image
-                src="/images/about/advisor2.jpg"
-                alt="Insert Photo Here"
-                layout="fill"
-                className="rounded-[6.5px] sm:rounded-[21px]"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-2 flex justify-center gap-x-5 md:mt-5 md:gap-x-16">
-          <div className="flex justify-center">
-            <div className="h-[51.52px] w-[118.92px] items-center justify-center rounded-[6.5px] bg-[#161B50] sm:h-[100px] sm:w-[228px] sm:rounded-[18px] md:h-[146px] md:w-[337px]">
-              <h3 className="mt-3 flex justify-center text-[6.5px] font-normal leading-[0.5rem] text-white sm:mt-4 sm:text-sm md:mt-8 md:text-lg md:leading-[1.375rem] ">
-                Advisor
-              </h3>
-              <h3 className="flex justify-center text-[6.5px] font-normal leading-[0.5rem] text-white sm:text-sm md:text-lg md:leading-[1.375rem]">
-                Prof
-              </h3>
-              <h3 className="flex justify-center text-[10.83px] font-normal leading-[0.813rem] text-white sm:text-xl md:text-[30px] md:leading-[2.25rem]">
-                Hahn Jungpil
-              </h3>
-            </div>
-          </div>
-
-          <div className="flex justify-center">
-            <div className="h-[51.52px] w-[118.92px] items-center justify-center rounded-[6.5px] bg-[#161B50] sm:h-[100px] sm:w-[228px] sm:rounded-[18px] md:h-[146px] md:w-[337px]">
-              <h3 className="mt-3 flex justify-center text-[6.5px] font-normal leading-[0.5rem] text-white sm:mt-4 sm:text-sm md:mt-8 md:text-lg md:leading-[1.375rem] ">
-                Advisor
-              </h3>
-              <h3 className="flex justify-center text-[6.5px] font-normal leading-[0.5rem] text-white sm:text-sm md:text-lg md:leading-[1.375rem]">
-                Dr.
-              </h3>
-              <h3 className="flex justify-center text-[10.83px] font-normal leading-[0.813rem] text-white sm:text-xl md:text-[30px] md:leading-[2.25rem]">
-                Nicholas Garcia
-              </h3>
-            </div>
-          </div>
-        </div>
+        {excoData && <AdvisorCard data={excoData[EXCO_ENUM.ADVISOR].people} />}
 
         <Title title="PRESIDENT" />
 

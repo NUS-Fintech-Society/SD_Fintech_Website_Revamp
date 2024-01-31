@@ -11,11 +11,12 @@ const ExcoCard = ({ data }: ExcoCardProps) => {
       {data.map((item: any) => (
         <div className="h-[110.53px] w-[118.92px] rounded-[13.18px] leading-tight shadow-[0_2px_30px_3px_rgba(0,0,0,0.1)] sm:h-[300px] sm:w-[300px] sm:rounded-[20px]">
           <div className="flex justify-center">
-            <div className="relative mt-3 flex h-[60.94px] w-[60.94px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
+            <div className="relative mt-3 flex h-[100px] w-[100px] sm:mt-8 sm:h-[160px] sm:w-[160px]">
               <Image
-                src="/images/about/co-president2.jpg"
+                src={item.imgSrc}
                 alt="Insert Photo Here"
                 layout="fill"
+                style={{ objectFit: 'contain' }}
                 className="rounded-full"
               />
             </div>
