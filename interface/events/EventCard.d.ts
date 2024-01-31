@@ -1,11 +1,5 @@
-export interface EventCardProps {
-    name: string;
-    cardDescription: string;
-    coverImage: {
-      src: string;
-      alt: string;
-    };
-    location: string;
-    date: string;
-  }
-  
+import { Event } from '@data/interface/eventsData';
+
+export default interface EventCardProps extends Event {
+  type?: string;
+}
