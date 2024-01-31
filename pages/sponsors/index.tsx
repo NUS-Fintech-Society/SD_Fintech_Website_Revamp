@@ -63,7 +63,7 @@ export default function Sponsor() {
 
   return (
     <SponsorWrapper overflow="hidden">
-      <HeaderContainer>Sponsors</HeaderContainer>
+      <HeaderContainer>NUS Fintech Summit 2024 Sponsors</HeaderContainer>
 
       <HeaderContainer fontWeight="normal">Organized By</HeaderContainer>
       {organizationSection(Organisers, rowSize || 2)}

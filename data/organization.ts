@@ -103,7 +103,7 @@ export const Organisers: Organization[] = [
   },
   {
     name: 'NUS FinTech Lab',
-    logoSrc: '/images/Sponsor/nus_ftl_logo.png',
+    logoSrc: '/images/sponsor/nus_ftl_logo.png',
     logoHeight: '90px',
     logoWidth: '311px',
     url: 'https://fintechlab.nus.edu.sg/',

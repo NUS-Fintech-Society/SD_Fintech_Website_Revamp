@@ -7,6 +7,7 @@ export const SponsorWrapper = chakra(Box, {
     backgroundColor: '#20345b',
     paddingTop: '34px',
     paddingX: '34px',
+    height: '100%',
   },
 });
 
