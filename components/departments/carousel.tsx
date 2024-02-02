@@ -39,7 +39,7 @@ const DeptCarousel = ({
   }, [router]);
 
   return (
-    <div className="relative mx-auto mt-10 h-[300px] w-full rounded-xl bg-[#090071] sm:h-[400px] sm:rounded-[20px] lg:w-[400px]">
+    <div className="relative h-full flex-1 rounded-xl bg-[#090071] text-white sm:rounded-[20px] ">
       <Image
         src="/images/departments/purpose, vision, directors overlay.jpg"
         alt="Insert Photo Here"
@@ -65,7 +65,7 @@ const DeptCarousel = ({
           <p className="text-left sm:mb-9 sm:mt-10 sm:text-lg">{vision}</p>
         </div>
         <div className="p-8 text-white sm:px-14 sm:py-10">
-          <h2 className="flex text-xl font-bold sm:mb-6 sm:text-3xl">
+          <h2 className="flex text-xl font-bold sm:mb-6 sm:text-3xl overflow-auto">
             Co-Directors
           </h2>
           {directors.map((director) => {
