@@ -8,8 +8,8 @@ interface AdvisorCardProps {
 const AdvisorCard = ({ data }: AdvisorCardProps) => {
   return (
     <div className="flex flex-row justify-center gap-x-5 sm:gap-x-16">
-      {data.map((item: any) => (
-        <div className="flex flex-col gap-y-3">
+      {data.map((item: any, index: number) => (
+        <div className="flex flex-col gap-y-3" key={index}>
           <div className="relative h-[119px] w-[119px] sm:h-[228px] sm:w-[228px] md:h-[337px] md:w-[337px]">
             <Image
               src={item.imgSrc}
