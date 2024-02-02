@@ -67,7 +67,7 @@ export default function Post({ postData, imageSizes }: Props) {
         <ArrowBackIcon fontSize="5xl" />
         Back
       </button>
-      <div className="w-[80%] lg:w-[40%] lg:text-2xl mt-20 lg:mt-0">
+      <div className="mt-20 w-[80%] lg:mt-0 lg:w-[40%] lg:text-2xl">
         <h1 className="text-5xl font-bold">{postData.title ?? ''}</h1>
         <br />
         <h2 className="text-3xl font-semibold">{postData.date ?? ''}</h2>
@@ -75,7 +75,7 @@ export default function Post({ postData, imageSizes }: Props) {
 
         <ReactMarkdown
           skipHtml={true}
-          className="items-center justify-center leading-10"
+          className="mb-40 items-center justify-center leading-10"
           components={{
             img: (props) => {
               const { src, alt } = props;
