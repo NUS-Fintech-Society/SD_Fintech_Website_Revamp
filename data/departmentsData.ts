@@ -866,8 +866,10 @@ const departmentsData: DepartmentsData = {
         src: '/images/departments/departmentLogos/Internal-main-icon.jpg',
         alt: 'Internal Logo',
       },
-      purpose: '',
-      vision: '',
+      purpose:
+        'Our purpose is to empower quantitative enthusiasts to explore, innovate, and excel in a supportive and dynamic environment.',
+      vision:
+        'We envision a future where our team leads the forefront of quantitative analysis, transforming ideas into impactful solutions through collaboration and shared passion.',
       directors: [
         {
           src: '/images/about/quant1.jpg',
@@ -882,7 +884,7 @@ const departmentsData: DepartmentsData = {
           linkedin: 'https://www.linkedin.com/in/hursinhaeng/',
         },
       ],
-      roles: [],
+      roles: ['Quant Leads', 'Quant Researcher', 'Quant Developer'],
       projects: [],
     },
   ],
