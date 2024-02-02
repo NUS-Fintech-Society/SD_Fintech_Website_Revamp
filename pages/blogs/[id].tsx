@@ -62,7 +62,7 @@ export default function Post({ postData, imageSizes }: Props) {
     <section className="my-16 flex items-start justify-center">
       <button
         className="absolute left-[15%] items-center justify-center text-xl font-semibold"
-        onClick={() => router.back()}
+        onClick={() => router.push('/blogs')}
       >
         <ArrowBackIcon fontSize="5xl" />
         Back
