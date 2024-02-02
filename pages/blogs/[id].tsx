@@ -1,11 +1,11 @@
 import { ArrowBackIcon } from '@chakra-ui/icons';
+import sizeOf from 'image-size';
 import { PostData, getPostById } from 'lib/posts';
 import { GetStaticPaths } from 'next';
-import { useRouter } from 'next/router';
-import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
-import sizeOf from 'image-size';
+import { useRouter } from 'next/router';
 import { join } from 'path';
+import ReactMarkdown from 'react-markdown';
 
 type Props = {
   postData: PostData;
@@ -59,15 +59,15 @@ export default function Post({ postData, imageSizes }: Props) {
   }
 
   return (
-    <section className="my-16 flex items-start justify-center">
+    <section className="flex items-start justify-center lg:my-16">
       <button
-        className="absolute left-[15%] items-center justify-center text-xl font-semibold"
+        className="absolute left-8 items-center justify-center text-xl font-semibold lg:left-[15%]"
         onClick={() => router.push('/blogs')}
       >
         <ArrowBackIcon fontSize="5xl" />
         Back
       </button>
-      <div className="w-[40%] text-2xl">
+      <div className="w-[80%] lg:w-[40%] lg:text-2xl mt-20 lg:mt-0">
         <h1 className="text-5xl font-bold">{postData.title ?? ''}</h1>
         <br />
         <h2 className="text-3xl font-semibold">{postData.date ?? ''}</h2>
