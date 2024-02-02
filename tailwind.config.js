@@ -1,9 +1,12 @@
+const tailwindMdBase = require('@geoffcodesthings/tailwind-md-base');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{html,js}', './node_modules/tw-elements/dist/js/**/*.js'
+    './src/**/*.{html,js}',
+    './node_modules/tw-elements/dist/js/**/*.js',
   ],
   theme: {
     extend: {
@@ -24,5 +27,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: ['prettier-plugin-tailwindcss', tailwindMdBase()],
 };

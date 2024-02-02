@@ -98,42 +98,50 @@ const PastEvents = ({ events }: EventsProps) => {
         </Carousel>
       </div>
       {/* Desktop Carousel */}
-      <div className="hidden sm:block">
-        <Carousel
-          swipeable={true}
-          draggable={true}
-          showDots={true}
-          responsive={responsive}
-          ssr={false} // means to not render carousel on server-side.
-          infinite={false}
-          // autoPlay={true}
-          // autoPlaySpeed={3000}
-          keyBoardControl={true}
-          partialVisible={true}
-        >
-          {eventChunks.map((chunk, index) => (
-            <div key={index}>
-              {chunk.map(
-                (
-                  { coverImage, name, cardDescription, location, date, type },
-                  cardIndex
-                ) => (
-                  <div key={cardIndex} className="my-7 flex justify-center">
-                    <PastEventCard
-                      coverImage={coverImage}
-                      name={name}
-                      cardDescription={cardDescription}
-                      location={location}
-                      date={date}
-                      type={type}
-                    />
-                  </div>
-                )
-              )}
-            </div>
-          ))}
-        </Carousel>
-      </div>
+      {pastEvents.length > 0 ? (
+        <div className="hidden sm:block">
+          <Carousel
+            swipeable={true}
+            draggable={true}
+            showDots={true}
+            responsive={responsive}
+            ssr={false} // means to not render carousel on server-side.
+            infinite={false}
+            // autoPlay={true}
+            // autoPlaySpeed={3000}
+            keyBoardControl={true}
+            partialVisible={true}
+          >
+            {eventChunks.map((chunk, index) => (
+              <div key={index}>
+                {chunk.map(
+                  (
+                    { coverImage, name, cardDescription, location, date, type },
+                    cardIndex
+                  ) => (
+                    <div key={cardIndex} className="my-7 flex justify-center">
+                      <PastEventCard
+                        coverImage={coverImage}
+                        name={name}
+                        cardDescription={cardDescription}
+                        location={location}
+                        date={date}
+                        type={type}
+                      />
+                    </div>
+                  )
+                )}
+              </div>
+            ))}
+          </Carousel>
+        </div>
+      ) : (
+        <div className="flex items-center justify-center">
+          <div className="mt-2 text-base md:mt-4 md:text-2xl lg:mt-6 lg:text-3xl">
+            No Events To Display
+          </div>
+        </div>
+      )}
     </div>
   );
 };

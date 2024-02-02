@@ -39,7 +39,7 @@ const AboutPage = () => {
       </Head>
 
       <MaxWidth>
-        <div className="mb-8 mt-3 flex flex-wrap text-[24.48px] font-bold leading-8 text-[#002750] sm:ml-4">
+        <div className="mb-8 mt-3 flex flex-wrap  text-[24.48px] font-bold leading-8 text-[#002750] sm:ml-4">
           <div className="relative h-[52px] w-[68.88px] sm:h-[139px] sm:w-[184px]">
             <Image src="/images/about/main_icon.jpg" alt="Logo" layout="fill" />
           </div>
