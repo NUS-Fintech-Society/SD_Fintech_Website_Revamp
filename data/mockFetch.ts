@@ -2,7 +2,7 @@
 import RecruitmentData from '@data/interface/recruitmentData';
 import RolesData from '@data/interface/rolesData';
 import { HomeData } from '@data/interface/homeData';
-import { EventsData } from '@data/interface/eventsData';
+import EventsData from '@data/interface/eventsData';
 import DepartmentsData from '@data/interface/departmentsData';
 
 // code

@@ -68,6 +68,7 @@ const departmentsData: DepartmentsData = {
             },
           ],
           collaborations: [],
+          category: '',
         },
         {
           projectName: 'Magic Formula Investing',
@@ -103,6 +104,7 @@ const departmentsData: DepartmentsData = {
             },
           ],
           collaborations: [],
+          category: '',
         },
         {
           projectName: 'NLP on FOMC Meetings',
@@ -138,6 +140,7 @@ const departmentsData: DepartmentsData = {
             },
           ],
           collaborations: [],
+          category: '',
         },
       ],
     },
@@ -215,6 +218,7 @@ const departmentsData: DepartmentsData = {
               companyName: 'xfers',
             },
           ],
+          category: '',
         },
         {
           projectName: 'ABCDao',
@@ -244,6 +248,7 @@ const departmentsData: DepartmentsData = {
             },
           ],
           collaborations: [],
+          category: '',
         },
 
         {
@@ -274,6 +279,7 @@ const departmentsData: DepartmentsData = {
             },
           ],
           collaborations: [],
+          category: '',
         },
         {
           projectName: 'Multi-Signature Wallet',
@@ -303,6 +309,138 @@ const departmentsData: DepartmentsData = {
             },
           ],
           collaborations: [],
+          category: '',
+        },
+        {
+          projectName: 'Superfluid',
+          year: '',
+          summary:
+            "We act as a service provider, providing companies/ projects that requires a subscription mechanism accepting crypto. Our service acts as a Factory for deployment of smart contracts that can handle these subscription services for said companies.",
+          htmlContent:
+            '<p>We act as a service provider, providing companies/ projects that requires a subscription mechanism accepting crypto. Our service acts as a Factory for deployment of smart contracts that can handle these subscription services for said companies. </p>',
+          projectImage: [
+            {
+              src: '/images/departments/projectImages/blockchain/wallet.jpg',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+          ],
+          members: [
+            {
+              memberName: '',
+              src: '',
+              alt: '',
+            },
+
+          ],
+          collaborations: [],
+          category: 'Past',
+        },
+        {
+          projectName: 'NFT Synthetic Market',
+          year: '',
+          summary:
+            "NFT Synthetic Markets serves as a way to increase liquidity for NFTs as NFTs are illiquid due to the nature of marketplaces such as OpenSea. Someone will put up the NFT for sale and someone else will buy it, which means it is mostly a one to one exchange. We intend to create tradable synthetic tokens with NFTs as the underlying asset, making NFTs more liquid.",
+          htmlContent:
+            '<p>NFT Synthetic Markets serves as a way to increase liquidity for NFTs as NFTs are illiquid due to the nature of marketplaces such as OpenSea. Someone will put up the NFT for sale and someone else will buy it, which means it is mostly a one to one exchange. We intend to create tradable synthetic tokens with NFTs as the underlying asset, making NFTs more liquid. </p>',
+          projectImage: [
+            {
+              src: '/images/departments/projectImages/blockchain/wallet.jpg',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+          ],
+          members: [
+            {
+              memberName: '',
+              src: '',
+              alt: '',
+            },
+
+          ],
+          collaborations: [],
+          category: 'Past',
+        },
+
+        {
+          projectName: 'Decentralised Ticket Marketplace',
+          year: '23/24',
+          summary:
+            "We can improve and foster talent in performing arts in Singapore by tokenizing concert tickets. This can provide unique experiences for consumers while reducing the problem of scalping.",
+          htmlContent:
+            '<p>We can improve and foster talent in performing arts in Singapore by tokenizing concert tickets. This can provide unique experiences for consumers while reducing the problem of scalping.</p>',
+          projectImage: [
+            {
+              src: '/images/departments/projectImages/blockchain/wallet.jpg',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+          ],
+          members: [
+            {
+              memberName: '',
+              src: '',
+              alt: '',
+            },
+
+          ],
+          collaborations: [],
+          category: 'Ongoing',
+        },
+        {
+          projectName: 'NFT Collection for Charity',
+          year: '23/24',
+          summary:
+            "Having NFTs as proof of charitable contributions provides another avenue for donations to the charity. Users  will have public and immutable records of their donation. This can encourage more individuals and companies to donate.",
+          htmlContent:
+            '<p>Having NFTs as proof of charitable contributions provides another avenue for donations to the charity. Users  will have public and immutable records of their donation. This can encourage more individuals and companies to donate.</p>',
+          projectImage: [
+            {
+              src: '/images/departments/projectImages/blockchain/wallet.jpg',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+          ],
+          members: [
+            {
+              memberName: '',
+              src: '',
+              alt: '',
+            },
+
+          ],
+          collaborations: [],
+          category: 'Ongoing',
+        },
+        {
+          projectName: 'On-Chain Referral System',
+          year: '23/24',
+          summary:
+            "An On-Chain referral system through a deployed smart contract where users can be referred and generate a proof of invitation to verify users. Reward / referral fees can also be claimed directly. ",
+          htmlContent:
+            '<p>An On-Chain referral system through a deployed smart contract where users can be referred and generate a proof of invitation to verify users. Reward / referral fees can also be claimed directly. </p>',
+          projectImage: [
+            {
+              src: '/images/departments/projectImages/blockchain/wallet.jpg',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+          ],
+          members: [
+            {
+              memberName: '',
+              src: '',
+              alt: '',
+            },
+
+          ],
+          collaborations: [],
+          category: 'Ongoing',
         },
       ],
     },
@@ -373,6 +511,7 @@ const departmentsData: DepartmentsData = {
             },
           ],
           collaborations: [],
+          category: 'Past',
         },
         {
           projectName:
@@ -403,6 +542,142 @@ const departmentsData: DepartmentsData = {
             },
           ],
           collaborations: [],
+          category: 'Past',
+        },
+        {
+          projectName:
+            'Natural Language Processing',
+          year: '',
+          summary:
+            "",
+          htmlContent:
+            "<p> </p>",
+          projectImage: [
+            {
+              src: '/images/departments/projectImages/softwareDevelopment/property.jpg',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+          ],
+          members: [
+            {
+              memberName: '',
+              src: '',
+              alt: '',
+            },
+
+          ],
+          collaborations: [],
+          category: 'Past',
+        },
+        {
+          projectName:
+            'NFS Website',
+          year: '23/24',
+          summary:
+            "NUS Fintech Society's flagship website showcasing our departments, projects, events, and recruitment information.",
+          htmlContent:
+            "<p>NUS Fintech Society's flagship website showcasing our departments, projects, events, and recruitment information. </p>",
+          projectImage: [
+            {
+              src: '/images/departments/projectImages/softwareDevelopment/property.jpg',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+          ],
+          members: [
+            {
+              memberName: '',
+              src: '',
+              alt: '',
+            },
+
+          ],
+          collaborations: [],
+          category: 'Ongoing',
+        },
+        {
+          projectName:
+            'Fintech Summit Website',
+          year: '23/24',
+          summary:
+            "Website for promoting and disseminating information about NUS Fintech Society's annual Fintech Summit.",
+          htmlContent:
+            "<p>Website for promoting and disseminating information about NUS Fintech Society's annual Fintech Summit. </p>",
+          projectImage: [
+            {
+              src: '/images/departments/projectImages/softwareDevelopment/property.jpg',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+          ],
+          members: [
+            {
+              memberName: '',
+              src: '',
+              alt: '',
+            },
+
+          ],
+          collaborations: [],
+          category: 'Ongoing',
+        },
+        {
+          projectName:
+            'ATLAS: HR Management System',
+          year: '23/24',
+          summary:
+            "Internal tool to manage NUS Fintech Society’s members and applicants.",
+          htmlContent:
+            "<p>Internal tool to manage NUS Fintech Society’s members and applicants. </p>",
+          projectImage: [
+            {
+              src: '/images/departments/projectImages/softwareDevelopment/property.jpg',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+          ],
+          members: [
+            {
+              memberName: '',
+              src: '',
+              alt: '',
+            },
+
+          ],
+          collaborations: [],
+          category: 'Ongoing',
+        },
+        {
+          projectName:
+            'MEDUSA: ML Microservices',
+          year: '23/24',
+          summary:
+            "Centralised platform to demonstrate the capabilities of ML department's models",
+          htmlContent:
+            "<p>Centralised platform to demonstrate the capabilities of ML department's models </p>",
+          projectImage: [
+            {
+              src: '/images/departments/projectImages/softwareDevelopment/property.jpg',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+          ],
+          members: [
+            {
+              memberName: '',
+              src: '',
+              alt: '',
+            },
+
+          ],
+          collaborations: [],
+          category: 'Ongoing',
         },
       ],
     },
@@ -472,6 +747,7 @@ const departmentsData: DepartmentsData = {
               companyName: 'MAS',
             },
           ],
+          category: '',
         },
         {
           projectName: 'NUS FinTech Month',
@@ -501,6 +777,7 @@ const departmentsData: DepartmentsData = {
             },
           ],
           collaborations: [],
+          category: '',
         },
       ],
     },
@@ -571,6 +848,7 @@ const departmentsData: DepartmentsData = {
               companyName: 'MAS',
             },
           ],
+          category: '',
         },
         {
           projectName: 'NUS FinTech Month',
@@ -600,15 +878,40 @@ const departmentsData: DepartmentsData = {
             },
           ],
           collaborations: [],
+          category: '',
         },
       ],
     },
-
-
-
-
-
-
+    {
+      name: 'Quant',
+      path: 'quant',
+      logo: {
+        src: '/images/departments/departmentLogos/Internal-main-icon.jpg',
+        alt: 'Internal Logo',
+      },
+      purpose:
+        '',
+      vision:
+        '',
+      directors: [
+        {
+          src: '/images/about/quant1.jpg',
+          alt: 'Image of director',
+          directorName: 'Justin Leng',
+          linkedin: '',
+        },
+        {
+          src: '/images/about/quant2.jpg',
+          alt: 'Image of director',
+          directorName: 'Hur Sinhaeng (Claire)',
+          linkedin: '',
+        },
+      ],
+      roles: [
+      ],
+      projects: [
+      ],
+    },
   ],
 };
 

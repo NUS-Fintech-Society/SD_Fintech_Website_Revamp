@@ -116,6 +116,21 @@ const excoData: ExcoData = {
       ],
     },
     {
+      header: 'Quant',
+      people: [
+        {
+          role: 'CO-DIRECTOR (SD)',
+          name: 'Justin Leng',
+          imgSrc: '/images/exco/quant1.jpg',
+        },
+        {
+          role: 'CO-DIRECTOR (QUANT)',
+          name: 'Hur Sinhaeng (Claire)',
+          imgSrc: '/images/exco/quant2.jpg',
+        },
+      ],
+    },
+    {
       header: 'Operation Wing',
       people: [
         {

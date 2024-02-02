@@ -22,9 +22,9 @@ const DeptCarousel = ({
   const [currentIndex, setCurrentIndex] = useState(0);
   const router = useRouter();
 
-  const updateIndex = (index : number) => {
-    setCurrentIndex(index)
-  }
+  const updateIndex = (index: number) => {
+    setCurrentIndex(index);
+  };
 
   useEffect(() => {
     const handleRouteChange = () => {
@@ -47,7 +47,11 @@ const DeptCarousel = ({
         objectFit="cover"
         className="opacity-20"
       />
-      <Carousel showThumbs={false} onChange={updateIndex} selectedItem={currentIndex}>
+      <Carousel
+        showThumbs={false}
+        onChange={updateIndex}
+        selectedItem={currentIndex}
+      >
         <div className="p-8 text-white sm:px-14 sm:py-10">
           <h2 className="mb-8 flex text-xl font-bold sm:mb-10 sm:text-3xl">
             Purpose
