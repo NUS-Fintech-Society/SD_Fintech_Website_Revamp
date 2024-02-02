@@ -54,6 +54,9 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
 
 export default function Post({ postData, imageSizes }: Props) {
   const router = useRouter();
+  if (router.isFallback) {
+    return <div>Loading post...</div>;
+  }
 
   return (
     <section className="my-16 flex items-start justify-center">
@@ -65,9 +68,9 @@ export default function Post({ postData, imageSizes }: Props) {
         Back
       </button>
       <div className="w-[40%] text-2xl">
-        <h1 className="text-5xl font-bold">{postData.title}</h1>
+        <h1 className="text-5xl font-bold">{postData.title ?? ''}</h1>
         <br />
-        <h2 className="text-3xl font-semibold">{postData.date}</h2>
+        <h2 className="text-3xl font-semibold">{postData.date ?? ''}</h2>
         <br />
 
         <ReactMarkdown
@@ -82,6 +85,7 @@ export default function Post({ postData, imageSizes }: Props) {
                   <Image src={src!} alt={alt} width={width} height={height} />
                 );
               } else {
+                // eslint-disable-next-line @next/next/no-img-element
                 return <img {...props} alt={props.alt} />;
               }
             },
