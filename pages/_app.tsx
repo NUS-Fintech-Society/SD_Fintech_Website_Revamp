@@ -8,7 +8,6 @@ import Script from 'next/script';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Script src="https://cdn.tailwindcss.com" />
       <Script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js" />
       <ChakraProvider theme={theme}>
         <Layout>

@@ -1,4 +1,3 @@
-import HomeNavbar from '@components/home/HomeNavbar';
 import Navbar from '@components/layout/Navbar';
 import { LayoutProps } from '@interfaces/layout';
 import { useEffect, useState } from 'react';
@@ -15,8 +14,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="relative flex min-h-screen flex-col">
       <div className={overWriteChakraTheme}>
-        {!isSSR && window.location.pathname !== '/' && <Navbar />}
-        {!isSSR && window.location.pathname === '/' && <HomeNavbar />}
+        <Navbar />
         {children}
       </div>
       <Footer />
