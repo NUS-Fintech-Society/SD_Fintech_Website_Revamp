@@ -17,13 +17,13 @@ const Recruitment = () => {
 
   const getRecruitmentYear = () => {
     const currentDate = new Date();
-    
+
     if (currentDate.getMonth() >= 6) {
       return `${currentDate.getFullYear()}/${currentDate.getFullYear() + 1}`;
     }
 
     return `${currentDate.getFullYear() - 1}/${currentDate.getFullYear()}`;
-  }
+  };
 
   const handleTabChange = () => {
     if (selectedTab === 1) {
@@ -107,6 +107,11 @@ const Recruitment = () => {
           img: '/images/recruitment/Roles Icon/BC - Research Analyst.svg',
           path: 'research-analyst',
         },
+      ],
+    },
+    {
+      department: 'Quant',
+      roles: [
       ],
     },
   ];

@@ -10,6 +10,7 @@ type TabName =
   | 'Blockchain'
   | 'Machine Learning'
   | 'Software Development'
+  | 'Quant'
   | 'Operations';
 
 const FAQ = ({ departmentFaq }: FaqProps) => {
@@ -93,6 +94,24 @@ const FAQ = ({ departmentFaq }: FaqProps) => {
                 ) : (
                   <span className="text-xs text-[#004F4E] lg:text-lg xl:text-xl 2xl:text-2xl">
                     Software Development
+                  </span>
+                )}
+              </span>
+            </div>
+            <div
+              className={`tab ${
+                activeTab === 'Quant' ? 'active' : ''
+              }`}
+              onClick={() => handleTabClick('Quant')}
+            >
+              <span className="tab-label">
+                {activeTab === 'Quant' ? (
+                  <strong className="text-xs text-[#036167] lg:text-lg xl:text-xl 2xl:text-2xl">
+                    Quant
+                  </strong>
+                ) : (
+                  <span className="text-xs text-[#004F4E] lg:text-lg xl:text-xl 2xl:text-2xl">
+                    Quant
                   </span>
                 )}
               </span>
