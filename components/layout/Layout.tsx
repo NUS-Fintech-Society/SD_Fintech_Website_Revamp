@@ -1,4 +1,3 @@
-import HomeNavbar from '@components/home/HomeNavbar';
 import Navbar from '@components/layout/Navbar';
 import { LayoutProps } from '@interfaces/layout';
 import { useEffect, useState } from 'react';

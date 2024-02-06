@@ -29,9 +29,9 @@ const Events = ({ events }: EventsProps) => {
             Events
           </h1>
         </div>
-        <FeaturedEvent events={events} />
-        <UpcomingEvents events={events} />
-        <PastEvents events={events} />
+        {/* <FeaturedEvent events={events} /> */}
+        <UpcomingEvents events={[]} />
+        <PastEvents events={[]} />
       </MaxWidth>
     </>
   );

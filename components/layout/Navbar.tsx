@@ -155,23 +155,18 @@ const Navbar = () => {
                 </div>
               </li>
 
-              {/*
-              <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-4 md:py-1">
-                <Link
-                  href="/recruitment"
-                  className="rounded-md px-3 py-1 text-black"
-                >
-                  <a onClick={handleCloseNav}>RECRUITMENT</a>
-                </Link>
-              </li>
-                    */}
-
               <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-4 md:py-1 ">
                 <Link
                   href="/sponsors"
                   className="rounded-md px-3 py-1 text-black"
                 >
                   <a onClick={handleCloseNav}>SPONSORS</a>
+                </Link>
+              </li>
+
+              <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-4 md:py-1">
+                <Link href="/blogs" className="rounded-md px-3 py-1 text-black">
+                  <a onClick={handleCloseNav}>BLOGS</a>
                 </Link>
               </li>
 
