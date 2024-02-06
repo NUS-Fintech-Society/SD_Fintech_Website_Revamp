@@ -1,47 +1,55 @@
 // type
 import { FeaturedProjectsProps } from '@interfaces/departments/FeaturedProjectsProps';
-
-// Library
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-
 import ProjectCard from '@components/departments/ProjectCard';
-import './ProjectCarousel.module.css';
+
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import { MdOutlineArrowBackIos } from 'react-icons/md';
+import { MdOutlineArrowForwardIos } from 'react-icons/md';
+
+const responsive = {
+  monitor: {
+    breakpoint: { max: 4000, min: 1620 },
+    items: 3,
+    // partialVisibilityGutter: 30,
+  },
+  desktop: {
+    breakpoint: { max: 1620, min: 1000 },
+    items: 2,
+  },
+};
 
 const ProjectCarousel = ({ projects }: FeaturedProjectsProps) => {
-  const projectChunks = [];
-  const chunkSize = 3;
-
-  for (let i = 0; i < projects.length; i += chunkSize) {
-    const chunk = projects.slice(i, i + chunkSize);
-    projectChunks.push(chunk);
-  }
-
-  // Generates key for the project. This to reset the carousel slider position when the project list is updated.
-  // https://github.com/leandrowd/react-responsive-carousel/issues/536
-  const projectsKey = JSON.stringify(projects);
   return (
-    <div className="carousel-container">
-      <Carousel showThumbs={false}>
-        {projectChunks.map((chunk, index) => (
-          <div key={index} className="carousel-item relative float-left w-full">
-            <div className="mt-4 flex flex-wrap justify-center gap-24">
-              {chunk.map(
-                ({ projectName, summary, projectImage }, cardIndex) => (
-                  <ProjectCard
-                    key={cardIndex}
-                    coverImage={projectImage[0]}
-                    cardDescription={summary}
-                    name={projectName}
-                    isMobile={false}
-                  />
-                )
-              )}
-            </div>
-          </div>
-        ))}
-      </Carousel>
-    </div>
+    <Carousel
+      showDots={true}
+      swipeable={true}
+      responsive={responsive}
+      customLeftArrow={
+        <MdOutlineArrowBackIos
+          size={50}
+          className="absolute left-0 top-1/2 cursor-pointer"
+        />
+      }
+      customRightArrow={
+        <MdOutlineArrowForwardIos // Add this line
+          size={50}
+          className="absolute right-0 top-1/2 cursor-pointer"
+        />
+      }
+      arrows={true}
+    >
+      {projects.map(({ projectName, summary, projectImage }, cardIndex) => (
+        <div key={cardIndex}>
+          <ProjectCard
+            coverImage={projectImage[0]}
+            cardDescription={summary}
+            name={projectName}
+            isMobile={false}
+          />
+        </div>
+      ))}
+    </Carousel>
   );
 };
 
