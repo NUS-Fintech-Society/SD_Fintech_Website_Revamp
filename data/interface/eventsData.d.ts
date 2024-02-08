@@ -1,4 +1,4 @@
-interface Event {
+export interface Event {
   coverImage: {
     src: string;
     alt: string;
@@ -7,9 +7,9 @@ interface Event {
   cardDescription: string;
   location: string;
   date: string;
+  type: string; // Internal or External
 }
 
-export interface EventsData {
+export default interface EventsData {
   events: Event[];
 }
-

@@ -36,6 +36,7 @@ interface Project {
   }[];
   members: Member[];
   collaborations: Collaboration[];
+  category: string;
 }
 
 interface Member {

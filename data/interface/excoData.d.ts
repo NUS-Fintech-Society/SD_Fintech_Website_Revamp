@@ -3,6 +3,7 @@ export interface People {
   title?: string;
   name: string;
   imgSrc: string;
+  linkedin?: string;
 }
 
 export interface Category {

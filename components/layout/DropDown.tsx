@@ -17,11 +17,15 @@ const DropDown = ({ items, title, handleCloseNav }: DropDownProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <div className="rounded-md hover:text-gray-400">
+    <div
+      className="h-full rounded-md hover:text-gray-400"
+      onMouseEnter={onOpen}
+      onMouseLeave={onClose}
+    >
       <Menu isOpen={isOpen}>
         <MenuButton
-          onMouseEnter={onOpen}
-          onMouseLeave={onClose}
+          // onMouseEnter={onOpen}
+          // onMouseLeave={onClose}
           className="cursor-default"
         >
           {title}
@@ -30,14 +34,13 @@ const DropDown = ({ items, title, handleCloseNav }: DropDownProps) => {
         <MenuList
           onMouseEnter={onOpen}
           onMouseLeave={onClose}
-          style={{ marginTop: '5px' }}
+          style={{ marginTop: '-8px' }}
         >
           <div className="text-black">
             {items.map((item, index) => (
               <Fragment key={index}>
                 <MenuItem _hover={{ bg: 'blue.100' }} padding={0}>
                   <Link href={item[1]}>
-                    {/* eslint-disable-next-line */}
                     <a onClick={handleCloseNav} className=" h-full w-full p-2">
                       {item[0]}
                     </a>

@@ -1,6 +1,6 @@
 // type
 import type { NextPage } from 'next';
-import { EventsData } from '@data/interface/eventsData';
+import EventsData from '@data/interface/eventsData';
 
 // library
 import Head from 'next/head';
@@ -9,14 +9,14 @@ import Head from 'next/head';
 import Events from '@components/events';
 import { fetchEventsData } from '@data/mockFetch';
 
-const EventsPage: NextPage<EventsData> = () => {
+const EventsPage: NextPage<EventsData> = (props: any) => {
   return (
     <>
       <Head>
         <title>NUS Fintech Society</title>
         <link rel="icon" href="/images/FintechSocietyLogo.png" />
       </Head>
-      <Events />
+      <Events {...props} />
     </>
   );
 };
