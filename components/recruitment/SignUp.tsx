@@ -12,17 +12,20 @@ const SignUp = () => {
       <div
         className={`text-[${textColor}] grid grid-flow-col grid-rows-4 gap-10 lg:grid-rows-3 lg:gap-20`}
       >
-        <div className="w-[300px] sm:w-[900px]">
+        <div className="w-[300px] sm:w-[900px] lg:w-full">
           <h1 className="mb-1 text-2xl font-bold md:text-4xl">Sign Up Now!</h1>
-          {/*
+          
             <h1 className="mb-3 md:text-xl">
               Sign ups close on{' '}
-              <time className="font-bold">25th August 2023 23:59</time>
+              <time className="font-bold">25th August 2024 23:59</time>
             </h1>
-            */}
-
+            <h1 className="mb-3 md:text-xl underline">
+              <a>
+              https://forms.gle/3GhF99Qt1pbLEomV6
+              </a> 
+            </h1>
           <div className={`ml-2 ${isTechnical ? 'block' : 'hidden'}`}>
-            <br />
+            {/* <br />
             <a
               className="underline underline-offset-1 md:text-xl"
               href="https://docs.google.com/forms/d/e/1FAIpQLSd1RExoYn3oKHG2gGjYZ-znYIpaz9iNeUXtOdHPFMn20Zjv8A/viewform"
@@ -68,24 +71,21 @@ const SignUp = () => {
               href="https://docs.google.com/forms/d/e/1FAIpQLScq1e4feF5CbF9N-nWc0sjq2mKw6b0_rZe4eBdAl-z5o8FAhQ/viewform"
             >
               <strong>Internal Affairs</strong>
-            </a>
+            </a> */}
           </div>
         </div>
-        <div className="w-[300px] sm:w-[320px] md:w-2/3">
+        <div className="w-[300px] sm:w-[6400px] md:w-2/3 lg:w-full">
           <h1 className="mb-1 text-2xl font-bold md:text-4xl">Welcome Tea</h1>
           <h1 className="mb-3 md:text-xl">
-            Missed our Welcome Tea?
-            <br />
-            Watch the recordings{' '}
-            <a
-              className="font-bold underline underline-offset-1"
-              href="https://drive.google.com/file/d/1OSCo00YSh07ZsptqTdQfMZdgenLuNrdG/view?usp=sharing"
-            >
-              here!
+            Missed our Welcome Tea? Watch the recordings here!
+          </h1>
+          <h1 className="mb-3 md:text-xl underline">
+            <a>
+              https://drive.google.com/file/d/1OSCo00YSh07ZsptqTdQfMZdgenLuNrdG/view?usp=sharing
             </a>
           </h1>
         </div>
-        <div className="w-[300px] md:w-[700px] md:grid-cols-2 md:gap-x-24 md:gap-y-0 lg:grid">
+        <div className="w-[300px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] md:grid-cols-2 md:gap-x-24 md:gap-y-0 lg:grid">
           <div>
             <h1 className="mb-1 text-2xl font-bold md:text-4xl">FAQs</h1>
             <h1 className="mb-3 md:text-xl">
@@ -108,7 +108,7 @@ const SignUp = () => {
           </div>
         </div>
 
-        <div className="w-[300px] sm:w-[1056px] lg:hidden">
+        <div className="w-[300px] sm:w-[768px] lg:hidden">
           <h1 className="mb-1 text-2xl font-bold md:text-4xl">Contact Us</h1>
           <h1 className="mb-3 md:text-xl">
             You could also contact us{' '}

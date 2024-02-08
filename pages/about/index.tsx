@@ -51,8 +51,8 @@ const AboutPage = () => {
               <Tabs size="xs">
                 <TabList>
                   <Tab>
-                    <h2 className="whitespace-nowrap text-xs font-bold sm:text-lg">
-                      <div className="mr-2 flex items-center sm:mr-4">
+                    <h2 className="text-xs font-bold sm:text-lg">
+                      <div className="mr-6 flex items-center sm:mr-4">
                         <div className="mx-2">
                           {/* Feather Icon */}
                           <svg
@@ -87,7 +87,7 @@ const AboutPage = () => {
                   </Tab>
                   <Tab>
                     <h2 className="text-xs font-bold sm:text-lg">
-                      <div className="mr-2 flex items-center sm:mr-4">
+                      <div className="mr-6 flex items-center sm:mr-4">
                         <div className="mx-2">
                           <svg
                             width="28"
@@ -110,7 +110,7 @@ const AboutPage = () => {
                   </Tab>
                   <Tab>
                     <h2 className="text-xs font-bold sm:text-lg">
-                      <div className="mr-2 flex items-center sm:mr-4">
+                      <div className="mr-6 flex items-center sm:mr-4">
                         <div className="mx-2">
                           <svg
                             width="19"
