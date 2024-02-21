@@ -29,7 +29,7 @@ const Navbar = () => {
     <nav className="relative z-10 w-[100vw] text-sm">
       <div className="flex h-[105px] bg-white text-black">
         <div className="relative ml-10 flex w-[100px] cursor-pointer items-center font-bold">
-          <Link href="/">
+          <Link href="/" passHref>
             <div className="relative">
               <Image
                 // className="relative z-10 rounded-full"
@@ -63,30 +63,28 @@ const Navbar = () => {
                           lg:pl-0`}
           >
             <div
-              className={`flex flex-wrap lg:divide-x ${
-                isOpen ? 'rounded-xl' : 'rounded-full py-3'
-              } bg-[#DDEEFE] text-[#002750]`}
+              className={`flex rounded-xl bg-[#DDEEFE] py-3 text-[#002750] lg:divide-x lg:rounded-full`}
             >
               <li
-                className={` my-3 hover:text-gray-400 md:my-0 ${
+                className={`my-3 hover:text-gray-400 md:my-0 ${
                   isOpen ? 'px-4' : 'px-7'
                 } py-1`}
               >
-                <Link href="/" className="rounded-md px-3 py-1 text-black ">
+                <Link href="/" className="rounded-md px-3 py-1 text-black">
                   <a onClick={handleCloseNav}>HOME</a>
                 </Link>
               </li>
 
-              <li className="my-3 px-4 py-1 hover:text-gray-400 md:my-0">
+              <li className="my-3 px-3 py-1 hover:text-gray-400 md:my-0">
                 <Link
                   href="/about"
                   className="rounded-md px-3 py-1 text-white "
                 >
-                  <a onClick={handleCloseNav}>ABOUT US</a>
+                  <a onClick={handleCloseNav}>ABOUT</a>
                 </Link>
               </li>
 
-              <li className="my-3  ml-4 md:my-0 md:px-4 md:py-1 lg:ml-5 lg:py-1">
+              <li className="my-3 ml-4 md:my-0 md:px-3 md:py-1 lg:ml-5 lg:py-1">
                 <div className="lg:hidden hover:lg:visible">
                   <div className="rounded-md">DEPARTMENTS</div>
                   <ul>
@@ -116,7 +114,7 @@ const Navbar = () => {
                 </div>
               </li>
 
-              <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-4 md:py-1 ">
+              <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-3 md:py-1 ">
                 <Link
                   href="/events"
                   className="rounded-md px-3 py-1 text-black"
@@ -125,7 +123,7 @@ const Navbar = () => {
                 </Link>
               </li>
 
-              <li className="my-3  ml-4 md:my-0 md:px-4 md:py-1 lg:ml-5 lg:py-1">
+              <li className="my-3 ml-4 md:my-0 md:px-3 md:py-1 lg:ml-5 lg:py-1">
                 <div className="lg:hidden">
                   <div className="rounded-md ">RECRUITMENT</div>
                   <ul>
@@ -155,7 +153,7 @@ const Navbar = () => {
                 </div>
               </li>
 
-              <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-4 md:py-1 ">
+              <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-3 md:py-1 ">
                 <Link
                   href="/sponsors"
                   className="rounded-md px-3 py-1 text-black"
@@ -164,18 +162,18 @@ const Navbar = () => {
                 </Link>
               </li>
 
-              <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-4 md:py-1">
+              <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-3 md:py-1">
                 <Link href="/blogs" className="rounded-md px-3 py-1 text-black">
-                  <a onClick={handleCloseNav}>BLOGS</a>
+                  <a onClick={handleCloseNav}>BLOG</a>
                 </Link>
               </li>
 
-              <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-4 md:py-1 lg:mr-5">
+              <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-3 md:py-1 lg:mr-5">
                 <Link
                   href="/contact-us"
                   className="rounded-md px-3 py-1 text-black"
                 >
-                  <a onClick={handleCloseNav}>CONTACT US</a>
+                  <a onClick={handleCloseNav}>CONTACT</a>
                 </Link>
               </li>
             </div>
