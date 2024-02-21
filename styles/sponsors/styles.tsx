@@ -26,6 +26,7 @@ export const HeaderContainer = chakra(Box, {
     justifyContent: 'center',
     paddingBottom: '70px',
     color: 'white',
+    lineHeight: '1.2',
   },
   sizes: {
     lg: {
