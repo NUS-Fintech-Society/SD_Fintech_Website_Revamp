@@ -40,9 +40,9 @@ function BlogCard({
   };
 }) {
   return (
-    <Link href={`/blogs/${id}`} key={id}>
+    <Link href={`/blogs/${id}`} key={id} passHref>
       <div className="flex h-96 w-[90%] gap-4 rounded-lg bg-slate-100 p-6 drop-shadow-lg hover:cursor-pointer lg:w-[40%]">
-        <div className="flex h-full w-full flex-col justify-between gap-4">
+        <div className="flex size-full flex-col justify-between gap-4">
           <h1 className="text-xl font-bold lg:text-2xl">{title}</h1>
           <h2 className="text-lg font-semibold  lg:text-xl">{date}</h2>
         </div>

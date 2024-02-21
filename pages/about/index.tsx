@@ -50,7 +50,7 @@ const AboutPage = () => {
         <div className="grid gap-x-8 rounded-b-[143px] lg:grid-cols-2">
           <div className="flex justify-center pb-4">
             {/* landing bg */}
-            <div className="h-[300px] w-[300px] sm:h-[400px] sm:w-[400px]">
+            <div className="size-[300px] sm:size-[400px]">
               <Image
                 src="/images/soc-bg.jpg"
                 alt="Insert Photo Here"

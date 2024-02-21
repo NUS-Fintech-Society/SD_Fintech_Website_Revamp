@@ -32,7 +32,7 @@ const HomeNavbar = () => {
     <nav className="relative z-10 w-[100vw]">
       <div className="flex text-white">
         <div className="relative ml-4 mt-3 flex h-[50px] w-[100px] cursor-pointer font-bold sm:ml-20 sm:h-[77px] sm:w-[144px]">
-          <Link href="/">
+          <Link href="/" passHref>
             <Image
               src="/images/fintechsoc-logo.png"
               alt="NUS FinTech Society Logo"
@@ -87,7 +87,7 @@ const HomeNavbar = () => {
                         <Link href={item[1]}>
                           <a
                             onClick={handleCloseNav}
-                            className=" h-full w-full p-2"
+                            className=" size-full p-2"
                           >
                             {item[0]}
                           </a>
@@ -126,7 +126,7 @@ const HomeNavbar = () => {
                         <Link href={item[1]}>
                           <a
                             onClick={handleCloseNav}
-                            className=" h-full w-full p-2"
+                            className=" size-full p-2"
                           >
                             {item[0]}
                           </a>

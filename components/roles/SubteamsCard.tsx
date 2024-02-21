@@ -9,7 +9,7 @@ const SubteamsCard = ({
   return (
     <div>
       <div className="mx-auto flex h-[300px] w-[260px] flex-col justify-center space-y-5 rounded-[10px] bg-[#EEF6FE] px-10 shadow-[0_2px_10px_3px_rgba(0,0,0,0.06)] md:min-h-[500px] md:min-w-[400px] md:rounded-[20px] lg:min-h-[560px] lg:min-w-[450px]">
-        <div className="relative h-[100px] w-[100px] self-center md:mb-2 md:min-h-[256px] md:min-w-[256px]">
+        <div className="relative size-[100px] self-center md:mb-2 md:min-h-[256px] md:min-w-[256px]">
           <Image
             src={teamImage.src}
             alt={teamImage.alt}

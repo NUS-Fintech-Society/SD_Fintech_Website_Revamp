@@ -221,7 +221,7 @@ const Recruitment = () => {
                 index={selectedTab === 1 ? 0 : 1}
               >
                 <TabList>
-                  <Link href="/recruitment/technical-wing">
+                  <Link href="/recruitment/technical-wing" passHref>
                     <Tab
                       className="flex-1"
                       _selected={{
@@ -233,7 +233,7 @@ const Recruitment = () => {
                       Technical Wing
                     </Tab>
                   </Link>
-                  <Link href="/recruitment/operations-wing">
+                  <Link href="/recruitment/operations-wing" passHref>
                     <Tab
                       className="flex-1"
                       _selected={{

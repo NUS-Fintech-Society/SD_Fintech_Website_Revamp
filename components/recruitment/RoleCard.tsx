@@ -23,13 +23,13 @@ const RoleCard: React.FC<RoleCardProps> = ({ title, img }) => {
         </h1>
       </div>
       <div className="absolute right-[-45px] top-[-10px] z-[-5]">
-        <div className={`bg-[${iconColor}] flex h-48 w-48 items-center justify-center rounded-full`}>
+        <div className={`bg-[${iconColor}] flex size-48 items-center justify-center rounded-full`}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke={iconColor}
-              className="h-10 w-10"
+              className="size-10"
             >
               {/* Place your SVG icon here */}
             </svg>

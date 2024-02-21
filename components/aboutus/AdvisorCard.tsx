@@ -10,7 +10,7 @@ const AdvisorCard = ({ data }: AdvisorCardProps) => {
     <div className="flex flex-row justify-center gap-x-5 sm:gap-x-16">
       {data.map((item: any, index: number) => (
         <div className="flex flex-col gap-y-3" key={index}>
-          <div className="relative h-[119px] w-[119px] sm:h-[228px] sm:w-[228px] md:h-[337px] md:w-[337px]">
+          <div className="relative size-[119px] sm:size-[228px] md:size-[337px]">
             <Image
               src={item.imgSrc}
               alt="Insert Photo Here"
