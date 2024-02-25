@@ -4,14 +4,17 @@ import Link from 'next/link';
 const SignUp = () => {
   const router = useRouter();
   const isTechnical = router.asPath.includes('/technical-wing');
-  const bgColor = isTechnical ? '#EEF6FE' : '#CEF0F1';
-  const textColor = isTechnical ? '#004C98' : '#006C6C';
+  console.log(isTechnical);
+  const bgColor = isTechnical ? 'bg-[#EEF6FE]' : 'bg-[#CEF0F1]';
+  const textColor = isTechnical ? 'text-[#004C98]' : 'text-[#006C6C]';
+  console.log(bgColor, textColor);
+  setTimeout(() => {console.log(isTechnical, bgColor, textColor);}, 5000);
 
   return (
-    <div className={`bg-[${bgColor}] block rounded-lg p-6 md:p-14`}>
+    <div className={`${bgColor} block rounded-lg p-6 md:p-14`}>
       <div
-        className={`text-[${textColor}] grid grid-flow-col grid-rows-4 gap-10 lg:grid-rows-3 lg:gap-20`}
-      >
+        className={`${textColor} grid grid-flow-col grid-rows-4 gap-10 lg:grid-rows-3 lg:gap-20`}
+      > 
         <div className="w-[300px] sm:w-[900px] lg:w-full">
           <h1 className="mb-1 text-2xl font-bold md:text-4xl">Sign Up Now!</h1>
           
