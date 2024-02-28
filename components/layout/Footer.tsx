@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     // [calc(60vh-64px)]
     <footer className="relative bottom-0 h-[175px] w-screen items-end sm:h-[160px]">
-      <div className="absolute -z-10 h-full w-full overflow-hidden bg-gray-50">
+      <div className="absolute -z-10 size-full overflow-hidden bg-gray-50">
         <Image
           src="/images/home/footer.jpg"
           alt="Insert Photo Here"
@@ -40,7 +40,7 @@ const Footer = () => {
                 title="NUS FinTech Society LinkedIn Page"
               >
                 <svg
-                  className="h-5 w-5 fill-current text-white sm:h-6 sm:w-6"
+                  className="size-5 fill-current text-white sm:size-6"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
                 >
@@ -53,7 +53,7 @@ const Footer = () => {
                 title="NUS FinTech Society Instagram Page"
               >
                 <svg
-                  className="h-5 w-5 fill-current text-white sm:h-6 sm:w-6"
+                  className="size-5 fill-current text-white sm:size-6"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
                 >
@@ -66,7 +66,7 @@ const Footer = () => {
                 title="NUS FinTech Society Facebook Page"
               >
                 <svg
-                  className="h-5 w-5 fill-current text-white sm:h-6 sm:w-6"
+                  className="size-5 fill-current text-white sm:size-6"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
                 >
@@ -79,7 +79,7 @@ const Footer = () => {
                 title="NUS FinTech Society Twitter Page"
               >
                 <svg
-                  className="h-5 w-5 fill-current text-white sm:h-6 sm:w-6"
+                  className="size-5 fill-current text-white sm:size-6"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="328 355 335 276"
                 >
@@ -107,7 +107,7 @@ const Footer = () => {
                 title="NUS FinTech Society Blockchain Medium Page"
               >
                 <svg
-                  className="h-5 w-5 fill-current text-white sm:h-6 sm:w-6"
+                  className="size-5 fill-current text-white sm:size-6"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 256 256"
                 >
@@ -119,7 +119,7 @@ const Footer = () => {
                 title="NUS FinTech Society Machine Learning Medium Page"
               >
                 <svg
-                  className="h-5 w-5 fill-current text-white sm:h-6 sm:w-6"
+                  className="size-5 fill-current text-white sm:size-6"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 32 32"
                 >
@@ -131,7 +131,7 @@ const Footer = () => {
                 title="NUS Fintech Society Youtube Page"
               >
                 <svg
-                  className="h-5 w-5 fill-current text-white sm:h-6 sm:w-6"
+                  className="size-5 fill-current text-white sm:size-6"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 576 512"
                 >

@@ -6,7 +6,7 @@ const Landing = () => {
   return (
     <div className="relative -mb-10 min-h-[400px] w-screen sm:h-[calc(80vh)]">
       <div className="absolute top-[-90px] h-[50%] w-full bg-gradient-to-b from-[#002750B3] via-[#00275059] to-[#00275000]" />
-      <div className="absolute top-[-90px] -z-10 h-full w-full overflow-hidden bg-primary">
+      <div className="absolute top-[-90px] -z-10 size-full overflow-hidden bg-primary">
         <Image
           src="/images/home/home_img.jpg"
           alt="Insert Photo Here"
@@ -18,7 +18,7 @@ const Landing = () => {
       </div>
 
       <MaxWidth>
-        <div className="relative flex cursor-default flex-col gap-y-3 text-center sm:pt-[max(20px,_5vh)]">
+        <div className="relative flex cursor-default flex-col gap-y-3 pt-[max(20px,_5vh)] text-center">
           <h1 className="text-2xl font-bold text-white sm:text-6xl">
             NUS Fintech Society
           </h1>

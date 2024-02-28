@@ -65,7 +65,7 @@ const DeptCarousel = ({
           <p className="text-left sm:mb-9 sm:mt-10 sm:text-lg">{vision}</p>
         </div>
         <div className="p-8 text-white sm:px-14 sm:py-10">
-          <h2 className="flex text-xl font-bold sm:mb-6 sm:text-3xl overflow-auto">
+          <h2 className="flex overflow-auto text-xl font-bold sm:mb-6 sm:text-3xl">
             Co-Directors
           </h2>
           {directors.map((director) => {
@@ -73,7 +73,7 @@ const DeptCarousel = ({
               // Add more margins if there is only 1 director
               <Fragment key={director.src}>
                 <div className="mb-28 mt-3 flex sm:mb-36 sm:mt-5">
-                  <div className="relative mr-6 h-[75px] w-[75px] sm:h-[105px] sm:w-[105px]">
+                  <div className="relative mr-6 size-[75px] sm:size-[105px]">
                     <Image
                       src={director.src}
                       alt={director.alt}
@@ -88,7 +88,7 @@ const DeptCarousel = ({
                   <div className="ml-10 mt-7 sm:mt-10">
                     <a href={director.linkedin} title="Director Linkedin Page">
                       <svg
-                        className="h-5 w-5 fill-current text-white sm:h-6 sm:w-6"
+                        className="size-5 fill-current text-white sm:size-6"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 16 16"
                       >
@@ -101,7 +101,7 @@ const DeptCarousel = ({
             ) : (
               <Fragment key={director.src}>
                 <div className="mb-5 mt-6 flex sm:mt-5">
-                  <div className="relative mr-6 h-[75px] w-[75px] sm:h-[105px] sm:w-[105px]">
+                  <div className="relative mr-6 size-[75px] sm:size-[105px]">
                     <Image
                       src={director.src}
                       alt={director.alt}
@@ -118,7 +118,7 @@ const DeptCarousel = ({
                   <div className="ml-auto mr-16 mt-7 sm:ml-auto sm:mr-16 sm:mt-10 md:ml-auto md:mr-36 md:mt-10 lg:ml-auto lg:mr-2 lg:mt-10 xl:ml-auto xl:mr-2 xl:mt-10">
                     <a href={director.linkedin} title="Director Linkedin Page">
                       <svg
-                        className="h-5 w-5 fill-current text-white sm:h-6 sm:w-6"
+                        className="size-5 fill-current text-white sm:size-6"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 16 16"
                       >

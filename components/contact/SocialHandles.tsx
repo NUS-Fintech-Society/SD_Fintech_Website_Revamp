@@ -12,7 +12,7 @@ const SocialHandles = () => {
         title="NUS FinTech Society LinkedIn Page"
       >
         <svg
-          className="h-5 w-5 fill-current text-white sm:h-8 sm:w-8"
+          className="size-5 fill-current text-white sm:size-8"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
         >
@@ -25,7 +25,7 @@ const SocialHandles = () => {
         title="NUS FinTech Society Instagram Page"
       >
         <svg
-          className="h-5 w-5 fill-current text-white sm:h-8 sm:w-8"
+          className="size-5 fill-current text-white sm:size-8"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
         >
@@ -38,7 +38,7 @@ const SocialHandles = () => {
         title="NUS FinTech Society Facebook Page"
       >
         <svg
-          className="h-5 w-5 fill-current text-white sm:h-8 sm:w-8"
+          className="size-5 fill-current text-white sm:size-8"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
         >
@@ -51,7 +51,7 @@ const SocialHandles = () => {
         title="NUS FinTech Society Twitter Page"
       >
         <svg
-          className="h-5 w-5 fill-current text-white sm:h-8 sm:w-8"
+          className="size-5 fill-current text-white sm:size-8"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="328 355 335 276"
         >
@@ -79,7 +79,7 @@ const SocialHandles = () => {
         title="NUS FinTech Society Blockchain Medium Page"
       >
         <svg
-          className="h-5 w-5 fill-current text-white sm:h-8 sm:w-8"
+          className="size-5 fill-current text-white sm:size-8"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 256 256"
         >
@@ -91,7 +91,7 @@ const SocialHandles = () => {
         title="NUS FinTech Society Machine Learning Medium Page"
       >
         <svg
-          className="h-5 w-5 fill-current text-white sm:h-8 sm:w-8"
+          className="size-5 fill-current text-white sm:size-8"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 32 32"
         >

@@ -29,7 +29,7 @@ const Navbar = () => {
     <nav className="relative z-10 w-[100vw] text-sm">
       <div className="flex h-[105px] bg-white text-black">
         <div className="relative ml-10 flex w-[100px] cursor-pointer items-center font-bold">
-          <Link href="/">
+          <Link href="/" passHref>
             <div className="relative">
               <Image
                 // className="relative z-10 rounded-full"
@@ -47,7 +47,7 @@ const Navbar = () => {
         <div className="mr-24 mt-6 h-[55px] lg:ml-auto">
           <div
             onClick={() => setIsOpen(!isOpen)}
-            className="absolute right-[24px] top-[37px] z-30 mt-3 -translate-y-1/2 cursor-pointer sm:right-[48px] lg:hidden"
+            className="absolute right-[24px] top-[24px] z-30 mt-3 -translate-y-1/2 cursor-pointer lg:hidden"
           >
             {isOpen ? (
               <CloseIcon width={10} height={6} />
@@ -58,36 +58,32 @@ const Navbar = () => {
 
           <ul
             className={`fixed z-20 transition-all duration-150 ease-in lg:pt-0
-                      ${isOpen ? 'top-0' : 'top-[-900px] '}
+                      ${isOpen ? 'top-0' : 'top-[-900px]'}
                           lg:static lg:z-auto lg:mt-0 lg:flex lg:w-auto lg:pb-0 
                           lg:pl-0`}
           >
             <div
-              className={`flex flex-wrap lg:divide-x ${
-                isOpen ? 'rounded-xl' : 'rounded-full py-3'
-              } bg-[#DDEEFE] text-[#002750]`}
+              className='flex rounded-xl bg-[#DDEEFE] px-2 py-3 text-[#002750] max-lg:flex-wrap max-lg:pr-12 lg:divide-x lg:rounded-full'
             >
               <li
-                className={` my-3 hover:text-gray-400 md:my-0 ${
-                  isOpen ? 'px-4' : 'px-7'
-                } py-1`}
+                className='mx-2 my-3 px-3 py-1 hover:text-gray-400 lg:my-0'
               >
-                <Link href="/" className="rounded-md px-3 py-1 text-black ">
+                <Link href="/" className="rounded-md px-3 py-1 text-black">
                   <a onClick={handleCloseNav}>HOME</a>
                 </Link>
               </li>
 
-              <li className="my-3 px-4 py-1 hover:text-gray-400 md:my-0">
+              <li className="mx-2 my-3 px-3 py-1 hover:text-gray-400 lg:my-0">
                 <Link
                   href="/about"
                   className="rounded-md px-3 py-1 text-white "
                 >
-                  <a onClick={handleCloseNav}>ABOUT US</a>
+                  <a onClick={handleCloseNav}>ABOUT</a>
                 </Link>
               </li>
 
-              <li className="my-3  ml-4 md:my-0 md:px-4 md:py-1 lg:ml-5 lg:py-1">
-                <div className="lg:hidden hover:lg:visible">
+              <li className="mx-2 my-3 px-3 py-1 hover:text-gray-400 lg:my-0">
+                {/* <div className="lg:hidden hover:lg:visible">
                   <div className="rounded-md">DEPARTMENTS</div>
                   <ul>
                     {DEPARTMENTS_ITEMS.map((item) => (
@@ -96,27 +92,24 @@ const Navbar = () => {
                         className="my-4 ml-3 hover:text-gray-400"
                       >
                         <Link href={item[1]}>
-                          <a
-                            onClick={handleCloseNav}
-                            className=" h-full w-full p-2"
-                          >
+                          <a onClick={handleCloseNav} className="size-full p-2">
                             {item[0]}
                           </a>
                         </Link>
                       </li>
                     ))}
                   </ul>
-                </div>
-                <div className="hidden lg:block">
-                  <DropDown
-                    handleCloseNav={handleCloseNav}
-                    title="DEPARTMENTS"
-                    items={DEPARTMENTS_ITEMS}
-                  />
-                </div>
+                </div> */}
+                {/* <div className="lg:block"> */}
+                <DropDown
+                  handleCloseNav={handleCloseNav}
+                  title="DEPARTMENTS"
+                  items={DEPARTMENTS_ITEMS}
+                />
+                {/* </div> */}
               </li>
 
-              <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-4 md:py-1 ">
+              <li className="mx-2 my-3 px-3 py-1 hover:text-gray-400 lg:my-0">
                 <Link
                   href="/events"
                   className="rounded-md px-3 py-1 text-black"
@@ -125,8 +118,8 @@ const Navbar = () => {
                 </Link>
               </li>
 
-              <li className="my-3  ml-4 md:my-0 md:px-4 md:py-1 lg:ml-5 lg:py-1">
-                <div className="lg:hidden">
+              <li className="mx-2 my-3 px-3 py-1 hover:text-gray-400 lg:my-0">
+                {/* <div className="lg:hidden">
                   <div className="rounded-md ">RECRUITMENT</div>
                   <ul>
                     {RECRUITMENT_ITEMS.map((item) => (
@@ -135,27 +128,24 @@ const Navbar = () => {
                         className="my-4 ml-3 hover:text-gray-400"
                       >
                         <Link href={item[1]}>
-                          <a
-                            onClick={handleCloseNav}
-                            className=" h-full w-full p-2"
-                          >
+                          <a onClick={handleCloseNav} className="size-full p-2">
                             {item[0]}
                           </a>
                         </Link>
                       </li>
                     ))}
                   </ul>
-                </div>
-                <div className=" hidden lg:block">
+                </div> */}
+                {/* <div className="hidden lg:block"> */}
                   <DropDown
                     handleCloseNav={handleCloseNav}
                     title="RECRUITMENT"
                     items={RECRUITMENT_ITEMS}
                   />
-                </div>
+                {/* </div> */}
               </li>
 
-              <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-4 md:py-1 ">
+              <li className="mx-2 my-3 px-3 py-1 hover:text-gray-400 lg:my-0">
                 <Link
                   href="/sponsors"
                   className="rounded-md px-3 py-1 text-black"
@@ -164,18 +154,18 @@ const Navbar = () => {
                 </Link>
               </li>
 
-              <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-4 md:py-1">
+              <li className="mx-2 my-3 px-3 py-1 hover:text-gray-400 lg:my-0">
                 <Link href="/blogs" className="rounded-md px-3 py-1 text-black">
-                  <a onClick={handleCloseNav}>BLOGS</a>
+                  <a onClick={handleCloseNav}>BLOG</a>
                 </Link>
               </li>
 
-              <li className="my-3 ml-4 hover:text-gray-400 md:my-0 md:px-4 md:py-1 lg:mr-5">
+              <li className="mx-2 my-3 px-3 py-1 hover:text-gray-400 lg:my-0">
                 <Link
                   href="/contact-us"
                   className="rounded-md px-3 py-1 text-black"
                 >
-                  <a onClick={handleCloseNav}>CONTACT US</a>
+                  <a onClick={handleCloseNav}>CONTACT</a>
                 </Link>
               </li>
             </div>

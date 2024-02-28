@@ -8,7 +8,7 @@ const LinkedInLogo = ({ link }: LinkedInLogoProps) => {
   return (
     <a href={link} title="Linkedin Page">
       <svg
-        className="h-[6px] w-[6px] fill-current text-black sm:h-[1.25rem] sm:w-[1.25rem]"
+        className="size-[6px] fill-current text-black sm:size-[1.25rem]"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 16 16"
       >

@@ -11,7 +11,7 @@ const Milestones = () => {
     <div className="section-my">
       <h2 className="mb-20 text-center text-h2 font-bold">Key Milestones</h2>
       <div className="flex flex-wrap justify-center gap-10">
-        <div className=" flex h-72 w-72 flex-col items-center justify-center bg-primary text-white">
+        <div className=" flex size-72 flex-col items-center justify-center bg-primary text-white">
           <div className="text-5xl">
             <CountUp
               start={memberCount ? 100 : undefined}
@@ -34,7 +34,7 @@ const Milestones = () => {
           </div>
           <div className=" mt-5 text-2xl capitalize">MEMBERS</div>
         </div>
-        <div className=" flex h-72 w-72 flex-col items-center justify-center bg-primary text-white">
+        <div className=" flex size-72 flex-col items-center justify-center bg-primary text-white">
           <div className="text-5xl">
             <CountUp
               start={projectsCount ? 0 : undefined}
@@ -59,7 +59,7 @@ const Milestones = () => {
             COMPLETED <div> PROJECTS</div>
           </div>
         </div>
-        <div className=" flex h-72 w-72 flex-col items-center justify-center bg-primary text-white">
+        <div className=" flex size-72 flex-col items-center justify-center bg-primary text-white">
           <div className="text-5xl">
             <CountUp
               start={deptCount ? 0 : undefined}

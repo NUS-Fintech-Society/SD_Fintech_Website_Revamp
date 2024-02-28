@@ -4,7 +4,7 @@ import Image from 'next/image';
 const Landing = () => {
   return (
     <div className="relative h-[calc(50vh-64px)] min-h-[400px] w-screen">
-      <div className="absolute -z-10 h-full w-full overflow-hidden">
+      <div className="absolute -z-10 size-full overflow-hidden">
         <Image
           src="/images/soc-bg.jpg"
           alt="Insert Photo Here"
