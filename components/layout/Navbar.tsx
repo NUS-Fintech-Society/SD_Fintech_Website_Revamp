@@ -8,7 +8,7 @@ const DEPARTMENTS_ITEMS = [
   ['Machine Learning', '/departments/machine-learning'],
   ['Blockchain', '/departments/blockchain'],
   ['Software Development', '/departments/software'],
-  ['Quant', '/departments/quant'],
+  ['Quantitative', '/departments/quant'],
   ['External Relations', '/departments/external'],
   ['Internal Affairs', '/departments/internal'],
 ];

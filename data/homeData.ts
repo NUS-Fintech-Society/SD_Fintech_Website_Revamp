@@ -2,7 +2,7 @@ import { HomeData } from '@data/interface/homeData';
 
 export enum WingType {
   Technical,
-  Operations
+  Operations,
 }
 
 const homeData: HomeData = {
@@ -76,24 +76,22 @@ const homeData: HomeData = {
       ],
     },
     {
-      name: 'Quant',
+      name: 'Quantitative',
       path: 'quant',
       wingType: WingType.Technical,
       coverImage: {
-        src: '/images/departments/departmentCovers/SD.jpg',
+        src: '/images/departments/departmentCovers/QNT.jpg',
         alt: 'random image 2',
       },
       cardDescription:
-        '',
+        'To cultivate a community of members with a strong foundation in quantitative methods and a deep understanding of their application in the financial industry, navigating complexities of financial modelling, algorithmic trading, data-driven decision-making and more.',
       popupDescription:
-        '',
-      rolesOffered: [
-      ],
+        'This is a lengthier description that appears in the popup',
+      rolesOffered: [],
       learnMoreLink: 'https://fintechsociety.comp.nus.edu.sg/#contact',
       roleInfoLink: 'https://fintechsociety.comp.nus.edu.sg/#contact',
       applyNowLink: 'https://fintechsociety.comp.nus.edu.sg/#contact',
-      faq: [
-      ],
+      faq: [],
     },
     {
       name: 'Blockchain',
