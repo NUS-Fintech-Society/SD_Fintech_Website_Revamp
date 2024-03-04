@@ -22,8 +22,8 @@ const DepartmentInfo = ({
         <h1 className="ml-4 mt-3 border-b-2 border-[#002750] sm:ml-6 sm:mt-10 sm:border-b-4 sm:text-6xl sm:leading-[4.538rem]">{`${name}`}</h1>
       </div>
 
-      <div className="grid grid-cols-1 mt-10 flex-row sm:gap-x-20 md:grid-cols-2 gap-4">
-        <div className="relative flex flex-col h-full flex-1 rounded-xl bg-[#090071]/70 px-8 text-white sm:rounded-[20px] sm:px-12 py-8 sm:py-12 gap-8">
+      <div className="mt-10 grid grid-cols-1 flex-row gap-4 sm:gap-x-20 md:grid-cols-2">
+        <div className="relative flex h-full flex-1 flex-col gap-8 rounded-xl bg-[#090071]/70 p-8 text-white sm:rounded-[20px] sm:p-12">
           <Image
             src="/images/section-header.jpg"
             alt=""

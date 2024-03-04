@@ -41,7 +41,7 @@ const DropDown = ({ items, title, handleCloseNav }: DropDownProps) => {
               <Fragment key={index}>
                 <MenuItem _hover={{ bg: 'blue.100' }} padding={0}>
                   <Link href={item[1]}>
-                    <a onClick={handleCloseNav} className=" h-full w-full p-2">
+                    <a onClick={handleCloseNav} className="size-full p-2">
                       {item[0]}
                     </a>
                   </Link>

@@ -8,7 +8,7 @@ import SectionHeader from '@components/layout/SectionHeader';
 
 const Partners = ({ partnersImages }: PartnersProps) => {
   return (
-    <div className="sm:section-my mt-10">
+    <div className="sm:section-my my-10">
       <SectionHeader
         color="green"
         title="Our Partners"
@@ -19,7 +19,7 @@ const Partners = ({ partnersImages }: PartnersProps) => {
         {partnersImages.map(({ src, alt, url }, index) => {
           return (
             <Fragment key={index}>
-              <div className="relative h-20 w-20 rounded-lg hover:drop-shadow-xl sm:h-[100px] sm:w-[100px]">
+              <div className="relative size-20 rounded-lg hover:drop-shadow-xl sm:size-[100px]">
                 <a
                   href={url}
                   target="_blank"

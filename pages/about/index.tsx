@@ -50,7 +50,7 @@ const AboutPage = () => {
         <div className="grid gap-x-8 rounded-b-[143px] lg:grid-cols-2">
           <div className="flex justify-center pb-4">
             {/* landing bg */}
-            <div className="h-[300px] w-[300px] sm:h-[400px] sm:w-[400px]">
+            <div className="size-[300px] sm:size-[400px]">
               <Image
                 src="/images/soc-bg.jpg"
                 alt="Insert Photo Here"
@@ -73,8 +73,8 @@ const AboutPage = () => {
               <Tabs size="xs">
                 <TabList>
                   <Tab>
-                    <h2 className="whitespace-nowrap text-xs font-bold sm:text-lg">
-                      <div className="mr-2 flex items-center sm:mr-4">
+                    <h2 className="text-xs font-bold sm:text-lg">
+                      <div className="mr-6 flex items-center sm:mr-4">
                         <div className="mx-2">
                           {/* Feather Icon */}
                           <Feather />
@@ -85,7 +85,7 @@ const AboutPage = () => {
                   </Tab>
                   <Tab>
                     <h2 className="text-xs font-bold sm:text-lg">
-                      <div className="mr-2 flex items-center sm:mr-4">
+                      <div className="mr-6 flex items-center sm:mr-4">
                         <div className="mx-2">
                           <Mountain />
                         </div>
@@ -95,7 +95,7 @@ const AboutPage = () => {
                   </Tab>
                   <Tab>
                     <h2 className="text-xs font-bold sm:text-lg">
-                      <div className="mr-2 flex items-center sm:mr-4">
+                      <div className="mr-6 flex items-center sm:mr-4">
                         <div className="mx-2">
                           <Lightbulb />
                         </div>

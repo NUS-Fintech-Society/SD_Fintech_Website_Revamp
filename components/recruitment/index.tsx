@@ -40,22 +40,22 @@ const Recruitment = () => {
         {
           title: 'Software Engineer',
           img: '/images/recruitment/Roles Icon/SD - Software Engineer.svg',
-          path: 'software-engineer',
+          path: 'technical-wing/software-engineer',
         },
         {
           title: 'Technical Lead',
           img: '/images/recruitment/Roles Icon/SD - Technical Lead.svg',
-          path: 'sd-technical-lead',
+          path: 'technical-wing/sd-technical-lead',
         },
         {
           title: 'Design Manager',
           img: '/images/recruitment/Roles Icon/SD - Design Manager.svg',
-          path: 'design-manager',
+          path: 'technical-wing/design-manager',
         },
         {
           title: 'UI/UX Designer',
           img: '/images/recruitment/Roles Icon/SD - UIUX.svg',
-          path: 'uiux-designer',
+          path: 'technical-wing/uiux-designer',
         },
       ],
     },
@@ -65,17 +65,17 @@ const Recruitment = () => {
         {
           title: 'Technical Analyst Trainee',
           img: '/images/recruitment/Roles Icon/ML - Technical Analyst Trainee.svg',
-          path: 'technical-analyst-trainee',
+          path: 'technical-wing/technical-analyst-trainee',
         },
         {
           title: 'Technical Lead (Project/Quant)',
           img: '/images/recruitment/Roles Icon/ML - Technical Lead.svg',
-          path: 'ml-technical-lead',
+          path: 'technical-wing/ml-technical-lead',
         },
         {
           title: 'Technical Analyst (Project/Quant)',
           img: '/images/recruitment/Roles Icon/ML - Technical Analyst.svg',
-          path: 'technical-analyst',
+          path: 'technical-wing/echnical-analyst',
         },
       ],
     },
@@ -85,27 +85,27 @@ const Recruitment = () => {
         {
           title: 'Blockchain Lead Developer',
           img: '/images/recruitment/Roles Icon/BC - Blockchain Lead Developer.svg',
-          path: 'blockchain-lead-developer',
+          path: 'technical-wing/blockchain-lead-developer',
         },
         {
           title: 'Blockchain Developer',
           img: '/images/recruitment/Roles Icon/BC - Blockchain Developer.svg',
-          path: 'blockchain-developer',
+          path: 'technical-wing/blockchain-developer',
         },
         {
           title: 'Core Blockchain Developer',
           img: '/images/recruitment/Roles Icon/BC - Core Blockchain Developer.svg',
-          path: 'core-blockchain-developer',
+          path: 'technical-wing/core-blockchain-developer',
         },
         {
           title: 'Community Manager',
           img: '/images/recruitment/Roles Icon/BC - Community Manager.svg',
-          path: 'community-manager',
+          path: 'technical-wing/community-manager',
         },
         {
           title: 'Research Analyst',
           img: '/images/recruitment/Roles Icon/BC - Research Analyst.svg',
-          path: 'research-analyst',
+          path: 'technical-wing/research-analyst',
         },
       ],
     },
@@ -132,12 +132,12 @@ const Recruitment = () => {
         {
           title: 'Marketing Lead',
           img: '/images/recruitment/Roles Icon/ER - Marketing Lead.svg',
-          path: 'marketing-lead',
+          path: 'operations-wing/marketing-lead',
         },
         {
           title: 'Marketing Executive',
           img: '/images/recruitment/Roles Icon/ER - Marketing Executive.svg',
-          path: 'marketing-executive',
+          path: 'operations-wing/marketing-executive',
         },
       ],
     },
@@ -147,47 +147,47 @@ const Recruitment = () => {
         {
           title: 'Project Management Lead',
           img: '/images/recruitment/Roles Icon/IA - Project Management Lead.svg',
-          path: 'project-management-lead',
+          path: 'operations-wing/project-management-lead',
         },
         {
           title: 'Project Management Executive',
           img: '/images/recruitment/Roles Icon/IA - Project Management Executive.svg',
-          path: 'project-management-executive',
+          path: 'operations-wing/project-management-executive',
         },
         {
           title: 'Talent Management Lead',
           img: '/images/recruitment/Roles Icon/IA - Talent Management Lead.svg',
-          path: 'talent-management-lead',
+          path: 'operations-wing/talent-management-lead',
         },
         {
           title: 'Talent Management Executive',
           img: '/images/recruitment/Roles Icon/IA - Talent Management Executive.svg',
-          path: 'talent-management-executive',
+          path: 'operations-wing/talent-management-executive',
         },
         {
           title: 'Finance Lead',
           img: '/images/recruitment/Roles Icon/IA - Finance Lead.svg',
-          path: 'finance-lead',
+          path: 'operations-wing/finance-lead',
         },
         {
           title: 'Finance Executive',
           img: '/images/recruitment/Roles Icon/IA - Finance Executive.svg',
-          path: 'finance-executive',
+          path: 'operations-wing/finance-executive',
         },
         {
           title: 'Community Development Lead',
           img: '/images/recruitment/Roles Icon/IA - Community Development Lead.svg',
-          path: 'community-development-lead',
+          path: 'operations-wing/community-development-lead',
         },
         {
           title: 'Community Development Executive',
           img: '/images/recruitment/Roles Icon/IA - Community Development Executive.svg',
-          path: 'community-development-executive',
+          path: 'operations-wing/community-development-executive',
         },
         {
           title: 'Product Manager',
           img: '/images/recruitment/Roles Icon/IA - Product Manager.svg',
-          path: 'product-manager',
+          path: 'operations-wing/product-manager',
         },
       ],
     },
@@ -220,7 +220,7 @@ const Recruitment = () => {
                 index={selectedTab === 1 ? 0 : 1}
               >
                 <TabList>
-                  <Link href="/recruitment/technical-wing">
+                  <Link href="/recruitment/technical-wing" passHref>
                     <Tab
                       className="flex-1"
                       _selected={{
@@ -232,7 +232,7 @@ const Recruitment = () => {
                       Technical Wing
                     </Tab>
                   </Link>
-                  <Link href="/recruitment/operations-wing">
+                  <Link href="/recruitment/operations-wing" passHref>
                     <Tab
                       className="flex-1"
                       _selected={{

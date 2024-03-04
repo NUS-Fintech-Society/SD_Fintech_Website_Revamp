@@ -7,7 +7,6 @@ export const SponsorWrapper = chakra(Box, {
     backgroundColor: '#20345b',
     paddingTop: '34px',
     paddingX: '34px',
-    height: '100vh',
   },
 });
 
@@ -27,6 +26,7 @@ export const HeaderContainer = chakra(Box, {
     justifyContent: 'center',
     paddingBottom: '70px',
     color: 'white',
+    lineHeight: '1.2',
   },
   sizes: {
     lg: {

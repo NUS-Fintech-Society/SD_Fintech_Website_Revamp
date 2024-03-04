@@ -19,7 +19,7 @@ const Exco = ({ categories }: ExcoProps) => {
                     className="basis-[280px] rounded-lg border border-gray-400 p-2 sm:basis-[400px]"
                   >
                     <div className="flex">
-                      <div className="relative h-[116px] w-[116px] sm:h-[160px] sm:w-[160px] ">
+                      <div className="relative size-[116px] sm:size-[160px] ">
                         <Image
                           src={imgSrc}
                           alt="picture"

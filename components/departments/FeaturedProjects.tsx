@@ -70,7 +70,7 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
         <MenuButton
           as={Button}
           rightIcon={<ChevronDownIcon />}
-          className="rounded-[13px] bg-teal-700 text-white p-2 ml-8 mt-4"
+          className="ml-8 mt-4 rounded-[13px] bg-teal-700 p-2 text-white"
         >
           {category}
         </MenuButton>
