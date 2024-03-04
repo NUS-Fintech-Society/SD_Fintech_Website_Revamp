@@ -111,8 +111,7 @@ const Recruitment = () => {
     },
     {
       department: 'Quant',
-      roles: [
-      ],
+      roles: [],
     },
   ];
 
@@ -121,14 +120,14 @@ const Recruitment = () => {
       department: 'External Relations',
       roles: [
         {
-          title: 'Partnership Lead',
-          img: '/images/recruitment/Roles Icon/ER - Partnerships Lead.svg',
-          path: 'operations-wing/partnership-lead',
+          title: 'Business Development Lead',
+          img: '/images/recruitment/Roles Icon/ER - Business Development Lead.svg',
+          path: 'business-development-lead',
         },
         {
-          title: 'Partnership Executive',
-          img: '/images/recruitment/Roles Icon/ER - Partnerships Executive.svg',
-          path: 'operations-wing/partnership-executive',
+          title: 'Business Development Executive',
+          img: '/images/recruitment/Roles Icon/ER - Business Development Executive.svg',
+          path: 'business-development-executive',
         },
         {
           title: 'Marketing Lead',

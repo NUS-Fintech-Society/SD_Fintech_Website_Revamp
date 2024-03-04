@@ -692,7 +692,7 @@ const departmentsData: DepartmentsData = {
         },
       ],
       roles: [
-        'Partnership Lead/\u200BExecutive',
+        'Business Development Lead/\u200BExecutive',
         'Marketing Lead/\u200BExecutive',
       ],
       projects: [
