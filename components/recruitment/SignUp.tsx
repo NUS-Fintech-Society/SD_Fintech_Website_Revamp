@@ -8,26 +8,27 @@ const SignUp = () => {
   const bgColor = isTechnical ? 'bg-[#EEF6FE]' : 'bg-[#CEF0F1]';
   const textColor = isTechnical ? 'text-[#004C98]' : 'text-[#006C6C]';
   console.log(bgColor, textColor);
-  setTimeout(() => {console.log(isTechnical, bgColor, textColor);}, 5000);
+  setTimeout(() => {
+    console.log(isTechnical, bgColor, textColor);
+  }, 5000);
 
   return (
-    <div className={`${bgColor} block rounded-lg p-6 md:p-14`}>
+    <div className={`${bgColor} block rounded-lg mb-6 p-6 md:p-14`}>
       <div
-        className={`${textColor} grid grid-flow-col grid-rows-4 gap-10 lg:grid-rows-3 lg:gap-20`}
-      > 
+        className={`${textColor} grid grid-flow-col grid-rows-3 gap-10 lg:grid-rows-2 lg:gap-20`}
+      >
         <div className="w-[300px] sm:w-[900px] lg:w-full">
           <h1 className="mb-1 text-2xl font-bold md:text-4xl">Sign Up Now!</h1>
-          
-            <h1 className="mb-3 md:text-xl">
-              Sign ups close on{' '}
-              <time className="font-bold">25th August 2024 23:59</time>
-            </h1>
-            <h1 className="mb-3 md:text-xl underline">
-              <a>
-              https://forms.gle/3GhF99Qt1pbLEomV6
-              </a> 
-            </h1>
-          <div className={`ml-2 ${isTechnical ? 'block' : 'hidden'}`}>
+
+          <h1 className="mb-3 md:text-xl">
+            We are reviewing applicants on a rolling basis so sign up ASAP!
+          </h1>
+          <h1 className="mb-3 md:text-xl underline">
+            <a href="https://forms.gle/95FUGAjHB46BMJd89" target='_blank' rel="noopener noreferrer">
+              https://forms.gle/95FUGAjHB46BMJd89
+            </a>
+          </h1>
+          {/* <div className={`ml-2 ${isTechnical ? 'block' : 'hidden'}`}> */}
             {/* <br />
             <a
               className="underline underline-offset-1 md:text-xl"
@@ -75,20 +76,9 @@ const SignUp = () => {
             >
               <strong>Internal Affairs</strong>
             </a> */}
-          </div>
+          {/* </div> */}
         </div>
-        <div className="w-[300px] sm:w-[6400px] md:w-2/3 lg:w-full">
-          <h1 className="mb-1 text-2xl font-bold md:text-4xl">Welcome Tea</h1>
-          <h1 className="mb-3 md:text-xl">
-            Missed our Welcome Tea? Watch the recordings here!
-          </h1>
-          <h1 className="mb-3 md:text-xl underline">
-            <a>
-              https://drive.google.com/file/d/1OSCo00YSh07ZsptqTdQfMZdgenLuNrdG/view?usp=sharing
-            </a>
-          </h1>
-        </div>
-        <div className="w-[300px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] md:grid-cols-2 md:gap-x-24 md:gap-y-0 lg:grid">
+        <div className="w-[300px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] lg:grid-cols-2 lg:gap-x-24 lg:gap-y-0 lg:grid">
           <div>
             <h1 className="mb-1 text-2xl font-bold md:text-4xl">FAQs</h1>
             <h1 className="mb-3 md:text-xl">
