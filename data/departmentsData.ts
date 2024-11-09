@@ -777,7 +777,7 @@ const departmentsData: DepartmentsData = {
           linkedin: 'https://www.linkedin.com/in/domi-bryan/',
         },
         {
-          src: '/images/about/ia1.jpg',
+          src: '/images/about/ia2.jpg',
           alt: 'Image of director',
           directorName: 'Qiuyu',
           linkedin: 'https://www.linkedin.com/in/xiangqiuyu/',
@@ -884,7 +884,7 @@ const departmentsData: DepartmentsData = {
           linkedin: 'https://www.linkedin.com/in/minreiseah/',
         },
         {
-          src: '/images/about/quant2.jpg',
+          src: '/images/about/quant3.jpg',
           alt: 'Image of director',
           directorName: 'Devanshu',
           linkedin: 'https://www.linkedin.com/in/devanshubisht/',
