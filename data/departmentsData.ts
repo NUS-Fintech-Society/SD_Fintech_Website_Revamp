@@ -777,7 +777,7 @@ const departmentsData: DepartmentsData = {
           linkedin: 'https://www.linkedin.com/in/domi-bryan/',
         },
         {
-          src: '/images/about/ia1.jpg',
+          src: '/images/about/ia2.jpg',
           alt: 'Image of director',
           directorName: 'Qiuyu',
           linkedin: 'https://www.linkedin.com/in/xiangqiuyu/',
@@ -880,14 +880,14 @@ const departmentsData: DepartmentsData = {
         {
           src: '/images/about/quant2.jpg',
           alt: 'Image of director',
-          directorName: 'Min Rei',
-          linkedin: 'https://www.linkedin.com/in/minreiseah/',
-        },
-        {
-          src: '/images/about/quant2.jpg',
-          alt: 'Image of director',
           directorName: 'Devanshu',
           linkedin: 'https://www.linkedin.com/in/devanshubisht/',
+        },
+        {
+          src: '/images/about/quant3.jpg',
+          alt: 'Image of director',
+          directorName: 'Min Rei',
+          linkedin: 'https://www.linkedin.com/in/minreiseah/',
         },
       ],
       roles: ['Quant Leads', 'Quant Researcher', 'Quant Developer'],

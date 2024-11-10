@@ -21,7 +21,7 @@ const excoData: ExcoData = {
     },
     {
       header: 'President',
-      people: [
+      people: [ 
         {
           role: 'PRESIDENT',
           name: 'Lim Ji Wei',
@@ -86,15 +86,15 @@ const excoData: ExcoData = {
         },
         {
           role: 'CO-DIRECTOR (QUANT)',
-          name: 'Min Rei Seah',
+          name: 'Devanshu Bisht',
           imgSrc: '/images/about/quant2.jpg',
-          linkedin: 'https://www.linkedin.com/in/minreiseah/',
+          linkedin: 'https://www.linkedin.com/in/devanshubisht/',
         },
         {
           role: 'CO-DIRECTOR (QUANT)',
-          name: 'Devanshu Bisht',
+          name: 'Min Rei Seah',
           imgSrc: '/images/about/quant3.jpg',
-          linkedin: 'https://www.linkedin.com/in/devanshubisht/',
+          linkedin: 'https://www.linkedin.com/in/minreiseah/',
         },
       ],
     },

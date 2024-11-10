@@ -154,13 +154,13 @@ const AboutPage = () => {
 
         {excoData && <ExcoCard data={excoData[EXCO_ENUM.TECHWING].people} />}
 
-        <SmallerTitle title="MACHINE LEARNING" />
-
-        {excoData && <ExcoCard data={excoData[EXCO_ENUM.ML].people} />}
-
         <SmallerTitle title="BLOCKCHAIN" />
 
         {excoData && <ExcoCard data={excoData[EXCO_ENUM.BLOCKCHAIN].people} />}
+
+        <SmallerTitle title="MACHINE LEARNING" />
+
+        {excoData && <ExcoCard data={excoData[EXCO_ENUM.ML].people} />}
 
         <SmallerTitle title="QUANT" />
 
@@ -181,6 +181,8 @@ const AboutPage = () => {
         <SmallerTitle title="INTERNAL AFFAIRS" />
 
         {excoData && <ExcoCard data={excoData[EXCO_ENUM.IA].people} />}
+
+        <div className='mb-20'></div>
       </MaxWidth>
     </>
   );
