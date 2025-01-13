@@ -147,7 +147,7 @@ const Navbar = () => {
 
               <li className="mx-2 my-3 px-3 py-1 hover:text-gray-400 lg:my-0">
                 <Link
-                  href="/sponsors"
+                  href="https://nusfintechsummit.com/sponsors"
                   className="rounded-md px-3 py-1 text-black"
                 >
                   <a onClick={handleCloseNav}>SPONSORS</a>
