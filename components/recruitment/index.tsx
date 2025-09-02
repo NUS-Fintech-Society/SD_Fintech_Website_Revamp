@@ -48,7 +48,7 @@ const Recruitment = () => {
           path: 'technical-wing/sd-technical-lead',
         },
         {
-          title: 'Design Manager',
+          title: 'Product Manager',
           img: '/images/recruitment/Roles Icon/SD - Product Manager.svg',
           path: 'technical-wing/product-manager',
         },
@@ -96,11 +96,6 @@ const Recruitment = () => {
           title: 'Core Blockchain Developer',
           img: '/images/recruitment/Roles Icon/BC - Core Blockchain Developer.svg',
           path: 'technical-wing/core-blockchain-developer',
-        },
-        {
-          title: 'Community Manager',
-          img: '/images/recruitment/Roles Icon/BC - Community Manager.svg',
-          path: 'technical-wing/community-manager',
         },
         {
           title: 'Research Analyst',
