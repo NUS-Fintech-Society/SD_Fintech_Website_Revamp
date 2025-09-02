@@ -119,7 +119,7 @@ const eventsData: EventsData = {
       cardDescription:
         'Join us at our AY25/26 Town Hall, where members across all departments come together to connect, share, and kick off the AY with good vibes!!',
       location: 'COM3-MPH (TBC)',
-      date: new Date('2025-09-13T15:00:00').toISOString(),
+      date: new Date('2025-09-13T15:00:00+08:00').toISOString(),
       type: 'Internal',
     },
     {
@@ -131,7 +131,7 @@ const eventsData: EventsData = {
       cardDescription:
         'Join us at our virtual Welcome Tea information sharing session to find out more about what we do and who we are looking for!',
       location: 'Online',
-      date: new Date('2026-01-01T18:00:00').toISOString(),
+      date: new Date('2026-01-01T18:00:00+08:00').toISOString(),
       type: 'Internal',
     },
     // {
