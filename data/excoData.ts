@@ -21,12 +21,12 @@ const excoData: ExcoData = {
     },
     {
       header: 'President',
-      people: [ 
+      people: [
         {
           role: 'PRESIDENT',
-          name: 'Lim Ji Wei',
-          imgSrc: '/images/about/president.jpg',
-          linkedin: 'https://www.linkedin.com/in/jiwei-lim/',
+          name: 'Lim Teng Hong (Kevin)',
+          imgSrc: '/images/about/president.jpeg',
+          linkedin: 'https://www.linkedin.com/in/teng-hong-lim/',
         },
       ],
     },
@@ -35,9 +35,9 @@ const excoData: ExcoData = {
       people: [
         {
           role: 'VICE PRESIDENT (TECH)',
-          name: 'Justin Peng',
+          name: 'Ryan Darius Lim',
           imgSrc: '/images/about/techwing.jpg',
-          linkedin: 'https://www.linkedin.com/in/justin-peng/',
+          linkedin: 'https://www.linkedin.com/in/ryan-darius-lim/',
         },
       ],
     },
@@ -63,15 +63,15 @@ const excoData: ExcoData = {
       people: [
         {
           role: 'CO-DIRECTOR (ML)',
-          name: 'Anthony Tamzil',
-          imgSrc: '/images/about/ml1.jpg',
-          linkedin: 'https://www.linkedin.com/in/anthony-tamzil/',
+          name: 'Leo Qiyi Joel',
+          imgSrc: '/images/about/ml1.jpeg',
+          linkedin: 'https://www.linkedin.com/in/joel-qiyi-leo/',
         },
         {
           role: 'CO-DIRECTOR (ML)',
-          name: 'Harry Wu',
-          imgSrc: '/images/about/ml2.jpg',
-          linkedin: 'https://www.linkedin.com/in/gtg-llama/',
+          name: 'Darren Sng',
+          imgSrc: '/images/about/ml2.jpeg',
+          linkedin: 'https://www.linkedin.com/in/darren-sng/',
         },
       ],
     },
@@ -80,21 +80,15 @@ const excoData: ExcoData = {
       people: [
         {
           role: 'CO-DIRECTOR (QUANT)',
-          name: 'Daniel Png',
-          imgSrc: '/images/about/quant1.jpg',
-          linkedin: 'https://www.linkedin.com/in/daniel-aloysius-png/',
+          name: 'Manimaran Pramoth',
+          imgSrc: '/images/about/quant1.jpeg',
+          linkedin: 'https://www.linkedin.com/in/manimaran-pranoth/',
         },
         {
           role: 'CO-DIRECTOR (QUANT)',
-          name: 'Devanshu Bisht',
-          imgSrc: '/images/about/quant2.jpg',
-          linkedin: 'https://www.linkedin.com/in/devanshubisht/',
-        },
-        {
-          role: 'CO-DIRECTOR (QUANT)',
-          name: 'Min Rei Seah',
-          imgSrc: '/images/about/quant3.jpg',
-          linkedin: 'https://www.linkedin.com/in/minreiseah/',
+          name: 'Jeron Liaw',
+          imgSrc: '/images/about/quant2.jpeg',
+          linkedin: 'https://www.linkedin.com/in/jeron-liaw-6ab736250/',
         },
       ],
     },
@@ -103,15 +97,15 @@ const excoData: ExcoData = {
       people: [
         {
           role: 'CO-DIRECTOR (SD)',
-          name: 'Ching Kwun Hei',
+          name: 'Samuel Then Shi Jie',
           imgSrc: '/images/about/sd1.jpg',
-          linkedin: 'https://www.linkedin.com/in/ching-kwun-hei/',
+          linkedin: 'https://www.linkedin.com/in/samuel-then-shi-jie/',
         },
         {
           role: 'CO-DIRECTOR (SD)',
-          name: 'Glenda Chong',
-          imgSrc: '/images/about/sd2.jpg',
-          linkedin: 'https://www.linkedin.com/in/glendachong/',
+          name: 'Damian Liew Cho Xiang',
+          imgSrc: '/images/about/sd2.jpeg',
+          linkedin: 'https://www.linkedin.com/in/damiancxliew/',
         },
       ],
     },
@@ -120,9 +114,9 @@ const excoData: ExcoData = {
       people: [
         {
           role: 'VICE PRESIDENT (OPS)',
-          name: 'Jeremy Thong',
-          imgSrc: '/images/about/op-wing.jpg',
-          linkedin: 'https://www.linkedin.com/in/jeremy-thong-33a0751a8/',
+          name: 'Chan Wei Guang',
+          imgSrc: '/images/about/opwing.jpeg',
+          linkedin: 'https://www.linkedin.com/in/chanweiguang/',
         },
       ],
     },
@@ -131,15 +125,15 @@ const excoData: ExcoData = {
       people: [
         {
           role: 'CO-DIRECTOR (ER)',
-          name: 'Damien Koh',
-          imgSrc: '/images/about/er1.jpg',
-          linkedin: 'https://www.linkedin.com/in/damien-koh-ke-qun/',
+          name: 'Stella Woon',
+          imgSrc: '/images/about/er1.jpeg',
+          linkedin: 'https://www.linkedin.com/in/stellawoon',
         },
         {
           role: 'CO-DIRECTOR (ER)',
-          name: 'Ryan Lim',
-          imgSrc: '/images/about/er2.jpg',
-          linkedin: 'https://www.linkedin.com/in/ryan-darius-lim/',
+          name: 'Delia Tan',
+          imgSrc: '/images/about/er2.jpeg',
+          linkedin: 'https://www.linkedin.com/in/deliatan',
         },
       ],
     },
@@ -148,15 +142,15 @@ const excoData: ExcoData = {
       people: [
         {
           role: 'CO-DIRECTOR (IA)',
-          name: 'Dominic Bryan',
-          imgSrc: '/images/about/ia1.jpg',
-          linkedin: 'https://www.linkedin.com/in/domi-bryan/',
+          name: 'Gwen Thai Khai Xuen',
+          imgSrc: '/images/about/ia1.jpeg',
+          linkedin: 'https://www.linkedin.com/in/gwen-thai-khai-xuen-3793871bb',
         },
         {
           role: 'CO-DIRECTOR (IA)',
-          name: 'Xiang Qiuyu',
-          imgSrc: '/images/about/ia2.jpg',
-          linkedin: 'https://www.linkedin.com/in/xiangqiuyu/',
+          name: 'Steven Nathanael Mulyadi',
+          imgSrc: '/images/about/ia2.jpeg',
+          linkedin: 'https://www.linkedin.com/in/stevennathanaelmulyadi',
         },
       ],
     },

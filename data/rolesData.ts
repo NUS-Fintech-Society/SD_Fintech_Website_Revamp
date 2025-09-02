@@ -179,10 +179,10 @@ const rolesData: RolesData = {
       ],
     },
     {
-      name: 'Design Manager',
-      path: 'design-manager',
+      name: 'Product Manager',
+      path: 'product-manager',
       logo: {
-        src: '/images/recruitment/Roles Icon/SD - Design Manager.svg',
+        src: '/images/recruitment/Roles Icon/SD - Product Manager.svg',
         alt: 'SD logo',
       },
       aboutUs: {
@@ -195,16 +195,17 @@ const rolesData: RolesData = {
       onboarding: {
         header: 'Onboarding',
         desc: [
-          'Members with no experience will join a 4-weeks program to learn about front/backend technologies and UI/UX design. Frontend is done with NextJs, and the backend with Express and Prisma, as well as basic command line commands.',
+          'Members with no experience will join a 4-weeks program to learn about PM tools, front/backend technologies and UI/UX design. Confluence/Jira is used in managing the product. Frontend is done with NextJs, and the backend with Express and Prisma, as well as basic command line commands.',
           'You will be building your own projects during the training (think of it as a bootcamp). For designers, we are doing our prototyping on Figma, and throughout your time here at FTS, you will have the opportunity to add various design projects to your portfolio.',
         ],
       },
       roleDescription: {
         header: 'Role Description',
         desc: [
-          '• As Design Manager, you will set the design vision for the software applications within NUS Fintech Society, such as its assets.',
+          '• As Product Manager, you will set the vision and directions for the software applications within NUS Fintech Society.',
+          '• Design PRD and be in charge of SCRUM/Sprint planning, work with UI/UX designers on the software designs.',
           '• Craft novel moments of storytelling and delight for our web presence.',
-          '• You will be in charge of recruiting new designers onto the team as well, be it as a fellow design manager or UI/UX designer.',
+          '• You will be in charge of recruiting new designers onto the team as well, which are the UI/UX designer.',
         ],
       },
       requirements: {
@@ -217,7 +218,7 @@ const rolesData: RolesData = {
         {
           teamName: 'Engineering',
           teamDescription:
-            'In the engineering team, you will gain experience in deploying and managing live projects while contributing in frontend and backend development',
+            'In the engineering team, you will gain experience in product management, deploying and managing live projects while contributing in frontend and backend development',
           teamImage: {
             src: '/images/recruitment/engineering.png',
             alt: 'Engineering logo',
