@@ -12,7 +12,21 @@
 5. [Next.js](https://nextjs.org/)
 
 ## Getting Started
+> This repo uses **pnpm** (v8) with **Node 22.x** (Latest Vercel's Update) via Corepack.
 
+[Latest - Using pnpm]
+1. Clone the repo locally,
+2. Enable Corepack & activate pnpm 8
+   ```bash
+   corepack enable
+   corepack prepare pnpm@8.15.8 --activate
+   ```
+3. Install dependencies by running `pnpm install`
+4. Run `pnpm dev` to launch the server locally.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see
+   the result.
+
+[Archived - Using yarn]
 1. Clone this repo locally.
 2. Install dependencies by running `yarn install` in the root folder of your
    cloned repo.
