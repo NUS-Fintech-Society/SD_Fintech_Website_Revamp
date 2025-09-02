@@ -6,6 +6,7 @@ import { Select } from '@chakra-ui/react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import UpcomingEventCard from './UpcomingEventCard';
+import eventsData from '@data/eventsData';
 
 const responsive = {
   monitor: {

@@ -39,16 +39,22 @@ const ProjectCarousel = ({ projects }: FeaturedProjectsProps) => {
       }
       arrows={true}
     >
-      {projects.map(({ projectName, summary, projectImage }, cardIndex) => (
-        <div key={cardIndex}>
-          <ProjectCard
-            coverImage={projectImage[0]}
-            cardDescription={summary}
-            name={projectName}
-            isMobile={false}
-          />
-        </div>
-      ))}
+      {projects.map(
+        ({ projectName, summary, projectImage, category }, cardIndex) => (
+          <div key={cardIndex}>
+            <ProjectCard
+              coverImage={projectImage[0]}
+              cardDescription={summary}
+              name={
+                category === 'Ongoing'
+                  ? `[Ongoing] ${projectName}`
+                  : projectName
+              }
+              isMobile={false}
+            />
+          </div>
+        )
+      )}
     </Carousel>
   );
 };

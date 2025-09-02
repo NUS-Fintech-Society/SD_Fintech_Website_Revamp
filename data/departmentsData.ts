@@ -10,29 +10,167 @@ const departmentsData: DepartmentsData = {
         alt: 'ML logo',
       },
       purpose:
-        'Explore beyond our school syllabus and expose our members to working with real and complex datasets.',
+        'We aim to bridge the gap between theory and practice in applied AI for finance. We empower students to explore, design, and implement cutting-edge machine learning models that address real-world financial challenges',
       vision:
-        'To foster a community of data-savvy members who are comfortable with wrangling and deriving insights from data',
+        'To become a leading student-driven hub for applied machine learning in fintech by leading research and development of machine learning applications tailored for financial systems and cultivating talent by equipping students with hands-on projects, mentorship, and industry exposure.',
       directors: [
         {
-          src: '/images/about/ml1.jpg',
+          src: '/images/about/ml1.jpeg',
           alt: 'Image of director',
-          directorName: 'Anthony',
-          linkedin: 'https://www.linkedin.com/in/anthony-tamzil/',
+          directorName: 'Leo Qiyi Joel',
+          linkedin: 'https://www.linkedin.com/in/joel-qiyi-leo/',
         },
         {
-          src: '/images/about/ml2.jpg',
+          src: '/images/about/ml2.jpeg',
           alt: 'Image of director',
-          directorName: 'Harry',
-          linkedin: 'https://www.linkedin.com/in/gtg-llama/',
+          directorName: 'Darren Sng',
+          linkedin: 'https://www.linkedin.com/in/darren-sng/',
         },
       ],
       roles: [
-        'Technical Lead (Project/\u200BQuant)',
-        'Technical Analyst (Project/\u200BQuant)',
-        'Technical Analyst Trainee',
+        'Technical Lead',
+        'Training Heads',
+        'Machine Learning Analyst',
+        'Machine Learning Trainee',
       ],
       projects: [
+        {
+          projectName: 'Asset Recommendation',
+          year: '25/26',
+          summary:
+            'The goal is to generate tailored asset recommendations using inputs such as investment goals, risk appetite, demographics, and transaction history. There will be exploration on collaborative filtering, sequential modeling, and possibly large language models, to deliver more informed, asset recommendations that align with each investor’s unique needs.',
+          htmlContent: '',
+          // "<p>The forex market has very high volatility. It is the largest financial market in the world with a daily volume of up to 6.6 trillion. This gives more way to algorithmic trading, which identifies patterns in the market and learns from the patterns to obtain profitable trades</p><p>The team was able to incorporated multiple variations of models to investigate the different performances for different specifications of models. They managed to execute profitable automated forex trading using signals generated from ML Models.</p><ul > <li>Number of Trades: 4311</li><li>Number of Win Trades: 2909</li><li>Number of Lose Trades: 1402</li><li>Total Profit: 14740.84SGD</li></ul><b>Article: </b><a class='underline' href='https://medium.com/@nusfintech.ml/fx-algorithmic-trading-with-machine-learning-models-7d6821fa7e67'>https://medium.com/@nusfintech.ml/fx-algorithmic-trading-with-machine-learning-models-7d6821fa7e67</a><b>Members:</b><p>Huaian, Siqi, Gu Geng, Jia Xuan, Hong Po</p>",
+          projectImage: [
+            {
+              src: '/images/departments/projectImages/machineLearning/asset-recommendation1.png',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+            {
+              src: '/images/departments/projectImages/machineLearning/algo-trading2.jpg',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+          ],
+          members: [
+            {
+              memberName: 'Jia Hao',
+              src: 'https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60',
+              alt: 'Member Image',
+            },
+            {
+              memberName: 'Zhengyang',
+              src: 'https://images.unsplash.com/photo-1627161684458-a62da52b51c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=600&q=60',
+              alt: 'Member Image',
+            },
+            {
+              memberName: 'Kavin',
+              src: 'https://images.unsplash.com/photo-1627161684458-a62da52b51c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=600&q=60',
+              alt: 'Member Image',
+            },
+          ],
+          collaborations: [],
+          category: 'Ongoing',
+        },
+        {
+          projectName: 'Agentic Research Analyst ',
+          year: '25/26',
+          summary:
+            'Agentic Investment Research Analyst is an AI-powered multi-agent system designed to automate equity research process, collecting real-time financial news, extracting key metrics and sentiment, and compiling actionable, sector-specific investment reports and trade ideas. Built on advanced NLP and LLM technologies, this platform aims to give retail investors access to timely insights without the time intensive research process.',
+          htmlContent: '',
+          // "<p>In 2006, Joel Greenblatt published his now-famous book, The Little Book that Beats the Market. In it, he describes a value investing strategy that he calls the Magic Formula. The unique feature of Magic Formula Investing is that it uses only two financial metrics, Return on Capital (ROC) and Earnings Yield (EY) to select a portfolio of stocks. Amazingly, according to Greenblatt, his Magic Formula Investing strategy could achieve an average of 30.8% in annual returns over 17 years when tested on the US market, far exceeding the market index — the S&P 500 — which returned 12.4% each year on average over that same 17-year time period.</p><p> Taking inspiration from Greenblatt’s Magic Formula, we decided to use ROC and EY as the only two features when training our machine learning models. Furthermore, since we found that the Magic Formula has yet to be extensively studied in our local (Singapore) context, we decided to apply this value investing strategy to SGX stocks and framed it as a machine learning problem. In this project, we explored using a variety of models including SVMs, KNNs, Neural Networks, and Gradient Boosted Models. Our best performing model achieved an accuracy of 86% in predicting outperformance of SGX stocks against the market index STI.</p><b>Article:</b><a href='https://medium.com/@nusfintech.ml/beating-the-singapore-stock-market-with-the-magic-formula-aa62989fda7d'> https://medium.com/@nusfintech.ml/beating-the-singapore-stock-market-with-the-magic-formula-aa62989fda7d</a> <b>Members:</b> <p>Kleon Ang, Vinod ,Hans Neddyanto Tandjung, Nixon Widjaja</p>",
+          projectImage: [
+            {
+              src: '/images/departments/projectImages/machineLearning/agentic-investment1.png',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+            // {
+            //   src: '/images/departments/projectImages/machineLearning/magic-formula2.jpg',
+            //   alt: 'Project Image',
+            //   height: '500',
+            //   width: '440',
+            // },
+          ],
+          members: [
+            {
+              memberName: 'Jaehyeok Choi',
+              src: 'https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60',
+              alt: 'Member Image',
+            },
+          ],
+          collaborations: [],
+          category: 'Ongoing',
+        },
+        {
+          projectName: 'Oil Price Prediction ',
+          year: '25/26',
+          summary:
+            'Using GDELT’s news-based signals, we will build a graph of country interactions and feed it into a GNN to understand how conflicts, alliances, and economic shifts ripple through global oil markets. The output then passed to a Gradient Boosted Tree to forecast price changes with more interpretability (and hopefully accuracy) than traditional models.',
+          htmlContent: '',
+          // "<p>In 2006, Joel Greenblatt published his now-famous book, The Little Book that Beats the Market. In it, he describes a value investing strategy that he calls the Magic Formula. The unique feature of Magic Formula Investing is that it uses only two financial metrics, Return on Capital (ROC) and Earnings Yield (EY) to select a portfolio of stocks. Amazingly, according to Greenblatt, his Magic Formula Investing strategy could achieve an average of 30.8% in annual returns over 17 years when tested on the US market, far exceeding the market index — the S&P 500 — which returned 12.4% each year on average over that same 17-year time period.</p><p> Taking inspiration from Greenblatt’s Magic Formula, we decided to use ROC and EY as the only two features when training our machine learning models. Furthermore, since we found that the Magic Formula has yet to be extensively studied in our local (Singapore) context, we decided to apply this value investing strategy to SGX stocks and framed it as a machine learning problem. In this project, we explored using a variety of models including SVMs, KNNs, Neural Networks, and Gradient Boosted Models. Our best performing model achieved an accuracy of 86% in predicting outperformance of SGX stocks against the market index STI.</p><b>Article:</b><a href='https://medium.com/@nusfintech.ml/beating-the-singapore-stock-market-with-the-magic-formula-aa62989fda7d'> https://medium.com/@nusfintech.ml/beating-the-singapore-stock-market-with-the-magic-formula-aa62989fda7d</a> <b>Members:</b> <p>Kleon Ang, Vinod ,Hans Neddyanto Tandjung, Nixon Widjaja</p>",
+          projectImage: [
+            {
+              src: '/images/departments/projectImages/machineLearning/oil-price-prediction1.png',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+          ],
+          members: [
+            // {
+            //   memberName: 'Jaehyeok Choi',
+            //   src: 'https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60',
+            //   alt: 'Member Image',
+            // },
+          ],
+          collaborations: [],
+          category: 'Ongoing',
+        },
+        {
+          projectName: 'Crowd-Based Trading',
+          year: '25/26',
+          summary:
+            'Experiment processing and engineering textual data from Social media platforms (Reddit, Facebook) into useful features that improves ML time series prediction when trading Crypto.',
+          htmlContent: '',
+          // "<p>In 2006, Joel Greenblatt published his now-famous book, The Little Book that Beats the Market. In it, he describes a value investing strategy that he calls the Magic Formula. The unique feature of Magic Formula Investing is that it uses only two financial metrics, Return on Capital (ROC) and Earnings Yield (EY) to select a portfolio of stocks. Amazingly, according to Greenblatt, his Magic Formula Investing strategy could achieve an average of 30.8% in annual returns over 17 years when tested on the US market, far exceeding the market index — the S&P 500 — which returned 12.4% each year on average over that same 17-year time period.</p><p> Taking inspiration from Greenblatt’s Magic Formula, we decided to use ROC and EY as the only two features when training our machine learning models. Furthermore, since we found that the Magic Formula has yet to be extensively studied in our local (Singapore) context, we decided to apply this value investing strategy to SGX stocks and framed it as a machine learning problem. In this project, we explored using a variety of models including SVMs, KNNs, Neural Networks, and Gradient Boosted Models. Our best performing model achieved an accuracy of 86% in predicting outperformance of SGX stocks against the market index STI.</p><b>Article:</b><a href='https://medium.com/@nusfintech.ml/beating-the-singapore-stock-market-with-the-magic-formula-aa62989fda7d'> https://medium.com/@nusfintech.ml/beating-the-singapore-stock-market-with-the-magic-formula-aa62989fda7d</a> <b>Members:</b> <p>Kleon Ang, Vinod ,Hans Neddyanto Tandjung, Nixon Widjaja</p>",
+          projectImage: [
+            {
+              src: '/images/departments/projectImages/machineLearning/crowd-based-trading1.png',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+          ],
+          members: [
+            {
+              memberName: 'Roydon Tay',
+              src: 'https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60',
+              alt: 'Member Image',
+            },
+            {
+              memberName: 'Mario Henzel',
+              src: 'https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60',
+              alt: 'Member Image',
+            },
+            {
+              memberName: 'Wayne Tan',
+              src: 'https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60',
+              alt: 'Member Image',
+            },
+            {
+              memberName: 'Mya Thet Chai',
+              src: 'https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60',
+              alt: 'Member Image',
+            },
+          ],
+          collaborations: [],
+          category: 'Ongoing',
+        },
         {
           projectName: 'FX Algorithmic Trading with Machine Learning Models',
           year: '21/22',
@@ -67,7 +205,7 @@ const departmentsData: DepartmentsData = {
             },
           ],
           collaborations: [],
-          category: '',
+          category: 'Past',
         },
         {
           projectName: 'Magic Formula Investing',
@@ -103,7 +241,7 @@ const departmentsData: DepartmentsData = {
             },
           ],
           collaborations: [],
-          category: '',
+          category: 'Past',
         },
         {
           projectName: 'NLP on FOMC Meetings',
@@ -139,7 +277,7 @@ const departmentsData: DepartmentsData = {
             },
           ],
           collaborations: [],
-          category: '',
+          category: 'Past',
         },
       ],
     },
@@ -151,14 +289,13 @@ const departmentsData: DepartmentsData = {
         alt: 'Blockchain logo',
       },
       purpose:
-        'Raise professionals and enthusiasts of blockchain, cryptocurrency, and distributed ledger technology to be early adopters, pioneers, and trailblazers of the industry',
-      vision:
-        'Provide ample connections and opportunities to the best companies, organizations, and individuals in the blockchain sphere, create solutions of tangible and industrial value',
+        'Research the blockchain technology and develop partner company projects and participate in crypto hackathons and events around the world',
+      vision: 'To build a community of blockchain enthusiasts within NUS',
       directors: [
         {
           src: '/images/about/blockchain1.jpg',
           alt: 'Image of director',
-          directorName: 'Wei Rong',
+          directorName: 'Wei Rong Chu',
           linkedin: 'https://www.linkedin.com/in/wei-rong-chu/',
         },
         {
@@ -168,7 +305,7 @@ const departmentsData: DepartmentsData = {
           linkedin: 'https://www.linkedin.com/in/jeplee/',
         },
       ],
-      roles: ['Research Analyst', 'Community Manager', 'Blockchain Developer'],
+      roles: ['Research Analyst', 'Blockchain Developer'],
       projects: [
         {
           projectName: 'Xfers NUS Transaction Risk Detection Website',
@@ -218,97 +355,96 @@ const departmentsData: DepartmentsData = {
           ],
           category: '',
         },
-        {
-          projectName: 'ABCDao',
-          year: '21/22',
-          summary:
-            'The ABCDao acts as an internal tracking system to encourage members of the NUS FinTech Society Blockchain Department to contribute more and meaningfully towards the organisation.',
-          htmlContent:
-            "<p> ABCDao is a BlockChain DAO built for members of the Blockchain Department within the NUS Fintech Society </p><p>The ABCDao acts as an internal tracking system to encourage members of the NUS Fintech Society Blockchain Department to contribute more and meaningfully towards the organisation. The tokens are used as a form of proof and incentive, where members earn tokens for every contribution that they make towards the society (e.g. attendance for department and society meetings, project participation, leadership roles, articles written on Medium, months of stay within the society). The higher the contribution, the more tokens they earn. </p><p>The ABCDao is also used to democratise voting processes relating to the functioning of the department (e.g. selection of blockchain projects, selection of technical leads in projects, etc), where voting rights for DAO proposals are based on the members' tokens. If a particular individual has more tokens, usually as a result of excellent performance in the society, they will get a higher voting preference over another.</p><b>Members:</b><p> Jun Xiong, Bryan Woo, Vimuth Mendis </p>",
-          projectImage: [
-            {
-              src: '/images/departments/projectImages/blockchain/abcdao.jpg',
-              alt: 'Project Image',
-              height: '500',
-              width: '440',
-            },
-          ],
-          members: [
-            {
-              memberName: 'Alicia Wong',
-              src: 'https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60',
-              alt: 'Member Image',
-            },
-            {
-              memberName: 'Brandon Tan',
-              src: 'https://images.unsplash.com/photo-1627161684458-a62da52b51c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=600&q=60',
-              alt: 'Member Image',
-            },
-          ],
-          collaborations: [],
-          category: '',
-        },
-
-        {
-          projectName: 'Potamus Loan - Real-time Loan and Instalment',
-          year: '21/22',
-          summary:
-            'On Potamus Loan, users can take a loan from a fund pool (fund contract) and repay it slowly using money streaming. Similarly, users can also create fund pools by supplying the address and some quantity of the token.',
-          htmlContent:
-            '<p>On Potamus Loan, users can take a loan from a fund pool (fund contract) and repay it slowly using money streaming. Similarly, users can also create fund pools by supplying the address and some quantity of the token. These tokens will generate interest automatically for users, and enable others to loan from their pools. </p><b>Members:</b> <p>Ngo Phuc Cuong, Marcus Tan, James Yak, Seungryeol, Louis</p>',
-          projectImage: [
-            {
-              src: '/images/departments/projectImages/blockchain/potamus.jpg',
-              alt: 'Project Image',
-              height: '500',
-              width: '440',
-            },
-          ],
-          members: [
-            {
-              memberName: 'Alicia Wong',
-              src: 'https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60',
-              alt: 'Member Image',
-            },
-            {
-              memberName: 'Brandon Tan',
-              src: 'https://images.unsplash.com/photo-1627161684458-a62da52b51c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=600&q=60',
-              alt: 'Member Image',
-            },
-          ],
-          collaborations: [],
-          category: '',
-        },
-        {
-          projectName: 'Multi-Signature Wallet',
-          year: '21/22',
-          summary:
-            'Multi-signature wallet is created through a smart contract, to require more than one private key to sign and authorise a crypto transaction, or to generate a signature.',
-          htmlContent:
-            '<p>Multi-signature wallet is created through a smart contract, to require more than one private key to sign and authorise a crypto transaction, or to generate a signature. </p><p>On this MultiSig wallet, users can add or delete their wallets, assign or remove owners, read all owners, submit transactions, multi-sign, and execute a transaction after enough signatures have been authorised.</p><p>On the frontend application, users can peform a Metamask login or logout, view past transactions, view all wallets they own or have been shared with them, send or receive tokens, and deploy their multiSig wallet onto a Ropsten test network</p><b>Members:</b><p>Marcus Pang, Foo Siqi, Ernest Chan</p>',
-          projectImage: [
-            {
-              src: '/images/departments/projectImages/blockchain/wallet.jpg',
-              alt: 'Project Image',
-              height: '500',
-              width: '440',
-            },
-          ],
-          members: [
-            {
-              memberName: 'Alicia Wong',
-              src: 'https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60',
-              alt: 'Member Image',
-            },
-            {
-              memberName: 'Brandon Tan',
-              src: 'https://images.unsplash.com/photo-1627161684458-a62da52b51c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=600&q=60',
-              alt: 'Member Image',
-            },
-          ],
-          collaborations: [],
-          category: '',
-        },
+        // {
+        //   projectName: 'ABCDao',
+        //   year: '21/22',
+        //   summary:
+        //     'The ABCDao acts as an internal tracking system to encourage members of the NUS FinTech Society Blockchain Department to contribute more and meaningfully towards the organisation.',
+        //   htmlContent:
+        //     "<p> ABCDao is a BlockChain DAO built for members of the Blockchain Department within the NUS Fintech Society </p><p>The ABCDao acts as an internal tracking system to encourage members of the NUS Fintech Society Blockchain Department to contribute more and meaningfully towards the organisation. The tokens are used as a form of proof and incentive, where members earn tokens for every contribution that they make towards the society (e.g. attendance for department and society meetings, project participation, leadership roles, articles written on Medium, months of stay within the society). The higher the contribution, the more tokens they earn. </p><p>The ABCDao is also used to democratise voting processes relating to the functioning of the department (e.g. selection of blockchain projects, selection of technical leads in projects, etc), where voting rights for DAO proposals are based on the members' tokens. If a particular individual has more tokens, usually as a result of excellent performance in the society, they will get a higher voting preference over another.</p><b>Members:</b><p> Jun Xiong, Bryan Woo, Vimuth Mendis </p>",
+        //   projectImage: [
+        //     {
+        //       src: '/images/departments/projectImages/blockchain/abcdao.jpg',
+        //       alt: 'Project Image',
+        //       height: '500',
+        //       width: '440',
+        //     },
+        //   ],
+        //   members: [
+        //     {
+        //       memberName: 'Alicia Wong',
+        //       src: 'https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60',
+        //       alt: 'Member Image',
+        //     },
+        //     {
+        //       memberName: 'Brandon Tan',
+        //       src: 'https://images.unsplash.com/photo-1627161684458-a62da52b51c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=600&q=60',
+        //       alt: 'Member Image',
+        //     },
+        //   ],
+        //   collaborations: [],
+        //   category: '',
+        // },
+        // {
+        //   projectName: 'Potamus Loan - Real-time Loan and Instalment',
+        //   year: '21/22',
+        //   summary:
+        //     'On Potamus Loan, users can take a loan from a fund pool (fund contract) and repay it slowly using money streaming. Similarly, users can also create fund pools by supplying the address and some quantity of the token.',
+        //   htmlContent:
+        //     '<p>On Potamus Loan, users can take a loan from a fund pool (fund contract) and repay it slowly using money streaming. Similarly, users can also create fund pools by supplying the address and some quantity of the token. These tokens will generate interest automatically for users, and enable others to loan from their pools. </p><b>Members:</b> <p>Ngo Phuc Cuong, Marcus Tan, James Yak, Seungryeol, Louis</p>',
+        //   projectImage: [
+        //     {
+        //       src: '/images/departments/projectImages/blockchain/potamus.jpg',
+        //       alt: 'Project Image',
+        //       height: '500',
+        //       width: '440',
+        //     },
+        //   ],
+        //   members: [
+        //     {
+        //       memberName: 'Alicia Wong',
+        //       src: 'https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60',
+        //       alt: 'Member Image',
+        //     },
+        //     {
+        //       memberName: 'Brandon Tan',
+        //       src: 'https://images.unsplash.com/photo-1627161684458-a62da52b51c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=600&q=60',
+        //       alt: 'Member Image',
+        //     },
+        //   ],
+        //   collaborations: [],
+        //   category: '',
+        // },
+        // {
+        //   projectName: 'Multi-Signature Wallet',
+        //   year: '21/22',
+        //   summary:
+        //     'Multi-signature wallet is created through a smart contract, to require more than one private key to sign and authorise a crypto transaction, or to generate a signature.',
+        //   htmlContent:
+        //     '<p>Multi-signature wallet is created through a smart contract, to require more than one private key to sign and authorise a crypto transaction, or to generate a signature. </p><p>On this MultiSig wallet, users can add or delete their wallets, assign or remove owners, read all owners, submit transactions, multi-sign, and execute a transaction after enough signatures have been authorised.</p><p>On the frontend application, users can peform a Metamask login or logout, view past transactions, view all wallets they own or have been shared with them, send or receive tokens, and deploy their multiSig wallet onto a Ropsten test network</p><b>Members:</b><p>Marcus Pang, Foo Siqi, Ernest Chan</p>',
+        //   projectImage: [
+        //     {
+        //       src: '/images/departments/projectImages/blockchain/wallet.jpg',
+        //       alt: 'Project Image',
+        //       height: '500',
+        //       width: '440',
+        //     },
+        //   ],
+        //   members: [
+        //     {
+        //       memberName: 'Alicia Wong',
+        //       src: 'https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60',
+        //       alt: 'Member Image',
+        //     },
+        //     {
+        //       memberName: 'Brandon Tan',
+        //       src: 'https://images.unsplash.com/photo-1627161684458-a62da52b51c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=600&q=60',
+        //       alt: 'Member Image',
+        //     },
+        //   ],
+        //   collaborations: [],
+        //   category: '',
+        // },
         {
           projectName: 'Superfluid',
           year: '',
@@ -385,56 +521,56 @@ const departmentsData: DepartmentsData = {
           collaborations: [],
           category: 'Ongoing',
         },
-        {
-          projectName: 'NFT Collection for Charity',
-          year: '23/24',
-          summary:
-            'Having NFTs as proof of charitable contributions provides another avenue for donations to the charity. Users  will have public and immutable records of their donation. This can encourage more individuals and companies to donate.',
-          htmlContent:
-            '<p>Having NFTs as proof of charitable contributions provides another avenue for donations to the charity. Users  will have public and immutable records of their donation. This can encourage more individuals and companies to donate.</p>',
-          projectImage: [
-            {
-              src: '/images/departments/projectImages/blockchain/wallet.jpg',
-              alt: 'Project Image',
-              height: '500',
-              width: '440',
-            },
-          ],
-          members: [
-            {
-              memberName: '',
-              src: '',
-              alt: '',
-            },
-          ],
-          collaborations: [],
-          category: 'Ongoing',
-        },
-        {
-          projectName: 'On-Chain Referral System',
-          year: '23/24',
-          summary:
-            'An On-Chain referral system through a deployed smart contract where users can be referred and generate a proof of invitation to verify users. Reward / referral fees can also be claimed directly. ',
-          htmlContent:
-            '<p>An On-Chain referral system through a deployed smart contract where users can be referred and generate a proof of invitation to verify users. Reward / referral fees can also be claimed directly. </p>',
-          projectImage: [
-            {
-              src: '/images/departments/projectImages/blockchain/wallet.jpg',
-              alt: 'Project Image',
-              height: '500',
-              width: '440',
-            },
-          ],
-          members: [
-            {
-              memberName: '',
-              src: '',
-              alt: '',
-            },
-          ],
-          collaborations: [],
-          category: 'Ongoing',
-        },
+        // {
+        //   projectName: 'NFT Collection for Charity',
+        //   year: '23/24',
+        //   summary:
+        //     'Having NFTs as proof of charitable contributions provides another avenue for donations to the charity. Users  will have public and immutable records of their donation. This can encourage more individuals and companies to donate.',
+        //   htmlContent:
+        //     '<p>Having NFTs as proof of charitable contributions provides another avenue for donations to the charity. Users  will have public and immutable records of their donation. This can encourage more individuals and companies to donate.</p>',
+        //   projectImage: [
+        //     {
+        //       src: '/images/departments/projectImages/blockchain/wallet.jpg',
+        //       alt: 'Project Image',
+        //       height: '500',
+        //       width: '440',
+        //     },
+        //   ],
+        //   members: [
+        //     {
+        //       memberName: '',
+        //       src: '',
+        //       alt: '',
+        //     },
+        //   ],
+        //   collaborations: [],
+        //   category: 'Ongoing',
+        // },
+        // {
+        //   projectName: 'On-Chain Referral System',
+        //   year: '23/24',
+        //   summary:
+        //     'An On-Chain referral system through a deployed smart contract where users can be referred and generate a proof of invitation to verify users. Reward / referral fees can also be claimed directly. ',
+        //   htmlContent:
+        //     '<p>An On-Chain referral system through a deployed smart contract where users can be referred and generate a proof of invitation to verify users. Reward / referral fees can also be claimed directly. </p>',
+        //   projectImage: [
+        //     {
+        //       src: '/images/departments/projectImages/blockchain/wallet.jpg',
+        //       alt: 'Project Image',
+        //       height: '500',
+        //       width: '440',
+        //     },
+        //   ],
+        //   members: [
+        //     {
+        //       memberName: '',
+        //       src: '',
+        //       alt: '',
+        //     },
+        //   ],
+        //   collaborations: [],
+        //   category: 'Ongoing',
+        // },
       ],
     },
     {
@@ -445,30 +581,143 @@ const departmentsData: DepartmentsData = {
         alt: 'SD logo',
       },
       purpose:
-        'Provide opportunities for members to collaborate and work on fintech software projects and maintain production applications',
+        'Provide opportunities for members to collaborate with external firms on fintech software projects and maintain production applications',
       vision:
-        'To create a community of fintech enthusiast developers who are passionate about learning and building fintech applications and products',
+        'To create a community of enthusiast developers who are passionate about learning and building fintech applications and products',
       directors: [
         {
           src: '/images/about/sd1.jpg',
           alt: 'Image of director',
-          directorName: 'Kwun Hei',
-          linkedin: 'https://www.linkedin.com/in/ching-kwun-hei/',
+          directorName: 'Samuel Then Shi Jie',
+          linkedin: 'https://www.linkedin.com/in/samuel-then-shi-jie/',
         },
         {
-          src: '/images/about/sd2.jpg',
+          src: '/images/about/sd2.jpeg',
           alt: 'Image of director',
-          directorName: 'Glenda',
-          linkedin: 'https://www.linkedin.com/in/glendachong/',
+          directorName: 'Damian Liew Cho Xiang',
+          linkedin: 'https://www.linkedin.com/in/damiancxliew/',
         },
       ],
       roles: [
-        'UIUX Designer',
-        'Design Manager',
+        'Product Manager',
         'Technical Lead',
         'Software Engineer',
+        'UI/UX Designer',
       ],
       projects: [
+        {
+          projectName: 'NUS FinTech Dashboard',
+          year: '25/26',
+          summary:
+            'A centralized fintech data platform designed to provide clean, ready-to-use datasets and analytical tools for society members working on fintech-related projects. The system exposes data through a REST/GraphQL API and includes an interactive dashboard for visualizing financial trends and insights. It saves time, improves project quality, and accelerates innovation across multiple teams.',
+          htmlContent:
+            '<p>A centralized fintech data platform designed to provide clean, ready-to-use datasets and analytical tools for society members working on fintech-related projects. The system exposes data through a REST/GraphQL API and includes an interactive dashboard for visualizing financial trends and insights. It saves time, improves project quality, and accelerates innovation across multiple teams.</p>',
+          projectImage: [
+            {
+              src: '/images/departments/projectImages/softwareDevelopment/nfs-dashboard.png',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+          ],
+          members: [],
+          collaborations: [],
+          category: 'Ongoing',
+        },
+        {
+          projectName: 'Heymax Telebot',
+          year: '25/26',
+          summary:
+            'Build an AI-powered Telegram bot that helps users optimise travel expenses by analyzing travel content (Instagram posts, destinations) and providing currency exchange recommendations, budget planning, and expense tracking for international travel.',
+          htmlContent:
+            '<p>Build an AI-powered Telegram bot that helps users optimise travel expenses by analyzing travel content (Instagram posts, destinations) and providing currency exchange recommendations, budget planning, and expense tracking for international travel. </p>',
+          projectImage: [
+            {
+              src: '/images/departments/projectImages/softwareDevelopment/heymax-telebot.png',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+          ],
+          members: [],
+          collaborations: [],
+          category: 'Ongoing',
+        },
+        {
+          projectName: 'ELEOS: An E-Commerce Platform',
+          year: '25/26',
+          summary:
+            'ELEOS is a full-stack e-commerce platform developed to streamline merchandise sales and operations. Built with React, Node.js, and MongoDB, it features secure JWT authentication, Stripe payment integration, and an intuitive web interface for both customers and administrators. The project enhances the society’s digital presence by enabling a scalable, user-friendly system for online transactions while showcasing modern fintech and web development practices.',
+          htmlContent:
+            '<p>Centralised platform that can be utilised to sell merch</p>',
+          projectImage: [
+            {
+              src: '/images/departments/projectImages/softwareDevelopment/eleos1.png',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+          ],
+          members: [
+            {
+              memberName: '',
+              src: '',
+              alt: '',
+            },
+          ],
+          collaborations: [],
+          category: 'Past',
+        },
+        {
+          projectName: 'Fintech Summit Website',
+          year: '24/25',
+          summary:
+            'Central platform for NUS Fintech Society’s annual summit, featuring event details, speaker highlights, registration, and sponsor visibility to drive outreach and engagement.',
+          htmlContent:
+            '<p>Central platform for NUS Fintech Society’s annual summit, featuring event details, speaker highlights, registration, and sponsor visibility to drive outreach and engagement.</p>',
+          projectImage: [
+            {
+              src: '/images/departments/projectImages/softwareDevelopment/nfs-summit1.png',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+          ],
+          members: [
+            {
+              memberName: '',
+              src: '',
+              alt: '',
+            },
+          ],
+          collaborations: [],
+          category: 'Ongoing',
+        },
+        {
+          projectName: 'NFS Website',
+          year: '24/25',
+          summary:
+            "NUS Fintech Society's flagship website showcasing our departments, projects, events, and recruitment information.",
+          htmlContent:
+            "<p>NUS Fintech Society's flagship website showcasing our departments, projects, events, and recruitment information. </p>",
+          projectImage: [
+            {
+              src: '/images/departments/projectImages/softwareDevelopment/nfs-website1.png',
+              alt: 'Project Image',
+              height: '500',
+              width: '440',
+            },
+          ],
+          members: [
+            {
+              memberName: '',
+              src: '',
+              alt: '',
+            },
+          ],
+          collaborations: [],
+          category: 'Ongoing',
+        },
         {
           projectName: 'Insurtech Computer Vision',
           year: '21/22',
@@ -535,129 +784,56 @@ const departmentsData: DepartmentsData = {
           collaborations: [],
           category: 'Past',
         },
-        {
-          projectName: 'Natural Language Processing',
-          year: '',
-          summary: '',
-          htmlContent: '<p> </p>',
-          projectImage: [
-            {
-              src: '/images/departments/projectImages/softwareDevelopment/property.jpg',
-              alt: 'Project Image',
-              height: '500',
-              width: '440',
-            },
-          ],
-          members: [
-            {
-              memberName: '',
-              src: '',
-              alt: '',
-            },
-          ],
-          collaborations: [],
-          category: 'Past',
-        },
-        {
-          projectName: 'NFS Website',
-          year: '23/24',
-          summary:
-            "NUS Fintech Society's flagship website showcasing our departments, projects, events, and recruitment information.",
-          htmlContent:
-            "<p>NUS Fintech Society's flagship website showcasing our departments, projects, events, and recruitment information. </p>",
-          projectImage: [
-            {
-              src: '/images/departments/projectImages/softwareDevelopment/property.jpg',
-              alt: 'Project Image',
-              height: '500',
-              width: '440',
-            },
-          ],
-          members: [
-            {
-              memberName: '',
-              src: '',
-              alt: '',
-            },
-          ],
-          collaborations: [],
-          category: 'Ongoing',
-        },
-        {
-          projectName: 'Fintech Summit Website',
-          year: '23/24',
-          summary:
-            "Website for promoting and disseminating information about NUS Fintech Society's annual Fintech Summit.",
-          htmlContent:
-            "<p>Website for promoting and disseminating information about NUS Fintech Society's annual Fintech Summit. </p>",
-          projectImage: [
-            {
-              src: '/images/departments/projectImages/softwareDevelopment/property.jpg',
-              alt: 'Project Image',
-              height: '500',
-              width: '440',
-            },
-          ],
-          members: [
-            {
-              memberName: '',
-              src: '',
-              alt: '',
-            },
-          ],
-          collaborations: [],
-          category: 'Ongoing',
-        },
-        {
-          projectName: 'ATLAS: HR Management System',
-          year: '23/24',
-          summary:
-            'Internal tool to manage NUS Fintech Society’s members and applicants.',
-          htmlContent:
-            '<p>Internal tool to manage NUS Fintech Society’s members and applicants. </p>',
-          projectImage: [
-            {
-              src: '/images/departments/projectImages/softwareDevelopment/property.jpg',
-              alt: 'Project Image',
-              height: '500',
-              width: '440',
-            },
-          ],
-          members: [
-            {
-              memberName: '',
-              src: '',
-              alt: '',
-            },
-          ],
-          collaborations: [],
-          category: 'Ongoing',
-        },
-        {
-          projectName: 'MEDUSA: ML Microservices',
-          year: '23/24',
-          summary:
-            "Centralised platform to demonstrate the capabilities of ML department's models",
-          htmlContent:
-            "<p>Centralised platform to demonstrate the capabilities of ML department's models </p>",
-          projectImage: [
-            {
-              src: '/images/departments/projectImages/softwareDevelopment/property.jpg',
-              alt: 'Project Image',
-              height: '500',
-              width: '440',
-            },
-          ],
-          members: [
-            {
-              memberName: '',
-              src: '',
-              alt: '',
-            },
-          ],
-          collaborations: [],
-          category: 'Ongoing',
-        },
+        // {
+        //   projectName: 'ATLAS: HR Management System',
+        //   year: '23/24',
+        //   summary:
+        //     'Internal tool to manage NUS Fintech Society’s members and applicants.',
+        //   htmlContent:
+        //     '<p>Internal tool to manage NUS Fintech Society’s members and applicants. </p>',
+        //   projectImage: [
+        //     {
+        //       src: '/images/departments/projectImages/softwareDevelopment/property.jpg',
+        //       alt: 'Project Image',
+        //       height: '500',
+        //       width: '440',
+        //     },
+        //   ],
+        //   members: [
+        //     {
+        //       memberName: '',
+        //       src: '',
+        //       alt: '',
+        //     },
+        //   ],
+        //   collaborations: [],
+        //   category: 'Past',
+        // },
+        // {
+        //   projectName: 'MEDUSA: ML Microservices',
+        //   year: '23/24',
+        //   summary:
+        //     "Centralised platform to demonstrate the capabilities of ML department's models",
+        //   htmlContent:
+        //     "<p>Centralised platform to demonstrate the capabilities of ML department's models </p>",
+        //   projectImage: [
+        //     {
+        //       src: '/images/departments/projectImages/softwareDevelopment/property.jpg',
+        //       alt: 'Project Image',
+        //       height: '500',
+        //       width: '440',
+        //     },
+        //   ],
+        //   members: [
+        //     {
+        //       memberName: '',
+        //       src: '',
+        //       alt: '',
+        //     },
+        //   ],
+        //   collaborations: [],
+        //   category: 'Ongoing',
+        // },
       ],
     },
     {
@@ -673,16 +849,16 @@ const departmentsData: DepartmentsData = {
         'Widen the outreach and expand FinTech Society’s network both within the NUS community and with industry partners.',
       directors: [
         {
-          src: '/images/about/er1.jpg',
+          src: '/images/about/er1.jpeg',
           alt: 'Image of director1',
-          directorName: 'Damien',
-          linkedin: 'https://www.linkedin.com/in/damien-koh-ke-qun/',
+          directorName: 'Stella Woon',
+          linkedin: 'https://www.linkedin.com/in/stellawoon',
         },
         {
-          src: '/images/about/er2.jpg',
+          src: '/images/about/er2.jpeg',
           alt: 'Image of director2',
-          directorName: 'Ryan',
-          linkedin: 'https://www.linkedin.com/in/ryan-darius-lim/',
+          directorName: 'Delia Tan',
+          linkedin: 'https://www.linkedin.com/in/deliatan',
         },
       ],
       roles: [
@@ -771,16 +947,16 @@ const departmentsData: DepartmentsData = {
         'Organise programmes and workshops to introduce FinTech to the wider community.',
       directors: [
         {
-          src: '/images/about/ia1.jpg',
+          src: '/images/about/ia1.jpeg',
           alt: 'Image of director',
-          directorName: 'Dominic',
-          linkedin: 'https://www.linkedin.com/in/domi-bryan/',
+          directorName: 'Gwen Thai Khai Xuen',
+          linkedin: 'https://www.linkedin.com/in/gwen-thai-khai-xuen-3793871bb',
         },
         {
-          src: '/images/about/ia2.jpg',
+          src: '/images/about/ia2.jpeg',
           alt: 'Image of director',
-          directorName: 'Qiuyu',
-          linkedin: 'https://www.linkedin.com/in/xiangqiuyu/',
+          directorName: 'Steven Nathanael Mulyadi',
+          linkedin: 'https://www.linkedin.com/in/stevennathanaelmulyadi',
         },
       ],
       roles: [
@@ -872,22 +1048,16 @@ const departmentsData: DepartmentsData = {
         'We envision a future where our team leads the forefront of quantitative analysis, transforming ideas into impactful solutions through collaboration and shared passion.',
       directors: [
         {
-          src: '/images/about/quant1.jpg',
+          src: '/images/about/quant1.jpeg',
           alt: 'Image of director',
-          directorName: 'Daniel',
-          linkedin: 'https://www.linkedin.com/in/daniel-aloysius-png/',
+          directorName: 'Manimaran Pramoth',
+          linkedin: 'https://www.linkedin.com/in/manimaran-pranoth/',
         },
         {
-          src: '/images/about/quant2.jpg',
+          src: '/images/about/quant2.jpeg',
           alt: 'Image of director',
-          directorName: 'Devanshu',
-          linkedin: 'https://www.linkedin.com/in/devanshubisht/',
-        },
-        {
-          src: '/images/about/quant3.jpg',
-          alt: 'Image of director',
-          directorName: 'Min Rei',
-          linkedin: 'https://www.linkedin.com/in/minreiseah/',
+          directorName: 'Jeron Liaw',
+          linkedin: 'https://www.linkedin.com/in/jeron-liaw-6ab736250/',
         },
       ],
       roles: ['Quant Leads', 'Quant Researcher', 'Quant Developer'],

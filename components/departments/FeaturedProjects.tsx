@@ -77,20 +77,32 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
         <MenuList>
           {category === 'All' && (
             <>
-              <MenuItem onClick={() => updateCategoryAndProjects('Ongoing')}>Ongoing</MenuItem>
-              <MenuItem onClick={() => updateCategoryAndProjects('Past')}>Past</MenuItem>
+              <MenuItem onClick={() => updateCategoryAndProjects('Ongoing')}>
+                Ongoing
+              </MenuItem>
+              <MenuItem onClick={() => updateCategoryAndProjects('Past')}>
+                Past
+              </MenuItem>
             </>
           )}
           {category === 'Ongoing' && (
             <>
-              <MenuItem onClick={() => updateCategoryAndProjects('All')}>All</MenuItem>
-              <MenuItem onClick={() => updateCategoryAndProjects('Past')}>Past</MenuItem>
+              <MenuItem onClick={() => updateCategoryAndProjects('All')}>
+                All
+              </MenuItem>
+              <MenuItem onClick={() => updateCategoryAndProjects('Past')}>
+                Past
+              </MenuItem>
             </>
           )}
           {category === 'Past' && (
             <>
-              <MenuItem onClick={() => updateCategoryAndProjects('All')}>All</MenuItem>
-              <MenuItem onClick={() => updateCategoryAndProjects('Ongoing')}>Ongoing</MenuItem>
+              <MenuItem onClick={() => updateCategoryAndProjects('All')}>
+                All
+              </MenuItem>
+              <MenuItem onClick={() => updateCategoryAndProjects('Ongoing')}>
+                Ongoing
+              </MenuItem>
             </>
           )}
         </MenuList>
@@ -99,13 +111,18 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
       {/* Mobile Carousel */}
       <div className="mt-10 flex flex-wrap justify-center gap-10 md:mt-14 md:gap-16 lg:hidden">
         {projectsByCategory.map(
-          ({ projectName, summary, projectImage }, index) => {
+          ({ projectName, summary, projectImage, category }, index) => {
+            console.log(projectName, summary, projectImage, category);
             return (
               <div className="w-full" key={index}>
                 <ProjectCard
                   coverImage={projectImage[0]}
                   cardDescription={summary}
-                  name={projectName}
+                  name={
+                    category === 'Ongoing'
+                      ? `[Ongoing] ${projectName}`
+                      : projectName
+                  }
                   isMobile // Add this prop to indicate mobile mode
                 />
               </div>

@@ -49,8 +49,8 @@ const Recruitment = () => {
         },
         {
           title: 'Design Manager',
-          img: '/images/recruitment/Roles Icon/SD - Design Manager.svg',
-          path: 'technical-wing/design-manager',
+          img: '/images/recruitment/Roles Icon/SD - Product Manager.svg',
+          path: 'technical-wing/product-manager',
         },
         {
           title: 'UI/UX Designer',

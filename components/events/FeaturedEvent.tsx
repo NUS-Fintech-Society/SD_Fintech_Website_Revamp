@@ -63,7 +63,7 @@ const FeaturedEvent = ({ events }: EventsProps) => {
             {/* for now put placeholder */}
             <p className="text-xs font-bold text-[#6f00ff] lg:text-base xl:text-xl">
               {/* {featuredEvent.location} */}
-              NUS School of Computing, COM1
+              NUS School of Computing, COM3-MPH
             </p>
             <p className="text-xs font-bold text-[#6f00ff] lg:text-base xl:text-xl">
               13 Computing Drive
@@ -74,6 +74,8 @@ const FeaturedEvent = ({ events }: EventsProps) => {
           </div>
           <div className="flex justify-evenly">
             <Button
+              as="a"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd4VYFyAC_KOSZR_DtzAS4UO0aAN-4iNEF6QLDN4LDmaDcjaA/viewform?usp=header&new=1"
               variant="solid"
               colorScheme="purple"
               borderRadius="xl"
@@ -81,7 +83,7 @@ const FeaturedEvent = ({ events }: EventsProps) => {
               _hover={{ bg: '#6f00ff', color: 'white' }}
               className="w-2/3 bg-purple-500 text-xs text-white md:text-base lg:text-xl"
             >
-              BOOK NOW
+              RSVP
             </Button>
             <IconButton
               colorScheme="white"
