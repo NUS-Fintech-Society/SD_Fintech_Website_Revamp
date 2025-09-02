@@ -13,23 +13,32 @@ const SignUp = () => {
   }, 5000);
 
   return (
-    <div className={`${bgColor} block rounded-lg mb-6 p-6 md:p-14`}>
+    <div className={`${bgColor} mb-6 block rounded-lg p-6 md:p-14`}>
       <div
         className={`${textColor} grid grid-flow-col grid-rows-3 gap-10 lg:grid-rows-2 lg:gap-20`}
       >
         <div className="w-[300px] sm:w-[900px] lg:w-full">
-          <h1 className="mb-1 text-2xl font-bold md:text-4xl">Sign Up Now!</h1>
-
+          <h1 className="mb-1 text-2xl font-bold md:text-4xl">
+            Sign Up Has Closed!
+          </h1>
           <h1 className="mb-3 md:text-xl">
+            We hope to see your application next year!
+          </h1>
+
+          {/* <h1 className="mb-3 md:text-xl">
             We are reviewing applicants on a rolling basis so sign up ASAP!
           </h1>
-          <h1 className="mb-3 md:text-xl underline">
-            <a href="https://forms.gle/95FUGAjHB46BMJd89" target='_blank' rel="noopener noreferrer">
+          <h1 className="mb-3 underline md:text-xl">
+            <a
+              href="https://forms.gle/95FUGAjHB46BMJd89"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               https://forms.gle/95FUGAjHB46BMJd89
             </a>
-          </h1>
+          </h1> */}
           {/* <div className={`ml-2 ${isTechnical ? 'block' : 'hidden'}`}> */}
-            {/* <br />
+          {/* <br />
             <a
               className="underline underline-offset-1 md:text-xl"
               href="https://docs.google.com/forms/d/e/1FAIpQLSd1RExoYn3oKHG2gGjYZ-znYIpaz9iNeUXtOdHPFMn20Zjv8A/viewform"
@@ -78,7 +87,7 @@ const SignUp = () => {
             </a> */}
           {/* </div> */}
         </div>
-        <div className="w-[300px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] lg:grid-cols-2 lg:gap-x-24 lg:gap-y-0 lg:grid">
+        <div className="w-[300px] md:w-[768px] lg:grid lg:w-[1024px] lg:grid-cols-2 lg:gap-x-24 lg:gap-y-0 xl:w-[1280px]">
           <div>
             <h1 className="mb-1 text-2xl font-bold md:text-4xl">FAQs</h1>
             <h1 className="mb-3 md:text-xl">
