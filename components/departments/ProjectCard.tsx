@@ -29,7 +29,7 @@ const ProjectCard = ({
             </h3>
           </div>
 
-          <div className="mr-5 h-[144px] overflow-hidden text-left text-xs font-medium text-[#303030] md:mb-8 md:h-[300px] md:w-[304px] md:text-base">
+          <div className="mr-5 h-[144px] overflow-hidden whitespace-pre-wrap text-left text-xs font-medium text-[#303030] md:mb-8 md:h-[300px] md:w-[304px] md:text-base">
             {cardDescription}
           </div>
         </div>

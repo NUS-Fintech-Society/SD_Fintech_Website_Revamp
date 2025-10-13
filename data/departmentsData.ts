@@ -35,10 +35,10 @@ const departmentsData: DepartmentsData = {
       ],
       projects: [
         {
-          projectName: 'Asset Recommendation',
+          projectName: 'Asset Recommendation System',
           year: '25/26',
           summary:
-            'The goal is to generate tailored asset recommendations using inputs such as investment goals, risk appetite, demographics, and transaction history. There will be exploration on collaborative filtering, sequential modeling, and possibly large language models, to deliver more informed, asset recommendations that align with each investor’s unique needs.',
+            'The goal is to generate tailored asset recommendations using inputs such as investment goals, risk appetite, demographics, and transaction history.\n\nThere will be exploration on collaborative filtering, sequential modeling, and possibly large language models, to deliver more informed, asset recommendations that align with each investor’s unique needs.',
           htmlContent: '',
           // "<p>The forex market has very high volatility. It is the largest financial market in the world with a daily volume of up to 6.6 trillion. This gives more way to algorithmic trading, which identifies patterns in the market and learns from the patterns to obtain profitable trades</p><p>The team was able to incorporated multiple variations of models to investigate the different performances for different specifications of models. They managed to execute profitable automated forex trading using signals generated from ML Models.</p><ul > <li>Number of Trades: 4311</li><li>Number of Win Trades: 2909</li><li>Number of Lose Trades: 1402</li><li>Total Profit: 14740.84SGD</li></ul><b>Article: </b><a class='underline' href='https://medium.com/@nusfintech.ml/fx-algorithmic-trading-with-machine-learning-models-7d6821fa7e67'>https://medium.com/@nusfintech.ml/fx-algorithmic-trading-with-machine-learning-models-7d6821fa7e67</a><b>Members:</b><p>Huaian, Siqi, Gu Geng, Jia Xuan, Hong Po</p>",
           projectImage: [
@@ -132,7 +132,8 @@ const departmentsData: DepartmentsData = {
           category: 'Ongoing',
         },
         {
-          projectName: 'Crowd-Based Trading',
+          projectName:
+            'Crowd-based Trade Signals for Algo trading',
           year: '25/26',
           summary:
             'Experiment processing and engineering textual data from Social media platforms (Reddit, Facebook) into useful features that improves ML time series prediction when trading Crypto.',
