@@ -31,7 +31,7 @@ const Events = ({ events }: EventsProps) => {
         </div>
         <FeaturedEvent events={events} />
         <UpcomingEvents events={events} />
-        {/* <PastEvents events={[]} /> */}
+        <PastEvents events={events} />
       </MaxWidth>
     </>
   );

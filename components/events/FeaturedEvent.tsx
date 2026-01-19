@@ -15,6 +15,7 @@ const FeaturedEvent = ({ events }: EventsProps) => {
       new Date(a.date).getTime() - new Date(b.date).getTime()
   );
   const featuredEvent: Event = sortedEvents[0];
+  if (!featuredEvent) return null;
 
   const dateObj = new Date(featuredEvent.date);
   const dateStr = moment(dateObj).format('D MMMM YYYY');
