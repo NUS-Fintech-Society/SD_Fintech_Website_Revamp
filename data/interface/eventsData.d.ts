@@ -1,8 +1,12 @@
 export interface Event {
-  coverImage: {
+  coverImage: string;
+  coverImageAlt?: string;
+
+  images?: {
     src: string;
-    alt: string;
-  };
+    alt?: string;
+  }[];      
+
   name: string;
   cardDescription: string;
   location: string;
