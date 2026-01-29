@@ -12,10 +12,14 @@ interface EventModalProps {
 const EventModal = ({ event, onClose }: EventModalProps) => {
   if (!event) return null;
 
-  const galleryImages =
+  const galleryImages = (
     event.images && event.images.length > 0
       ? event.images
-      : [{ src: event.coverImage, alt: event.coverImageAlt }];
+      : [{ src: event.coverImage, alt: event.coverImageAlt }]
+  ).filter(
+    (img): img is { src: string; alt?: string } =>
+      typeof img?.src === 'string' && img.src.length > 0
+  );
 
   // close on ESC
   useEffect(() => {
@@ -58,13 +62,15 @@ const EventModal = ({ event, onClose }: EventModalProps) => {
             infinite={false}
           >
             {galleryImages.map((img, idx) => (
-              <div className="relative w-full aspect-[16/9]">
-                <Image
-                  src={img.src}
-                  alt={img.alt ?? event.name}
-                  layout="fill"
-                  className="rounded-lg object-cover"
-                />
+              <div key={idx} className="relative w-full aspect-[16/9]">
+                {img.src && (
+                  <Image
+                    src={img.src}
+                    alt={img.alt ?? event.name}
+                    layout="fill"
+                    className="rounded-lg object-cover"
+                  />
+                )}
               </div>
             ))}
           </Carousel>

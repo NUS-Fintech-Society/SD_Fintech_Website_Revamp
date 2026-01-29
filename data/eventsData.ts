@@ -110,7 +110,6 @@ const eventsData: EventsData = {
       cardDescription:
         'NUS FinTech Summit 2026 is a three-day hackathon and innovation event where university students design and build real fintech solutions, explore blockchain and XRPL technologies, attend hands-on workshops, and demonstrate their projects to industry judges',
       images: [
-        { src: '/images/events/summit2026/cover.jpg', alt: 'Summit Cover' },
         { src: '/images/events/summit2026/workshop1.jpg', alt: 'Summit workshop 1' },
         { src: '/images/events/summit2026/image1.png', alt: 'Summit Image 1' },
         { src: '/images/events/summit2026/image2.jpg', alt: 'Summit Image 2' },
@@ -125,7 +124,7 @@ const eventsData: EventsData = {
         { src: '/images/events/summit2026/image11.jpg', alt: 'Summit Image 11' },
     ],
       location: 'Online',
-      date: new Date('2026-01-01T18:00:00').toISOString(),
+      date: new Date('2026-01-09T18:00:00').toISOString(),
       type: 'Internal',
     },
     // {
