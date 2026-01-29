@@ -123,9 +123,9 @@ const eventsData: EventsData = {
         { src: '/images/events/summit2026/image10.jpg', alt: 'Summit Image 10' },
         { src: '/images/events/summit2026/image11.jpg', alt: 'Summit Image 11' },
     ],
-      location: 'Online',
+      location: 'NUS',
       date: new Date('2026-01-09T18:00:00').toISOString(),
-      type: 'Internal',
+      type: 'External',
     },
     // {
     //   name: 'Welcome Tea',
