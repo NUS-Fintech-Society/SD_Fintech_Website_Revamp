@@ -124,7 +124,7 @@ const eventsData: EventsData = {
         { src: '/images/events/summit2026/image11.jpg', alt: 'Summit Image 11' },
     ],
       location: 'NUS',
-      date: new Date('2026-01-09').toISOString(),
+      date: '2026-01-09',
       type: 'External',
     },
     // {

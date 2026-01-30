@@ -10,6 +10,15 @@ interface EventModalProps {
 }
 
 const EventModal = ({ event, onClose }: EventModalProps) => {
+  // close on ESC
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [onClose]);
+
   if (!event) return null;
 
   const galleryImages = (
@@ -20,15 +29,6 @@ const EventModal = ({ event, onClose }: EventModalProps) => {
     (img): img is { src: string; alt?: string } =>
       typeof img?.src === 'string' && img.src.length > 0
   );
-
-  // close on ESC
-  useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
-    };
-    window.addEventListener('keydown', handler);
-    return () => window.removeEventListener('keydown', handler);
-  }, [onClose]);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
@@ -62,7 +62,7 @@ const EventModal = ({ event, onClose }: EventModalProps) => {
             infinite={false}
           >
             {galleryImages.map((img, idx) => (
-              <div key={idx} className="relative w-full aspect-[16/9]">
+              <div key={idx} className="relative aspect-[16/9] w-full">
                 {img.src && (
                   <Image
                     src={img.src}
