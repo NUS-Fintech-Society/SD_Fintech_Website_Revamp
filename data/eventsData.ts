@@ -93,16 +93,16 @@ const eventsData: EventsData = {
     //   date: new Date('2025-03-03T18:00:00').toISOString(),
     //   type: 'Internal',
     // },
-    {
-      name: 'NUS FinTech Society Town Hall AY25/26',
-      coverImage: 'https://images.unsplash.com/photo-1595206133361-b1fe343e5e23?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80',
-      coverImageAlt: 'Welcome Image',
-      cardDescription:
-        'Join us at our AY25/26 Town Hall, where members across all departments come together to connect, share, and kick off the AY with good vibes!!',
-      location: 'COM3-MPH (TBC)',
-      date: new Date('2025-09-13T15:00:00').toISOString(),
-      type: 'Internal',
-    },
+    // {
+    //   name: 'NUS FinTech Society Town Hall AY25/26',
+    //   coverImage: 'https://images.unsplash.com/photo-1595206133361-b1fe343e5e23?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80',
+    //   coverImageAlt: 'Welcome Image',
+    //   cardDescription:
+    //     'Join us at our AY25/26 Town Hall, where members across all departments come together to connect, share, and kick off the AY with good vibes!!',
+    //   location: 'COM3-MPH (TBC)',
+    //   date: new Date('2025-09-13T15:00:00').toISOString(),
+    //   type: 'Internal',
+    // },
     {
       name: 'NUS Fintech Summit 2026',
       coverImage: '/images/events/summit2026/image9.jpg',
@@ -124,7 +124,7 @@ const eventsData: EventsData = {
         { src: '/images/events/summit2026/image11.jpg', alt: 'Summit Image 11' },
     ],
       location: 'NUS',
-      date: new Date('2026-01-09T18:00:00').toISOString(),
+      date: new Date('2026-01-09').toISOString(),
       type: 'External',
     },
     // {
