@@ -10,6 +10,18 @@ interface EventModalProps {
 }
 
 const EventModal = ({ event, onClose }: EventModalProps) => {
+  // close on ESC
+  useEffect(() => {
+    if (!event) return;
+
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [event, onClose]);
+
   if (!event) return null;
 
   const galleryImages = (
@@ -21,23 +33,11 @@ const EventModal = ({ event, onClose }: EventModalProps) => {
       typeof img?.src === 'string' && img.src.length > 0
   );
 
-  // close on ESC
-  useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
-    };
-    window.addEventListener('keydown', handler);
-    return () => window.removeEventListener('keydown', handler);
-  }, [onClose]);
-
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
-      {/* Backdrop */}
       <div className="absolute inset-0 bg-black/60" onClick={onClose} />
 
-      {/* Modal */}
       <div className="relative z-10 max-h-[90vh] w-[90%] max-w-3xl overflow-y-auto rounded-xl bg-white p-6 shadow-xl">
-        {/* Header */}
         <div className="mb-4 flex items-start justify-between">
           <h2 className="text-2xl font-bold text-[#002750]">{event.name}</h2>
           <button
@@ -49,7 +49,6 @@ const EventModal = ({ event, onClose }: EventModalProps) => {
           </button>
         </div>
 
-        {/* Image Gallery (SAFE) */}
         <div className="mb-4">
           <Carousel
             swipeable
@@ -62,7 +61,7 @@ const EventModal = ({ event, onClose }: EventModalProps) => {
             infinite={false}
           >
             {galleryImages.map((img, idx) => (
-              <div key={idx} className="relative w-full aspect-[16/9]">
+              <div key={idx} className="relative aspect-[16/9] w-full">
                 {img.src && (
                   <Image
                     src={img.src}
@@ -76,7 +75,6 @@ const EventModal = ({ event, onClose }: EventModalProps) => {
           </Carousel>
         </div>
 
-        {/* Meta */}
         <div className="mb-3 text-sm text-gray-600">
           <p>
             <strong>Date:</strong> {event.date}
@@ -89,7 +87,6 @@ const EventModal = ({ event, onClose }: EventModalProps) => {
           </p>
         </div>
 
-        {/* Description */}
         <p className="text-gray-700">{event.cardDescription}</p>
       </div>
     </div>
