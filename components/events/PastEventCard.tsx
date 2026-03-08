@@ -1,16 +1,18 @@
 // library
 // import Link from 'next/link';
-import EventCardProps from '@interfaces/events/EventCard';
+import EventCardProps, { PastEventCardProps } from '@interfaces/events/EventCard';
 import Image from 'next/image';
 
 const PastEventCard = ({
   coverImage,
+  coverImageAlt,
   name,
   cardDescription,
   location,
   date,
   type,
-}: EventCardProps) => {
+  onClick
+}: PastEventCardProps) => {
   const MONTHS = [
     'Jan',
     'Feb',
@@ -31,10 +33,14 @@ const PastEventCard = ({
   const year = dateObj.getFullYear();
 
   return (
+    <div
+      onClick={onClick}
+      className="cursor-pointer transition-transform duration-200 hover:scale-[1.02]"
+    >
     <div className="relative flex h-[225px] w-[250px] flex-col justify-end rounded-xl border-2 p-4 shadow-lg">
       <Image
-        src={coverImage.src}
-        alt={coverImage.alt}
+        src={coverImage}
+        alt={coverImageAlt}
         layout="fill"
         objectFit="cover"
         className="-z-10 rounded-xl opacity-70"
@@ -45,6 +51,7 @@ const PastEventCard = ({
         {year}
       </p>
       <h3 className="py-1 text-xl text-white">{name}</h3>
+    </div>
     </div>
   );
 };

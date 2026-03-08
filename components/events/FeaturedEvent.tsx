@@ -15,6 +15,7 @@ const FeaturedEvent = ({ events }: EventsProps) => {
       new Date(a.date).getTime() - new Date(b.date).getTime()
   );
   const featuredEvent: Event = sortedEvents[0];
+  if (!featuredEvent) return null;
 
   const dateObj = new Date(featuredEvent.date);
   const dateStr = moment(dateObj).format('D MMMM YYYY');
@@ -25,8 +26,8 @@ const FeaturedEvent = ({ events }: EventsProps) => {
       <div className="relative mt-10 h-[400px] rounded-xl border-8 sm:h-[500px] sm:rounded-[20px] lg:min-w-[400px]">
         <div className="absolute h-full w-3/5 px-8 text-white sm:px-12">
           <Image
-            src={featuredEvent.coverImage.src}
-            alt={featuredEvent.coverImage.alt}
+            src={featuredEvent.coverImage}
+            alt={featuredEvent.coverImageAlt}
             layout="fill"
             objectFit="cover"
             className="-z-10 rounded-l-xl opacity-50 sm:rounded-l-[20px]"
