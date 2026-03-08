@@ -77,7 +77,7 @@ const EventModal = ({ event, onClose }: EventModalProps) => {
 
         <div className="mb-3 text-sm text-gray-600">
           <p>
-            <strong>Date:</strong> {event.date}
+            <strong>Date:</strong> {new Date(event.date).toISOString().split("T")[0]}
           </p>
           <p>
             <strong>Location:</strong> {event.location}
