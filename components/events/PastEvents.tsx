@@ -45,16 +45,9 @@ const responsive = {
 const PastEvents = ({ events }: EventsProps) => {
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
 
-  const pastEvents: Event[] = events.filter(
-    (e) => new Date(e.date).getTime() <= new Date().getTime()
-  );
-
-  const chunkSize = 2;
-  const eventChunks: Event[][] = [];
-
-  for (let i = 0; i < pastEvents.length; i += chunkSize) {
-    eventChunks.push(pastEvents.slice(i, i + chunkSize));
-  }
+  const pastEvents: Event[] = events
+    .filter((e) => new Date(e.date).getTime() <= new Date().getTime())
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
     <div className="sm:section-my mt-10">
@@ -101,16 +94,12 @@ const PastEvents = ({ events }: EventsProps) => {
             keyBoardControl
             partialVisible
           >
-            {eventChunks.map((chunk, chunkIndex) => (
-              <div key={chunkIndex}>
-                {chunk.map((event, index) => (
-                  <div key={index} className="my-7 flex justify-center">
-                    <PastEventCard
-                      {...event}
-                      onClick={() => setSelectedEvent(event)}
-                    />
-                  </div>
-                ))}
+            {pastEvents.map((event, index) => (
+              <div key={index} className="my-7 flex justify-center">
+                <PastEventCard
+                  {...event}
+                  onClick={() => setSelectedEvent(event)}
+                />
               </div>
             ))}
           </Carousel>

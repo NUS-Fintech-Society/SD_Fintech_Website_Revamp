@@ -77,7 +77,8 @@ const EventModal = ({ event, onClose }: EventModalProps) => {
 
         <div className="mb-3 text-sm text-gray-600">
           <p>
-            <strong>Date:</strong> {new Date(event.date).toISOString().split("T")[0]}
+            <strong>Date:</strong>{' '}
+            {new Date(event.date).toISOString().split('T')[0]}
           </p>
           <p>
             <strong>Location:</strong> {event.location}
@@ -88,6 +89,36 @@ const EventModal = ({ event, onClose }: EventModalProps) => {
         </div>
 
         <p className="text-gray-700">{event.cardDescription}</p>
+
+        {event.description && (
+          <p className="mt-3 text-gray-700">{event.description}</p>
+        )}
+
+        {event.learningObjectives && event.learningObjectives.length > 0 && (
+          <>
+            <h3 className="mt-4 font-semibold text-[#002750]">
+              Learning Objectives
+            </h3>
+            <ul className="mt-1 list-disc pl-5 text-sm text-gray-700">
+              {event.learningObjectives.map((obj, i) => (
+                <li key={i}>{obj}</li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        {event.expectedOutcomes && event.expectedOutcomes.length > 0 && (
+          <>
+            <h3 className="mt-4 font-semibold text-[#002750]">
+              Expected Outcomes
+            </h3>
+            <ul className="mt-1 list-disc pl-5 text-sm text-gray-700">
+              {event.expectedOutcomes.map((o, i) => (
+                <li key={i}>{o}</li>
+              ))}
+            </ul>
+          </>
+        )}
       </div>
     </div>
   );

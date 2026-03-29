@@ -1,6 +1,8 @@
 // library
 // import Link from 'next/link';
-import EventCardProps, { PastEventCardProps } from '@interfaces/events/EventCard';
+import EventCardProps, {
+  PastEventCardProps,
+} from '@interfaces/events/EventCard';
 import Image from 'next/image';
 
 const PastEventCard = ({
@@ -11,7 +13,7 @@ const PastEventCard = ({
   location,
   date,
   type,
-  onClick
+  onClick,
 }: PastEventCardProps) => {
   const MONTHS = [
     'Jan',
@@ -37,21 +39,26 @@ const PastEventCard = ({
       onClick={onClick}
       className="cursor-pointer transition-transform duration-200 hover:scale-[1.02]"
     >
-    <div className="relative flex h-[225px] w-[250px] flex-col justify-end rounded-xl border-2 p-4 shadow-lg">
-      <Image
-        src={coverImage}
-        alt={coverImageAlt}
-        layout="fill"
-        objectFit="cover"
-        className="-z-10 rounded-xl opacity-70"
-      />
-      <p className="text-sm text-white">
-        {day + ' '}
-        {month + ' '}
-        {year}
-      </p>
-      <h3 className="py-1 text-xl text-white">{name}</h3>
-    </div>
+      <div className="relative flex h-[225px] w-[250px] flex-col justify-end overflow-hidden rounded-xl border-2 shadow-lg">
+        <Image
+          src={coverImage}
+          alt={coverImageAlt}
+          layout="fill"
+          objectFit="cover"
+          className="-z-10 rounded-xl opacity-70"
+        />
+        <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+        <div className="relative z-10 p-4">
+          <p className="text-sm text-white">
+            {day + ' '}
+            {month + ' '}
+            {year}
+          </p>
+          <h3 className="line-clamp-3 py-1 text-xl leading-tight text-white">
+            {name}
+          </h3>
+        </div>
+      </div>
     </div>
   );
 };
