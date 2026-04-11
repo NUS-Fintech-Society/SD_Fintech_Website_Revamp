@@ -203,6 +203,42 @@ const eventsData: EventsData = {
       date: new Date('2026-01-09').toISOString(),
       type: 'External',
     },
+    {
+      name: 'ETH Oxford 2025 — Multi-Track First-Place Awards',
+      coverImage: {
+        src: 'https://www.comp.nus.edu.sg/wp-content/uploads/2025/04/Newsbyte-2025-Eth-Oxford-Web.png',
+        alt: 'ETH Oxford 2025',
+      },
+      cardDescription:
+        'NUS FinTech Society secured multiple first-place awards at ETH Oxford 2025, demonstrating innovation and technical excellence across several competition tracks.',
+      location: 'Oxford, UK',
+      date: new Date('2025-02-01T10:00:00').toISOString(),
+      type: 'External',
+    },
+    {
+      name: 'ETH Rome 2025 — Four Prize Wins',
+      coverImage: {
+        src: 'https://www.comp.nus.edu.sg/wp-content/uploads/2025/11/Newsbtye-SOC-10.jpg',
+        alt: 'ETH Rome 2025',
+      },
+      cardDescription:
+        'NUS FinTech Society clinched four prizes at ETHRome 2025, showcasing strong blockchain and fintech innovation through competitive hackathon projects.',
+      location: 'Rome, Italy',
+      date: new Date('2025-10-01T10:00:00').toISOString(),
+      type: 'External',
+    },
+    {
+      name: 'Fundl: The Gateway to the Future of Funding — Brownbag Review',
+      coverImage: {
+        src: 'https://fintechlab.nus.edu.sg/wp-content/uploads/2026/01/Canva-1-1085x1536.png',
+        alt: 'Fundl Brownbag Review',
+      },
+      cardDescription:
+        'Brownbag review session featuring Fundl, exploring the future of funding platforms, innovation in fintech ecosystems, and key product insights.',
+      location: 'NUS',
+      date: new Date('2026-01-15T12:00:00').toISOString(),
+      type: 'Internal',
+    },
     // {
     //   name: 'Welcome Tea',
     //   coverImage: {
