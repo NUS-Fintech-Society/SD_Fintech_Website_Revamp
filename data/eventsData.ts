@@ -203,6 +203,36 @@ const eventsData: EventsData = {
       date: new Date('2026-01-09').toISOString(),
       type: 'External',
     },
+    {
+      name: 'XRPL Hackathon @ XRP Australia 2026',
+      coverImage: '/images/events/xrpl2026/image1.jpg',
+      coverImageAlt: 'XRPL Hackathon Winners',
+      cardDescription:
+        'Hackathon Win! Our team won first place at the XRPL Hackathon @ XRP Australia 2026.',
+      images: [
+        {
+          src: '/images/events/xrpl2026/image1.jpg',
+          alt: 'XRPL Hackathon Team Photo',
+        },
+        {
+          src: '/images/events/xrpl2026/image2.jpg',
+          alt: 'XRPL Hackathon Presentation',
+        },
+        {
+          src: '/images/events/xrpl2026/image3.jpg',
+          alt: 'XRPL Hackathon Demo',
+        },
+        {
+          src: '/images/events/xrpl2026/image4.jpg',
+          alt: 'XRPL Hackathon Group Photo',
+        },
+      ],
+      location: 'Australia',
+      date: new Date('2026-03-07T14:58:00').toISOString(),
+      type: 'External',
+      description:
+        'Hackathon Win! The team comprising of Darren Sng, Raihan Rizqullah, Tan Gian Sen, Chua Wee Yeow and Kai Chew has won first place at the XRPL Hackathon @ XRP Australia 2026.',
+    },
     // {
     //   name: 'Welcome Tea',
     //   coverImage: {
