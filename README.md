@@ -1,7 +1,7 @@
 ## Prerequisites
 
-1. Node.js
-2. yarn
+1. Node.js **22.x** (pinned in `.nvmrc`; the production build fails on Node 20)
+2. pnpm **8.15.8** (pinned in `package.json` via `packageManager`)
 
 ## Key packages and dependencies
 
@@ -14,26 +14,21 @@
 ## Getting Started
 > This repo uses **pnpm** (v8) with **Node 22.x** (Latest Vercel's Update) via Corepack.
 
-[Latest - Using pnpm]
-1. Clone the repo locally,
-2. Enable Corepack & activate pnpm 8
+1. Clone the repo locally.
+2. Switch to Node 22 (e.g. `nvm use` or `fnm use`, which read `.nvmrc`).
+3. Enable Corepack & activate pnpm 8
    ```bash
    corepack enable
    corepack prepare pnpm@8.15.8 --activate
    ```
-3. Install dependencies by running `pnpm install`
-4. Run `pnpm dev` to launch the server locally.
-5. Open [http://localhost:3000](http://localhost:3000) with your browser to see
+4. Install dependencies by running `pnpm install --frozen-lockfile`
+5. Run `pnpm dev` to launch the server locally.
+6. Open [http://localhost:3000](http://localhost:3000) with your browser to see
    the result.
 
-[Archived - Using yarn]
-1. Clone this repo locally.
-2. Install dependencies by running `yarn install` in the root folder of your
-   cloned repo.
-3. Run `yarn dev` to launch the server locally.
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see
-   the result.
-   
+> `pnpm-lock.yaml` is the only lockfile. Don't use yarn or npm, as they would
+> create a second lockfile with different dependency versions.
+
 ## Project Structure
 * `/pages`: only for navigation, should render a top-level component
 * `/components`: most of the code goes here, 
@@ -66,19 +61,37 @@ TailwindCSS supports mobile first design out of the box, please read more here: 
 
 We follow a
 [branching workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow#:~:text=The%20core%20idea%20behind%20the,without%20disturbing%20the%20main%20codebase.)
-where developers create a new branch and then make changes to it directly on the
-main repo.
+where developers create a new branch and then make changes to it directly on
+this repo (`NUS-Fintech-Society/SD_Fintech_Website_Revamp`).
 
-*There is no need to fork! (that's the forking workflow)*
+*If you have write access, there is no need to fork.* Contributors without
+write access can fork, but should open their PR into **this repo's `main`**
+(not into someone else's fork).
 
-
-### Making a branch: 
+### Making a branch:
 * please create a branch in this format: `[yourname]/[branchname]`
    * so for creating a branch called homepage, create branch named `zhiwei/homepage`
+* always branch off an up-to-date `main`:
+   ```bash
+   git switch main && git pull
+   git switch -c yourname/short-description
+   ```
 
 ### Before making a PR:
-* Rebase your branch onto master
-* Make sure that lint passes (run `yarn lint`)
+* Update your branch with the latest `main` (rebase or merge)
+* Make sure that lint and the production build pass on Node 22:
+   ```bash
+   pnpm lint
+   pnpm build
+   ```
+   There is no CI, so this is the only check before your change goes live.
+
+### Making a PR:
+1. Push your branch and open a PR into `main`.
+2. Vercel will comment on the PR with a **Preview URL**. Check the pages you
+   changed there, including on mobile.
+3. Get a review from another member where possible, then merge.
+4. Delete the branch after merging.
 
 ## vs code plugins 
 * Eslint 
@@ -86,5 +99,18 @@ main repo.
 * Prettier
 
 # Deployment
-The deployment repo is a forked repo under the nusfintech github account. (Deployment from org in vercel requires payment).
-To deploy changes, make a PR to the forked repo main branch.
+The site is hosted on Vercel (team `nus-fintech-deployments`), connected
+directly to this repo through Vercel's GitHub integration. There is no manual
+deploy step:
+
+* **Production:** every push or merge to `main` is deployed automatically to
+  https://fintechsociety.comp.nus.edu.sg (a CNAME to Vercel, managed under NUS SoC's DNS).
+  **Merging to `main` = deploying to production.**
+* **Preview:** every other branch and every PR gets its own Preview deployment URL.
+* **Rollback:** in the Vercel dashboard, go to Deployments, pick the last good
+  production deployment and use *Instant Rollback* / *Promote to Production*.
+  Then revert the bad change on `main` with a PR so the next deploy doesn't
+  bring it back.
+
+> The old `nusfintech/SD_Fintech_Website_Revamp` fork is no longer used for
+> deployment. Don't open PRs against it.
