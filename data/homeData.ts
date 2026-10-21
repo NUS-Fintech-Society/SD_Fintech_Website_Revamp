@@ -13,7 +13,7 @@ const homeData: HomeData = {
       wingType: WingType.Technical,
       coverImage: {
         src: '/images/departments/departmentCovers/ML.jpg',
-        alt: 'random image 1',
+        alt: 'Illustration of an AI head surrounded by neural network and data charts',
       },
       cardDescription:
         'To foster a community of data-savvy members who are comfortable with wrangling and deriving insights from data.',
@@ -47,7 +47,7 @@ const homeData: HomeData = {
       wingType: WingType.Technical,
       coverImage: {
         src: '/images/departments/departmentCovers/SD.jpg',
-        alt: 'random image 2',
+        alt: 'NUS Fintech Society members in society T-shirts in front of the #NUS sign',
       },
       cardDescription:
         'To create a community of fintech enthusiast developers who are passionate about learning and building fintech applications and products.',
@@ -81,7 +81,7 @@ const homeData: HomeData = {
       wingType: WingType.Technical,
       coverImage: {
         src: '/images/departments/departmentCovers/QNT.jpg',
-        alt: 'random image 2',
+        alt: 'Quant members at a WorldQuant BRAIN research session',
       },
       cardDescription:
         'To cultivate a community of members with a strong foundation in quantitative methods and a deep understanding of their application in the financial industry, navigating complexities of financial modelling, algorithmic trading, data-driven decision-making and more.',
@@ -99,7 +99,7 @@ const homeData: HomeData = {
       wingType: WingType.Technical,
       coverImage: {
         src: '/images/departments/departmentCovers/BC.jpg',
-        alt: 'random image 2',
+        alt: 'Illustration of linked blocks in a blockchain',
       },
       cardDescription:
         'To organise programmes and workshops to introduce FinTech to the wider community.',
@@ -133,7 +133,7 @@ const homeData: HomeData = {
       wingType: WingType.Operations,
       coverImage: {
         src: '/images/departments/departmentCovers/ER.jpg',
-        alt: 'random image 2',
+        alt: 'Business partners shaking hands across a meeting table',
       },
       cardDescription:
         'To widen the outreach and expand FinTech Society’s network both within the NUS community and with industry partners.',
@@ -167,7 +167,7 @@ const homeData: HomeData = {
       wingType: WingType.Operations,
       coverImage: {
         src: '/images/departments/departmentCovers/IA.jpg',
-        alt: 'random image 2',
+        alt: 'Hand sketching business ideas and charts on paper beside a laptop',
       },
       cardDescription:
         'To grow our outreach in the industry and expose our members to the best expertise and help with their career opportunities.',
