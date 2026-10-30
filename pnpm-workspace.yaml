@@ -1,0 +1,6 @@
+# Install scripts pnpm may run. unrs-resolver's only fetches a native binary that its prebuilt
+# optional dependency already provides, so it stays off.
+allowBuilds:
+  unrs-resolver: false
+# Supply-chain buffer: refuse any package version published less than 14 days ago (value in minutes).
+minimumReleaseAge: 20160

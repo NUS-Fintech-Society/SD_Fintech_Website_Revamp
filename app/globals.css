@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+@import './tokens.css';
+
+/* next/font sets --font-schibsted-grotesk on <html>; inline so the utility reads it at use. */
+@theme inline {
+  --font-sans: var(--font-schibsted-grotesk), system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+body {
+  background: var(--color-surface-page);
+  color: var(--color-text-default);
+}
