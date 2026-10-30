@@ -173,6 +173,12 @@
   --spacing-rail-mark: 24px;
   --spacing-facts-width: 360px;
   --spacing-measure: 680px;
+  --spacing-mark-height: 32px;
+  --spacing-mark-height-lg: 40px;
+  --spacing-menu-row: 64px;
+  --spacing-footer-col-min: 150px;
+  --spacing-footer-blurb: 340px;
+  --spacing-footer-base-text: 620px;
   --radius-pill: 999px;
   --radius-xl: 40px;
   --radius-xl-mobile: 28px;
