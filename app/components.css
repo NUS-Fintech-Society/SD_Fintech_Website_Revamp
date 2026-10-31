@@ -73,7 +73,7 @@
   .fs-bar-inner { display: flex; align-items: center; justify-content: space-between; gap: var(--spacing-space-4); height: var(--spacing-nav-height); }
   .fs-brandlink { display: flex; align-items: center; gap: var(--spacing-space-3); min-height: var(--spacing-target-min); min-width: var(--spacing-target-min); text-decoration: none; }
   /* The society mark painted in currentColor through a mask: harbour-ink on light grounds, white on dark. */
-  .fs-brandmark { flex: none; height: var(--spacing-mark-height); aspect-ratio: 227 / 116; background: currentColor; -webkit-mask: url("/images/site/society-mark.png") center / contain no-repeat; mask: url("/images/site/society-mark.png") center / contain no-repeat; }
+  .fs-brandmark { flex: none; height: var(--spacing-mark-height); aspect-ratio: 1082 / 514; background: currentColor; -webkit-mask: url("/images/site/society-mark.svg") center / contain no-repeat; mask: url("/images/site/society-mark.svg") center / contain no-repeat; }
   .fs-navlinks { display: flex; gap: var(--spacing-space-6); font-size: var(--text-t-body); font-weight: 700; }
   .fs-bar-actions { display: flex; align-items: center; gap: var(--spacing-space-3); }
   .fs-burger { display: none; }
@@ -85,6 +85,7 @@
   .fs-menu-top { display: flex; align-items: center; justify-content: space-between; min-height: var(--spacing-nav-height); }
   .fs-menu-links { list-style: none; padding: 0; }
   .fs-menu-link { display: flex; align-items: center; min-height: var(--spacing-menu-row); text-decoration: none; border-bottom: var(--stroke-hairline) solid var(--color-line-on-dark); }
+  .fs-menu-link[aria-current="page"] { text-decoration-line: underline; text-underline-offset: var(--underline-offset); text-decoration-thickness: var(--underline-hover); }
   .fs-menu-blurb { color: var(--color-text-on-night-muted); font-size: var(--text-t-small); }
 
   /* Footer */
@@ -118,7 +119,9 @@
   .fs-card-noimg { position: absolute; inset: 0; display: flex; align-items: flex-end; padding: var(--spacing-space-6); background: var(--color-blue-tint); color: var(--color-nus-blue); font-size: var(--text-t-row); line-height: 1.25; font-weight: 800; }
   .fs-card-when { display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-space-2) var(--spacing-space-3); }
   .fs-reltext { font-size: var(--text-t-ui); font-weight: 700; color: var(--color-text-muted); }
-  .fs-card .fs-pill { align-self: flex-start; margin-top: var(--spacing-space-2); }
+  /* The pill sits at the card's foot so pills line up across a row; the line above keeps the old space-2 gap. */
+  .fs-card .fs-pill { align-self: flex-start; margin-top: auto; }
+  .fs-card > :nth-last-child(2) { margin-bottom: var(--spacing-space-2); }
   .fs-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--spacing-space-7) var(--spacing-space-5); }
 
   /* Panels and facts */
@@ -159,6 +162,7 @@
   .ev-detail { display: grid; grid-template-columns: minmax(0, 1fr) var(--spacing-facts-width); grid-template-areas: "cover facts" "content facts"; gap: var(--spacing-space-7) var(--spacing-space-8); align-items: start; }
   .ev-cover { grid-area: cover; position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius-lg); overflow: hidden; background: var(--color-line); }
   .ev-cover img { object-fit: cover; }
+  img.fs-poster { object-fit: contain; padding: var(--spacing-space-3); background: var(--color-blue-tint); }
   .ev-facts { grid-area: facts; }
   .ev-split { display: flex; flex-direction: column; gap: var(--spacing-space-4); padding-top: var(--spacing-space-5); border-top: var(--stroke-hairline) solid var(--color-border-default); }
   .ev-content { grid-area: content; display: flex; flex-direction: column; gap: var(--spacing-space-7); min-width: 0; }
@@ -180,6 +184,7 @@
   .fs-thumbs { @variant bp-mobile { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   /* Steps below the photo at 700px, so stepping never depends on a swipe (WCAG 2.5.1). */
   .fs-lightbox-stage { @variant bp-mobile { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto; grid-template-areas: "photo photo" "prev next"; gap: var(--spacing-space-4); } }
+  .ev-cover:has(.fs-poster) { @variant bp-mobile { aspect-ratio: 1; } }
   .ev-head { @variant bp-mobile { padding-bottom: var(--spacing-section-sm-mobile); } }
   .ev-sec { @variant bp-mobile { padding-bottom: var(--spacing-section-md-mobile); } }
   .ev-sec-last { @variant bp-mobile { padding-bottom: var(--spacing-section-lg-mobile); } }

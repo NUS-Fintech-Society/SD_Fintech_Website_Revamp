@@ -77,12 +77,16 @@ export default function PhotoGrid({ photos, eventName }: { photos: Photo[]; even
               <Image key={p.src.src} src={p.src} alt={i === index ? p.alt : ''} fill sizes="100vw" className={i === index ? 'is-current' : undefined} />
             ))}
           </div>
-          <button ref={prev} type="button" className="fs-iconbtn fs-lb-prev" aria-label="Previous photo" disabled={index === 0} onClick={() => step(-1)}>
-            <Icon name="prev" />
-          </button>
-          <button ref={next} type="button" className="fs-iconbtn fs-lb-next" aria-label="Next photo" disabled={index === n - 1} onClick={() => step(1)}>
-            <Icon name="next" />
-          </button>
+          {n > 1 && (
+            <>
+              <button ref={prev} type="button" className="fs-iconbtn fs-lb-prev" aria-label="Previous photo" disabled={index === 0} onClick={() => step(-1)}>
+                <Icon name="prev" />
+              </button>
+              <button ref={next} type="button" className="fs-iconbtn fs-lb-next" aria-label="Next photo" disabled={index === n - 1} onClick={() => step(1)}>
+                <Icon name="next" />
+              </button>
+            </>
+          )}
         </div>
         <p className="fs-wrap fs-lightbox-caption">{photos[index].alt}</p>
       </dialog>

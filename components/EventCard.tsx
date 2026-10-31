@@ -28,7 +28,7 @@ export default function EventCard({ event: e, buildNow, level = 'h3' }: { event:
     <article className="fs-card">
       <div className="fs-card-media">
         {e.cover ? (
-          <Image src={e.cover.src} alt={e.cover.alt} fill sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw" />
+          <Image src={e.cover.src} alt={e.cover.alt} fill className={e.cover.poster ? 'fs-poster' : undefined} sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw" />
         ) : (
           <span className="fs-card-noimg" aria-hidden="true">{e.name}</span>
         )}

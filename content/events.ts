@@ -14,11 +14,11 @@ import summitPhoto08 from '@/public/images/events/nus-fintech-summit-2026/photo-
 import summitPhoto09 from '@/public/images/events/nus-fintech-summit-2026/photo-09.jpg';
 import summitPhoto10 from '@/public/images/events/nus-fintech-summit-2026/photo-10.jpg';
 import summitPhoto11 from '@/public/images/events/nus-fintech-summit-2026/photo-11.jpg';
-import summitPhoto12 from '@/public/images/events/nus-fintech-summit-2026/photo-12.jpg';
 import tensorplexPoster from '@/public/images/events/tensorplex-distributed-mind/poster.png';
 
 export type EventFormat = 'Workshop' | 'Talk' | 'Summit' | 'Social';
-export type Photo = { src: StaticImageData; alt: string };
+/** `poster`: a text poster, shown whole on blue-tint instead of cropped to the frame. */
+export type Photo = { src: StaticImageData; alt: string; poster?: boolean };
 
 export type SocietyEvent = {
   slug: string;
@@ -40,8 +40,8 @@ export type SocietyEvent = {
   gallery: Photo[];
 };
 
-const summitCover = { src: summitPhoto05, alt: 'Participants in the auditorium during a panel discussion' };
-const tensorplexGroup = { src: tensorplexPoster, alt: "Workshop poster" };
+const summitCover = { src: summitPhoto04, alt: 'Participants in the auditorium during a panel discussion' };
+const tensorplexGroup = { src: tensorplexPoster, alt: 'Poster for Architects of a Distributed Mind, a workshop with Tensorplex Labs, Wed 8 Oct 2025, 6:30pm, SR2 COM1 02-04', poster: true };
 const chainlinkGroup = { src: chainlinkPhoto01, alt: "Participants standing in front of the workshop's title slide" };
 
 export const events: SocietyEvent[] = [
@@ -59,24 +59,23 @@ export const events: SocietyEvent[] = [
       'A five-day hackathon with workshops, panel discussions and a demo day, where student teams build fintech solutions and present them to industry judges.',
     ],
     recap: [
-      'NUS FinTech Society successfully concluded the 5th edition of its annual flagship event — and its most ambitious yet. What started as a student hackathon has grown into one of Southeast Asia\'s most internationally diverse student FinTech competitions.',
-      'This year centred on the XRP Ledger (XRPL) by Ripple, challenging teams to build Minimum Viable Products that solve real financial problems — from payments and decentralised identity to Real-World Asset tokenisation and RLUSD integration.',
-      'There were hiccups and plenty of room to improve — but the outcome was an event that felt closer to the real industry than any previous year. The organisers came away with a newfound respect for everyone working behind the scenes in this ecosystem.'
+      'NUS FinTech Society successfully concluded the 5th edition of its annual flagship event, and its most ambitious yet. What started as a student hackathon has grown into one of Southeast Asia\'s most internationally diverse student FinTech competitions.',
+      'This year centred on the XRP Ledger (XRPL) by Ripple, challenging teams to build Minimum Viable Products that solve real financial problems, from payments and decentralised identity to Real-World Asset tokenisation and RLUSD integration.',
+      'There were hiccups and plenty of room to improve, but the outcome was an event that felt closer to the real industry than any previous year. The organisers came away with a newfound respect for everyone working behind the scenes in this ecosystem.'
     ],
     cover: summitCover,
     gallery: [
-      { src: summitPhoto01, alt: 'An online workshop on real-world asset tokenisation, with the speaker on video beside the title slide' },
-      { src: summitPhoto02, alt: 'Teams talking over lunch at their laptops during the hackathon' },
-      { src: summitPhoto03, alt: 'The panel discussion on stablecoins, with three panellists on stage under the speaker slide' },
-      { src: summitPhoto04, alt: 'The panel discussion seen from the side, next to a Ripple banner' },
+      { src: summitPhoto01, alt: 'Teams talking over lunch at their laptops during the hackathon' },
+      { src: summitPhoto02, alt: 'The panel discussion on stablecoins, with three panellists on stage under the speaker slide' },
+      { src: summitPhoto03, alt: 'The panel discussion seen from the side, next to a Ripple banner' },
       summitCover,
-      { src: summitPhoto06, alt: 'Participants at the lunch buffet' },
-      { src: summitPhoto07, alt: 'Students talking with a partner at a booth' },
-      { src: summitPhoto08, alt: 'Two students presenting their project to judges in a seminar room' },
-      { src: summitPhoto09, alt: 'A team working through their project on laptops' },
-      { src: summitPhoto10, alt: 'Judges at their table, one asking a team a question into a microphone' },
-      { src: summitPhoto11, alt: 'A team presenting their project on stage to the judges' },
-      { src: summitPhoto12, alt: 'Group photo of participants, judges and organisers' },
+      { src: summitPhoto05, alt: 'Participants at the lunch buffet' },
+      { src: summitPhoto06, alt: 'Students talking with a partner at a booth' },
+      { src: summitPhoto07, alt: 'Two students presenting their project to judges in a seminar room' },
+      { src: summitPhoto08, alt: 'A team working through their project on laptops' },
+      { src: summitPhoto09, alt: 'Judges at their table, one asking a team a question into a microphone' },
+      { src: summitPhoto10, alt: 'A team presenting their project on stage to the judges' },
+      { src: summitPhoto11, alt: 'Group photo of participants, judges and organisers' },
     ],
   },
   {
@@ -90,7 +89,7 @@ export const events: SocietyEvent[] = [
     coHosts: ['Tensorplex Labs'],
     about: [
       'A workshop by Tensorplex Labs on the Bittensor ecosystem, featuring Bittensor co-founder Jake Steeves, introducing students to decentralized AI networks and how they can participate in and get paid to build open-source AI.',
-      'Tensorplex Labs — a company building in the Bittensor ecosystem — organized this workshop on behalf of Bittensor. Bittensor\'s co-founder Jake Steeves participated to introduce Bittensor as a decentralized AI network framed as an open, incentivized competition where students can directly participate and get paid to build open-source AI.',
+      'Tensorplex Labs, a company building in the Bittensor ecosystem, organized this workshop on behalf of Bittensor. Bittensor\'s co-founder Jake Steeves participated to introduce Bittensor as a decentralized AI network framed as an open, incentivized competition where students can directly participate and get paid to build open-source AI.',
     ],
     learn: [
       'Understanding Decentralized Intelligence Markets: how Bittensor frames "intelligence" as a commodity, how models are evaluated peer-to-peer, and how the TAO token is used to reward contributions',

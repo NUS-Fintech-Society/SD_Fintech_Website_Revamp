@@ -32,11 +32,10 @@ export const isUpcoming = (e: SocietyEvent, now: number) => Date.parse(e.end) > 
 /** The card's date label: "Wed 10 Sep 2025, 3:00pm", or "5–9 Jan 2026" when only dates are known. */
 export const cardDate = (e: SocietyEvent) => (e.datesOnly ? dateRange(e) : `${parts(e.start).date}, ${parts(e.start).time}`);
 
-/** The facts panel's two lines. */
-export const factDate = (e: SocietyEvent) => {
+/** The facts panel's date line and time line; a multi-day event without times has no time line (the range says it). */
+export const factDate = (e: SocietyEvent): { date: string; time?: string } => {
   if (e.datesOnly) {
-    const days = dayNumber(e.end) - dayNumber(e.start) + 1;
-    return { date: dateRange(e), time: days === 1 ? 'All day' : `${days} days` };
+    return { date: dateRange(e), time: dayNumber(e.end) === dayNumber(e.start) ? 'All day' : undefined };
   }
   return { date: dateRange(e), time: `${parts(e.start).time}–${parts(e.end).time}` };
 };

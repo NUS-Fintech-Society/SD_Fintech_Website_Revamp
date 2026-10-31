@@ -41,6 +41,8 @@ export default async function EventPage({ params }: Props) {
   if (!e) notFound();
   const past = !isUpcoming(e, builtAt);
   const when = factDate(e);
+  // A gallery that is only the cover repeats it, so the Photos section is left out.
+  const gallery = e.gallery.length === 1 && e.gallery[0] === e.cover ? [] : e.gallery;
 
   return (
     <>
@@ -54,7 +56,7 @@ export default async function EventPage({ params }: Props) {
         <div className="ev-detail">
           <div className="ev-cover">
             {e.cover ? (
-              <Image src={e.cover.src} alt={e.cover.alt} fill preload sizes="(max-width: 1000px) 100vw, 66vw" />
+              <Image src={e.cover.src} alt={e.cover.alt} fill preload className={e.cover.poster ? 'fs-poster' : undefined} sizes="(max-width: 1000px) 100vw, 66vw" />
             ) : (
               <span className="fs-card-noimg" aria-hidden="true">{e.name}</span>
             )}
@@ -65,7 +67,7 @@ export default async function EventPage({ params }: Props) {
               <div>
                 <dt>Date and time</dt>
                 <dd className="font-bold">{when.date}</dd>
-                <dd>{when.time}</dd>
+                {when.time && <dd>{when.time}</dd>}
                 {!past && <dd><RelativeDate event={e} buildNow={builtAt} chip={false} /></dd>}
               </div>
               <div>
@@ -126,10 +128,10 @@ export default async function EventPage({ params }: Props) {
                 {e.recap.map((p) => <p key={p} className="t-body">{p}</p>)}
               </section>
             )}
-            {past && e.gallery.length > 0 && (
+            {past && gallery.length > 0 && (
               <section className="ev-photos" aria-labelledby="photos-title">
                 <h2 className="t-h2" id="photos-title">Photos</h2>
-                <PhotoGrid photos={e.gallery} eventName={e.name} />
+                <PhotoGrid photos={gallery} eventName={e.name} />
               </section>
             )}
           </div>
