@@ -6,6 +6,7 @@ export const icons = {
   close: <path d="M6 6l12 12M18 6L6 18" />,
   prev: <path d="M15 5l-7 7 7 7" />,
   next: <path d="M9 5l7 7-7 7" />,
+  arrow: <path d="M5 12h14M13 6l6 6-6 6" />,
   instagram: (
     <>
       <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
@@ -28,9 +29,10 @@ export const icons = {
   ),
 } satisfies Record<string, ReactNode>;
 
-export default function Icon({ name }: { name: keyof typeof icons }) {
+/** 24px in buttons; 20px beside text (row chevrons). */
+export default function Icon({ name, size = 24, className }: { name: keyof typeof icons; size?: 20 | 24; className?: string }) {
   return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <svg className={className} width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       {icons[name]}
     </svg>
   );

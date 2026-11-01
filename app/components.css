@@ -6,6 +6,8 @@
   .t-h1 { @apply text-t-h1 bp-mobile:text-t-h1-sm; }
   .t-h2 { @apply text-t-h2 bp-mobile:text-t-h2-sm; }
   .t-h3 { @apply text-t-h3 bp-mobile:text-t-h3-sm; }
+  .t-display-h2 { @apply text-t-display-h2 bp-mobile:text-t-display-h2-sm; }
+  .t-row { @apply text-t-row bp-mobile:text-t-row-sm; }
   .t-lead { @apply text-t-lead bp-mobile:text-t-lead-sm; }
   .t-open { @apply text-t-open bp-mobile:text-t-open-sm; }
   .t-strong { @apply text-t-strong bp-mobile:text-t-strong-sm; }
@@ -43,12 +45,17 @@
   /* Round buttons */
   .fs-iconbtn { display: inline-flex; align-items: center; justify-content: center; flex: none; width: var(--spacing-icon-button); height: var(--spacing-icon-button); padding: 0; border-radius: var(--radius-pill); border: var(--stroke-control) solid currentColor; background: transparent; color: var(--color-nus-blue); font: inherit; text-decoration: none; cursor: pointer; }
   .fs-on-dark .fs-iconbtn { color: var(--color-white); }
+  /* The tile arrow: the one filled round button, because it is its tile's only action. */
+  .fs-go { flex: none; display: inline-flex; align-items: center; justify-content: center; width: var(--spacing-go-button); height: var(--spacing-go-button); border-radius: var(--radius-pill); text-decoration: none; }
+  .fs-go--orange { background: var(--color-nus-orange); color: var(--color-harbour-ink); }
+  .fs-go--blue { background: var(--color-nus-blue); color: var(--color-white); }
+  .fs-go svg { transition: transform var(--duration-quick) var(--ease-standard); }
 
   /* Control states: hover 10% darker (lighter inside .fs-on-dark); one disabled look. */
-  :is(.fs-pill, .fs-iconbtn):hover { box-shadow: var(--shadow-hover); }
-  .fs-on-dark :is(.fs-pill, .fs-iconbtn):hover { box-shadow: var(--shadow-hover-on-dark); }
-  .fs-base :is(.fs-pill, .fs-iconbtn):hover:focus-visible { box-shadow: var(--shadow-hover), var(--shadow-focus-light); }
-  .fs-base .fs-on-dark :is(.fs-pill, .fs-iconbtn):hover:focus-visible { box-shadow: var(--shadow-hover-on-dark), var(--shadow-focus-dark); }
+  :is(.fs-pill, .fs-iconbtn, .fs-go):hover { box-shadow: var(--shadow-hover); }
+  .fs-on-dark :is(.fs-pill, .fs-iconbtn, .fs-go):hover { box-shadow: var(--shadow-hover-on-dark); }
+  .fs-base :is(.fs-pill, .fs-iconbtn, .fs-go):hover:focus-visible { box-shadow: var(--shadow-hover), var(--shadow-focus-light); }
+  .fs-base .fs-on-dark :is(.fs-pill, .fs-iconbtn, .fs-go):hover:focus-visible { box-shadow: var(--shadow-hover-on-dark), var(--shadow-focus-dark); }
   .fs-base :is(.fs-pill, .fs-iconbtn):disabled { color: var(--color-disabled-text); cursor: not-allowed; box-shadow: none; }
 
   /* Links */
@@ -130,6 +137,53 @@
   .fs-facts--sticky { position: sticky; top: calc(var(--spacing-nav-height) + var(--spacing-space-5)); }
   .fs-facts dl { display: flex; flex-direction: column; gap: var(--spacing-space-4); }
   .fs-facts dt { margin-bottom: var(--spacing-space-1); font-size: var(--text-t-tag); font-weight: 800; color: var(--color-text-muted); }
+  .fs-facts .fs-fact-action { margin-top: var(--spacing-space-3); }
+
+  /* Row lists in a white panel: link rows (the title is the row's one link) or text rows (projects). */
+  .fs-rows { list-style: none; padding: 0; background: var(--color-surface-panel); border: var(--stroke-hairline) solid var(--color-border-default); border-radius: var(--radius-lg); overflow: hidden; }
+  .fs-rowitem { position: relative; display: flex; align-items: center; gap: var(--spacing-space-5); padding: var(--spacing-space-5); }
+  .fs-rowitem + .fs-rowitem { border-top: var(--stroke-hairline) solid var(--color-border-default); }
+  /* The end rows follow the panel's inner radius, so the inset focus ring and the hover ground curve with it. */
+  .fs-rowitem:first-child { border-top-left-radius: calc(var(--radius-lg) - var(--stroke-hairline)); border-top-right-radius: calc(var(--radius-lg) - var(--stroke-hairline)); }
+  .fs-rowitem:last-child { border-bottom-left-radius: calc(var(--radius-lg) - var(--stroke-hairline)); border-bottom-right-radius: calc(var(--radius-lg) - var(--stroke-hairline)); }
+  .fs-rowtext { display: flex; flex-direction: column; gap: var(--spacing-space-1); flex: 1; min-width: 0; }
+  .fs-rowtext .fs-pill { align-self: flex-start; margin-top: var(--spacing-space-2); }
+  .fs-rowlink { color: var(--color-text-default); text-decoration: none; }
+  .fs-rowlink::after { content: ""; position: absolute; inset: 0; }
+  .fs-rowitem:has(.fs-rowlink):hover { background: var(--color-row-hover); }
+  .fs-rowitem:hover .fs-rowlink { text-decoration: underline; text-underline-offset: var(--underline-offset); text-decoration-thickness: var(--underline-hover); }
+  .fs-base .fs-rowlink:focus-visible { outline: none; box-shadow: none; }
+  .fs-rowitem:has(.fs-rowlink:focus-visible) { outline: var(--focus-width) solid var(--color-focus-ring); outline-offset: var(--focus-offset-inset); }
+  .fs-base .fs-rowitem:focus-visible { outline-offset: var(--focus-offset-inset); }
+  .fs-chev { flex: none; transition: transform var(--duration-quick) var(--ease-standard); }
+  .fs-rowitem:hover .fs-chev { transform: translateX(var(--spacing-nudge)); }
+
+  /* Split: a sticky heading column beside the content */
+  .fs-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: var(--spacing-space-5) var(--spacing-space-8); align-items: start; }
+  .fs-split-side { position: sticky; top: calc(var(--spacing-nav-height) + var(--spacing-space-5)); display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacing-space-4); min-width: 0; }
+
+  /* Checkerboard (Departments index): a photo beside a colour tile; the round arrow is the pair's only link. */
+  .fs-pairs { list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--spacing-space-4); }
+  .fs-pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--spacing-space-4); }
+  /* 4:3 at least; where the tile's text runs taller (768px), the photo grows to match it. The fixed width keeps
+     the ratio from widening it past its column. */
+  .fs-pair-media { position: relative; aspect-ratio: 4 / 3; width: 100%; height: 100%; border-radius: var(--radius-lg); overflow: hidden; background: var(--color-line); }
+  .fs-pair-media img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform var(--duration-moderate) var(--ease-standard); }
+  .fs-pair:hover .fs-pair-media img, .fs-pair:focus-within .fs-pair-media img { transform: scale(1.03); }
+  .fs-pair--flip .fs-pair-media { order: 2; }
+  .fs-tile { display: flex; flex-direction: column; justify-content: space-between; gap: var(--spacing-space-5); min-width: 0; padding: var(--spacing-space-6); border-radius: var(--radius-lg); }
+  .fs-tile--blue { background: var(--color-surface-brand); color: var(--color-text-on-brand); }
+  .fs-tile--orange { background: var(--color-surface-accent); color: var(--color-text-default); }
+  .fs-tile-name { text-underline-offset: var(--underline-offset); text-decoration-thickness: var(--underline-hover); }
+  .fs-tile--orange .fs-tile-name { color: var(--color-text-brand); }
+  .fs-pair:hover .fs-tile-name, .fs-pair:focus-within .fs-tile-name { text-decoration-line: underline; }
+  .fs-tile-foot { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--spacing-space-5); }
+  .fs-pair:hover .fs-go svg, .fs-pair:focus-within .fs-go svg { transform: translateX(var(--spacing-nudge)); }
+  /* Hover anywhere on the pair darkens the arrow too; the focused arrow keeps its halo. */
+  .fs-pair:hover .fs-go { box-shadow: var(--shadow-hover); }
+  .fs-pair:hover .fs-on-dark .fs-go { box-shadow: var(--shadow-hover-on-dark); }
+  .fs-base .fs-pair .fs-go:focus-visible { box-shadow: var(--shadow-hover), var(--shadow-focus-light); }
+  .fs-base .fs-pair .fs-on-dark .fs-go:focus-visible { box-shadow: var(--shadow-hover-on-dark), var(--shadow-focus-dark); }
 
   /* Event photo grid */
   .fs-thumbs { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--spacing-space-3); }
@@ -150,7 +204,7 @@
   .fs-lightbox-photos img.is-current { opacity: 1; }
   .fs-lightbox-caption { width: 100%; padding-block: var(--spacing-space-5) var(--spacing-space-6); color: var(--color-text-on-night-muted); }
 
-  /* Page layouts: Events */
+  /* Page layouts: Events, and the department pages that share the event-page grid */
   .ev-head { display: flex; flex-direction: column; gap: var(--spacing-space-3); padding-block: var(--spacing-space-3) var(--spacing-section-sm); }
   .ev-sec { padding-bottom: var(--spacing-section-md); }
   .ev-sec-last { padding-bottom: var(--spacing-section-lg); }
@@ -167,8 +221,8 @@
   .ev-split { display: flex; flex-direction: column; gap: var(--spacing-space-4); padding-top: var(--spacing-space-5); border-top: var(--stroke-hairline) solid var(--color-border-default); }
   .ev-content { grid-area: content; display: flex; flex-direction: column; gap: var(--spacing-space-7); min-width: 0; }
   .ev-content section { display: flex; flex-direction: column; gap: var(--spacing-space-4); max-width: var(--spacing-measure); }
-  .ev-content .ev-photos { max-width: none; }
-  .ev-content ul:not(.fs-thumbs) { list-style: disc; padding-left: var(--spacing-space-5); display: flex; flex-direction: column; gap: var(--spacing-space-2); }
+  .ev-content :is(.ev-photos, .ev-wide) { max-width: none; }
+  .ev-content ul:not(.fs-thumbs, .fs-rows) { list-style: disc; padding-left: var(--spacing-space-5); display: flex; flex-direction: column; gap: var(--spacing-space-2); }
 
   /* Responsive: 1000 / 700 / 420 */
   .fs-cards { @variant bp-wide { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -182,20 +236,33 @@
   .fs-panel { @variant bp-mobile { padding: var(--spacing-space-5); } }
   .fs-card-noimg { @variant bp-mobile { padding: var(--spacing-space-5); } }
   .fs-thumbs { @variant bp-mobile { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .fs-rowitem { @variant bp-mobile { padding: var(--spacing-space-4) var(--spacing-space-5); gap: var(--spacing-space-4); } }
+  .fs-split { @variant bp-mobile { grid-template-columns: minmax(0, 1fr); gap: var(--spacing-space-4); } }
+  .fs-split-side { @variant bp-mobile { position: static; } }
+  .fs-pairs { @variant bp-mobile { gap: var(--spacing-space-5); } }
+  .fs-pair { @variant bp-mobile { grid-template-columns: minmax(0, 1fr); } }
+  .fs-pair--flip .fs-pair-media { @variant bp-mobile { order: 0; } }
+  .fs-tile { @variant bp-mobile { padding: var(--spacing-space-5); } }
   /* Steps below the photo at 700px, so stepping never depends on a swipe (WCAG 2.5.1). */
   .fs-lightbox-stage { @variant bp-mobile { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto; grid-template-areas: "photo photo" "prev next"; gap: var(--spacing-space-4); } }
   .ev-cover:has(.fs-poster) { @variant bp-mobile { aspect-ratio: 1; } }
   .ev-head { @variant bp-mobile { padding-bottom: var(--spacing-section-sm-mobile); } }
   .ev-sec { @variant bp-mobile { padding-bottom: var(--spacing-section-md-mobile); } }
   .ev-sec-last { @variant bp-mobile { padding-bottom: var(--spacing-section-lg-mobile); } }
-  /* Below 1000px the bar can't fit the name, four links and the pill on one line, so the name hides (the logo
-     and the link's label stay) and nothing in the bar wraps. */
+  /* From 701 to 1000px the bar can't fit the name, four links and the pill on one line, so the name hides (the
+     logo and the link's label stay) and nothing in the bar wraps. In the burger layout (700px and below) there's
+     room again, so it shows down to 480px; below that it would crowd the Join pill. The open menu's top row has
+     no pill, so its name shows down to 360px. */
   .fs-bar .fs-brandtext, .fs-bar .fs-pill { white-space: nowrap; }
-  .fs-bar .fs-brandtext { @variant bp-wide { display: none; } }
-  .fs-menu .fs-brandtext { @variant bp-narrow { display: none; } }
+  /* .fs-bar-inner, not .fs-bar: the menu dialog sits inside the header and keeps its own rule. */
+  .fs-bar-inner .fs-brandtext { @variant bp-wide { display: none; } }
+  .fs-bar-inner .fs-brandtext { @variant bp-mobile { display: inline; } }
+  .fs-bar-inner .fs-brandtext { @variant bp-narrow { display: none; } }
+  .fs-menu-top .fs-brandtext { @variant bp-menu-brand { display: none; } }
 
   @media (prefers-reduced-motion: reduce) {
     .fs-base *, .fs-base *::before, .fs-base *::after { transition: none !important; animation: none !important; }
     .fs-card:hover .fs-card-media img, .fs-card:focus-within .fs-card-media img, .fs-thumb:hover img, .fs-thumb:focus-visible img { transform: none; }
+    .fs-pair:hover .fs-pair-media img, .fs-pair:focus-within .fs-pair-media img, .fs-rowitem:hover .fs-chev, .fs-pair:hover .fs-go svg, .fs-pair:focus-within .fs-go svg { transform: none; }
   }
 }

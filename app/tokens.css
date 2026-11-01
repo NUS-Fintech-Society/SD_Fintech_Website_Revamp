@@ -210,4 +210,5 @@
 @custom-variant bp-wide (@media (max-width: 1000px));
 @custom-variant bp-motto (@media (max-width: 900px));
 @custom-variant bp-mobile (@media (max-width: 700px));
-@custom-variant bp-narrow (@media (max-width: 420px));
+@custom-variant bp-narrow (@media (max-width: 479px));
+@custom-variant bp-menu-brand (@media (max-width: 359px));

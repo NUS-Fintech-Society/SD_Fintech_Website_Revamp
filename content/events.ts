@@ -1,4 +1,5 @@
 import type { StaticImageData } from 'next/image';
+import type { DepartmentSlug } from '@/content/departments';
 // Photos live in public/images/events/<event slug>/: photo-01, photo-02… in gallery order, and poster.<ext>.
 import chainlinkPhoto01 from '@/public/images/events/chainlink-internet-of-blockchains/photo-01.jpg';
 import chainlinkPhoto02 from '@/public/images/events/chainlink-internet-of-blockchains/photo-02.jpg';
@@ -38,6 +39,8 @@ export type SocietyEvent = {
   recap?: string[];
   cover?: Photo;
   gallery: Photo[];
+  /** Departments that ran it: the event shows under "Recent events" on their pages. */
+  departments?: DepartmentSlug[];
 };
 
 const summitCover = { src: summitPhoto04, alt: 'Participants in the auditorium during a panel discussion' };
