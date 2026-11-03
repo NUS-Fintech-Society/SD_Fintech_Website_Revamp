@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
     { source: '/departments/external', destination: '/departments/external-relations', permanent: true },
     { source: '/departments/internal', destination: '/departments/internal-affairs', permanent: true },
     { source: '/departments/software', destination: '/departments', permanent: true },
+    { source: '/recruitment', destination: '/join', permanent: true },
   ],
 };
 

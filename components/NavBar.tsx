@@ -36,7 +36,7 @@ export default function NavBar() {
           ))}
         </nav>
         <div className="fs-bar-actions">
-          <Link href="/join" prefetch={prefetchFor('/join')} className="fs-pill fs-pill--primary fs-pill--small">Join us</Link>
+          <Link href="/join" prefetch={prefetchFor('/join')} className="fs-pill fs-pill--primary fs-pill--small" aria-current={current('/join')}>Join us</Link>
           <button
             ref={burger}
             type="button"
@@ -85,7 +85,7 @@ export default function NavBar() {
               ))}
             </ul>
           </nav>
-          <Link href="/join" prefetch={prefetchFor('/join')} className="fs-pill fs-pill--orange fs-pill--block" onClick={close}>Join us</Link>
+          <Link href="/join" prefetch={prefetchFor('/join')} className="fs-pill fs-pill--orange fs-pill--block" aria-current={current('/join')} onClick={close}>Join us</Link>
           <p className="fs-menu-blurb">{BLURB}</p>
         </div>
       </dialog>

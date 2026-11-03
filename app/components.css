@@ -16,6 +16,8 @@
   .t-label { @apply text-t-label; color: var(--color-text-brand); }
   .t-small { @apply text-t-small; }
   .t-tag { @apply text-t-tag; }
+  .t-fact { @apply text-t-fact; }
+  .t-meta { @apply text-t-meta; }
 
   /* Base */
   .fs-base { font-size: var(--text-t-body); line-height: var(--text-t-body--line-height); color: var(--color-text-default); background: var(--color-surface-page); }
@@ -116,6 +118,7 @@
   .fs-chip { display: inline-flex; align-items: center; gap: var(--spacing-space-2); padding: var(--spacing-space-1) var(--spacing-space-3); border-radius: var(--radius-pill); background: var(--color-blue-tint); color: var(--color-nus-blue); white-space: nowrap; }
   .fs-chip--photo { background: var(--color-white); }
   .fs-chip--live::before { content: ""; width: var(--spacing-space-2); height: var(--spacing-space-2); border-radius: var(--radius-pill); background: var(--color-nus-blue); }
+  .fs-chip--caution { background: var(--color-apricot); color: var(--color-caution-text); }
 
   /* Event card */
   .fs-card { display: flex; flex-direction: column; gap: var(--spacing-space-2); min-width: 0; }
@@ -138,6 +141,8 @@
   .fs-facts dl { display: flex; flex-direction: column; gap: var(--spacing-space-4); }
   .fs-facts dt { margin-bottom: var(--spacing-space-1); font-size: var(--text-t-tag); font-weight: 800; color: var(--color-text-muted); }
   .fs-facts .fs-fact-action { margin-top: var(--spacing-space-3); }
+  .fs-factgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--spacing-space-5) var(--spacing-space-7); }
+  .fs-factgrid dt { margin-bottom: var(--spacing-space-1); font-size: var(--text-t-tag); font-weight: 800; color: var(--color-text-muted); }
 
   /* Row lists in a white panel: link rows (the title is the row's one link) or text rows (projects). */
   .fs-rows { list-style: none; padding: 0; background: var(--color-surface-panel); border: var(--stroke-hairline) solid var(--color-border-default); border-radius: var(--radius-lg); overflow: hidden; }
@@ -161,6 +166,40 @@
   /* Split: a sticky heading column beside the content */
   .fs-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: var(--spacing-space-5) var(--spacing-space-8); align-items: start; }
   .fs-split-side { position: sticky; top: calc(var(--spacing-nav-height) + var(--spacing-space-5)); display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacing-space-4); min-width: 0; }
+  /* Department groups: a rule between each group. */
+  .fs-index { padding-block: var(--spacing-space-6); border-top: var(--stroke-hairline) solid var(--color-border-default); }
+
+  /* Time-progress rail: a segment below each marker, filled once its step is done, so the fill stops at the current step. */
+  .fs-rail { list-style: none; padding: 0; display: flex; flex-direction: column; }
+  .fs-step { position: relative; display: grid; grid-template-columns: var(--spacing-rail-mark) minmax(0, 1fr); column-gap: var(--spacing-space-5); padding-bottom: var(--spacing-space-7); }
+  .fs-step:last-child { padding-bottom: 0; }
+  .fs-mark { position: relative; z-index: 1; width: var(--spacing-rail-mark); height: var(--spacing-rail-mark); margin-top: var(--stroke-hairline); border-radius: var(--radius-pill); border: var(--stroke-rail-mark) solid var(--color-graphite); background: var(--color-mist); }
+  .fs-step--done .fs-mark, .fs-step--now .fs-mark { background: var(--color-nus-blue); border-color: var(--color-nus-blue); }
+  .fs-step--now .fs-mark { box-shadow: var(--shadow-now); }
+  .fs-seg { position: absolute; left: calc((var(--spacing-rail-mark) - var(--spacing-space-1)) / 2); top: calc(var(--spacing-rail-mark) + var(--spacing-space-1)); bottom: var(--stroke-control); width: var(--spacing-space-1); border-radius: var(--radius-hairline); background: var(--color-rail-track); overflow: hidden; }
+  .fs-step:last-child .fs-seg { display: none; }
+  .fs-seg-fill { position: absolute; inset: 0; background: var(--color-nus-blue); transform-origin: top; transform: scaleY(0); }
+  .fs-step--done .fs-seg-fill { transform: scaleY(1); }
+  .fs-stepbody { display: flex; flex-direction: column; gap: var(--spacing-space-2); min-width: 0; }
+  .fs-stepbody .fs-pill { align-self: flex-start; margin-top: var(--spacing-space-2); }
+  .fs-stephead { display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-space-2) var(--spacing-space-3); }
+  .fs-state--now { color: var(--color-text-brand); }
+  .fs-state--done { color: var(--color-text-muted); }
+  /* The fill draws in once as the rail scrolls into view, only where scroll-driven animation exists and motion is welcome. */
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .fs-step--done .fs-seg-fill { animation: fs-draw linear both; animation-timeline: view(); animation-range: entry 10% cover 40%; }
+    }
+  }
+
+  /* FAQ: native details rows */
+  .fs-faq { display: flex; flex-direction: column; gap: var(--spacing-space-3); }
+  .fs-faq details { background: var(--color-surface-panel); border: var(--stroke-hairline) solid var(--color-border-default); border-radius: var(--radius-md); }
+  .fs-faq summary { list-style: none; display: flex; align-items: center; justify-content: space-between; gap: var(--spacing-space-4); min-height: var(--spacing-pill-height); padding: var(--spacing-space-4) var(--spacing-space-5); border-radius: var(--radius-md); cursor: pointer; }
+  .fs-faq summary::-webkit-details-marker { display: none; }
+  .fs-faq summary svg { flex: none; transition: transform var(--duration-quick) var(--ease-standard); }
+  .fs-faq details[open] summary svg { transform: rotate(180deg); }
+  .fs-faq details > p { padding: var(--spacing-space-3) var(--spacing-space-5) var(--spacing-space-5); color: var(--color-text-muted); }
 
   /* Checkerboard (Departments index): a photo beside a colour tile; the round arrow is the pair's only link. */
   .fs-pairs { list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--spacing-space-4); }
@@ -222,12 +261,23 @@
   .ev-content { grid-area: content; display: flex; flex-direction: column; gap: var(--spacing-space-7); min-width: 0; }
   .ev-content section { display: flex; flex-direction: column; gap: var(--spacing-space-4); max-width: var(--spacing-measure); }
   .ev-content :is(.ev-photos, .ev-wide) { max-width: none; }
+  .ev-detail--nocover { grid-template-areas: "content facts"; }
+
+  /* Join */
+  .jn-panel { margin-top: var(--spacing-space-4); }
+  .jn-status { display: flex; flex-direction: column; gap: var(--spacing-space-3); min-width: 0; max-width: var(--spacing-measure); }
+  .jn-statusline { display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-space-2) var(--spacing-space-3); }
+  .jn-groups { margin-top: var(--spacing-space-5); }
+  /* "Something else?" sits in the sticky side column on desktop and after the questions on mobile. */
+  .jn-more { display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacing-space-4); }
+  .jn-more--end { display: none; }
   .ev-content ul:not(.fs-thumbs, .fs-rows) { list-style: disc; padding-left: var(--spacing-space-5); display: flex; flex-direction: column; gap: var(--spacing-space-2); }
 
   /* Responsive: 1000 / 700 / 420 */
   .fs-cards { @variant bp-wide { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   .fs-facts--sticky { @variant bp-wide { position: static; } }
   .ev-detail { @variant bp-wide { grid-template-columns: minmax(0, 1fr); grid-template-areas: "cover" "facts" "content"; } }
+  .ev-detail--nocover { @variant bp-wide { grid-template-areas: "facts" "content"; } }
   .fs-navlinks { @variant bp-mobile { display: none; } }
   .fs-burger { @variant bp-mobile { display: inline-flex; } }
   .fs-footer { @variant bp-mobile { padding-top: var(--spacing-section-md-mobile); } }
@@ -239,6 +289,10 @@
   .fs-rowitem { @variant bp-mobile { padding: var(--spacing-space-4) var(--spacing-space-5); gap: var(--spacing-space-4); } }
   .fs-split { @variant bp-mobile { grid-template-columns: minmax(0, 1fr); gap: var(--spacing-space-4); } }
   .fs-split-side { @variant bp-mobile { position: static; } }
+  .fs-index { @variant bp-mobile { padding-block: var(--spacing-space-5); } }
+  .fs-factgrid { @variant bp-mobile { grid-template-columns: minmax(0, 1fr); gap: var(--spacing-space-4); } }
+  .jn-more--side { @variant bp-mobile { display: none; } }
+  .jn-more--end { @variant bp-mobile { display: flex; margin-top: var(--spacing-space-5); } }
   .fs-pairs { @variant bp-mobile { gap: var(--spacing-space-5); } }
   .fs-pair { @variant bp-mobile { grid-template-columns: minmax(0, 1fr); } }
   .fs-pair--flip .fs-pair-media { @variant bp-mobile { order: 0; } }
@@ -266,3 +320,5 @@
     .fs-pair:hover .fs-pair-media img, .fs-pair:focus-within .fs-pair-media img, .fs-rowitem:hover .fs-chev, .fs-pair:hover .fs-go svg, .fs-pair:focus-within .fs-go svg { transform: none; }
   }
 }
+
+@keyframes fs-draw { from { transform: scaleY(0); } to { transform: scaleY(1); } }

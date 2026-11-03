@@ -6,6 +6,7 @@ export const icons = {
   close: <path d="M6 6l12 12M18 6L6 18" />,
   prev: <path d="M15 5l-7 7 7 7" />,
   next: <path d="M9 5l7 7-7 7" />,
+  down: <path d="M6 9l6 6 6-6" />,
   arrow: <path d="M5 12h14M13 6l6 6-6 6" />,
   instagram: (
     <>

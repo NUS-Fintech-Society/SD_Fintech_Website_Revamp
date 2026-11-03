@@ -1,7 +1,7 @@
 import type { SocietyEvent } from '@/content/events';
 
 // Every date shows in Singapore time, whatever the reader's or the server's time zone.
-const parts = (iso: string) => {
+export const parts = (iso: string) => {
   const p = Object.fromEntries(
     new Intl.DateTimeFormat('en-US', {
       timeZone: 'Asia/Singapore', weekday: 'short', day: 'numeric', month: 'short', year: 'numeric',
@@ -18,9 +18,9 @@ const parts = (iso: string) => {
 };
 
 const DAY = 86_400_000;
-const dayNumber = (iso: string) => Date.parse(`${parts(iso).ymd}T00:00:00Z`) / DAY;
+export const dayNumber = (iso: string) => Date.parse(`${parts(iso).ymd}T00:00:00Z`) / DAY;
 
-const dateRange = (e: SocietyEvent) => {
+export const dateRange = (e: { start: string; end: string }) => {
   const a = parts(e.start), b = parts(e.end);
   if (a.ymd === b.ymd) return a.date;
   if (a.month === b.month && a.year === b.year) return `${a.day}–${b.day} ${b.month} ${b.year}`;

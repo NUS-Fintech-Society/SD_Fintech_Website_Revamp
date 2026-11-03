@@ -11,7 +11,7 @@ export type DepartmentSlug = 'blockchain' | 'machine-learning' | 'quant' | 'exte
 export type Department = {
   slug: DepartmentSlug;
   name: string;
-  wing: 'Technical' | 'Operations';
+  wing: 'Technology' | 'Operations';
   /** One sentence: the index tile, the page lead and the meta description. */
   lead: string;
   about: string[];
@@ -34,7 +34,7 @@ export const departments: Department[] = [
   {
     slug: 'blockchain',
     name: 'Blockchain',
-    wing: 'Technical',
+    wing: 'Technology',
     lead: 'Hands-on blockchain work: research, industry projects and hackathons.',
     about: [
       'The Blockchain department explores how blockchain and decentralised technologies can be applied to real-world problems.',
@@ -46,7 +46,7 @@ export const departments: Department[] = [
   {
     slug: 'machine-learning',
     name: 'Machine Learning',
-    wing: 'Technical',
+    wing: 'Technology',
     lead: 'Hands-on AI projects for finance, from credit risk to investment research.',
     about: [
       'The Machine Learning department explores how AI and data-driven methods can be used to address real-world financial and technology problems.',
@@ -57,7 +57,7 @@ export const departments: Department[] = [
   {
     slug: 'quant',
     name: 'Quant',
-    wing: 'Technical',
+    wing: 'Technology',
     lead: 'Quantitative methods for finance, through research and team projects.',
     about: [
       'The Quant department brings together students interested in using mathematics, statistics, programming and financial knowledge to solve problems in finance.',
