@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" width="260" height="260" role="img" aria-labelledby="fe-title">
+  <title id="fe-title">Finance Expert</title>
+  <!-- Palette (site tokens only): NUS Blue #003D7C, Navy #0B1E33, NUS Orange #EF7C00, White #FFFFFF,
+       Blue tint #E3EAF2, Border #DDE3EA, Track #C3CDD9, Ink #14262B -->
+
+  <!-- Frame: white ring and tinted disc (the same 260px frame as the seals) -->
+  <circle cx="130" cy="130" r="126" fill="#FFFFFF"/>
+  <circle cx="130" cy="130" r="112" fill="#E3EAF2"/>
+
+  <!-- Neck -->
+  <path d="M118 146 V172 Q130 180 142 172 V146 Z" fill="#DDE3EA"/>
+
+  <!-- Jacket: shoulders, with the lower edge following the disc so no clip path is needed -->
+  <path d="M40 196.7 C52 176 86 168 130 168 C174 168 208 176 220 196.7 A112 112 0 0 1 40 196.7 Z" fill="#003D7C"/>
+
+  <!-- Shirt, tie, notched lapels and pocket square -->
+  <path d="M110 168 L130 220 L150 168 Z" fill="#FFFFFF"/>
+  <path d="M124 174 H136 L134 185 H126 Z" fill="#EF7C00"/>
+  <path d="M126 185 H134 L138 212 L130 222 L122 212 Z" fill="#EF7C00"/>
+  <path d="M110 168 L97 184 L111 193 L103 201 L130 226 Z" fill="#0B1E33"/>
+  <path d="M150 168 L163 184 L149 193 L157 201 L130 226 Z" fill="#0B1E33"/>
+  <path d="M168 202 H186 L183 209 H171 Z" fill="#FFFFFF"/>
+
+  <!-- Head -->
+  <circle cx="94" cy="114" r="9" fill="#FFFFFF"/>
+  <circle cx="166" cy="114" r="9" fill="#FFFFFF"/>
+  <ellipse cx="130" cy="112" rx="36" ry="40" fill="#FFFFFF"/>
+
+  <!-- Hair: short, side-swept -->
+  <path d="M93 112 C88 80 104 62 132 62 C158 62 174 78 168 110 C166 98 160 90 152 86 C138 100 112 100 98 92 C95 98 94 104 93 112 Z" fill="#0B1E33"/>
+
+  <!-- Face -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M108 104 Q115 100 122 103" stroke="#0B1E33" stroke-width="3.5"/>
+    <path d="M138 103 Q145 100 152 104" stroke="#0B1E33" stroke-width="3.5"/>
+    <path d="M130 116 Q126 125 131 128" stroke="#C3CDD9" stroke-width="3"/>
+    <path d="M119 134 Q130 143 141 134" stroke="#14262B" stroke-width="3.5"/>
+  </g>
+  <circle cx="115" cy="114" r="3.8" fill="#14262B"/>
+  <circle cx="145" cy="114" r="3.8" fill="#14262B"/>
+
+  <!-- Badge: rising trend -->
+  <g>
+    <circle cx="204" cy="58" r="24" fill="#003D7C" stroke="#FFFFFF" stroke-width="5"/>
+    <path d="M191 67 L200 58 L206 64 L216 53" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M209 53 H216 V60" fill="none" stroke="#EF7C00" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

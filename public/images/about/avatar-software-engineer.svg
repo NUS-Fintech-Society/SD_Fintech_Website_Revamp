@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" width="260" height="260" role="img" aria-labelledby="se-title">
+  <title id="se-title">Software Engineer</title>
+  <!-- Palette (site tokens only): NUS Blue #003D7C, Navy #0B1E33, NUS Orange #EF7C00, White #FFFFFF,
+       Blue tint #E3EAF2, Border #DDE3EA, Track #C3CDD9, Ink #14262B -->
+
+  <!-- Frame: white ring and tinted disc (the same 260px frame as the seals) -->
+  <circle cx="130" cy="130" r="126" fill="#FFFFFF"/>
+  <circle cx="130" cy="130" r="112" fill="#E3EAF2"/>
+
+  <!-- Neck -->
+  <path d="M118 146 V172 Q130 180 142 172 V146 Z" fill="#DDE3EA"/>
+
+  <!-- Hoodie: shoulders, with the lower edge following the disc so no clip path is needed -->
+  <path d="M40 196.7 C52 176 86 168 130 168 C174 168 208 176 220 196.7 A112 112 0 0 1 40 196.7 Z" fill="#EF7C00"/>
+
+  <!-- Neckline, hood band and drawstrings -->
+  <path d="M112 168 C114 188 146 188 148 168 Z" fill="#DDE3EA"/>
+  <path d="M104 168 C106 196 154 196 156 168" fill="none" stroke="#003D7C" stroke-width="8" stroke-linecap="round"/>
+  <g stroke="#FFFFFF" stroke-width="4" stroke-linecap="round">
+    <path d="M118 190 L115 212"/>
+    <path d="M142 190 L145 212"/>
+  </g>
+  <circle cx="115" cy="215" r="3.5" fill="#FFFFFF"/>
+  <circle cx="145" cy="215" r="3.5" fill="#FFFFFF"/>
+
+  <!-- Head -->
+  <circle cx="94" cy="114" r="9" fill="#FFFFFF"/>
+  <circle cx="166" cy="114" r="9" fill="#FFFFFF"/>
+  <ellipse cx="130" cy="112" rx="36" ry="40" fill="#FFFFFF"/>
+
+  <!-- Hair: top bun with an orange tie -->
+  <circle cx="130" cy="56" r="15" fill="#0B1E33"/>
+  <path d="M92 114 C86 80 106 64 130 64 C154 64 174 80 168 114 C164 98 150 88 130 88 C110 88 96 98 92 114 Z" fill="#0B1E33"/>
+  <rect x="122" y="66" width="16" height="5" rx="2.5" fill="#EF7C00"/>
+
+  <!-- Face -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M107 97 Q115 93 123 96" stroke="#0B1E33" stroke-width="3.5"/>
+    <path d="M137 96 Q145 93 153 97" stroke="#0B1E33" stroke-width="3.5"/>
+    <rect x="103" y="103" width="24" height="20" rx="7" stroke="#003D7C" stroke-width="3.5"/>
+    <rect x="133" y="103" width="24" height="20" rx="7" stroke="#003D7C" stroke-width="3.5"/>
+    <path d="M127 111 Q130 108 133 111" stroke="#003D7C" stroke-width="3.5"/>
+    <path d="M103 110 L95 108" stroke="#003D7C" stroke-width="3.5"/>
+    <path d="M157 110 L165 108" stroke="#003D7C" stroke-width="3.5"/>
+    <path d="M130 120 Q126 127 131 129" stroke="#C3CDD9" stroke-width="3"/>
+    <path d="M120 135 Q130 142 140 135" stroke="#14262B" stroke-width="3.5"/>
+  </g>
+  <circle cx="115" cy="113" r="3.4" fill="#14262B"/>
+  <circle cx="145" cy="113" r="3.4" fill="#14262B"/>
+
+  <!-- Badge: code brackets -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5">
+    <circle cx="204" cy="58" r="24" fill="#003D7C" stroke="#FFFFFF" stroke-width="5"/>
+    <path d="M196 50 L188 58 L196 66" stroke="#FFFFFF"/>
+    <path d="M212 50 L220 58 L212 66" stroke="#FFFFFF"/>
+    <path d="M207 47 L201 69" stroke="#EF7C00"/>
+  </g>
+</svg>

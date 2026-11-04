@@ -271,6 +271,26 @@
   /* "Something else?" sits in the sticky side column on desktop and after the questions on mobile. */
   .jn-more { display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacing-space-4); }
   .jn-more--end { display: none; }
+  /* Person cards (About): a 4:5 photo or initials, name, role and an optional LinkedIn button. */
+  .fs-people { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--spacing-space-6) var(--spacing-space-5); }
+  .fs-person { display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacing-space-2); min-width: 0; }
+  .fs-person-photo { position: relative; width: 100%; aspect-ratio: 4 / 5; margin-bottom: var(--spacing-space-2); border-radius: var(--radius-lg); overflow: hidden; background: var(--color-line); display: flex; align-items: center; justify-content: center; }
+  .fs-person-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+  .fs-initials { letter-spacing: 0.02em; color: var(--color-nus-blue); }
+  .fs-person-role { color: var(--color-text-muted); }
+
+  /* The orange CTA card: decorative avatars beside the text; ink outline because NUS Blue text fails on orange. */
+  .fs-pill--ink { border-color: currentColor; color: var(--color-harbour-ink); }
+  .fs-cta { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: var(--spacing-space-7) var(--spacing-space-9); min-height: var(--spacing-cta-min-height); padding: var(--spacing-space-9); border-radius: var(--radius-xl); background: var(--color-surface-accent); color: var(--color-text-default); }
+  .fs-cta-art { display: flex; align-items: center; justify-content: center; min-width: 0; }
+  .fs-cta-art img { width: min(var(--spacing-cta-art), 52%); height: auto; }
+  .fs-cta-art img + img { margin-left: -6%; }
+  .fs-cta-text { display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacing-space-4); max-width: var(--spacing-cta-text-max); min-width: 0; }
+  .fs-cta-title { color: var(--color-text-brand); }
+
+  /* About: the affiliation names are text links in a facts list, so they get the 44px target a pill would have. */
+  .ab-factlink { display: inline-flex; align-items: center; min-height: var(--spacing-target-min); }
+
   .ev-content ul:not(.fs-thumbs, .fs-rows) { list-style: disc; padding-left: var(--spacing-space-5); display: flex; flex-direction: column; gap: var(--spacing-space-2); }
 
   /* Responsive: 1000 / 700 / 420 */
@@ -297,6 +317,14 @@
   .fs-pair { @variant bp-mobile { grid-template-columns: minmax(0, 1fr); } }
   .fs-pair--flip .fs-pair-media { @variant bp-mobile { order: 0; } }
   .fs-tile { @variant bp-mobile { padding: var(--spacing-space-5); } }
+  .fs-people { @variant bp-wide { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .fs-people { @variant bp-mobile { gap: var(--spacing-space-5) var(--spacing-space-4); } }
+  .fs-person-photo { @variant bp-mobile { border-radius: var(--radius-md); } }
+  /* Stacks at 1000px: below that, the text column is too narrow for the heading on one line. */
+  .fs-cta { @variant bp-wide { grid-template-columns: minmax(0, 1fr); gap: var(--spacing-space-6); min-height: 0; } }
+  .fs-cta { @variant bp-mobile { padding: var(--spacing-space-5); border-radius: var(--radius-xl-mobile); } }
+  .fs-cta .fs-row-actions { @variant bp-mobile { flex-direction: column; align-self: stretch; } }
+  .fs-cta .fs-pill { @variant bp-mobile { width: 100%; } }
   /* Steps below the photo at 700px, so stepping never depends on a swipe (WCAG 2.5.1). */
   .fs-lightbox-stage { @variant bp-mobile { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto; grid-template-areas: "photo photo" "prev next"; gap: var(--spacing-space-4); } }
   .ev-cover:has(.fs-poster) { @variant bp-mobile { aspect-ratio: 1; } }

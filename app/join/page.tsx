@@ -61,7 +61,7 @@ export default function JoinPage() {
             {groups.map((d) => (
               <section key={d.slug} id={d.slug} className="fs-index fs-split" aria-labelledby={`${d.slug}-title`}>
                 <div className="fs-split-side">
-                  <h3 className="t-h2" id={`${d.slug}-title`}>{d.name}</h3>
+                  <h3 className="t-h3" id={`${d.slug}-title`}>{d.name}</h3>
                   <Link href={`/departments/${d.slug}`} className="fs-pill fs-pill--outline fs-pill--small">{`About ${d.name}`}</Link>
                 </div>
                 <RoleRows roles={d.roles} />

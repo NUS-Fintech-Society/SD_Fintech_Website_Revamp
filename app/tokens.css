@@ -173,6 +173,9 @@
   --spacing-rail-mark: 24px;
   --spacing-facts-width: 360px;
   --spacing-measure: 680px;
+  --spacing-cta-min-height: 420px;
+  --spacing-cta-text-max: 480px;
+  --spacing-cta-art: 260px;
   --spacing-mark-height: 32px;
   --spacing-mark-height-lg: 40px;
   --spacing-menu-row: 64px;
