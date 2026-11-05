@@ -8,6 +8,8 @@ export const icons = {
   next: <path d="M9 5l7 7-7 7" />,
   down: <path d="M6 9l6 6 6-6" />,
   arrow: <path d="M5 12h14M13 6l6 6-6 6" />,
+  pause: <path d="M9 6v12M15 6v12" />,
+  play: <path d="M8 5.5v13l10.5-6.5z" />,
   instagram: (
     <>
       <rect x="3.5" y="3.5" width="17" height="17" rx="5" />

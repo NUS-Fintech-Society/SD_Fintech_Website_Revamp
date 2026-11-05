@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Icon from '@/components/Icon';
 import { BLURB, prefetchFor } from '@/content/site';
 
@@ -19,12 +19,34 @@ export default function NavBar() {
   const burger = useRef<HTMLButtonElement>(null);
   const closeButton = useRef<HTMLButtonElement>(null);
   const [open, setOpen] = useState(false);
+  // Home only: see-through while just the hero photo is under the bar; frosted just before
+  // the bar would overlap the hero's text, wherever that sits at this screen size.
+  const home = pathname === '/';
+  const header = useRef<HTMLElement>(null);
+  const [atTop, setAtTop] = useState(true);
+  useEffect(() => {
+    if (!home) return;
+    const update = () => {
+      const text = document.querySelector('.fs-hero-text');
+      const barBottom = header.current?.getBoundingClientRect().bottom ?? 0;
+      const gap = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--spacing-space-4')) || 0;
+      setAtTop(text ? text.getBoundingClientRect().top > barBottom + gap : scrollY <= 0);
+    };
+    update();
+    addEventListener('scroll', update, { passive: true });
+    addEventListener('resize', update);
+    return () => {
+      removeEventListener('scroll', update);
+      removeEventListener('resize', update);
+    };
+  }, [home]);
+  const overHero = home && atTop;
   // A section's child pages (an event, a role) keep that section's nav link marked as current.
   const current = (href: string) => (pathname === href || pathname.startsWith(`${href}/`) ? 'page' : undefined);
   const close = () => menu.current?.close();
 
   return (
-    <header className="fs-bar">
+    <header ref={header} className={overHero ? 'fs-bar fs-bar--hero fs-on-dark' : 'fs-bar'}>
       <div className="fs-wrap fs-bar-inner">
         <Link href="/" className="fs-brandlink t-strong" aria-label="NUS Fintech Society home">
           <span className="fs-brandmark" aria-hidden="true" />
@@ -36,7 +58,7 @@ export default function NavBar() {
           ))}
         </nav>
         <div className="fs-bar-actions">
-          <Link href="/join" prefetch={prefetchFor('/join')} className="fs-pill fs-pill--primary fs-pill--small" aria-current={current('/join')}>Join us</Link>
+          <Link href="/join" prefetch={prefetchFor('/join')} className={`fs-pill ${overHero ? 'fs-pill--orange' : 'fs-pill--primary'} fs-pill--small`} aria-current={current('/join')}>Join us</Link>
           <button
             ref={burger}
             type="button"

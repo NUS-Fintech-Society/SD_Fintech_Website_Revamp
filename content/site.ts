@@ -8,3 +8,7 @@ const UNBUILT = ['/partners'];
 export const prefetchFor = (href: string) => (UNBUILT.includes(href.split('#')[0]) ? false : undefined);
 
 export const BLURB ='The NUS student-led society for fintech: workshops, talks, industry partnerships and projects.';
+
+// Home's Summit band. The prize pool is the latest edition's: update it with each edition's dates in events.ts.
+export const SUMMIT_LINE = 'A five-day hackathon with workshops, panel discussions and a demo day.';
+export const SUMMIT_PRIZE = '$13,000';

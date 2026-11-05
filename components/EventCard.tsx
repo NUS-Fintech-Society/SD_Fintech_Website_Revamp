@@ -20,7 +20,7 @@ export function UpcomingOnly({ event, buildNow, children }: { event: SocietyEven
 }
 
 /** The one event card: photo, date, title, one line, and "Event details" as the only link. */
-export default function EventCard({ event: e, buildNow, level = 'h3' }: { event: SocietyEvent; buildNow: number; level?: 'h3' | 'h4' }) {
+export default function EventCard({ event: e, buildNow, level = 'h3', note }: { event: SocietyEvent; buildNow: number; level?: 'h3' | 'h4'; note?: ReactNode }) {
   const upcoming = isUpcoming(e, useNow(buildNow));
   const Title = level;
   const line = upcoming ? e.venue.name : e.coHosts.length ? `With ${e.coHosts.join(' and ')}` : null;
@@ -40,6 +40,7 @@ export default function EventCard({ event: e, buildNow, level = 'h3' }: { event:
       </div>
       <Title className="t-h3">{e.name}</Title>
       {line && <p className="fs-muted">{line}</p>}
+      {note && <p>{note}</p>}
       <Link href={`/events/${e.slug}`} className="fs-pill fs-pill--outline fs-pill--small">
         Event details<span className="fs-sr"> for {e.name}</span>
       </Link>

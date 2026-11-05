@@ -182,6 +182,18 @@
   --spacing-footer-col-min: 150px;
   --spacing-footer-blurb: 340px;
   --spacing-footer-base-text: 620px;
+  --spacing-acc-height: 500px;
+  --spacing-strip-closed: 76px;
+  --spacing-strip-open: 340px;
+  --spacing-strip-text: 460px;
+  --spacing-hero-min: 560px;
+  --spacing-hero-text-max: 900px;
+  --spacing-hero-lead-max: 560px;
+  --spacing-card-max: 380px;
+  --spacing-logo-cell: 64px;
+  --spacing-marquee-cell: 170px;
+  --spacing-logo-max: 150px;
+  --spacing-logo-max-sm: 118px;
   --radius-pill: 999px;
   --radius-xl: 40px;
   --radius-xl-mobile: 28px;
