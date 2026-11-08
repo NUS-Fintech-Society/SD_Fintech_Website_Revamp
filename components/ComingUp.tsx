@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import EventCard from '@/components/EventCard';
+import ExternalLink from '@/components/ExternalLink';
 import Icon from '@/components/Icon';
 import { events } from '@/content/events';
 import { TELEGRAM_URL } from '@/content/site';
@@ -95,11 +96,11 @@ export default function ComingUp({ buildNow }: { buildNow: number }) {
             <EventCard
               event={latest}
               buildNow={buildNow}
-              note={<>Nothing else is scheduled yet. New dates are posted here and on our <a href={TELEGRAM_URL} className="fs-link">Telegram channel</a>.</>}
+              note={<>Nothing else is scheduled yet. New dates are posted here and on our <ExternalLink href={TELEGRAM_URL} className="fs-link">Telegram channel</ExternalLink>.</>}
             />
           </div>
         ) : (
-          <p>Nothing is scheduled yet. New dates are posted here and on our <a href={TELEGRAM_URL} className="fs-link">Telegram channel</a>.</p>
+          <p>Nothing is scheduled yet. New dates are posted here and on our <ExternalLink href={TELEGRAM_URL} className="fs-link">Telegram channel</ExternalLink>.</p>
         )}
 
         {allEvents('hm-bottom-only')}

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import ExternalLink from '@/components/ExternalLink';
 import Icon from '@/components/Icon';
 import { departments } from '@/content/departments';
 import { membersOf, team, type Person, type TeamGroup } from '@/content/team';
@@ -41,7 +42,7 @@ function PersonCard({ person, role }: { person: Person; role: Person['roles'][nu
         {role.also && <><br />{role.also}</>}
       </p>
       {person.linkedin && (
-        <a href={person.linkedin} className="fs-iconbtn" aria-label={`${person.name} on LinkedIn`}><Icon name="linkedin" /></a>
+        <ExternalLink href={person.linkedin} className="fs-iconbtn" aria-label={`${person.name} on LinkedIn`}><Icon name="linkedin" /></ExternalLink>
       )}
     </li>
   );
@@ -64,7 +65,7 @@ export default function AboutPage() {
               {facts.map(([term, value, href]) => (
                 <div key={term}>
                   <dt>{term}</dt>
-                  <dd className="t-fact">{href ? <a href={href} className="fs-link ab-factlink">{value}</a> : value}</dd>
+                  <dd className="t-fact">{href ? <ExternalLink href={href} className="fs-link ab-factlink">{value}</ExternalLink> : value}</dd>
                 </div>
               ))}
             </dl>

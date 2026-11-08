@@ -1,5 +1,6 @@
 'use client';
 
+import ExternalLink from '@/components/ExternalLink';
 import { intake } from '@/content/join';
 import { TELEGRAM_URL } from '@/content/site';
 import { closesIn, intakeState, railProgress, statusText, whenLabel, type IntakeState } from '@/lib/intake';
@@ -17,8 +18,8 @@ const NOTE: Record<IntakeState, string> = {
 /** The state's one main action: the form while open, otherwise the Telegram channel. Never a dead button. */
 function MainPill({ state, block, describedBy }: { state: IntakeState; block?: boolean; describedBy?: string }) {
   const className = `fs-pill fs-pill--primary${block ? ' fs-pill--block' : ''}`;
-  if (state === 'open') return <a href={intake.applyUrl} className={className} aria-describedby={describedBy}>Apply now</a>;
-  return <a href={TELEGRAM_URL} className={className}>{state === 'before' ? 'Get notified on Telegram' : 'Join the Telegram channel'}</a>;
+  if (state === 'open') return <ExternalLink href={intake.applyUrl} className={className} aria-describedby={describedBy}>Apply now</ExternalLink>;
+  return <ExternalLink href={TELEGRAM_URL} className={className}>{state === 'before' ? 'Get notified on Telegram' : 'Join the Telegram channel'}</ExternalLink>;
 }
 
 function Caution({ now }: { now: number }) {
@@ -85,7 +86,7 @@ export function HowSection({ buildNow }: { buildNow: number }) {
                   </div>
                   {!finished && <p className="t-label">{whenLabel(s.start, s.end)}</p>}
                   <p className="fs-muted">{s.detail}</p>
-                  {isNow && s.apply && state === 'open' && <a href={intake.applyUrl} className="fs-pill fs-pill--primary fs-pill--small">Apply now</a>}
+                  {isNow && s.apply && state === 'open' && <ExternalLink href={intake.applyUrl} className="fs-pill fs-pill--primary fs-pill--small">Apply now</ExternalLink>}
                 </div>
               </li>
             );

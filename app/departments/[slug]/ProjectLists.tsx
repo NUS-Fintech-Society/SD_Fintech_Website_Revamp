@@ -2,6 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { flushSync } from 'react-dom';
+import ExternalLink from '@/components/ExternalLink';
 import type { Project } from '@/content/departments';
 import { academicYear } from '@/lib/events';
 import { useNow } from '@/lib/use-now';
@@ -31,9 +32,9 @@ export default function ProjectLists({ projects, buildNow }: { projects: Project
         <p className="fs-muted">{p.summary}</p>
         {p.partner && <p className="t-ui">With {p.partner}</p>}
         {p.link && (
-          <a href={p.link.url} className="fs-pill fs-pill--outline fs-pill--small">
+          <ExternalLink href={p.link.url} className="fs-pill fs-pill--outline fs-pill--small">
             {p.link.label}<span className="fs-sr"> for {p.title}</span>
-          </a>
+          </ExternalLink>
         )}
       </div>
     </li>

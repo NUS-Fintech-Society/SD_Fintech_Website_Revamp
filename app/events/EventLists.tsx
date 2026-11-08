@@ -3,6 +3,7 @@
 import { useRef, useState } from 'react';
 import { flushSync } from 'react-dom';
 import EventCard from '@/components/EventCard';
+import ExternalLink from '@/components/ExternalLink';
 import { events } from '@/content/events';
 import { TELEGRAM_URL } from '@/content/site';
 import { splitEvents } from '@/lib/events';
@@ -36,7 +37,7 @@ export default function EventLists({ buildNow }: { buildNow: number }) {
           ) : (
             <div className="fs-panel ev-empty">
               <p className="t-lead">Nothing scheduled right now. New events are announced on our Telegram channel first.</p>
-              <a href={TELEGRAM_URL} className="fs-pill fs-pill--primary">Join the Telegram channel</a>
+              <ExternalLink href={TELEGRAM_URL} className="fs-pill fs-pill--primary">Join the Telegram channel</ExternalLink>
             </div>
           )}
         </div>

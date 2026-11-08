@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import Breadcrumb from '@/components/Breadcrumb';
 import EventCard, { RelativeDate, UpcomingOnly } from '@/components/EventCard';
+import ExternalLink from '@/components/ExternalLink';
 import PhotoGrid from '@/components/PhotoGrid';
 import { events, getEvent, type SocietyEvent } from '@/content/events';
 import { SITE_URL, SUMMIT_URL } from '@/content/site';
@@ -90,14 +91,14 @@ export default async function EventPage({ params }: Props) {
               <UpcomingOnly event={e} buildNow={builtAt}>
                 <div className="ev-split">
                   {e.rsvp.state === 'open' && e.rsvp.url && (
-                    <a href={e.rsvp.url} className="fs-pill fs-pill--primary fs-pill--block" aria-describedby="event-title">RSVP</a>
+                    <ExternalLink href={e.rsvp.url} className="fs-pill fs-pill--primary fs-pill--block" aria-describedby="event-title">RSVP</ExternalLink>
                   )}
                   {e.rsvp.state === 'closed' && <p className="font-bold">RSVP closed</p>}
                   {e.rsvp.state === 'none' && <p className="font-bold">Open to all, no RSVP needed.</p>}
                   <div className="ev-stack-sm">
                     <p className="t-tag fs-muted">Add to calendar</p>
                     <div className="fs-row-actions">
-                      <a href={googleCalendarUrl(e)} className="fs-pill fs-pill--outline fs-pill--small">Google Calendar</a>
+                      <ExternalLink href={googleCalendarUrl(e)} className="fs-pill fs-pill--outline fs-pill--small">Google Calendar</ExternalLink>
                       <a href={`/events/${e.slug}/event.ics`} className="fs-pill fs-pill--outline fs-pill--small" download>Apple or Outlook (.ics)</a>
                     </div>
                   </div>
@@ -106,7 +107,7 @@ export default async function EventPage({ params }: Props) {
             )}
             {e.format === 'Summit' && (
               <div className="ev-split">
-                <a href={SUMMIT_URL} className="fs-pill fs-pill--primary fs-pill--block">Visit the Summit site</a>
+                <ExternalLink href={SUMMIT_URL} className="fs-pill fs-pill--primary fs-pill--block">Visit the Summit site</ExternalLink>
               </div>
             )}
           </aside>

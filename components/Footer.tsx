@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ExternalLink from '@/components/ExternalLink';
 import Icon from '@/components/Icon';
 import { BLURB, CONTACT_EMAIL, SUMMIT_URL, TELEGRAM_URL } from '@/content/site';
 
@@ -25,7 +26,9 @@ export default function Footer() {
             <p className="fs-footer-blurb">{BLURB}</p>
             <div className="fs-socials">
               {socials.map((s) => (
-                <a key={s.icon} href={s.href} className="fs-iconbtn" aria-label={s.label}><Icon name={s.icon} /></a>
+                s.href.startsWith('mailto:')
+                  ? <a key={s.icon} href={s.href} className="fs-iconbtn" aria-label={s.label}><Icon name={s.icon} /></a>
+                  : <ExternalLink key={s.icon} href={s.href} className="fs-iconbtn" aria-label={s.label}><Icon name={s.icon} /></ExternalLink>
               ))}
             </div>
           </div>
@@ -34,14 +37,16 @@ export default function Footer() {
               <nav key={c.title} className="fs-footer-col" aria-label={c.title}>
                 <h2>{c.title}</h2>
                 {c.links.map(([label, href]) => (
-                  <Link key={href} href={href} className="fs-navlink">{label}</Link>
+                  href.startsWith('http')
+                    ? <ExternalLink key={href} href={href} className="fs-navlink">{label}</ExternalLink>
+                    : <Link key={href} href={href} className="fs-navlink">{label}</Link>
                 ))}
               </nav>
             ))}
           </div>
         </div>
         <div className="fs-footer-base">
-          <p>A student society of <a href="https://www.comp.nus.edu.sg/">NUS School of Computing</a>.</p>
+          <p>A student society of <ExternalLink href="https://www.comp.nus.edu.sg/">NUS School of Computing</ExternalLink>.</p>
           <span>© National University of Singapore. All Rights Reserved.</span>
         </div>
       </div>

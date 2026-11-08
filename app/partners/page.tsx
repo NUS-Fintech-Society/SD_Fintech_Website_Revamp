@@ -4,6 +4,7 @@ import Link from 'next/link';
 import type { ReactNode } from 'react';
 import Breadcrumb from '@/components/Breadcrumb';
 import CopyEmail from '@/components/CopyEmail';
+import ExternalLink from '@/components/ExternalLink';
 import PartnerLogo from '@/components/PartnerLogo';
 import { partners, reach } from '@/content/partners';
 import { CONTACT_EMAIL, SUMMIT_URL } from '@/content/site';
@@ -29,7 +30,7 @@ const ways: { title: string; text: string; link?: ReactNode }[] = [
   {
     title: 'Set a Summit challenge',
     text: 'Give hackathon teams a problem statement or a bounty track, then judge what they build.',
-    link: <a href={SUMMIT_URL} className="fs-link">NUS Fintech Summit</a>,
+    link: <ExternalLink href={SUMMIT_URL} className="fs-link">NUS Fintech Summit</ExternalLink>,
   },
   { title: 'Meet students at the Summit', text: 'Speak on a panel, or run a booth at the career fair on demo day.' },
 ];

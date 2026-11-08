@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import ExternalLink from '@/components/ExternalLink';
 import { events } from '@/content/events';
 import { SUMMIT_LINE, SUMMIT_PRIZE, SUMMIT_URL } from '@/content/site';
 import { dayNumber, isUpcoming, parts } from '@/lib/events';
@@ -45,7 +46,7 @@ export default function SummitBand({ buildNow }: { buildNow: number }) {
               <span className="fs-fig-label t-fact">{upcoming ? 'in prizes' : 'in prizes awarded'}</span>
             </li>
           </ul>
-          <a href={SUMMIT_URL} className="fs-pill fs-pill--primary">Visit the Summit site</a>
+          <ExternalLink href={SUMMIT_URL} className="fs-pill fs-pill--primary">Visit the Summit site</ExternalLink>
         </div>
       </div>
     </section>
