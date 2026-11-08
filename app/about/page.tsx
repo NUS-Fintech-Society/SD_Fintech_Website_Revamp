@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import Icon from '@/components/Icon';
 import { departments } from '@/content/departments';
-import { prefetchFor } from '@/content/site';
 import { membersOf, team, type Person, type TeamGroup } from '@/content/team';
 
 const LEAD = `What NUS Fintech Society does, and the students who run it in AY${team.ay}.`;
@@ -117,7 +116,7 @@ export default function AboutPage() {
               <h2 className="fs-cta-title t-display-h2" id="work-title">Come build with us</h2>
               <p>You don&apos;t need to be an expert to join. Pick a department and learn by building. Run a company? Partner with us on workshops, projects and the NUS Fintech Summit.</p>
               <div className="fs-row-actions">
-                <Link href="/partners" prefetch={prefetchFor('/partners')} className="fs-pill fs-pill--primary">Partner with us</Link>
+                <Link href="/partners" className="fs-pill fs-pill--primary">Partner with us</Link>
                 <Link href="/join" className="fs-pill fs-pill--ink">Join us</Link>
               </div>
             </div>

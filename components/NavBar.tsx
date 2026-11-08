@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import Icon from '@/components/Icon';
-import { BLURB, prefetchFor } from '@/content/site';
+import { BLURB } from '@/content/site';
 
 const links = [
   ['About', '/about'],
@@ -54,11 +54,11 @@ export default function NavBar() {
         </Link>
         <nav className="fs-navlinks" aria-label="Main">
           {links.map(([label, href]) => (
-            <Link key={href} href={href} prefetch={prefetchFor(href)} className="fs-navlink" aria-current={current(href)}>{label}</Link>
+            <Link key={href} href={href} className="fs-navlink" aria-current={current(href)}>{label}</Link>
           ))}
         </nav>
         <div className="fs-bar-actions">
-          <Link href="/join" prefetch={prefetchFor('/join')} className={`fs-pill ${overHero ? 'fs-pill--orange' : 'fs-pill--primary'} fs-pill--small`} aria-current={current('/join')}>Join us</Link>
+          <Link href="/join" className={`fs-pill ${overHero ? 'fs-pill--orange' : 'fs-pill--primary'} fs-pill--small`} aria-current={current('/join')}>Join us</Link>
           <button
             ref={burger}
             type="button"
@@ -102,12 +102,12 @@ export default function NavBar() {
             <ul className="fs-menu-links">
               {links.map(([label, href]) => (
                 <li key={href}>
-                  <Link href={href} prefetch={prefetchFor(href)} className="fs-menu-link t-open" aria-current={current(href)} onClick={close}>{label}</Link>
+                  <Link href={href} className="fs-menu-link t-open" aria-current={current(href)} onClick={close}>{label}</Link>
                 </li>
               ))}
             </ul>
           </nav>
-          <Link href="/join" prefetch={prefetchFor('/join')} className="fs-pill fs-pill--orange fs-pill--block" aria-current={current('/join')} onClick={close}>Join us</Link>
+          <Link href="/join" className="fs-pill fs-pill--orange fs-pill--block" aria-current={current('/join')} onClick={close}>Join us</Link>
           <p className="fs-menu-blurb">{BLURB}</p>
         </div>
       </dialog>

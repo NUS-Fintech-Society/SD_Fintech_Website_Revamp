@@ -3,15 +3,8 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import Icon from '@/components/Icon';
+import Logo from '@/components/PartnerLogo';
 import { partners, type Partner } from '@/content/partners';
-import { prefetchFor } from '@/content/site';
-
-// Each wordmark at its optical height, in rem so it scales with the reader's text size. Lazy, because the band is far
-// down the page and eager images get preloaded ahead of the hero photo.
-const Logo = ({ p, alt }: { p: Partner; alt: string }) => (
-  // eslint-disable-next-line @next/next/no-img-element -- small SVG wordmarks; the image optimiser doesn't resize SVGs
-  <img src={`/images/partners/${p.slug}.svg`} alt={alt} loading="lazy" className="fs-logo" style={{ height: `${p.height / 16}rem` }} />
-);
 // Four copies of a row, panned by half: a half-list row is narrower than a wide screen, and the loop must never show a gap.
 const cells = (list: Partner[]) =>
   [0, 1, 2, 3].flatMap((copy) =>
@@ -42,7 +35,7 @@ export default function LogoBand() {
           <button type="button" className="fs-iconbtn fs-marquee-pause" aria-label="Pause partner logos" aria-pressed={paused} onClick={() => setPaused(!paused)}>
             <Icon name={paused ? 'play' : 'pause'} />
           </button>
-          <Link href="/partners" prefetch={prefetchFor('/partners')} className="fs-pill fs-pill--orange">Partner with us</Link>
+          <Link href="/partners" className="fs-pill fs-pill--orange">Partner with us</Link>
         </div>
       </div>
       <ul className="fs-sr">

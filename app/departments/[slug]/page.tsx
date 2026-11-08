@@ -7,7 +7,6 @@ import EventCard from '@/components/EventCard';
 import Icon from '@/components/Icon';
 import { departments, getDepartment, projects } from '@/content/departments';
 import { events } from '@/content/events';
-import { prefetchFor } from '@/content/site';
 import { directorsOf } from '@/content/team';
 import ProjectLists from './ProjectLists';
 
@@ -59,14 +58,14 @@ export default async function DepartmentPage({ params }: Props) {
                 <dt>Directors</dt>
                 {directorsOf(d.slug).map((p) => <dd key={p.id}>{p.name}</dd>)}
                 <dd className="fs-fact-action">
-                  <Link href={teamHref} prefetch={prefetchFor(teamHref)} className="fs-pill fs-pill--outline fs-pill--small">Meet the team</Link>
+                  <Link href={teamHref} className="fs-pill fs-pill--outline fs-pill--small">Meet the team</Link>
                 </dd>
               </div>
               <div>
                 <dt>Roles</dt>
                 <dd>Roles and how to apply are on the Join page.</dd>
                 <dd className="fs-fact-action">
-                  <Link href={rolesHref} prefetch={prefetchFor(rolesHref)} className="fs-pill fs-pill--outline fs-pill--small">{`See ${d.name} roles`}</Link>
+                  <Link href={rolesHref} className="fs-pill fs-pill--outline fs-pill--small">{`See ${d.name} roles`}</Link>
                 </dd>
               </div>
             </dl>

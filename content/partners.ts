@@ -13,8 +13,8 @@ export const partners: Partner[] = [
   { slug: 'defiance', name: 'DeFiance Capital', height: 38.3 },
   { slug: 'futu', name: 'Futu', height: 31.5 },
   { slug: 'helicap', name: 'Helicap', height: 30.6 },
-  { slug: 'monee', name: 'Monee', height: 29.3 },
   { slug: 'moledao', name: 'Moledao', height: 32 },
+  { slug: 'monee', name: 'Monee', height: 29.3 },
   { slug: 'octava', name: 'Octava', height: 39.8 },
   { slug: 'oio', name: 'OIO Holdings', height: 38.1 },
   { slug: 'revolut', name: 'Revolut', height: 29.7 },
@@ -24,3 +24,25 @@ export const partners: Partner[] = [
   { slug: 'stashaway', name: 'StashAway', height: 35.1 },
   { slug: 'stellar', name: 'Stellar', height: 37.5 },
 ];
+
+/**
+ * Partners' "Who you'll reach" figures, set by hand. null shows "[n]" until the count is supplied.
+ */
+export const reach: {
+  members: number | null;
+  /** The academic year the member count is for, e.g. "AY2026/27". */
+  membersAy: string;
+  summit: number | null;
+  /** The Summit edition the participant count is for, e.g. "NUS Fintech Summit 2026". */
+  summitEdition: string;
+  telegram: number | null;
+  /** When the Telegram subscribers were counted, e.g. "Nov 2026". */
+  telegramAsOf: string | null;
+} = {
+  members: 146,
+  membersAy: 'AY2026/27',
+  summit: 278,
+  summitEdition: 'NUS Fintech Summit 2026',
+  telegram: 1685,
+  telegramAsOf: 'Nov 2026',
+};

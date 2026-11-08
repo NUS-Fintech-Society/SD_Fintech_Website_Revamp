@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Icon from '@/components/Icon';
-import { BLURB, CONTACT_EMAIL, SUMMIT_URL, TELEGRAM_URL, prefetchFor } from '@/content/site';
+import { BLURB, CONTACT_EMAIL, SUMMIT_URL, TELEGRAM_URL } from '@/content/site';
 
 const socials = [
   { href: 'https://www.instagram.com/nusfintech', label: 'Instagram', icon: 'instagram' },
@@ -34,7 +34,7 @@ export default function Footer() {
               <nav key={c.title} className="fs-footer-col" aria-label={c.title}>
                 <h2>{c.title}</h2>
                 {c.links.map(([label, href]) => (
-                  <Link key={href} href={href} prefetch={prefetchFor(href)} className="fs-navlink">{label}</Link>
+                  <Link key={href} href={href} className="fs-navlink">{label}</Link>
                 ))}
               </nav>
             ))}

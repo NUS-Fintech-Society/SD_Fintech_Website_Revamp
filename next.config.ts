@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
     { source: '/departments/internal', destination: '/departments/internal-affairs', permanent: true },
     { source: '/departments/software', destination: '/departments', permanent: true },
     { source: '/recruitment', destination: '/join', permanent: true },
+    { source: '/sponsors', destination: '/partners', permanent: true },
   ],
 };
 

@@ -487,8 +487,16 @@
   .fs-lightbox-caption { width: 100%; padding-block: var(--spacing-space-5) var(--spacing-space-6); color: var(--color-text-on-night-muted); }
 
   /* ===================================================================================================== */
-  /* PARTNERS: not built yet. It will use Shared's partner band, figures and CTA card.                     */
+  /* PARTNERS                                                                                              */
   /* ===================================================================================================== */
+
+  /* Text rows in two columns (title, then text) on wider screens; stacked like project rows at 700px. */
+  .fs-rows--split .fs-rowitem { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); }
+  .fs-rows--split .fs-rowitem { @variant bp-mobile { grid-template-columns: minmax(0, 1fr); gap: var(--spacing-space-1); } }
+  /* Copy email: both labels share one cell, so the pill keeps its width while it reads "Copied". */
+  .fs-copy { display: inline-grid; place-items: center; }
+  .fs-copy > span { grid-area: 1 / 1; }
+  .fs-copy > [aria-hidden="true"] { visibility: hidden; }
 
   /* ===================================================================================================== */
   /* JOIN (and the role pages)                                                                             */

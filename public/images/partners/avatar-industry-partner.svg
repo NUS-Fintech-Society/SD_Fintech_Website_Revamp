@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" width="260" height="260" role="img" aria-labelledby="ip-title">
+  <title id="ip-title">Industry Partner</title>
+  <!-- Palette (site tokens only): NUS Blue #003D7C, Navy #0B1E33, NUS Orange #EF7C00, White #FFFFFF,
+       Blue tint #E3EAF2, Border #DDE3EA, Track #C3CDD9, Ink #14262B -->
+
+  <!-- Frame: white ring and tinted disc (the same 260px frame as the About avatars) -->
+  <circle cx="130" cy="130" r="126" fill="#FFFFFF"/>
+  <circle cx="130" cy="130" r="112" fill="#E3EAF2"/>
+
+  <!-- Hair, back: a shoulder-length bob behind the head -->
+  <path d="M88 118 C84 80 104 60 130 60 C156 60 176 80 172 118 C174 136 170 150 162 158 L98 158 C90 150 86 136 88 118 Z" fill="#0B1E33"/>
+
+  <!-- Neck -->
+  <path d="M118 146 V172 Q130 180 142 172 V146 Z" fill="#DDE3EA"/>
+
+  <!-- Blazer: shoulders, with the lower edge following the disc so no clip path is needed -->
+  <path d="M40 196.7 C52 176 86 168 130 168 C174 168 208 176 220 196.7 A112 112 0 0 1 40 196.7 Z" fill="#003D7C"/>
+
+  <!-- Crew-neck top under an open blazer, with navy lapels -->
+  <path d="M112 168 L124 236 L136 236 L148 168 Z" fill="#FFFFFF"/>
+  <path d="M118 168 C120 178 140 178 142 168" fill="none" stroke="#DDE3EA" stroke-width="3"/>
+  <path d="M112 168 L98 184 L108 192 L102 200 L122 230 Z" fill="#0B1E33"/>
+  <path d="M148 168 L162 184 L152 192 L158 200 L138 230 Z" fill="#0B1E33"/>
+
+  <!-- Lanyard and ID card -->
+  <g stroke="#EF7C00" stroke-width="5" stroke-linecap="round">
+    <path d="M118 172 L127 204"/>
+    <path d="M142 172 L133 204"/>
+  </g>
+  <rect x="119" y="203" width="22" height="27" rx="3" fill="#FFFFFF" stroke="#003D7C" stroke-width="2.5"/>
+  <rect x="123" y="209" width="14" height="4" rx="2" fill="#003D7C"/>
+  <rect x="123" y="217" width="9" height="3" rx="1.5" fill="#C3CDD9"/>
+
+  <!-- Head -->
+  <ellipse cx="130" cy="112" rx="36" ry="40" fill="#FFFFFF"/>
+
+  <!-- Hair, front: a side-parted fringe -->
+  <path d="M94 110 C92 80 108 64 132 64 C154 64 168 80 166 106 C158 92 146 86 136 84 C126 94 108 100 94 110 Z" fill="#0B1E33"/>
+
+  <!-- Face -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M108 104 Q115 100 122 103" stroke="#0B1E33" stroke-width="3.5"/>
+    <path d="M138 103 Q145 100 152 104" stroke="#0B1E33" stroke-width="3.5"/>
+    <path d="M130 116 Q126 125 131 128" stroke="#C3CDD9" stroke-width="3"/>
+    <path d="M118 134 Q130 144 142 134" stroke="#14262B" stroke-width="3.5"/>
+  </g>
+  <circle cx="115" cy="114" r="3.8" fill="#14262B"/>
+  <circle cx="145" cy="114" r="3.8" fill="#14262B"/>
+
+  <!-- Badge: calendar -->
+  <g>
+    <circle cx="204" cy="58" r="24" fill="#003D7C" stroke="#FFFFFF" stroke-width="5"/>
+    <rect x="192" y="48" width="24" height="21" rx="3.5" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+    <path d="M192 55 H216" stroke="#FFFFFF" stroke-width="3"/>
+    <path d="M198 44 V50 M210 44 V50" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="209" cy="62" r="3" fill="#EF7C00"/>
+  </g>
+</svg>
