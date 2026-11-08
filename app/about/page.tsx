@@ -110,8 +110,8 @@ export default function AboutPage() {
         <div className="fs-wrap">
           <div className="fs-cta">
             <div className="fs-cta-art" aria-hidden="true">
-              <Image src="/images/about/avatar-finance-expert.svg" alt="" width={260} height={260} />
-              <Image src="/images/about/avatar-software-engineer.svg" alt="" width={260} height={260} />
+              <Image src="/images/illustrations/avatar-finance-expert.svg" alt="" width={260} height={260} />
+              <Image src="/images/illustrations/avatar-software-engineer.svg" alt="" width={260} height={260} />
             </div>
             <div className="fs-cta-text">
               <h2 className="fs-cta-title t-display-h2" id="work-title">Come build with us</h2>

@@ -96,8 +96,8 @@ export default function PartnersPage() {
         <div className="fs-wrap">
           <div className="fs-cta">
             <div className="fs-cta-art" aria-hidden="true">
-              <Image src="/images/partners/avatar-industry-partner.svg" alt="" width={260} height={260} />
-              <Image src="/images/partners/avatar-student.svg" alt="" width={260} height={260} />
+              <Image src="/images/illustrations/avatar-industry-partner.svg" alt="" width={260} height={260} />
+              <Image src="/images/illustrations/avatar-student.svg" alt="" width={260} height={260} />
             </div>
             <div className="fs-cta-text">
               <h2 className="fs-cta-title t-display-h2" id="contact-title">Partner with us</h2>

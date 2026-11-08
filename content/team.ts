@@ -6,7 +6,7 @@ export type TeamGroup = 'advisors' | 'president' | DepartmentSlug;
 export type Person = {
   id: string;
   name: string;
-  photo?: string; // 4:5 headshot in public/images/about/team/, at least 600px wide
+  photo?: string; // 4:5 headshot in public/images/team/<id>.jpg, at least 600px wide
   linkedin?: string; // students only, and only when they agree to publish it
   // One entry per group the person appears in; `also` is the card's second line.
   roles: { group: TeamGroup; label: string; also?: string }[];
@@ -30,8 +30,8 @@ const advisor = (id: string, name: string, photo: string): Person => ({
 export const team: { ay: string; people: Person[] } = {
   ay: '2026/27',
   people: [
-    advisor('hahn-jungpil', 'Prof Hahn Jungpil', '/images/about/team/hahn-jungpil.jpg'),
-    advisor('nicholas-garcia', 'Dr Nicholas Garcia', '/images/about/team/nicholas-garcia.jpg'),
+    advisor('hahn-jungpil', 'Prof Hahn Jungpil', '/images/team/hahn-jungpil.jpg'),
+    advisor('nicholas-garcia', 'Dr Nicholas Garcia', '/images/team/nicholas-garcia.jpg'),
     director('jing-yuan', 'Jing Yuan', 'blockchain'),
     director('khang-sian', 'Khang Sian', 'blockchain'),
     director('sean', 'Sean', 'machine-learning'),
